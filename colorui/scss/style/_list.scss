@@ -1,0 +1,306 @@
+/* ==================
+          列表
+ ==================== */
+.grayscale {
+	filter: grayscale(1);
+}
+.cu-list + .cu-list {
+	margin-top: 30rpx;
+}
+.cu-list > .cu-item {
+	transition: all .6s ease-in-out 0s;
+	transform: translateX(0rpx);
+}
+.cu-list > .cu-item.move-cur {
+	transform: translateX(-260rpx);
+}
+.cu-list > .cu-item .move {
+	position: absolute;
+	right: 0;
+	display: flex;
+	width: 260rpx;
+	height: 100%;
+	transform: translateX(100%);
+}
+.cu-list > .cu-item .move view {
+	display: flex;
+	flex: 1;
+	justify-content: center;
+	align-items: center;
+}
+.cu-list.menu-avatar {
+	overflow: hidden;
+	> .cu-item {
+		position: relative;
+		display: flex;
+		padding-right: 10rpx;
+		height: 140rpx;
+		background-color: white;
+		justify-content: flex-end;
+		align-items: center;
+		> .cu-avatar {
+			position: absolute;
+			left: 30rpx;
+		}
+		.flex .text-cut {
+			max-width: 510rpx;
+		}
+		.content {
+			position: absolute;
+			left: 146rpx;
+			width: calc(100% - #{96rpx} - #{60rpx} - #{160rpx} - #{20rpx});
+			line-height: 1.6em;
+			&.flex-sub {
+				width: calc(100% - #{96rpx} - #{60rpx} - #{20rpx});
+			}
+			> view:first-child {
+				font-size: 30rpx;
+				display: flex;
+				align-items: center;
+			}
+			.cu-btn.sm {
+				display: inline-block;
+				margin-left: 10rpx;
+				height: 28rpx;
+				font-size: 16rpx;
+				line-height: 32rpx;
+			}
+		}
+		.action {
+			width: 140rpx;
+			text-align: center;
+		}
+		.action view + view {
+			margin-top: 10rpx;
+		}
+	}
+}
+.cu-list.menu-avatar.comment > .cu-item .content {
+	position: relative;
+	left: 0;
+	width: auto;
+	flex: 1;
+	padding-bottom: 30rpx;
+}
+.cu-list.menu-avatar.comment > .cu-item {
+	padding: 30rpx 30rpx 0rpx 120rpx;
+	height: auto;
+}
+.cu-list.menu-avatar.comment .cu-avatar {
+	align-self: flex-start;
+}
+.cu-list.menu > .cu-item {
+	position: relative;
+	display: flex;
+	padding: 0 30rpx;
+	min-height: 100rpx;
+	justify-content: space-between;
+	align-items: center;
+}
+.cu-list.menu > .cu-item:last-child:after {
+	border: none;
+}
+
+.cu-list.menu > .cu-item.arrow {
+	padding-right: 90rpx;
+}
+.cu-list.menu > .cu-item.arrow:before {
+	position: absolute;
+	top: 0;
+	right: 30rpx;
+	bottom: 0;
+	display: block;
+	margin: auto;
+	width: 30rpx;
+	height: 30rpx;
+	color: #eeeeee;
+	content: '\e605';
+	text-align: center;
+	font-size: 34rpx;
+	font-family: 'colorui';
+	line-height: 30rpx;
+}
+.cu-list.menu > .cu-item button.content {
+	padding: 0;
+	background-color: transparent;
+	justify-content: flex-start;
+	color: inherit !important;
+	text-align: inherit !important;
+}
+.cu-list.menu > .cu-item button.content:after {
+	display: none;
+}
+
+.cu-list > .cu-item .cu-avatar-group .cu-avatar {
+	border-color: white;
+}
+.cu-list.menu > .cu-item .content > view:first-child {
+	display: inline-flex;
+	align-items: center;
+}
+.cu-list.menu > .cu-item .content > text[class*='icon'] {
+	display: inline-block;
+	margin-right: 10rpx;
+	width: 1.6em;
+	text-align: center;
+}
+.cu-list.menu > .cu-item .content > image {
+	display: inline-block;
+	margin-right: 20rpx;
+	width: 1.6em;
+	height: 1.6em;
+	vertical-align: middle;
+}
+.cu-list.menu > .cu-item .content {
+	font-size: 30rpx;
+	line-height: 1.6em;
+	flex: 1;
+}
+.cu-list.menu > .cu-item .content .cu-tag.sm {
+	display: inline-block;
+	margin-left: 10rpx;
+	height: 28rpx;
+	font-size: 16rpx;
+	line-height: 32rpx;
+}
+.cu-list.menu > .cu-item .action .cu-tag:empty {
+	right: 10rpx;
+}
+.cu-list.menu {
+	display: block;
+	overflow: hidden;
+}
+.cu-list.sm-border > .cu-item:after {
+	position: absolute;
+	top: 0;
+	box-sizing: border-box;
+	left: 30rpx;
+	width: calc(200% - #{120rpx});
+	height: 200%;
+	border-bottom: 2rpx solid #eee;
+	border-radius: inherit;
+	content: ' ';
+	transform: scale(.5);
+	transform-origin: 0 0;
+	pointer-events: none;
+}
+.cu-list.sm-border > .cu-item:last-child:after {
+	display: none;
+}
+.cu-list.grid > .cu-item {
+	position: relative;
+	display: flex;
+	padding: 20rpx 0 30rpx;
+	transition-duration: 0s;
+	flex-direction: column;
+}
+.cu-list.grid > .cu-item:after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	box-sizing: border-box;
+	width: 200%;
+	height: 200%;
+	border-right: 1px solid rgba(0, 0, 0, .1);
+	border-bottom: 1px solid rgba(0, 0, 0, .1);
+	border-radius: inherit;
+	content: ' ';
+	transform: scale(.5);
+	transform-origin: 0 0;
+	pointer-events: none;
+}
+.cu-list.grid > .cu-item text {
+	display: block;
+	margin-top: 10rpx;
+	color: #888;
+	font-size: 26rpx;
+	line-height: 40rpx;
+}
+.cu-list.grid > .cu-item [class*='icon'] {
+	position: relative;
+	display: block;
+	margin-top: 20rpx;
+	width: 100%;
+	font-size: 48rpx;
+}
+.cu-list.grid > .cu-item .cu-tag {
+	right: auto;
+	left: 50%;
+	margin-left: 20rpx;
+}
+.cu-list.grid {
+	background-color: white;
+	text-align: center;
+}
+.cu-list.grid.no-border > .cu-item {
+	padding-top: 10rpx;
+	padding-bottom: 20rpx;
+}
+.cu-list.grid.no-border > .cu-item:after {
+	border: none;
+}
+.cu-list.grid.no-border {
+	padding: 20rpx 10rpx;
+}
+.cu-list.grid.col-3 > .cu-item:nth-child(3n):after,
+.cu-list.grid.col-4 > .cu-item:nth-child(4n):after,
+.cu-list.grid.col-5 > .cu-item:nth-child(5n):after {
+	border-right-width: 0;
+}
+.cu-list.card-menu {
+	overflow: hidden;
+	margin-right: 30rpx;
+	margin-left: 30rpx;
+	border-radius: 20rpx;
+}
+.cu-list.serve {
+	.cu-item {
+		background-color: #ffffff;
+		padding: 30rpx;
+		margin-top: 30rpx;
+		.content {
+			display: flex;
+			align-items: center;
+			.cu-avatar {
+				align-self: flex-start;
+			}
+			.center {
+				flex: 1;
+				padding-left: 20rpx;
+			}
+			.action {
+				padding: 30rpx;
+			}
+		}
+		.serve-item {
+			background: rgba(255, 199, 73, .08);
+			margin-top: 30rpx;
+		}
+	}
+}
+.serve-item {
+	border-radius: 8px;
+	padding: 30rpx;
+	.content {
+		display: flex;
+		align-items: flex-start;
+		.center {
+			flex: 1;
+			padding-left: 20rpx;
+		}
+		.action {
+			padding: 30rpx;
+		}
+	}
+}
+button.none-bg {
+	padding: 0 !important;
+	background-color: transparent;
+	justify-content: flex-start;
+	color: inherit !important;
+	text-align: inherit !important;
+	height: auto;
+}
+button.none-bg:after {
+	display: none;
+}

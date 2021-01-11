@@ -1,0 +1,59 @@
+.cu-code {
+	font-family: Monaco, Menlo, Consolas, 'Courier New', FontAwesome, monospace;
+
+	font-size: 90%;
+	position: relative;
+	z-index: 1;
+	rich-text {
+		display: inline-block;
+	}
+
+	&.code {
+		display: inline-block;
+		padding: 0 10rpx;
+		margin: 0 10rpx;
+		border-radius: $radius-sm;
+		line-height: 1.6;
+		vertical-align: baseline;
+	}
+
+	&.pre {
+		display: block;
+		white-space: pre-wrap;
+		word-break: break-all;
+		word-wrap: break-word;
+		// padding: 10rpx;
+		margin: 20rpx 0;
+		line-height: 1.6;
+		border-radius: $radius-sm;
+		.rich-text {
+			padding: 40rpx;
+		}
+		.scroll-view {
+			&.scroll {
+				max-height: 500px;
+				white-space: pre;
+			}
+		}
+		.cu-btn.copy-btn {
+			position: absolute;
+			z-index: 2;
+			top: 0;
+			right: 0;
+			border-radius: 0 $radius-sm 0 $radius-sm;
+		}
+	}
+}
+.cu-code.pre.dark .rich-text {
+	color: #333333;
+	filter: invert(1);
+}
+@media (prefers-color-scheme: dark) {
+	.theme-auto {
+		.cu-code.pre .rich-text {
+			color: #333333;
+			filter: invert(1);
+		}
+	}
+}
+@import '../../components/cu-code/prism.scss'; //代码高亮

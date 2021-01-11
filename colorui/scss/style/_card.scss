@@ -1,0 +1,215 @@
+/* ==================
+         卡片
+ ==================== */
+.cu-card {
+	display: block;
+	overflow: hidden;
+	& .cu-btn.badge {
+		top: 0;
+		right: 0;
+		font-size: 24rpx;
+		padding: 0rpx 15rpx;
+		height: 40rpx;
+	}
+	&.no-card > .cu-item {
+		margin: 0rpx;
+		border-radius: 0rpx;
+	}
+	& > .cu-item {
+		display: block; /* background-color: #ffffff; */
+		overflow: hidden;
+		border-radius: 10rpx;
+		margin: 30rpx;
+	}
+	& > .cu-item.shadow-blur {
+		overflow: initial;
+	}
+	.grid.grid-square {
+		margin-bottom: -20rpx;
+	}
+	.article {
+		display: block;
+		& > .cu-item {
+			padding-bottom: 30rpx;
+		}
+		& > .cu-item .title {
+			font-size: 30rpx;
+			font-weight: 900;
+			color: #333333;
+			line-height: 100rpx;
+			padding: 0 30rpx;
+		}
+		& > .cu-item .content {
+			display: flex;
+			padding: 0 30rpx;
+		}
+		& > .cu-item .content > image {
+			width: 240rpx;
+			height: 6.4em;
+			margin-right: 20rpx;
+			border-radius: 6rpx;
+		}
+		& > .cu-item .content .desc {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+		& > .cu-item .content .text-content {
+			font-size: 28rpx;
+			color: #888;
+		}
+	}
+	&.case {
+		.image {
+			position: relative;
+			image {
+				width: 100%;
+				display: block;
+			}
+			.cu-tag {
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+			.cu-bar {
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				background-color: transparent;
+				padding: 0rpx 30rpx;
+			}
+			.bg-black {
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				background-color: rgba(0, 0, 0, .6);
+			}
+		}
+		&.no-card .image {
+			margin: 30rpx 30rpx 0;
+			overflow: hidden;
+			border-radius: 10rpx;
+		}
+	}
+	&.dynamic {
+		display: block;
+		& > .cu-item {
+			display: block;
+			background-color: #ffffff;
+			overflow: hidden;
+			& > .text-content {
+				padding: 0 30rpx 0;
+				font-size: 30rpx;
+				margin-bottom: 20rpx;
+			}
+			& .square-img {
+				width: 100%;
+				height: 200rpx;
+				border-radius: 6rpx;
+			}
+			& .only-img {
+				width: 100%;
+				height: 320rpx;
+				border-radius: 6rpx;
+			}
+		}
+	}
+	&.goods {
+		display: block;
+		& > .cu-item {
+			padding: 30rpx;
+			display: flex;
+			position: relative;
+			& + .cu-item {
+				border-top: 1rpx solid #eeeeee;
+			}
+			.content {
+				width: 410rpx;
+				padding: 0rpx;
+			}
+			.title {
+				font-size: 30rpx;
+				font-weight: 900;
+				color: #333333;
+				line-height: 1.4;
+				height: 1.4em;
+				overflow: hidden;
+			}
+		}
+		&.col-goods.col-twice {
+			display: flex;
+			flex-wrap: wrap;
+			padding-bottom: 30rpx;
+			& > .cu-item {
+				width: 345rpx;
+				margin: 20rpx 20rpx 0rpx 20rpx;
+				.content {
+					padding: 20rpx;
+				}
+			}
+			& > .cu-item:nth-child(2n) {
+				margin-left: 0rpx;
+			}
+		}
+		&.col-goods > .cu-item {
+			padding: 0rpx;
+			display: block;
+			border: 0px;
+			.content {
+				width: 100%;
+				padding: 30rpx;
+			}
+		}
+		&.no-card > .cu-item .content {
+			width: 470rpx;
+			padding: 0rpx;
+		}
+		&.no-card > .cu-item .title,
+		&.col-goods > .cu-item .title {
+			height: 3em;
+			overflow: hidden;
+		}
+		& > .cu-item .text-line2cut {
+			-webkit-line-clamp: 1;
+		}
+		&.no-card > .cu-item .text-line2cut,
+		&.col-goods > .cu-item .text-line2cut {
+			-webkit-line-clamp: 2;
+		}
+		& > .cu-item > image {
+			width: 200rpx;
+			height: 200rpx;
+			margin-right: 20rpx;
+			border-radius: 6rpx;
+		}
+		&.no-card > .cu-item > image {
+			width: 220rpx;
+			height: 170rpx;
+		}
+		&.col-goods > .cu-item > image {
+			width: 100%;
+			height: 340rpx;
+			border-bottom-left-radius: 0rpx;
+			border-bottom-right-radius: 0rpx;
+			display: block;
+		}
+		&.col-goods.col-twice > .cu-item > image {
+			height: 300rpx;
+		}
+	}
+	&.orders .cu-item {
+		margin-top: 30rpx;
+		.address-box {
+			padding: 15rpx;
+			margin: 0 30rpx 30rpx;
+			border: 1px solid;
+			border-color: var(--main-a);
+			border-radius: 10px;
+			position: relative;
+			.cu-form-group {
+				min-height: 10px;
+			}
+		}
+	}
+}

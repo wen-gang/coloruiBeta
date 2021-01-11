@@ -1,0 +1,40 @@
+/*!
+ * colorui v3.0.1 (https://www.color-ui.com/)
+ * Authors 文晓港 (https://www.weilanwl.com/).
+ * Licensed under MIT (https://github.com/weilanwl/ColorUI/blob/master/LICENSE)
+ */
+
+@import './main'; //主样式*
+
+@import './style/background'; //背景
+@import './style/flex'; //弹性布局
+@import './style/grid'; //栅栏
+@import './style/text'; //文本
+@import './icon/style'; //图标
+@import './style/shadow'; //阴影
+@import './style/border'; //边框
+@import './style/avatar'; //头像
+@import './style/card'; //卡片
+@import './style/list'; //列表
+@import './style/form'; //表单
+@import './style/steps'; //步骤条
+@import './style/timeline'; //时间轴
+
+@import '../components/cu-fixed/fixed.scss'; //定位组件
+@import '../components/cu-code/code.scss'; //代码组件
+@import '../components/cu-nav/nav.scss'; //选项卡组件
+@import '../components/cu-tabbar/tabbar.scss'; //选项卡组件
+@import '../components/cu-table/table.scss'; //表格组件 
+@import '../components/cu-markdown/markdown.scss'; //markdown组件
+@import '../components/cu-toc/toc.scss'; //目录组件
+@import '../components/cu-input/input.scss'; //输入框组件
+@import '../components/cu-demo/demo.scss'; //演示组件
+@import '../components/cu-popover/popover.scss'; //弹出层组件
+@import '../components/cu-tag/tag.scss'; //标签组件
+@import '../components/cu-title/title.scss'; //标签组件
+@import '../components/cu-tab/tab.scss'; //标签组件
+@import '../components/cu-modal/modal.scss'; //标签组件
+@import '../components/cu-btn/btn.scss'; //标签组件
+
+
+@import '@/app/scss/app.scss'; //标签组件  

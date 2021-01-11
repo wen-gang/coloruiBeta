@@ -1,0 +1,122 @@
+.cu-modal {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 880;
+	opacity: 0;
+	outline: 0;
+	text-align: center;
+	transform: scale(1.185);
+	backface-visibility: hidden;
+	perspective: 2000rpx;
+	transition: 0.3s;
+	pointer-events: none;
+
+	.cu-dialog {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: auto;
+		margin-right: auto;
+		width: 680rpx;
+		max-width: 100%;
+		background-color: #f8f8f8;
+		border-radius: 10rpx;
+		overflow: hidden;
+		text-align: left;
+		.option {
+			display: flex;
+			background-color: #ffffff;
+			padding: 15rpx 0;
+			justify-content: center;
+			view {
+				flex: 1;
+				padding: 15rpx 0;
+				text-align: center;
+				border-left: 1px solid #f1f1f1;
+			}
+			view:first-child {
+				border-left: 0px solid;
+			}
+		}
+		&.bg-none .option {
+			background: transparent;
+		}
+	}
+	&::before {
+		content: '\200B';
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
+	}
+
+	&.show {
+		opacity: 1;
+		transform: scale(1);
+		overflow-x: hidden;
+		overflow-y: auto;
+		pointer-events: auto;
+	}
+
+	&.bottom {
+		margin-bottom: -1000rpx;
+		&::before {
+			vertical-align: bottom;
+		}
+		.cu-dialog {
+			width: 100%;
+			border-radius: 0;
+			padding-bottom: calc(env(safe-area-inset-bottom) / 4 * 3);
+		}
+		&.show {
+			margin-bottom: 0;
+		}
+	}
+	&.top {
+		margin-top: -1000rpx;
+		&::before {
+			vertical-align: top;
+		}
+		.cu-dialog {
+			width: 100%;
+			border-radius: 0;
+		}
+		&.show {
+			margin-top: 0;
+		}
+	}
+
+	&.left,
+	&.right {
+		transform: scale(1);
+		display: flex;
+	}
+	&.right {
+		justify-content: flex-end;
+	}
+	&.left .cu-dialog,
+	&.right .cu-dialog {
+		height: 100%;
+		min-width: 200rpx;
+		border-radius: 0;
+		margin: initial;
+		transition: 0.3s;
+		width: auto;
+		padding-bottom: calc(env(safe-area-inset-bottom) / 4 * 3);
+	}
+
+	&.left .cu-dialog {
+		transform: translateX(-100%);
+	}
+
+	&.right .cu-dialog {
+		transform: translateX(100%);
+	}
+
+	&.left.show .cu-dialog,
+	&.right.show .cu-dialog {
+		transform: translateX(0%);
+	}
+}

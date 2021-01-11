@@ -1,0 +1,23 @@
+// 核心主题样式文件
+@mixin theme-dark {
+	
+	// 页面
+	--page-bg:                      #1b1b1b;
+	--page-bg-sub:                  #151515;
+	--page-bg-dark:                 #0e0e0e;
+	
+	// 内容
+	--box-bg:                       #262626;	
+	--box-bg-sub:                   #1f1f1f;	
+	--box-filter:                   rgba(31, 31, 31, 0.85);
+	
+	// 默认边框
+	--border-color:                 #525252;
+	
+	// 文本等级
+	--text-a:                       #ffffff;
+	--text-b:                       #d4d4d4;
+	--text-c:                       #919191;
+	--text-d:                       #6a6a6a;
+	--text-e:                       #474747;
+} 

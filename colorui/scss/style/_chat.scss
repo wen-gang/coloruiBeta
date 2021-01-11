@@ -1,0 +1,126 @@
+/* ==================
+         聊天
+ ==================== */
+
+.cu-chat {
+	display: flex;
+	flex-direction: column;
+	.cu-item {
+		display: flex;
+		padding: 30rpx 30rpx 70rpx;
+		position: relative;
+		> .cu-avatar {
+			width: 80rpx;
+			height: 80rpx;
+		}
+		&.self {
+			justify-content: flex-end;
+			> .main {
+				justify-content: flex-end;
+				.content {
+					&::before {
+						left: auto;
+						right: -12rpx;
+					}
+					&::after {
+						left: auto;
+						right: -12rpx;
+					}
+				}
+			}
+			.date {
+				text-align: right;
+			}
+		}
+		> .main {
+			max-width: calc(100% - #{260rpx});
+			margin: 0 40rpx;
+			display: flex;
+			align-items: center;
+			.content {
+				padding: 20rpx;
+				border-radius: 6rpx;
+				display: inline-flex;
+				max-width: 100%;
+				align-items: center;
+				font-size: 30rpx;
+				position: relative;
+				min-height: 80rpx;
+				line-height: 40rpx;
+				text-align: left;
+				&:not([class*='bg-']) {
+					background-color: white;
+					color: #666;
+					&::before {
+						background-color: black;
+						opacity: .1;
+					}
+				}
+				&::after {
+					content: '';
+					top: 27rpx;
+					transform: rotate(45deg);
+					position: absolute;
+					z-index: 100;
+					display: inline-block;
+					overflow: hidden;
+					width: 24rpx;
+					height: 24rpx;
+					left: -12rpx;
+					right: initial;
+					background-color: inherit;
+				}
+				&::before {
+					content: '';
+					top: 30rpx;
+					transform: rotate(45deg);
+					position: absolute;
+					z-index: -1;
+					display: inline-block;
+					overflow: hidden;
+					width: 24rpx;
+					height: 24rpx;
+					left: -12rpx;
+					right: initial;
+					background-color: inherit;
+					filter: blur(#{5rpx});
+					opacity: .3;
+				}
+			}
+		}
+		> image {
+			height: 320rpx;
+		}
+		.date {
+			position: absolute;
+			font-size: 24rpx;
+			color: #aaa;
+			width: calc(100% - #{320rpx});
+			bottom: 20rpx;
+			left: 160rpx;
+		}
+		.action {
+			padding: 0 30rpx;
+			display: flex;
+			align-items: center;
+		}
+	}
+	.cu-info {
+		display: inline-block;
+		margin: 20rpx auto;
+		font-size: 24rpx;
+		padding: 8rpx 12rpx;
+		background-color: rgba(0, 0, 0, .2);
+		border-radius: 6rpx;
+		color: white;
+		max-width: 400rpx;
+		line-height: 1.4;
+	}
+}
+rich-text .emoji {
+	display: inline-flex;
+	vertical-align: middle;
+	width: 40rpx;
+	height: 40rpx;
+	margin: 0 !important;
+}
