@@ -1,0 +1,32 @@
+.ui-icon-list .ui-item {
+  padding: 5px;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+  border-radius: 5px;
+}
+.ui-icon-list .ui-item .copy-layer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  font-size: 12px;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  padding-bottom: 0rpx;
+}
+.ui-icon-list .ui-item .copy-layer view {
+  -webkit-box-flex: 1;
+          flex: 1;
+  text-align: center;
+}
+

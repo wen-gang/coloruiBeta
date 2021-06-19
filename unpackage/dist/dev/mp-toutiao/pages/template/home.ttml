@@ -1,0 +1,1 @@
+<ui-sys vue-id="aea1facc-1" bind:__l="__l" vue-slots="{{['default']}}"><view class="content"><image class="logo" src="/static/logo.png"></image><view class="text-area"><text class="title"></text></view><ui-tabbar vue-id="{{('aea1facc-2')+','+('aea1facc-1')}}" cur="1" bind:__l="__l"></ui-tabbar></view></ui-sys>

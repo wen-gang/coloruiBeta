@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "ui-sys": "/ui/components/ui-sys/ui-sys",
+    "ui-navbar": "/ui/components/ui-navbar/ui-navbar",
+    "ui-title": "/ui/components/ui-title/ui-title",
+    "ui-code": "/ui/components/ui-code/ui-code",
+    "ui-switch": "/ui/components/ui-switch/ui-switch",
+    "ui-fixed": "/ui/components/ui-fixed/ui-fixed"
+  }
+}

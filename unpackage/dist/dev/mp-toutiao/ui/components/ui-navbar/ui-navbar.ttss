@@ -1,0 +1,185 @@
+.ui-navbar-box {
+  background-color: transparent;
+  width: 100%;
+}
+.ui-navbar-box .ui-bar {
+  position: relative;
+  z-index: 2;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+}
+.ui-navbar-box .ui-bar .left {
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 1;
+          flex: 1;
+}
+.ui-navbar-box .ui-bar .left .back {
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+}
+.ui-navbar-box .ui-bar .left .back .back-icon {
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  width: 28px;
+  height: 28px;
+  margin: 0 5px;
+}
+.ui-navbar-box .ui-bar .left .back .back-icon.opacityIcon {
+  position: relative;
+  border-radius: 50%;
+  background-color: rgba(127, 127, 127, 0.5);
+}
+.ui-navbar-box .ui-bar .left .back .back-icon.opacityIcon::after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 200%;
+  width: 200%;
+  left: 0;
+  top: 0;
+  border-radius: inherit;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  opacity: 0.1;
+  border: 1px solid currentColor;
+  pointer-events: none;
+}
+.ui-navbar-box .ui-bar .left .back .back-icon.opacityIcon::before {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+.ui-navbar-box .ui-bar .left .capsule {
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  border-radius: 100px;
+  position: relative;
+}
+.ui-navbar-box .ui-bar .left .capsule.dark {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.ui-navbar-box .ui-bar .left .capsule.light {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.ui-navbar-box .ui-bar .left .capsule::after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 60%;
+  width: 1px;
+  left: 50%;
+  top: 20%;
+  background-color: currentColor;
+  opacity: 0.1;
+  pointer-events: none;
+}
+.ui-navbar-box .ui-bar .left .capsule::before {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 200%;
+  width: 200%;
+  left: 0;
+  top: 0;
+  border-radius: inherit;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  opacity: 0.1;
+  border: 1px solid currentColor;
+  pointer-events: none;
+}
+.ui-navbar-box .ui-bar .left .capsule .capsule-back,
+.ui-navbar-box .ui-bar .left .capsule .capsule-home {
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+          flex: 1;
+}
+.ui-navbar-box .ui-bar .left .capsule.atHome .capsule-back, .ui-navbar-box .ui-bar .left .capsule.atHome::after {
+  display: none;
+}
+.ui-navbar-box .ui-bar .right {
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 1;
+          flex: 1;
+}
+.ui-navbar-box .ui-bar .right .right-content {
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+          flex-direction: row-reverse;
+  -webkit-box-flex: 1;
+          flex: 1;
+}
+.ui-navbar-box .ui-bar .center {
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  text-overflow: ellipsis;
+  text-align: center;
+  -webkit-box-flex: 2;
+          flex: 2;
+}
+.ui-navbar-box .ui-bar .center .image {
+  display: block;
+  height: 36px;
+  max-width: calc(100vw - 200px);
+}
+.ui-navbar-box .ui-bar-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+

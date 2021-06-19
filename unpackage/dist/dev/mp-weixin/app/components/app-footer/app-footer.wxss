@@ -1,0 +1,6 @@
+.page-footer {
+  opacity: 0.5;
+  width: 247.5px;
+  height: 75px;
+}
+

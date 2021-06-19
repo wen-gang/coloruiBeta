@@ -1,0 +1,19 @@
+.ui-fixed .ui-fixed-box {
+  position: relative;
+  width: 100%;
+}
+.ui-fixed .ui-fixed-box.fixed {
+  position: fixed;
+}
+.ui-fixed .ui-fixed-box .ui-fixed-content {
+  position: relative;
+}
+.ui-fixed .ui-fixed-box .ui-fixed-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+

@@ -1,0 +1,12 @@
+// 导入自定义主题
+@import './lightblue';			//浅蓝主题
+@import './darkblue';				//深蓝主题
+
+@if $enable-theme {
+	.theme-darkblue {
+		@include theme-darkblue;
+	}
+	.theme-lightblue {
+		@include theme-lightblue;
+	}
+} 

@@ -1,0 +1,1 @@
+<ui-sys vue-id="38123808-1" title="轮播图" bind:__l="__l" vue-slots="{{['default']}}"><ui-swiper vue-id="{{('38123808-2')+','+('38123808-1')}}" info="{{swiperList}}" dotStyle="line" dotCur="ui-BG-Main" bind:__l="__l"></ui-swiper><ui-swiper vue-id="{{('38123808-3')+','+('38123808-1')}}" info="{{swiperList}}" dotStyle="tag" dotCur="bg-mask-50" bind:__l="__l"></ui-swiper></ui-sys>

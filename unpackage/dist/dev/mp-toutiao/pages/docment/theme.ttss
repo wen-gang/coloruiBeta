@@ -1,0 +1,13 @@
+.change-theme .item {
+  padding: 5px;
+}
+.change-theme .item .ui-BG {
+  border-radius: 5px;
+  display: -webkit-box;
+  display: flex;
+  padding: 10px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+

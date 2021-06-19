@@ -1,0 +1,1 @@
+<ui-sys vue-id="2af17b25-1" bind:__l="__l" vue-slots="{{['default']}}"><view class="guide-page" style="height:60vh;"><view class="p-5"><ui-loading vue-id="{{('2af17b25-2')+','+('2af17b25-1')}}" color="{{true}}" bind:__l="__l" vue-slots="{{['default']}}"><image src="/static/logo.png" mode="aspectFill"></image></ui-loading></view></view></ui-sys>

@@ -1,0 +1,28 @@
+@mixin theme-lightblue {
+	
+	// 背景色
+	--ui-BG:                        #ffffff;
+	--ui-BG-1:                      #f6f6f6;
+	--ui-BG-2:                      #f1f1f1;
+	--ui-BG-3:                      #e8e8e8;
+	--ui-BG-4:                      #e0e0e0;	
+	
+	// 文本色
+	--ui-TC:                    	#303030;
+	--ui-TC-1:                    	#525252;
+	--ui-TC-2:                    	#777777;
+	--ui-TC-3:                    	#9e9e9e;
+	--ui-TC-4:                    	#c6c6c6;
+	
+	// 模糊
+	--ui-Blur:                    	rgba(255, 255, 255, 0.85);
+	--ui-Blur-1:                	rgba(246, 246, 246, 0.85);
+	--ui-Blur-2:                	rgba(241,241,241,0.85);
+	--ui-Blur-3:                	rgba(232,232,232,0.85);
+		
+	// 边框
+	--ui-Border:           		   	#d4d4d4; 
+	--ui-Outline:                   rgba(0,0,0,0.1);
+	--ui-Line:                      rgba(119,119,119,0.25);
+} 
+ 

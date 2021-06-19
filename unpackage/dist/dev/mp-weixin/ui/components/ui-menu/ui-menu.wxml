@@ -1,0 +1,1 @@
+<view class="{{['ui-menu',bg,[(!radius)?'border-top border-bottom':''],[(radius)?'radius':''],[(radius=='lg')?'radius-lg':''],[(shadow)?'shadow':''],[(shadow=='sm')?'shadow-sm':''],[(shadow=='lg')?'shadow-lg':'']]}}"><slot></slot></view>

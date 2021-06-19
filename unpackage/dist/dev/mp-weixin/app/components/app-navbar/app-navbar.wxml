@@ -1,0 +1,1 @@
+<ui-navbar vue-id="a378ce58-1" back="{{true}}" bg="{{navBg}}" bind:__l="__l" vue-slots="{{['center']}}"><view slot="center">{{title}}</view></ui-navbar>

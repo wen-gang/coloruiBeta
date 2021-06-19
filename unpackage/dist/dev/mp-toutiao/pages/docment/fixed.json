@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "ui-sys": "/ui/components/ui-sys/ui-sys",
+    "ui-fixed": "/ui/components/ui-fixed/ui-fixed"
+  }
+}

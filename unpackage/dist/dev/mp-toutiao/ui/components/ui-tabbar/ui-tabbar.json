@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "ui-fixed": "/ui/components/ui-fixed/ui-fixed"
+  },
+  "component": true
+}

@@ -1,0 +1,1 @@
+<view class="{{['ui-switch',(disabled)?'disabled':'']}}"><view data-event-opts="{{[['tap',[['clickSwitch',['$event']]]]]}}" class="ui-switch-wrapper" bindtap="__e"><view class="{{['ui-switch-input',[(tempChecked)?'ui-switch-input-checked':''],tempChecked?bg:'',text,size]}}"></view></view></view>

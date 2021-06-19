@@ -1,0 +1,1 @@
+<ui-sys vue-id="fb2b340c-1" title="模态框" bind:__l="__l" vue-slots="{{['default']}}"><view class="ui-container"><ui-title vue-id="{{('fb2b340c-2')+','+('fb2b340c-1')}}" depth="2" title="radio" isIcon="{{true}}" bind:__l="__l"></ui-title><button class="ui-btn">modal</button></view></ui-sys>

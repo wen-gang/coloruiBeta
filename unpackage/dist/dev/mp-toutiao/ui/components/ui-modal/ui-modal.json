@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "ui-title": "/ui/components/ui-title/ui-title"
+  },
+  "component": true
+}

@@ -1,0 +1,1 @@
+<view class="{{['ui-loading-box',size?'text-'+size:'',[(loop)?'loop':'']]}}"><view class="ui-loading"><view class="ui-loading-cut"><view class="{{['ui-loading-loop',color==true?'color':'default text-'+color]}}"></view></view></view><view class="ui-loading-content"><slot></slot></view></view>

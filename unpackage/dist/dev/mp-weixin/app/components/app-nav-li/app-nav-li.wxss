@@ -1,0 +1,111 @@
+
+.doc-card {
+  position: relative;
+}
+.doc-card navigator {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+.doc-card view {
+  position: relative;
+  z-index: 2;
+  text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.1);
+}
+.doc-card .doc-title {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  font-size: 17px;
+}
+.doc-card .doc-title::after {
+  content: '';
+  position: absolute;
+  width: calc(100% + 10px);
+  height: 2px;
+  background-color: currentColor;
+  left: 0;
+  bottom: 0;
+}
+.doc-card .doc-name {
+  position: relative;
+  display: block;
+  padding-top: 10px;
+}
+.doc-card .doc-name::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: currentColor;
+  left: 0;
+  top: 0;
+}
+.doc-card .doc-dot {
+  position: absolute;
+  z-index: 1;
+  border-radius: 50%;
+  -webkit-transition: all 0.6s cubic-bezier(0.08, 0.82, 0.17, 1);
+  transition: all 0.6s cubic-bezier(0.08, 0.82, 0.17, 1);
+  opacity: .3;
+}
+.doc-card .doc-dot.doc-dot1 {
+  width: 200px;
+  height: 200px;
+  left: 0;
+  top: auto;
+  right: auto;
+  bottom: -150px;
+  -webkit-filter: hue-rotate(30deg) brightness(160%);
+          filter: hue-rotate(30deg) brightness(160%);
+}
+.doc-card .doc-dot.doc-dot2 {
+  left: -40px;
+  top: auto;
+  right: auto;
+  bottom: -10px;
+  width: 150px;
+  height: 150px;
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+}
+.doc-card .doc-dot.doc-dot3 {
+  top: -60px;
+  right: -60px;
+  opacity: 0.6;
+  width: 120px;
+  height: 120px;
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
+}
+.doc-card .doc-bg {
+  position: absolute;
+  z-index: 0;
+  width: calc(100% - 20px);
+  height: 15px;
+  bottom: -7.5px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 5px;
+  opacity: 0.2;
+}
+.doc-card:hover .doc-dot1 {
+  -webkit-transform: translateX(-50px) translatey(-180px);
+          transform: translateX(-50px) translatey(-180px);
+  -webkit-filter: hue-rotate(-30deg) brightness(80%);
+          filter: hue-rotate(-30deg) brightness(80%);
+}
+.doc-card:hover .doc-dot2 {
+  -webkit-transform: translateX(150px) translatey(0px);
+          transform: translateX(150px) translatey(0px);
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
+}
+.doc-card:hover .doc-dot3 {
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+  -webkit-transform: translateX(-150px) translatey(120px);
+          transform: translateX(-150px) translatey(120px);
+}
+

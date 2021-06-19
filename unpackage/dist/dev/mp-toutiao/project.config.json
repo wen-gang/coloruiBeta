@@ -1,0 +1,14 @@
+{
+    "setting": {
+        "postcss": true,
+        "minified": true,
+        "urlCheck": false
+    },
+    "appid": "tt0f33798e9008dd01",
+    "projectname": "ColoruiApp",
+    "condition": {
+        "miniprogram": {
+            "current": -1
+        }
+    }
+}

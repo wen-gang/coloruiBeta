@@ -1,0 +1,49 @@
+.ui-code {
+	font-family: Monaco, Menlo, Consolas, 'Courier New';
+	font-size: 90%;
+	position: relative;
+	z-index: 1;
+	color: var(--ui-TC);
+	rich-text {
+		display: inline-block;
+	}
+
+	&.code {
+		display: inline-block;
+		padding: 0 10rpx;
+		margin: 0 10rpx;
+		border-radius: $radius-sm;
+		line-height: 1.6;
+		vertical-align: baseline;
+	}
+
+	&.pre {
+		display: block;
+		// padding: 10rpx;
+		margin: 20rpx 0;
+		line-height: 1.6;
+		// border-radius: $radius-sm;
+		.rich-text {
+			padding: 40rpx;
+			white-space: pre-wrap;
+			word-break: break-all;
+			word-wrap: break-word;
+		}
+		.scroll-view {
+			&.scroll {
+				max-height: 500px;
+				white-space: pre;
+			}
+		}
+		.copy-btn {
+			position: absolute;
+			z-index: 2;
+			top: 0;
+			right: 0;
+			padding: 0.8em;
+			border-radius: 0 $radius-sm 0 $radius-sm;
+		}
+	}
+}
+
+@import '@/app/scss/style/prism.scss'; //代码高亮

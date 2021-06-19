@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "app-navbar": "/app/components/app-navbar/app-navbar",
+    "app-footer": "/app/components/app-footer/app-footer",
+    "ui-tabbar": "/ui/components/ui-tabbar/ui-tabbar",
+    "ui-modal": "/ui/components/ui-modal/ui-modal",
+    "ui-toast": "/ui/components/ui-toast/ui-toast"
+  },
+  "component": true
+}

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "ui-sys": "/ui/components/ui-sys/ui-sys",
+    "ui-change-theme": "/ui/components/ui-change-theme/ui-change-theme"
+  }
+}
