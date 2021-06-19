@@ -1,8 +1,0 @@
-{
-  "usingComponents": {
-    "ui-switch": "/ui/components/ui-switch/ui-switch",
-    "ui-radio": "/ui/components/ui-radio/ui-radio",
-    "ui-modal": "/ui/components/ui-modal/ui-modal"
-  },
-  "component": true
-}

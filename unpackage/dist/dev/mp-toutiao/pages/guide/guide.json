@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "ui-sys": "/ui/components/ui-sys/ui-sys",
-    "ui-loading": "/ui/components/ui-loading/ui-loading"
-  }
-}

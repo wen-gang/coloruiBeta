@@ -1,1 +1,0 @@
-<ui-sys vue-id="0b77bb48-1" bind:__l="__l" vue-slots="{{['default']}}"><ui-tabbar vue-id="{{('0b77bb48-2')+','+('0b77bb48-1')}}" cur="2" bind:__l="__l"></ui-tabbar></ui-sys>

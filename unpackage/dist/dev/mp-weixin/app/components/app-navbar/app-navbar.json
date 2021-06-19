@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "ui-navbar": "/ui/components/ui-navbar/ui-navbar"
-  },
-  "component": true
-}

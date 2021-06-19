@@ -1,1 +1,0 @@
-<view class="{{['ui-toast-box',title!=''?'show':'hide',[(mask||mask=='80')?'bg-mask-80':''],[(mask=='20')?'bg-mask-20':''],[(mask=='40')?'bg-mask-40':'']]}}" style="{{'top:'+(sys_navBar+'px')+';'}}"><view class="ui-toast bg-mask-80"><view><text class="{{[icon]}}"></text></view><text>{{title.length>255?$root.g0+'...':title}}</text></view></view>

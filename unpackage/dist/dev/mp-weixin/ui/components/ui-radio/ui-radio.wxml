@@ -1,1 +1,0 @@
-<view data-event-opts="{{[['tap',[['_onRadioChange',['$event']]]]]}}" class="{{['ui-radio',(isDisabled)?'disabled':'']}}" bindtap="__e"><view class="{{['ui-radio-input round',cur==label?'cur '+ui:unbg==''?'borderss':unbg]}}"></view><slot></slot></view>

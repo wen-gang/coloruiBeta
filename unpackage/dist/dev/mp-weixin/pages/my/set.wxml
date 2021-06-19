@@ -1,1 +1,0 @@
-<ui-sys vue-id="5a3dac4e-1" title="设置" bind:__l="__l" vue-slots="{{['default']}}"><ui-change-theme class="mt-2" vue-id="{{('5a3dac4e-2')+','+('5a3dac4e-1')}}" bind:__l="__l"></ui-change-theme></ui-sys>

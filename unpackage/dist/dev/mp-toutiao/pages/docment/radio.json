@@ -1,8 +1,0 @@
-{
-  "usingComponents": {
-    "ui-sys": "/ui/components/ui-sys/ui-sys",
-    "ui-title": "/ui/components/ui-title/ui-title",
-    "ui-radio": "/ui/components/ui-radio/ui-radio",
-    "ui-radio-group": "/ui/components/ui-radio-group/ui-radio-group"
-  }
-}
