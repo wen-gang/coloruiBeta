@@ -1,5 +1,5 @@
 # coloruiBeta
-Colorui先行版本
+Colorui先行版本 qq讨论群 ：647923188
 
 ##文档
 -------
