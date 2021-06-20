@@ -186,7 +186,7 @@ export default {
 			display: flex;
 			padding: 15rpx 0;
 			justify-content: center;
-			view {
+			.ui-modal-btn {
 				flex: 1;
 				padding: 15rpx 0;
 				text-align: center;

@@ -22,7 +22,7 @@ export default {
 	name: 'uiTabbar',
 	data() {
 		return {
-			curr: 0
+			cur: 0
 		};
 	},
 	props: {
@@ -50,22 +50,26 @@ export default {
 			type: String,
 			default: 'text-c'
 		},
-		cur: {
-			type: [String, Number],
-			default: 0
-		}
 	},
 	watch: {},
 	computed: {
 		tabbar() {
 			return this.$store.getters.getTabbar;
 		}
-	},	
+	},
 	created() {
-		console.log('ui-tabbar');
-		uni.hideTabBar();	
+		uni.hideTabBar();
 	},
 	methods: {
+		_onShow() {
+			let page = getCurrentPages();
+			let url = page[page.length - 1].route
+			this.tabbar.map((item,index)=>{
+				if(item.url == '/'+url){
+					this.cur = index
+				}
+			})
+		},
 		clickItem(item) {
 			if (item.type == 'tab') {
 				this.changeTab(item.url);

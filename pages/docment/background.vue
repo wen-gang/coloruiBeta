@@ -34,7 +34,7 @@
 				更浅的颜色。为适应暗色主题,注意有透明度！
 			</view>
 			<view class="ui-grid ui-cols-1 ui-cols-sm-2 ui-cols-md-2 ui-cols-lg-2 ui-cols-xl-4 ui-cols-xxl-8 radius" v-if="demo">
-				<view class="p-3 ui-item" v-for="(item, index) in color" :key="'light-'+index">
+				<view class="p-3 ui-item" v-for="(item, index) in color" :key="$util.getUuid()">
 					<view :class="'bg-' + item.name + '-thin'" class="radius p-4 item">
 						<view class="text-xl pb-3">{{ item.desc }}</view>
 						<view class="text-sm flex-bar">
@@ -58,8 +58,8 @@
 				来关闭渐变背景的编译。
 			</view>
 			<view class="ui-grid ui-cols-12 ui-cols-md-12 ui-cols-lg-12 ui-cols-xl-12 ui-cols-xxl-12 ui-BG radius p-2" v-if="demo">
-				<block v-for="(item, index) in color" :key="'gradients-'+index">
-					<view class="p-2 ui-item" v-for="(itemsub, indexsub) in color" :key="'gradientssub-'+indexsub" v-if="item.name != itemsub.name && index < 6">
+				<block v-for="(item, index) in color" :key="$util.getUuid()">
+					<view class="p-2 ui-item" v-for="(itemsub, indexsub) in color" :key="$util.getUuid()" v-if="item.name != itemsub.name && index < 6">
 						<view :class="'bg-' + item.name + '-' + itemsub.name" class="p-4 item radius"></view>
 					</view>
 				</block>
@@ -71,7 +71,7 @@
 				精心调整的色值，更加自然的过渡色。
 			</view>
 			<view class="ui-grid ui-cols-1 ui-cols-sm-2 ui-cols-md-2 ui-cols-lg-2 ui-cols-xl-4 ui-cols-xxl-8" v-if="demo">
-				<view class="p-3 ui-item" v-for="(item, index) in color" :key="'gradients-'+index">
+				<view class="p-3 ui-item" v-for="(item, index) in color" :key="$util.getUuid()">
 					<view :class="'bg-' + item.name + '-gradient'" class="radius p-4 item">
 						<view class="text-xl pb-3">{{ item.desc }}</view>
 						<view class="text-sm">
@@ -86,7 +86,7 @@
 				带有一定色彩的高亮背景。在深浅主题下保持一致。
 			</view>
 			<view class="ui-grid ui-cols-1 ui-cols-sm-2 ui-cols-md-2 ui-cols-lg-2 ui-cols-xl-4 ui-cols-xxl-8 radius" v-if="demo">
-				<view class="p-3 ui-item" v-for="(item, index) in color" :key="'light-'+index">
+				<view class="p-3 ui-item" v-for="(item, index) in color" :key="$util.getUuid()">
 					<view :class="'bg-' + item.name + '-light'" class="radius p-4 item">
 						<view class="text-xl pb-3">{{ item.desc }}</view>
 						<view class="text-sm">
@@ -107,7 +107,7 @@
 				的浅色灰度值
 			</view>
 			<view class="ui-grid ui-cols-1 ui-cols-sm-2 ui-cols-md-2 ui-cols-lg-2 ui-cols-xl-4 ui-cols-xxl-7 bg-dark-3 radius p-2" v-if="demo">
-				<view class="p-2 ui-item" v-for="(item, index) in gray" :key="'gray-'+index">
+				<view class="p-2 ui-item" v-for="(item, index) in gray" :key="$util.getUuid()">
 					<view :class="'bg-' + item.name" class="radius p-3 item">{{ item.name }}</view>
 				</view>
 			</view>
@@ -121,7 +121,7 @@
 				的深色灰度值
 			</view>
 			<view class="ui-grid ui-cols-1 ui-cols-sm-2 ui-cols-md-2 ui-cols-lg-2 ui-cols-xl-4 ui-cols-xxl-7 bg-white radius p-2 mt-3" v-if="demo">
-				<view class="p-2 ui-item" v-for="(item, index) in dark" :key="'dark-'+index">
+				<view class="p-2 ui-item" v-for="(item, index) in dark" :key="$util.getUuid()">
 					<view :class="'bg-' + item.name" class="radius p-3 item">{{ item.name }}</view>
 				</view>
 			</view>
@@ -133,7 +133,7 @@
 				<ui-code>.ui-BG-Main-{No}</ui-code>
 			</view>
 			<view class="ui-grid ui-cols-1 ui-cols-sm-2 ui-cols-md-4 ui-BG radius p-2" v-if="demo">
-				<view class="p-2 ui-item" v-for="(item, index) in themeColor" :key="'theme-'+index">
+				<view class="p-2 ui-item" v-for="(item, index) in themeColor" :key="$util.getUuid()">
 					<view :class="'ui-BG-Main-' + (index+1)" class="radius p-3 item">{{ item.name }}</view>
 				</view>
 			</view>
@@ -143,10 +143,10 @@
 				<ui-code>.{level}-bg-sub</ui-code>
 			</view>
 			<view class="ui-grid ui-cols-1 ui-cols-sm-3 radius px-2" v-if="demo">
-				<view class="px-2 ui-item" v-for="(item, index) in level" :key="'level-'+index">
+				<view class="px-2 ui-item" v-for="(item, index) in level" :key="$util.getUuid()">
 					<view :class="item + '-bg'" class="radius p-3 item border">{{ item }}</view>
 				</view>
-				<view class="px-2 ui-item mt-4" v-for="(item, index) in level" :key="'levels-'+index">
+				<view class="px-2 ui-item mt-4" v-for="(item, index) in level" :key="$util.getUuid()">
 					<view :class="item + '-bg-sub'" class="radius p-3 item border">{{ item }}</view>
 				</view>
 			</view>
@@ -206,8 +206,7 @@
 					<view class="mt-5 p-4 ui-BG radius-bottom"><view>.bg-blur 不兼容时</view></view>
 				</view>
 			</view>
-		</view>
-		<demo-btn :demo.sync="demo"></demo-btn>
+		</view> 
 	</ui-sys>
 </template>
 
