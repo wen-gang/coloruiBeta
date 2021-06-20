@@ -83,26 +83,74 @@
 		}, {
 			"path": "pages/my/set",
 			"style": {}
+		}, {
+			"path": "pages/docment/navbar",
+			"style": {}
+		}, {
+			"path": "pages/docment/background",
+			"style": {}
+		}, {
+			"path": "pages/docment/icon",
+			"style": {}
+		}, {
+			"path": "pages/docment/title",
+			"style": {}
+		}, {
+			"path": "pages/docment/image",
+			"style": {}
+		}, {
+			"path": "pages/docment/progress",
+			"style": {}
+		}, {
+			"path": "pages/docment/loading",
+			"style": {}
+		}, {
+			"path": "pages/docment/flex",
+			"style": {}
+		}, {
+			"path": "pages/docment/card",
+			"style": {}
+		}, {
+			"path": "pages/docment/list",
+			"style": {}
+		}, {
+			"path": "pages/docment/grid",
+			"style": {}
+		}, {
+			"path": "pages/docment/timeline",
+			"style": {}
+		}, {
+			"path": "pages/docment/table",
+			"style": {}
+		}, {
+			"path": "pages/docment/popover",
+			"style": {}
+		}, {
+			"path": "pages/docment/drawer",
+			"style": {}
+		}, {
+			"path": "pages/docment/collapse",
+			"style": {}
+		}, {
+			"path": "pages/docment/tab",
+			"style": {}
+		}, {
+			"path": "pages/docment/steps",
+			"style": {}
+		}, {
+			"path": "pages/docment/refresh",
+			"style": {}
+		}, {
+			"path": "pages/docment/input",
+			"style": {}
+		}, {
+			"path": "pages/docment/checkbox",
+			"style": {}
+		}, {
+			"path": "pages/docment/picker",
+			"style": {}
 		}
-	    ,{
-            "path" : "pages/docment/navbar",
-            "style" :                                                                                    
-            {}
-            
-        }
-        ,{
-            "path" : "pages/docment/background",
-            "style" :                                                                                    
-            {}
-            
-        }
-        ,{
-            "path" : "pages/docment/icon",
-            "style" :                                                                                    
-            {}
-            
-        }
-    ],
+	],
 	"easycom": {
 		"ui-(.*)": "@/ui/components/ui-$1/ui-$1.vue",
 		"app-(.*)": "@/app/components/app-$1/app-$1.vue"

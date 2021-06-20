@@ -220,16 +220,6 @@
 								icon: 'uicon-git-commit',
 								name: 'steps',
 								title: '步骤条'
-							},
-							{
-								icon: 'uicon-loop',
-								name: 'refresh',
-								title: '下拉刷新'
-							},
-							{
-								icon: 'uicon-emoji',
-								name: 'emoji',
-								title: '表情输入'
 							}
 						]
 					},
@@ -258,36 +248,7 @@
 							{
 								icon: 'uicon-view-headline',
 								name: 'picker',
-								title: '普通选择器'
-							},
-							{
-								icon: 'uicon-sip',
-								name: 'colorpicker',
-								title: '颜色选择器'
-							}
-						]
-					},
-					{
-						title: '扩展',
-						subnav: [{
-								icon: 'uicon-file-text',
-								name: 'markdown',
-								title: 'MarkDown'
-							},
-							{
-								icon: 'uicon-sort-order',
-								name: 'indexlist',
-								title: '索引列表'
-							},
-							{
-								icon: 'uicon-terminal',
-								name: 'tabindex',
-								title: '双向导航'
-							},
-							{
-								icon: 'uicon-event-list',
-								name: 'chekin',
-								title: '酒店日历'
+								title: '选择器'
 							}
 						]
 					}
