@@ -21,11 +21,7 @@
 	color: var(--text-a);
 	background-color: var(--ui-BG);
 	vertical-align: baseline;
-	
-	&.button-hover {
-	transform: translate(1rpx, 1rpx);
-	pointer-events: none;
-	}
+
 	&:not([class*='round'])::after {
 		border-radius: calc(#{$radius} * 2);
 	}

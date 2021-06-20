@@ -1,7 +1,5 @@
 <template>
-	<ui-sys>
-
-		<ui-tabbar cur="2"></ui-tabbar>
+	<ui-sys tabbar>
 	</ui-sys>
 </template>
 

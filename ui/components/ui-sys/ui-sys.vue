@@ -5,7 +5,7 @@
 				<app-navbar :bg="navBg" :title="title" v-if="title"></app-navbar>
 				<slot></slot>
 				<app-footer v-if="footer"></app-footer>
-				<ui-tabbar v-if="_isTabbar()"></ui-tabbar>
+				<ui-tabbar v-if="tabbar"></ui-tabbar>
 			</view>
 			<view class="loading-body bg-blur" :style="[{ zIndex: 1999 }]" v-if="loading">
 				<view class="uicon-loading1 icon-spin icon-xl mb-3"></view>
@@ -74,6 +74,10 @@ export default {
 		footer: {
 			type: Boolean,
 			default: true
+		},
+		tabbar: {
+			type: Boolean,
+			default: false
 		}
 	},
 	created() {
@@ -83,26 +87,12 @@ export default {
 		...mapState({
 			dialog: state => state.modal.dialog,
 			toast: state => state.modal.toast
-		}),
-		tabbar() {
-			return this.$store.getters.getTabbar;
-		}
+		})
 	},
 	mounted() {
 		this._loading = false;
 	},
 	methods: {
-		_isTabbar() {
-			let page = getCurrentPages();
-			let url = '/' + page[page.length - 1].route;
-			let isTabbar = false;
-			this.tabbar.map(item => {
-				if (item.url == url && item.type == 'tab') {
-					isTabbar = true;
-				}
-			});
-			return isTabbar;
-		}
 	}
 };
 </script>

@@ -142,8 +142,10 @@ export default {
 						if (this.height == 0) {
 							// #ifdef H5
 							// 解决H5刷新错位的问题
+							console.log('fixed-' + this._uid);
 							let ele = document.getElementById('fixed-' + this._uid);
 							data.top = ele.offsetTop;
+							
 							// #endif
 							this.content = data;
 							this.$emit('getHeight', data.height);

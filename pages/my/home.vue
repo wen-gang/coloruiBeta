@@ -1,5 +1,5 @@
 <template>
-	<ui-sys img="https://oss.color-ui.com/img/4put2.png">
+	<ui-sys img="https://oss.color-ui.com/img/4put2.png" tabbar>
 		<ui-navbar :back="false" opacity>
 			<view class="flex-center flex-sub" v-if="sys_scrollTop > sys_navBar">
 				我的
@@ -24,7 +24,6 @@
 				<ui-menu-item arrow title="设置" icon="uicon-set" @click.native="_to('/pages/my/set')"></ui-menu-item>
 			</ui-menu>
 		</view>
-		<ui-tabbar cur="4"></ui-tabbar>
 	</ui-sys>
 </template>
 
