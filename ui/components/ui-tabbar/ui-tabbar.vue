@@ -3,12 +3,12 @@
 		<view class="ui-tabbar-box">
 			<view class="ui-tabbar">
 				<block class="" v-for="(item, index) in tabbar" :key="index">
-					<view class="tabbar-item" :class="[index == cur ? curText : text, item.type, { cur: index == cur }]" @tap="clickItem(item)">
-						<view class="tabbar-icon" :class="item.center ? `center border shadow-${sys_main}` : ''">
-							<text :class="index == cur ? item.curIcon : item.icon" v-if="item.icon.indexOf(icon) != -1"></text>
-							<image :src="index == cur ? item.curIcon : item.icon" mode="aspectFill" v-else></image>
+					<view class="ui-tabbar-item" :class="[index == cur ? curText : text, item.type, { cur: index == cur }]" @tap="clickItem(item)">
+						<view class="ui-tabbar-icon" :class="item.center ? `center border shadow-${sys_main}` : ''">
+							<image :src="index == cur ? item.curIcon : item.icon" v-if="item.icon.indexOf('/') != -1" class="ui-tabbar-image" mode="aspectFill" ></image>
+							<text :class="index == cur ? item.curIcon : item.icon" v-else></text>
 						</view>
-						<view class="tabbar-text">{{ item.title }}</view>
+						<view class="ui-tabbar-text">{{ item.title }}</view>
 					</view>
 				</block>
 				<slot></slot>
@@ -107,7 +107,7 @@ export default {
 		padding: 10rpx;
 		display: flex;
 
-		.tabbar-item {
+		.ui-tabbar-item {
 			text-align: center;
 			flex: 1;
 			display: flex;
@@ -117,7 +117,7 @@ export default {
 			position: relative;
 			z-index: 10;
 
-			.tabbar-icon {
+			.ui-tabbar-icon {
 				height: 60rpx;
 				width: 60rpx;
 				position: relative;
@@ -127,7 +127,7 @@ export default {
 				font-size: 45rpx;
 
 				// background-color: #f1f1f1;
-				image {
+				.ui-tabbar-image {
 					width: 50rpx;
 					height: 50rpx;
 				}
@@ -151,12 +151,12 @@ export default {
 				position: relative;
 			}
 
-			.tabbar-text {
+			.ui-tabbar-text {
 				font-size: 24rpx;
 				color: var(--ui-TC-2);
 			}
 
-			&.cur .tabbar-text {
+			&.cur .ui-tabbar-text {
 				color: var(--ui-TC-Main);
 			}
 		}

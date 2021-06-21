@@ -9,7 +9,7 @@
 			<view class="ui-icon-list ui-grid ui-cols-4 mt-3">
 				<view class="ui-item" v-for="(item, index) in iconlist" :key="index">
 					<view class="py-4 border radius ui-BG" style="height: 100%;">
-						<view class="text-cut mt-2 icon-xxl p-4 ui-TC"><text :class="[`uicon-${item}`]"></text></view>
+						<view class="text-cut mt-2 icon-xxl p-4 ui-TC"><text :class="[`cicon-${item}`]"></text></view>
 						<view class="text-cut mt-2 text-xs text-grey">{{ item }}</view>
 					</view>
 				</view>
@@ -36,30 +36,46 @@ export default {
 			grid: true,
 			list: [],
 			iconlist: [
-				'add',
-				'move',
-				'close',
-				'check',
-				'back',
-				'forward',
-				'arrow',
-				'loading',
-				'title',
-				'titles',
-				'more',
+				'home',
+				'home-o',
 				'search',
-				'info',
-				'warn',
-				'info-o',
-				'warn-o',
+				'arrow',
+				'checkbox',
+				'checkbox-o',
+				'box',
+				'round',
+				'check',
 				'check-round',
-				'close-round',
 				'check-round-o',
+				'more',
+				'close',
+				'close-round',
 				'close-round-o',
+				'edit',
+				'info',
+				'info-o',
+				'warn',
+				'warn-o',
+				'waiting',
+				'waiting-o',
 				'delete',
 				'delete-o',
-				'edit',
-				'delete-o'
+				'add',
+				'add-round',
+				'add-round-o',
+				'title',
+				'move',
+				'move-round',
+				'move-round-o',
+				'titles',
+				'copy',
+				'copy-o',
+				'loading',
+				'loader',
+				'back',
+				'forward',
+				'drop-down',
+				'drop-up',
 			],
 			tagList: [
 				{
