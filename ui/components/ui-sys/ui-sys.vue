@@ -6,11 +6,13 @@
 				<slot></slot>
 				<app-footer v-if="footer"></app-footer>
 				<ui-tabbar v-if="tabbar"></ui-tabbar>
+				
+				<view class="loading-body bg-blur" :style="[{ zIndex: 1999 }]" v-if="loading">
+					<view class="cicon-loading icon-spin text-sl mb-3"></view>
+					<view>加载中</view>
+				</view>
 			</view>
-			<view class="loading-body bg-blur" :style="[{ zIndex: 1999 }]" v-if="loading">
-				<view class="cicon-loading icon-spin icon-xl mb-3"></view>
-				<view>加载中</view>
-			</view>
+			
 
 			<ui-modal
 				name="sys_dialog"
@@ -43,7 +45,9 @@ var _this = {};
 export default {
 	name: 'uiSys',
 	data() {
-		return {};
+		return {
+			loading:true
+		};
 	},
 	props: {
 		styles: {
@@ -64,10 +68,10 @@ export default {
 			type: String,
 			default: 'bg-blur'
 		},
-		loading: {
-			type: Boolean,
-			default: false
-		},
+		// loading: {
+		// 	type: Boolean,
+		// 	default: false
+		// },
 		title: {
 			type: String,
 			default: ''
@@ -83,15 +87,20 @@ export default {
 	},
 	created() {
 		_this = this;
+		uni.$on('_hideLoading_' + this.$root._uid, e => {
+			this.loading = e;
+		});
 	},
 	computed: {
 		...mapState({
 			dialog: state => state.modal.dialog,
 			toast: state => state.modal.toast
-		})
+		}),
 	},
-	mounted() {
-		this._loading = false;
+	mounted() { 
+	},
+	destroyed() {
+		uni.$off('_hideLoading_' + this.$root._uid);
 	},
 	methods: {
 	}
@@ -135,6 +144,8 @@ export default {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	z-index: 999;
+	// opacity: .98;
 }
 
 // .ui-toast-box {

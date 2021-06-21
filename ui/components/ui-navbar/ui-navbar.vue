@@ -135,8 +135,10 @@ export default {
 		this.slots = this.$scopedSlots;
 		// console.log('cuNavbar mounted', this.status);
 		//设置 statusBarStyle App端必须在渲染后
-
 		this.changeStatus();
+	},
+	destroyed() {
+		uni.$off('_scrollTop_' + this.$root._uid);
 	},
 	watch: {
 		status(val) {
@@ -184,7 +186,7 @@ export default {
 			} 
 		},
 		setStatusStyle(status) { 
-			console.log(this.statusCur,status );
+			// console.log(this.statusCur,status );
 			this.statusCur = status;
 			// #ifdef H5
 			return false
@@ -371,12 +373,4 @@ export default {
 		pointer-events: none;
 	}
 }
-// @media screen and (min-width: 1025px) {
-// 	.ui-navbar-box {
-// 		height: 60px !important;
-// 		.ui-bar {
-// 			height: 60px !important;
-// 		}
-// 	}
-// }
 </style>

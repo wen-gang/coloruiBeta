@@ -68,13 +68,15 @@ const mixin = {
 
 	},
 	onReady() {
-		// #ifdef H5
 		this.$nextTick(function() {
+			// #ifdef H5
+			// 刷新后保持导航栏位置
 			let top = window.pageYOffset || document.body.scrollTop || document.documentElement.scrollTop
 			this.sys_scrollTop = top;
 			uni.$emit('_scrollTop_' + this.$root._uid, top);
+			// #endif
+			uni.$emit('_hideLoading_' + this.$root._uid, false);
 		});
-		// #endif
 	},
 	onHide() {
 		uni.$emit('_onHide_' + this._uid);
@@ -128,7 +130,7 @@ const mixin = {
 				}
 			});
 		},
-		_to(url, type='') {
+		_to(url, type = '') {
 			console.log('_to');
 			switch (type) {
 				case 'switchTab':

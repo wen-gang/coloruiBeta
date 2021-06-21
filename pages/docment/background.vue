@@ -1,5 +1,5 @@
 <template>
-	<ui-sys :loading="loading" doc title="背景">
+	<ui-sys :loading="loading" title="背景">
 		<view class="ui-container">
 			<!-- 简介 -->
 			<ui-title title="简介" depth="2"  isIcon toc></ui-title>
@@ -57,13 +57,10 @@
 				<ui-code>false</ui-code>
 				来关闭渐变背景的编译。
 			</view>
-			<view class="ui-grid ui-cols-12 ui-cols-md-12 ui-cols-lg-12 ui-cols-xl-12 ui-cols-xxl-12 ui-BG radius p-2" v-if="demo">
-				<block v-for="(item, index) in color" :key="$util.getUuid()">
-					<view class="p-2 ui-item" v-for="(itemsub, indexsub) in color" :key="$util.getUuid()" v-if="item.name != itemsub.name && index < 6">
-						<view :class="'bg-' + item.name + '-' + itemsub.name" class="p-4 item radius"></view>
-					</view>
-				</block>
+			<view class="ui-BG radius p-3 my-3" @click="_to('/pages/find/background')">
+				浏览全部背景色
 			</view>
+		
 
 			<view class="paragraph p-3">
 				<ui-title title="特殊的渐变背景色" depth="3" class="ml-3"  isIcon toc></ui-title>
@@ -257,7 +254,7 @@ export default {
 		};
 	},
 	onReady() {
-		this.loading = false;
+		// this.loading = false;
 	},
 	methods: {
 		setColor(color) {
