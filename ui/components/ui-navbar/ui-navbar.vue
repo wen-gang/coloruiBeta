@@ -161,7 +161,13 @@ export default {
 		},
 		changeStatus() {
 			if (this.status == '') {
-				this.setStatusStyle(this.sys_theme == 'light' ? 'dark' : 'light');
+				if(this.sys_theme == 'auto'){
+					// #ifdef MP
+					this.setStatusStyle(uni.getSystemInfoSync().theme)
+					// #endif
+				} else {
+					this.setStatusStyle(this.sys_theme == 'light' ? 'dark' : 'light');
+				}				
 			} else {
 				this.setStatusStyle(this.status);
 			}
@@ -178,9 +184,7 @@ export default {
 			} 
 		},
 		setStatusStyle(status) { 
-			if(this.statusCur==status){
-				return false
-			}
+			console.log(this.statusCur,status );
 			this.statusCur = status;
 			// #ifdef H5
 			return false

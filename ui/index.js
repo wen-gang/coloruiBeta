@@ -16,6 +16,8 @@ var main = uni.getStorageSync("sys_main");
 
 if (!theme) {
 	theme = store.getters.getCustomTheme;
+}
+if (!main) {
 	main = store.getters.getCustomMain;
 }
 uni.setStorageSync('sys_theme', theme);

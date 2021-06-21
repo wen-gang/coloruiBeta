@@ -41,11 +41,11 @@
 
 @each $color, $value in $colors{
 	.main-#{$color} {
-		--ui-BG-Main: $value;
-		--ui-BG-Main-1: mix(rgba(255,255,255,.7),desaturate($value, 20%), 10%);
-		--ui-BG-Main-2: mix(rgba(255,255,255,.6),desaturate($value, 40%), 20%);
-		--ui-BG-Main-3: mix(rgba(119,119,119,.2),desaturate($value, 40%), 40%);
-		--ui-BG-Main-4: mix(rgba(119,119,119,.1),desaturate($value, 40%), 60%);
+		--ui-BG-Main: #{$value};
+		--ui-BG-Main-1: mix(rgba(255,255,255,.7),desaturate(#{$value}, 20%), 10%);
+		--ui-BG-Main-2: mix(rgba(255,255,255,.6),desaturate(#{$value}, 40%), 20%);
+		--ui-BG-Main-3: mix(rgba(119,119,119,.2),desaturate(#{$value}, 40%), 40%);
+		--ui-BG-Main-4: mix(rgba(119,119,119,.1),desaturate(#{$value}, 40%), 60%);
 		
 		@if $color == 'yellow' {
 			--ui-BG-Main-TC: #333333 !important;

@@ -17,7 +17,6 @@ const mixin = {
 	},
 	computed: {
 		...mapState({
-			sys_themeAuto: state => state.sys_themeAuto,
 			sys_theme: state => state.sys_theme,
 			sys_main: state => state.sys_main,
 			sys_info: state => state.sys_info,
