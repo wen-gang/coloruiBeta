@@ -16,7 +16,7 @@
 				<slot name="action"></slot>
 			</view>
 		</view>
-		<view class="ui-menu-item-arrow"><view class="uicon-forward"></view></view>
+		<view class="ui-menu-item-arrow"><view class="cicon-forward"></view></view>
 	</view>
 </template>
 

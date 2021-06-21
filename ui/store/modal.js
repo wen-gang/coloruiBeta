@@ -17,6 +17,7 @@ export default {
 			image:'',
 			duration:1500,
 			mask:false,
+			isLoading:false,
 			success:()=>{},
 		 },
 	},

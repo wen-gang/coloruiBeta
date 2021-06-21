@@ -11,7 +11,7 @@
 			<slot></slot>
 		</view>
 		<view class="copy-btn sm" v-if="tag != 'code'" @tap="copyCode">
-			<text class="uicon-file-copy icon-xl text-c"></text>
+			<text class="cicon-file-copy icon-xl text-c"></text>
 		</view>
 	</view>
 </template>

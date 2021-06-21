@@ -8,7 +8,7 @@
 							<text :class="index == cur ? item.curIcon : item.icon" v-if="item.icon.indexOf(icon) != -1"></text>
 							<image :src="index == cur ? item.curIcon : item.icon" mode="aspectFill" v-else></image>
 						</view>
-						<view class="tabbar-text uicon-">{{ item.title }}</view>
+						<view class="tabbar-text">{{ item.title }}</view>
 					</view>
 				</block>
 				<slot></slot>
@@ -32,7 +32,7 @@ export default {
 		},
 		icon: {
 			type: String,
-			default: 'uicon'
+			default: ''
 		},
 		bg: {
 			type: String,

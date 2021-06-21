@@ -16,7 +16,7 @@
 				</view>
 				<view class="flex-center" @tap="_cancel" v-if="iconCancel&&transparent">
 					<button class="ui-btn bg-none icon xxl borders round border-white">
-						<text class="uicon-close text-white"></text>
+						<text class="cicon-close text-white"></text>
 					</button>
 				</view>
 			</view>

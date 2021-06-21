@@ -13,8 +13,17 @@
 	toast(toast) {
 		store.commit('setToast', toast); 
 	},
-	success(title,duration=1500) {
-		store.commit('setToast', {icon:'uicon-check',title:title,duration:duration}); 
+	success(title='成功',duration=1500) {
+		store.commit('setToast', {icon:'cicon-check',title:title,duration:duration}); 
+	},
+	error(title='错误',duration=1500) {
+		store.commit('setToast', {icon:'cicon-warn',title:title,duration:duration}); 
+	},
+	loading(title='加载中') {
+		store.commit('setToast', {icon:'cicon-loading',title:title,isLoading:true}); 
+	},
+	hideloading() {
+		store.commit('setToast', {title:'',isLoading:false}); 
 	},
 }
 
@@ -23,5 +32,6 @@ Vue.prototype.$Tips = modal.tips
 Vue.prototype.$Toast = modal.toast
 Vue.prototype.$Success = modal.success
 Vue.prototype.$Error = modal.error
-Vue.prototype.$loading = modal.loading
+Vue.prototype.$Loading = modal.loading
+Vue.prototype.$HideLoading = modal.hideloading
 export default modal

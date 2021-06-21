@@ -8,7 +8,7 @@
 				<ui-tabbar v-if="tabbar"></ui-tabbar>
 			</view>
 			<view class="loading-body bg-blur" :style="[{ zIndex: 1999 }]" v-if="loading">
-				<view class="uicon-loading1 icon-spin icon-xl mb-3"></view>
+				<view class="cicon-loading icon-spin icon-xl mb-3"></view>
 				<view>加载中</view>
 			</view>
 
@@ -27,6 +27,7 @@
 				:title="toast.title"
 				:duration="toast.duration"
 				:mask="toast.mask"
+				:isLoading="toast.isLoading"
 				:image="toast.image"
 				:icon="toast.icon"
 				@success="toast.success($event)"

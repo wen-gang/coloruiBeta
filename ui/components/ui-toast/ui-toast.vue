@@ -1,11 +1,11 @@
 <template>
 	<view
 		class="ui-toast-box"
-		:class="[title!='' ? 'show' : 'hide', { 'bg-mask-80': mask || mask == '80' }, { 'bg-mask-20': mask == '20' }, { 'bg-mask-40': mask == '40' }]"
+		:class="[title != '' ? 'show' : 'hide', { 'bg-mask-80': mask || mask == '80' }, { 'bg-mask-20': mask == '20' }, { 'bg-mask-40': mask == '40' }]"
 		:style="{ top: sys_navBar + 'px' }"
 	>
-		<view class="ui-toast bg-mask-80">
-			<view class=""><text :class="icon"></text></view>
+		<view class="ui-toast bg-mask-80" :class="[{ hasIcon: icon != '' }]">
+			<view class="ui-toast-icon" v-if="icon != ''"><text :class="[icon,{'icon-spin':isLoading}]"></text></view>
 			<text>{{ title.length > 255 ? title.substring(0, 255) + '...' : title }}</text>
 		</view>
 	</view>
@@ -35,7 +35,11 @@ export default {
 		mask: {
 			type: [Boolean, String],
 			default: false
-		}
+		},
+		isLoading: {
+			type: [Boolean, String],
+			default: false
+		},
 	},
 	data() {
 		return {
@@ -51,7 +55,7 @@ export default {
 	watch: {
 		title: {
 			handler(val) {
-				if (val) {
+				if (val&&!this.isLoading) {
 					setTimeout(() => {
 						this.hide();
 					}, this.duration);
@@ -62,14 +66,15 @@ export default {
 	},
 	methods: {
 		hide() {
-			this.$store.commit('setToast',{
-			title:'', 
-			icon:'',
-			image:'',
-			duration:1500,
-			mask:false,
-			success:()=>{},
-		 });
+			this.$store.commit('setToast', {
+				title: '',
+				icon: '',
+				image: '',
+				duration: 1500,
+				mask: false,
+				isLoading: false,
+				success: () => {}
+			});
 		}
 	}
 };
@@ -106,36 +111,15 @@ export default {
 		max-width: 90vw;
 		max-height: 20vh;
 		overflow: hidden;
-		.ui-toast-title {
-			padding-top: 20rpx;
-		}
-		.ui-toast-content {
-			padding: 10rpx 50rpx 50rpx;
-			font-size: 32rpx;
-			color: var(--ui-TC-2);
-		}
-		.ui-toast-content:first-child {
-			padding: 50rpx;
-			color: var(--ui-TC);
-		}
-		.ui-toast-option {
-			display: flex;
-			padding: 15rpx 0;
-			justify-content: center;
-			view {
-				flex: 1;
-				padding: 15rpx 0;
-				text-align: center;
-			}
-		}
-		&.bg-none .ui-toast-option {
-			background: transparent;
-			color: #ffffff;
-			.ui-toast-btn {
-				border: 1px solid #ffffff;
-				border-radius: 500px;
-				margin: 0 40rpx;
-				color: #ffffff !important;
+		&.hasIcon {
+			text-align: center;
+			padding: 0.5em 1em 1em;
+			.ui-toast-icon {
+				display: block;
+				width: 170rpx;
+				height: 150rpx;
+				@include flex-center;
+				font-size: 80rpx;
 			}
 		}
 	}
@@ -153,40 +137,6 @@ export default {
 		overflow-x: hidden;
 		overflow-y: auto;
 		pointer-events: auto;
-	}
-	&.show.bg-none {
-		pointer-events: none;
-		.ui-dialog {
-			pointer-events: auto;
-		}
-	}
-
-	&.bottom {
-		margin-bottom: -1000rpx;
-		&::before {
-			vertical-align: bottom;
-		}
-		.ui-dialog {
-			width: 100%;
-			border-radius: 0;
-			padding-bottom: calc(env(safe-area-inset-bottom) / 4 * 3);
-		}
-		&.show {
-			margin-bottom: 0;
-		}
-	}
-	&.top {
-		margin-top: -1000rpx;
-		&::before {
-			vertical-align: top;
-		}
-		.ui-dialog {
-			width: 100%;
-			border-radius: 0;
-		}
-		&.show {
-			margin-top: 0;
-		}
 	}
 }
 </style>

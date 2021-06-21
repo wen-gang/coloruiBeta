@@ -8,7 +8,7 @@
 			<view class="ui-table-header">
 				<view class="ui-table-tr">
 					<view class="ui-table-th" style="width: 120rpx;" v-if="type == 'checked'">
-						<view class="text-xxl text-center" @tap="toggleAllChecked()"><text :class="allChecked ? 'uicon-checkbox' : 'uicon-box'"></text></view>
+						<view class="text-xxl text-center" @tap="toggleAllChecked()"><text :class="allChecked ? 'cicon-checkbox' : 'cicon-box'"></text></view>
 					</view>
 					<view
 						v-for="(item, index) in header"
@@ -20,13 +20,13 @@
 					>
 						<block v-if="!item.isSearch && !item.isFilter">
 							<view class="text-cut"><inline :text="item.title"></inline></view>
-							<text v-if="item.sortable" class="uicon-unfold-more"></text>
+							<text v-if="item.sortable" class="cicon-unfold-more"></text>
 						</block>
 						<block v-if="item.isSearch">
 							<ui-popover :mask="true" :index="10000" :show.sync="hidePopover[item.key]">
 								<view class="flex-center ui-link">
 									<view class="text-cut"><inline :text="item.title"></inline></view>
-									<text class="uicon-search ml-3"></text>
+									<text class="cicon-search ml-3"></text>
 								</view>
 								<block slot="content">
 									<view class="p-3 flex-bar text-left">
@@ -42,13 +42,13 @@
 							<ui-popover :mask="true" :index="10000" :show.sync="hidePopover[item.key]">
 								<view class="flex-center ui-link">
 									<view class="text-cut"><inline :text="item.title"></inline></view>
-									<text class="uicon-filter ml-3"></text>
+									<text class="cicon-filter ml-3"></text>
 								</view>
 								<block slot="content">
 									<view class="ui-list menu sm-border" style="width: 150px;">
 										<view class="ui-item" v-for="(filter, filterIndex) in item.filter" :key="filterIndex" @tap="searchHead(item.key, filter.value)">
 											{{ filter['name'] }}
-											<view class="action"><text class="uicon-forward"></text></view>
+											<view class="action"><text class="cicon-forward"></text></view>
 										</view>
 									</view>
 								</block>
@@ -70,7 +70,7 @@
 				<block v-for="(tr, row) in dataList" :key="row">
 					<view class="ui-table-tr">
 						<view class="ui-table-td" v-if="type == 'checked'" @tap="toggleIndexChecked(row)">
-							<view class="text-xxl text-center"><text :class="tr['_checked'] ? 'uicon-checkbox' : 'uicon-box'"></text></view>
+							<view class="text-xxl text-center"><text :class="tr['_checked'] ? 'cicon-checkbox' : 'cicon-box'"></text></view>
 						</view>
 						<block v-for="(item, index) in header" :key="index">
 							<view
@@ -81,7 +81,7 @@
 							>
 								<block v-if="!item.slot">
 									<block v-if="item.key == subkey && tr.subnav">
-										<text class="mr-2 icon-lg" :class="tr._showChildren ? 'uicon-move-round' : 'uicon-add-round-o'"></text>
+										<text class="mr-2 icon-lg" :class="tr._showChildren ? 'cicon-move-round' : 'cicon-add-round-o'"></text>
 									</block>
 									<text v-if="item.price">{{ tr[item.key] | price}}</text>
 									<text v-else>{{ tr[item.key] }}</text>
@@ -94,7 +94,7 @@
 					<block v-for="(subtr, subrow) in tr.subnav" :key="row + '-' + subrow">
 						<view class="ui-table-tr" v-if="subtr._show">
 							<view class="ui-table-td" v-if="type == 'checked'" @tap="toggleIndexChecked(subrow)">
-								<view class="text-xxl text-center"><text :class="subtr['_checked'] ? 'uicon-checkbox' : 'uicon-box'"></text></view>
+								<view class="text-xxl text-center"><text :class="subtr['_checked'] ? 'cicon-checkbox' : 'cicon-box'"></text></view>
 							</view>
 							<block v-for="(item, index) in header" :key="index">
 								<view
