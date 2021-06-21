@@ -38,6 +38,6 @@
 }
 @each $class, $value in $iconsize {
 	.icon-#{$class} {
-		transform: scale($value);
+		transform: scale(#{$value});
 	}
 }

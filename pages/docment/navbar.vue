@@ -19,7 +19,7 @@
 					</navigator>
 				</ui-title>
 			</view>
-			<view class="text-center" v-if="demo"><image src="https://image.weilanwl.com/web/ozgly.jpg" mode="widthFix" style="width: 100%;"></image></view>
+			<view class="text-center" v-if="demo"><image src="https://oss.color-ui.com/web/ozgly.jpg" mode="widthFix" style="width: 100%;"></image></view>
 			<ui-code tag="pre" lang="html" :content="code1" v-else></ui-code>
 			<!-- 自定义返回文本 -->
 			<view class="paragraph">
@@ -30,7 +30,7 @@
 					</navigator>
 				</ui-title>
 			</view>
-			<view class="text-center" v-if="demo"><image src="https://image.weilanwl.com/web/i4ux8.jpg" mode="widthFix" style="width: 100%;"></image></view>
+			<view class="text-center" v-if="demo"><image src="https://oss.color-ui.com/web/i4ux8.jpg" mode="widthFix" style="width: 100%;"></image></view>
 			<ui-code tag="pre" lang="html" :content="code2" v-else></ui-code>
 
 			<!-- 有阴影 -->
@@ -42,7 +42,7 @@
 					</navigator>
 				</ui-title>
 			</view>
-			<view class="text-center" v-if="demo"><image src="https://image.weilanwl.com/web/7i87w.jpg" mode="widthFix" style="width: 100%;"></image></view>
+			<view class="text-center" v-if="demo"><image src="https://oss.color-ui.com/web/7i87w.jpg" mode="widthFix" style="width: 100%;"></image></view>
 			<ui-code tag="pre" lang="html" :content="code3" v-else></ui-code>
 			<!-- Api -->
 			<block v-if="!demo">

@@ -20,7 +20,7 @@
 			<ui-menu-item arrow title="标签" icon="uicon-tag text-orange">
 				<block slot="action">
 					<view class="ui-tag bg-red img">
-						<image src="https://image.weilanwl.com/avatar/1009.jpg" mode="aspectFill" class="tag-img"></image>
+						<image src="https://oss.color-ui.com/avatar/1009.jpg" mode="aspectFill" class="tag-img"></image>
 						bg-red
 					</view>
 
