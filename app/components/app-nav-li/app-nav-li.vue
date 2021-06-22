@@ -1,11 +1,11 @@
 <template>
 	<view class="doc-card">
 		<navigator :url="`/pages/docment/${data.name}`" class="flex radius doc-card-navigator" :class="['bg-' + colorname + '-gradient']">
-			<view class="flex-sub p-4">
+			<view class="flex-sub p-4 doc-text">
 				<view class="doc-title">{{ data.title }}</view>
 				<view class="text-lg text-Abc text-lighter doc-name">{{ data.name }}</view>
 			</view>
-			<view class="mt-2 mr-1 pt-4 pr-4 pl-2"><text class="icon-xl text-xl" :class="[data.icon]"></text></view>
+			<view class="mt-2 mr-1 pt-4 pr-4 pl-2 doc-text"><text class="icon-xl text-xl" :class="[data.icon]"></text></view>
 			<view class="doc-dot doc-dot1" :class="['bg-' + colorname + '-gradient']"></view>
 			<view class="doc-dot doc-dot2" :class="['bg-' + colorname + '-gradient']"></view>
 			<view class="doc-dot doc-dot3" :class="['bg-' + colorname + '-gradient']"></view>
@@ -20,8 +20,7 @@ export default {
 	data() {
 		return {
 			colorname: '',
-			color: [
-			]
+			color: []
 		};
 	},
 	props: {
@@ -112,6 +111,10 @@ export default {
 			left: 0;
 			top: 0;
 		}
+	}
+	.doc-text{
+		position: relative;
+		z-index: 2;
 	}
 	.doc-dot {
 		position: absolute;

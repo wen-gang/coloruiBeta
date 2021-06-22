@@ -131,7 +131,6 @@ const mixin = {
 			});
 		},
 		_to(url, type = '') {
-			console.log('_to');
 			switch (type) {
 				case 'switchTab':
 					uni.switchTab({

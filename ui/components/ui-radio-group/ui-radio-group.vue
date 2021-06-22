@@ -24,11 +24,30 @@ export default {
 			default: 'ui-BG-Main'
 		}
 	},
+	watch: {
+		value: {
+			handler(value) {
+				this._deepSetValue(this.$children)
+			}
+		}
+	},
 	methods: {
-		_onRadioGroupChange(res) {
-			if (!this.disabled) {
-				this.$emit('input', res);
-				this.$emit('change', res);
+		_onRadioChange(label) {
+			this.$emit('input', label)
+			this.$emit('change', label)
+		},
+		_deepSetValue(array) {
+			if (Array.isArray(array)) {
+				array.forEach((child) => {
+					let childName = child.$options.name
+					if (childName == 'UiRadio') {
+						if (typeof child._setValue == 'function') {
+							child._setValue(this.value)
+						}
+					} else if (child.$children) {
+						this._deepSetValue(child.$children)
+					}
+				})
 			}
 		}
 	}
