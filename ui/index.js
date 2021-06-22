@@ -4,12 +4,11 @@ import modal from '@/ui/js/modal.js'
 import util from '@/ui/js/util.js'
 import mixin from '@/ui/js/mixin.js'
 import app from "@/app/index.js"
-
-// #ifdef H5
 if (uni.getStorageSync("VUE_APP_NAME") != process.env.VUE_APP_NAME) {
 	uni.clearStorage();
 	uni.setStorageSync('VUE_APP_NAME', process.env.VUE_APP_NAME);
 }
+
 /*分析主题*/
 var theme = uni.getStorageSync("sys_theme");
 var main = uni.getStorageSync("sys_main");
@@ -20,8 +19,5 @@ if (!theme) {
 if (!main) {
 	main = store.getters.getCustomMain;
 }
-uni.setStorageSync('sys_theme', theme);
-uni.setStorageSync('sys_main', main);
-document.getElementsByTagName('html')[0].className += `theme-${theme} main-${main}`;
-
-// #endif
+store.commit('setTheme', theme);
+store.commit('setMain', main);

@@ -133,26 +133,26 @@ export default {
 	},
 	mounted() {
 		this.slots = this.$scopedSlots;
-		// console.log('cuNavbar mounted', this.status);
-		//设置 statusBarStyle App端必须在渲染后
+		
+		// //设置 statusBarStyle App端必须在渲染后
 		this.changeStatus();
 	},
 	destroyed() {
 		uni.$off('_scrollTop_' + this.$root._uid);
 	},
 	watch: {
-		status(val) {
-			this.setStatusStyle(val);
-		},
-		sys_theme() {
-			if(this.sys_atPage){
-				this.changeStatus();
-			}
+		status: {
+			handler(val) {
+				if (val!='') {
+					this.$store.commit('setStatusStyle',val);
+				}
+			},
+			immediate: true
 		},
 	},
 	methods: {
-		_onShow() {
-			this.changeStatus();
+		_onShow(){
+			this.changeStatus();	
 		},
 		_navback() {
 			if (this.stopBack) {
@@ -165,78 +165,26 @@ export default {
 			if (this.status == '') {
 				if(this.sys_theme == 'auto'){
 					// #ifdef MP
-					this.setStatusStyle(uni.getSystemInfoSync().theme)
+					this.$store.commit('setStatusStyle',uni.getSystemInfoSync().theme == 'light' ? 'dark' : 'light')
 					// #endif
 				} else {
-					this.setStatusStyle(this.sys_theme == 'light' ? 'dark' : 'light');
+					this.$store.commit('setStatusStyle',this.sys_theme == 'light' ? 'dark' : 'light');
 				}				
 			} else {
-				this.setStatusStyle(this.status);
+				this.$store.commit('setStatusStyle',this.status);
 			}
 		},
 		opacityChangeStatus() {
 			let e = this.sys_scrollTop;
 			this.opacityVal = e > this.sys_navBar ? 1 : e * 0.01;
-			if (e > this.sys_navBar / 2) {
-				if ((this.bg == 'ui-BG' || this.bg == 'bg-blur') && this.status == '') {
-					this.setStatusStyle(this.sys_theme == 'light' ? 'dark' : 'light');
-				} else {
-					this.setStatusStyle(this.status == 'light' ? 'dark' : 'light');
-				}
-			} 
+			// if (e > this.sys_navBar / 2) {
+			// 	if ((this.bg == 'ui-BG' || this.bg == 'bg-blur') && this.status == '') {
+			// 		this.$store.commit('setStatusStyle',this.sys_theme == 'light' ? 'dark' : 'light');
+			// 	} else {
+			// 		this.$store.commit('setStatusStyle',this.status == 'light' ? 'dark' : 'light');
+			// 	}
+			// } 
 		},
-		setStatusStyle(status) { 
-			// console.log(this.statusCur,status );
-			this.statusCur = status;
-			// #ifdef H5
-			return false
-			// #endif 
-			if (status == 'light') {
-				// #ifndef MP-ALIPAY
-				uni.setNavigationBarColor({
-					frontColor: '#ffffff',
-					backgroundColor: '#000000',
-					animation: {
-						duration: 200,
-						timingFunc: 'easeIn'
-					}
-				});
-				// #endif
-
-				// #ifdef APP-PLUS
-				plus.navigator.setStatusBarStyle('light');
-				// #endif
-
-				// #ifdef MP-ALIPAY
-				uni.setNavigationBarColor({
-					frontColor: '#ffffff',
-					backgroundColor: '#000000'
-				});
-				// #endif
-			} else {
-				// #ifndef MP-ALIPAY
-				uni.setNavigationBarColor({
-					frontColor: '#000000',
-					backgroundColor: '#ffffff',
-					animation: {
-						duration: 200,
-						timingFunc: 'easeIn'
-					}
-				});
-				// #endif
-
-				// #ifdef APP-PLUS
-				plus.navigator.setStatusBarStyle('dark');
-				// #endif
-
-				// #ifdef MP-ALIPAY
-				uni.setNavigationBarColor({
-					frontColor: '#000000'
-					backgroundColor: '#ffffff'
-				});
-				// #endif
-			}
-		}
 	}
 };
 </script>

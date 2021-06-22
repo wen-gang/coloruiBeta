@@ -1,9 +1,10 @@
 <template>
-	<ui-sys tabbar>
-		<view class="content">
-			<image class="logo" src="/static/logo.png"></image>
-			<view class="text-area"><text class="title"></text></view> 
-		</view>
+	<ui-sys img="https://oss.color-ui.com/img/4put2.png"  tabbar>
+		<ui-navbar :back="false" opacity>
+			<view class="flex-center flex-sub" v-if="sys_scrollTop > sys_navBar">
+				发现
+			</view>
+		</ui-navbar>
 	</ui-sys>
 </template>
 

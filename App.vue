@@ -12,8 +12,9 @@
 			console.log('App Hide')
 		},
 		onThemeChange: function (res){	
-			if(store.state.sys_themeAuto){
-				store.commit('setTheme', res.theme);
+			console.log('onThemeChange',res);
+			if(store.state.sys_theme == 'auto'){
+				store.commit('setStatusStyle', res.theme == 'light' ? 'dark' : 'light');
 			}
 		}
 	}
