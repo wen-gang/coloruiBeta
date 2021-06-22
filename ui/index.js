@@ -25,15 +25,3 @@ uni.setStorageSync('sys_main', main);
 document.getElementsByTagName('html')[0].className += `theme-${theme} main-${main}`;
 
 // #endif
-uni.getStorage({
-	key: 'userInfo',
-	success: function(res) {
-		store.commit('upUserInfo', res.data);
-	}
-});
-uni.getStorage({
-	key: 'app',
-	success: function(res) {
-		store.commit('initApp', res.data);
-	}
-});

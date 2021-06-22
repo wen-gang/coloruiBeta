@@ -1,5 +1,5 @@
 <template>
-	<ui-fixed bottom @getHeight="tabbarheight" :bg="bg" :placeholder="true" :index="1000" shadow="lg">
+	<ui-fixed bottom @getHeight="tabbarheight" :bg="bg" :placeholder="true" :index="1000" :shadow="shadow">
 		<view class="ui-tabbar-box">
 			<view class="ui-tabbar">
 				<block class="" v-for="(item, index) in tabbar" :key="index">
@@ -40,7 +40,7 @@ export default {
 		},
 		shadow: {
 			type: [Boolean, String],
-			default: false
+			default: 'lg'
 		},
 		curText: {
 			type: String,

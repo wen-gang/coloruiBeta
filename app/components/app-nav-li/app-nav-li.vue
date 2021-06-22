@@ -1,6 +1,6 @@
 <template>
 	<view class="doc-card">
-		<navigator :url="`/pages/docment/${data.name}`" class="flex radius" :class="['bg-' + colorname + '-gradient']">
+		<navigator :url="`/pages/docment/${data.name}`" class="flex radius doc-card-navigator" :class="['bg-' + colorname + '-gradient']">
 			<view class="flex-sub p-4">
 				<view class="doc-title">{{ data.title }}</view>
 				<view class="text-lg text-Abc text-lighter doc-name">{{ data.name }}</view>
@@ -74,12 +74,12 @@ export default {
 <style lang="scss">
 .doc-card {
 	position: relative;
-	navigator {
+	.doc-card-navigator {
 		position: relative;
 		z-index: 2;
 		overflow: hidden;
 	}
-	view {
+	.doc-bg {
 		position: relative;
 		z-index: 2;
 		text-shadow: 2px 3px 5px rgba(0,0,0,.1);

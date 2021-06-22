@@ -1,32 +1,30 @@
 <template>
-	<view>
-		<view class="ui-title" :class="[align, tpl, bg, { line: inLine }, depth > 0 ? 'heading-' + depth : '']">
-			<view class="anchor" :id="title"></view>
-			<view class="action" :class="[hasLine ? 'hasLine' : '', hasDot ? 'hasDot' : '']">
-				<div class="action-icon">
-					<block v-if="isIcon">
-						<view class="ui-TC-Main cicon-titles" v-if="depth < 3"></view>
-						<view class="ui-TC-Main cicon-title" v-if="depth == 3"></view>
-						<view class="ui-TC-Main cicon-title icon-sm" v-if="depth > 3"></view>
-					</block>
-					<slot name="icon"></slot>
-				</div>
-				<view class="action-title" :class="[text]" v-if="title != ''">
-					{{ title }}
-					<slot></slot>
-					<view class="action-line" :class="[line]" v-if="hasLine">
-						<view></view>
-						<view></view>
-					</view>
-					<view class="action-dot" :class="[dot]" v-if="hasDot">
-						<view></view>
-						<view></view>
-					</view>
+	<view class="ui-title" :class="[align, tpl, bg, { line: inLine }, depth > 0 ? 'heading-title heading-' + depth : '']">
+		<view class="anchor" :id="title"></view>
+		<view class="action" :class="[hasLine ? 'hasLine' : '', hasDot ? 'hasDot' : '']">
+			<div class="action-icon">
+				<block v-if="isIcon">
+					<view class="ui-TC-Main cicon-titles" v-if="depth < 3"></view>
+					<view class="ui-TC-Main cicon-title" v-if="depth == 3"></view>
+					<view class="ui-TC-Main cicon-title icon-sm" v-if="depth > 3"></view>
+				</block>
+				<slot name="icon"></slot>
+			</div>
+			<view class="action-title" :class="[text]" v-if="title != ''">
+				{{ title }}
+				<slot></slot>
+				<view class="action-line" :class="[line]" v-if="hasLine">
+					<view></view>
+					<view></view>
 				</view>
-				<view class="action-desc" :class="[desc]" v-if="desc != ''">{{ subTitle }}</view>
+				<view class="action-dot" :class="[dot]" v-if="hasDot">
+					<view></view>
+					<view></view>
+				</view>
 			</view>
-			<view class="more"><slot name="more"></slot></view>
+			<view class="action-desc" :class="[desc]" v-if="desc != ''">{{ subTitle }}</view>
 		</view>
+		<view class="more"><slot name="more"></slot></view>
 	</view>
 </template>
 
@@ -316,7 +314,7 @@ ui-title {
 		}
 	}
 }
-[class*='heading-'].ui-title {
+.ui-title.heading-title {
 	padding: 0;
 }
 .heading-1 {

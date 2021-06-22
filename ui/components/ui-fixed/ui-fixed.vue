@@ -88,12 +88,12 @@ export default {
 			type: [Boolean],
 			default: false
 		},
-		shadow: {
-			type: [Boolean, String],
-			default: false
-		},
 		noFixed: {
 			type: Boolean,
+			default: false
+		},
+		shadow: {
+			type: [Boolean, String],
 			default: false
 		},
 		clickTo: {
