@@ -1,6 +1,6 @@
 <template>
 	<ui-sys img="https://oss.color-ui.com/img/4put2.png" tabbar>
-		<ui-navbar :back="false" opacity>
+		<ui-navbar :back="false" opacity shadow>
 			<view class="flex-bar p-3" v-if="sys_scrollTop > sys_navBar">
 				<image src="https://oss.color-ui.com/img/hapm8.png" mode="aspectFill"
 					style="width: 200rpx;height: 56rpx;"></image>

@@ -94,7 +94,7 @@ export default {
 		},
 		shadow: {
 			type: [Boolean, String],
-			default: false
+			default: ''
 		},
 		clickTo: {
 			type: Boolean,
