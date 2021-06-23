@@ -1,26 +1,12 @@
 <template>
-	<view
-		class="ui-progress"
-		:class="[
-			{ border: border },
-			{ active: active },
-			{ striped: striped },
-			{ radius: radius },
-			{ round: round },
-			{ lg: lg },
-			{ sm: sm },
-			{ shadow: shadow },
-			{ 'shadow-sm': shadow == 'sm' },
-			{ 'shadow-lg': shadow == 'lg' }
-		]"
-	>
-		<block v-if="typeof progress == 'object'">
-			<view class="ui-progress-bar" v-for="(item, index) in progress" :class="bgArray[index]" :style="[{ width: item + '%' }]">
-				<text v-if="item > 5&&!sm">{{ item }}%</text>
+	<view class="ui-progress" :class="[{ 'border': border },{ 'active': active },{ 'striped': striped },{ 'radius': radius },{ 'round': round },{ 'lg': lg },{ 'sm': sm },{ 'shadow': shadow },{ 'shadow-sm': shadow == 'sm' },{ 'shadow-lg': shadow == 'lg' }]">
+		<block v-if="progressArray.length > 0">
+			<view class="ui-progress-bar" v-for="(item, index) in progressArray" :class="bgArray[index]" :style="[{ width: item + '%' }]">
+				<text v-if="item > 5 && !sm">{{ item }}%</text>
 			</view>
 		</block>
 		<view class="ui-progress-bar" :class="bg" :style="[{ width: progress + '%' }]" v-else>
-			<text v-if="progress > 5&&!sm">{{ progress }}%</text>
+			<text v-if="progress > 5 && !sm">{{ progress }}%</text>
 		</view>
 	</view>
 </template>
@@ -35,8 +21,14 @@ export default {
 	},
 	props: {
 		progress: {
-			type: [String, Number, Array],
+			type: [String, Number],
 			default: 0
+		},
+		progressArray: {
+			type: Array,
+			default() {
+				return [];
+			}
 		},
 		bg: {
 			type: [String, Array],
@@ -106,7 +98,7 @@ export default {
 	}
 	&.sm {
 		font-size: 24rpx;
-		height: .7em;
+		height: 0.7em;
 		margin: 0.5em 0;
 	}
 	.ui-progress-bar {
@@ -121,11 +113,11 @@ export default {
 		transition: width 0.6s ease;
 		position: relative;
 		z-index: 1;
-		&:first-child{
+		&:first-child {
 			border-top-left-radius: inherit;
 			border-bottom-left-radius: inherit;
 		}
-		&:last-child{
+		&:last-child {
 			border-top-right-radius: inherit;
 			border-bottom-right-radius: inherit;
 		}

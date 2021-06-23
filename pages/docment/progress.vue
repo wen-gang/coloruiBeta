@@ -27,10 +27,10 @@
 			<ui-progress striped active progress="40.8"></ui-progress> 
 			<ui-title title="进度条组合" depth="2" isIcon></ui-title>    
 			
-			<ui-progress :progress="[40.8,20,8]" :bgArray="['bg-red','bg-green','bg-blue']" striped active round></ui-progress> 
+			<ui-progress :progressArray="[40.8,20,8]" :bgArray="['bg-red','bg-green','bg-blue']" striped active round></ui-progress> 
 			<ui-title title="进度条布局" depth="2" isIcon></ui-title>    
 			
-			<ui-progress border :progress="[40.8,20,8]" :bgArray="['bg-red','bg-green','bg-blue']" striped active round></ui-progress> 
+			<ui-progress border :progressArray="[40.8,20,8]" :bgArray="['bg-red','bg-green','bg-blue']" striped active round></ui-progress> 
 		</view>
 	</ui-sys>
 </template>
