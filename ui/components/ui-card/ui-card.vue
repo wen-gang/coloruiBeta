@@ -3,7 +3,7 @@
 		class="ui-card"
 		:class="[{ margin: margin }, { border: border }, { radius: margin }, { shadow: shadow }, { 'shadow-sm': shadow == 'sm' }, { 'shadow-lg': shadow == 'lg' }]"
 	>
-		<view class="ui-card-main" :style="[{ height: imgHeight }, { paddingTop: imgHeight ? 0 : '50%' }]">
+		<view class="ui-card-main" v-if="img" :style="[{ height: imgHeight }, { paddingTop: imgHeight ? 0 : '50%' }]">
 			<image :src="img" class="ui-card-image" mode="aspectFill"></image>
 			<view class="text-cut text-lg text-bold ui-card-fixedTitle bg-mask-bottom" v-if="title && fixedTitle">
 				<view class="">
@@ -135,6 +135,9 @@ export default {
 	}
 	.ui-card-other {
 		padding: 0.5em 1em;
+	}
+	.ui-card-other:first-child {
+		padding: 0;
 	}
 	&.margin {
 		margin: 2em 1em;

@@ -1,7 +1,9 @@
 <template>
 	<ui-sys title="入门指南">
-		<ui-card>
-			<ui-card-item img="" title=""></ui-card-item>
+		<ui-card shadow  :title="item.title" :desc="item.desc" fixedTitle  v-for="(item, index) in list" :key="index">
+			<view class="p-4 ">
+				目录结构
+			</view>
 		</ui-card>
 	</ui-sys>
 </template>
@@ -10,7 +12,9 @@
 	export default {
 		data() {
 			return {
-				
+				list:[{
+					img:"https://oss.color-ui.com/img/qtrr8.png"
+				}]
 			}
 		},
 		methods: {
