@@ -1,6 +1,6 @@
 <template>
 	<view class="doc-card">
-		<navigator :url="`/pages/docment/${data.name}`" class="flex radius doc-card-navigator" :class="['bg-' + colorname + '-gradient']">
+		<navigator :url="`/pages/document/${data.name}`" class="flex radius doc-card-navigator" :class="['bg-' + colorname + '-gradient']">
 			<view class="flex-sub p-4 doc-text">
 				<view class="doc-title">{{ data.title }}</view>
 				<view class="text-lg text-Abc text-lighter doc-name">{{ data.name }}</view>

@@ -9,6 +9,9 @@
 				组件来控制页面的表现，内嵌Colorui的交互反馈(模态框，轻提示等)，主题样式，页面加载等，是每个页面必须有的组件。
 			</view>
 			<ui-code tag="pre" lang="html" :content="code1" title></ui-code>
+			<ui-menu radius>
+				<ui-menu-item icon="uicon-equalizer" title="参数" @click.native="_to('/pages/parameter/parameter?component=ui-sys')"></ui-menu-item>
+			</ui-menu>
 			<ui-title title="参数" depth="2" isIcon toc></ui-title>
 			<view class="ui-table table-border table-full ui-BG">
 				<view class="ui-table-header">
@@ -32,7 +35,7 @@
 						<view class="ui-table-td">'ui-BG-1'</view>
 						<view class="ui-table-td">
 							背景颜色
-							<navigator class="ui-TC-Main" url="/pages/docment/rules">《使用规则》</navigator>
+							<navigator class="ui-TC-Main" url="/pages/document/rules">《使用规则》</navigator>
 						</view>
 					</view>
 					<view class="ui-table-tr">
@@ -78,18 +81,18 @@
 				默认背景是
 				<ui-code>theme.scss</ui-code>
 				里定义的页面背景色，关于主题的使用，请参考
-				<navigator class="ui-TC-Main inline px-2" url="/pages/docment/theme">
+				<navigator class="ui-TC-Main inline px-2" url="/pages/document/theme">
 					Colorui主题
 					<text class="uicon-arrow"></text>
 				</navigator>
 				。你也可以使用
-				<navigator class="ui-TC-Main inline" url="/pages/docment/rules">《使用规则》</navigator>
+				<navigator class="ui-TC-Main inline" url="/pages/document/rules">《使用规则》</navigator>
 				里的背景颜色来配置页面颜色。
 
 				<ui-code tag="pre" lang="html" title :content="code2"></ui-code>
 				<view class="mt-5">
 					你也可以使用背景图片来填充你的页面：
-					<navigator class="ui-TC-Main inline px-2" url="/pages/docment/demo?cur=1">
+					<navigator class="ui-TC-Main inline px-2" url="/pages/document/demo?cur=1">
 						演示
 						<text class="uicon-arrow"></text>
 					</navigator>
@@ -97,7 +100,7 @@
 				<ui-code tag="pre" lang="html" title :content="code3"></ui-code>
 				<view class="mt-5">
 					或者根据图片宽度来加载背景：
-					<navigator class="ui-TC-Main inline px-2" url="/pages/docment/demo?cur=1">
+					<navigator class="ui-TC-Main inline px-2" url="/pages/document/demo?cur=1">
 						演示
 						<text class="uicon-arrow"></text>
 					</navigator>

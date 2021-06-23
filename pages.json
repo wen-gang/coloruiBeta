@@ -12,7 +12,7 @@
 			}
 		},
 		{
-			"path": "pages/docment/home",
+			"path": "pages/document/home",
 			"style": {}
 		}, {
 			"path": "pages/template/home",
@@ -27,124 +27,124 @@
 			"path": "pages/my/home",
 			"style": {}
 		}, {
-			"path": "pages/docment/swiper",
+			"path": "pages/document/swiper",
 			"style": {}
 		}, {
-			"path": "pages/docment/tag",
+			"path": "pages/document/tag",
 			"style": {}
 		}, {
-			"path": "pages/docment/avatar",
+			"path": "pages/document/avatar",
 			"style": {}
 		}, {
-			"path": "pages/docment/fixed",
+			"path": "pages/document/fixed",
 			"style": {}
 		}, {
-			"path": "pages/docment/shadow",
+			"path": "pages/document/shadow",
 			"style": {}
 		}, {
-			"path": "pages/docment/border",
+			"path": "pages/document/border",
 			"style": {}
 		}, {
-			"path": "pages/docment/text",
+			"path": "pages/document/text",
 			"style": {}
 		}, {
-			"path": "pages/docment/system",
+			"path": "pages/document/system",
 			"style": {}
 		}, {
-			"path": "pages/docment/code",
+			"path": "pages/document/code",
 			"style": {}
 		}, {
-			"path": "pages/docment/button",
+			"path": "pages/document/button",
 			"style": {}
 		}, {
-			"path": "pages/docment/theme",
+			"path": "pages/document/theme",
 			"style": {}
 		}, {
-			"path": "pages/docment/radio",
+			"path": "pages/document/radio",
 			"style": {}
 		}, {
 			"path": "pages/search/search",
 			"style": {}
 		}, {
-			"path": "pages/docment/switch",
+			"path": "pages/document/switch",
 			"style": {}
 		}, {
-			"path": "pages/docment/modal",
+			"path": "pages/document/modal",
 			"style": {}
 		}, {
-			"path": "pages/docment/menu",
+			"path": "pages/document/menu",
 			"style": {}
 		}, {
-			"path": "pages/docment/toast",
+			"path": "pages/document/toast",
 			"style": {}
 		}, {
 			"path": "pages/my/set",
 			"style": {}
 		}, {
-			"path": "pages/docment/navbar",
+			"path": "pages/document/navbar",
 			"style": {}
 		}, {
-			"path": "pages/docment/background",
+			"path": "pages/document/background",
 			"style": {}
 		}, {
-			"path": "pages/docment/icon",
+			"path": "pages/document/icon",
 			"style": {}
 		}, {
-			"path": "pages/docment/title",
+			"path": "pages/document/title",
 			"style": {}
 		}, {
-			"path": "pages/docment/image",
+			"path": "pages/document/image",
 			"style": {}
 		}, {
-			"path": "pages/docment/progress",
+			"path": "pages/document/progress",
 			"style": {}
 		}, {
-			"path": "pages/docment/loading",
+			"path": "pages/document/loading",
 			"style": {}
 		}, {
-			"path": "pages/docment/flex",
+			"path": "pages/document/flex",
 			"style": {}
 		}, {
-			"path": "pages/docment/card",
+			"path": "pages/document/card",
 			"style": {}
 		}, {
-			"path": "pages/docment/list",
+			"path": "pages/document/list",
 			"style": {}
 		}, {
-			"path": "pages/docment/grid",
+			"path": "pages/document/grid",
 			"style": {}
 		}, {
-			"path": "pages/docment/timeline",
+			"path": "pages/document/timeline",
 			"style": {}
 		}, {
-			"path": "pages/docment/table",
+			"path": "pages/document/table",
 			"style": {}
 		}, {
-			"path": "pages/docment/popover",
+			"path": "pages/document/popover",
 			"style": {}
 		}, {
-			"path": "pages/docment/drawer",
+			"path": "pages/document/drawer",
 			"style": {}
 		}, {
-			"path": "pages/docment/collapse",
+			"path": "pages/document/collapse",
 			"style": {}
 		}, {
-			"path": "pages/docment/tab",
+			"path": "pages/document/tab",
 			"style": {}
 		}, {
-			"path": "pages/docment/steps",
+			"path": "pages/document/steps",
 			"style": {}
 		}, {
-			"path": "pages/docment/refresh",
+			"path": "pages/document/refresh",
 			"style": {}
 		}, {
-			"path": "pages/docment/input",
+			"path": "pages/document/input",
 			"style": {}
 		}, {
-			"path": "pages/docment/checkbox",
+			"path": "pages/document/checkbox",
 			"style": {}
 		}, {
-			"path": "pages/docment/picker",
+			"path": "pages/document/picker",
 			"style": {}
 		}, {
 			"path": "pages/demo/background",
@@ -162,7 +162,13 @@
 			"path": "pages/article/guide/guide",
 			"style": {}
 		}
-	],
+	    ,{
+            "path" : "pages/parameter/parameter",
+            "style" :                                                                                    
+            {}
+            
+        }
+    ],
 	"easycom": {
 		"ui-(.*)": "@/ui/components/ui-$1/ui-$1.vue",
 		"app-(.*)": "@/app/components/app-$1/app-$1.vue"
@@ -194,9 +200,9 @@
 		"borderStyle": "black",
 		"backgroundColor": "#ffffff",
 		"list": [{
-			"pagePath": "pages/docment/home",
-			"iconPath": "static/tab_icon/docment.png",
-			"selectedIconPath": "static/tab_icon/docment_cur.png",
+			"pagePath": "pages/document/home",
+			"iconPath": "static/tab_icon/document.png",
+			"selectedIconPath": "static/tab_icon/document_cur.png",
 			"text": "文档"
 		}, {
 			"pagePath": "pages/template/home",

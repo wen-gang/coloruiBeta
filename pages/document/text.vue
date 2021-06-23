@@ -20,7 +20,7 @@
 			</view>
 			<view class="blockquote text-sm">
 				跨大屏端建议使用px为单位,移动端建议使用rpx为单位,关于怎样配置项目的单位，请参考
-				<navigator class="ui-TC-Main px-2" url="/pages/docment/navbar/demo?id=2">
+				<navigator class="ui-TC-Main px-2" url="/pages/document/navbar/demo?id=2">
 					rpx与px的转换
 					<text class="cui-arrow ml-2"></text>
 				</navigator>

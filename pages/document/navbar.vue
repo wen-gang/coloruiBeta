@@ -13,7 +13,7 @@
 				配置首页)
 				<!-- 仅图标 -->
 				<ui-title title="仅图标" depth="3" isIcon toc>
-					<navigator class="text-main-a px-2" url="/pages/docment/navbar/demo?id=1" slot="more">
+					<navigator class="text-main-a px-2" url="/pages/document/navbar/demo?id=1" slot="more">
 						演示
 						<text class="uicon-arrow ml-2"></text>
 					</navigator>
@@ -24,7 +24,7 @@
 			<!-- 自定义返回文本 -->
 			<view class="paragraph">
 				<ui-title title="自定义返回文本" depth="3" isIcon toc>
-					<navigator class="text-main-a px-2" url="/pages/docment/navbar/demo?id=2" slot="more">
+					<navigator class="text-main-a px-2" url="/pages/document/navbar/demo?id=2" slot="more">
 						演示
 						<text class="uicon-arrow ml-2"></text>
 					</navigator>
@@ -36,7 +36,7 @@
 			<!-- 有阴影 -->
 			<view class="paragraph">
 				<ui-title title="有阴影" depth="2" isIcon toc>
-					<navigator class="text-main-a px-2" url="/pages/docment/navbar/demo?id=3" slot="more">
+					<navigator class="text-main-a px-2" url="/pages/document/navbar/demo?id=3" slot="more">
 						演示
 						<text class="uicon-arrow ml-2"></text>
 					</navigator>
@@ -124,7 +124,7 @@
 							<view class="ui-table-td">'box-bg'</view>
 							<view class="ui-table-td">
 								背景颜色
-								<navigator class="text-main-a inline" url="/pages/docment/rules/rules">《使用规则》</navigator>
+								<navigator class="text-main-a inline" url="/pages/document/rules/rules">《使用规则》</navigator>
 							</view>
 						</view>
 						<view class="ui-table-tr">

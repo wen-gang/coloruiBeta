@@ -1,7 +1,7 @@
 <template>
 	<ui-sys title="入门指南">
-		<ui-card shadow  :title="item.title" :desc="item.desc" fixedTitle  v-for="(item, index) in list" :key="index">
-			<view class="p-4 ">
+		<ui-card shadow :title="item.title" :desc="item.desc" fixedTitle  v-for="(item, index) in list" :key="index">
+			<view class="p-4">
 				目录结构
 			</view>
 		</ui-card>

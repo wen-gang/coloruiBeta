@@ -81,4 +81,10 @@
 		width: 1.2em;
 		height: 1.2em;
 	}
+	&:first-child{
+		margin-left: 0;
+	}
+	&:last-child{
+		margin-right: 0;
+	}
 }

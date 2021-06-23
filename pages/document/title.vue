@@ -89,7 +89,7 @@
 							<view class="ui-table-td">'bg-none'</view>
 							<view class="ui-table-td">
 								背景颜色
-								<navigator class="text-main-a inline" url="/pages/docment/rules/rules">《使用规则》</navigator>
+								<navigator class="text-main-a inline" url="/pages/document/rules/rules">《使用规则》</navigator>
 							</view>
 						</view>
 					</view>

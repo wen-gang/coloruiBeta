@@ -85,7 +85,7 @@
 						<view class="ui-table-td">'ui-BG-1'</view>
 						<view class="ui-table-td">
 							背景颜色
-							<navigator class="ui-TC-Main inline" url="/pages/docment/rules/rules">《使用规则》</navigator>
+							<navigator class="ui-TC-Main inline" url="/pages/document/rules/rules">《使用规则》</navigator>
 						</view>
 					</view>
 					<view class="ui-table-tr">
@@ -94,7 +94,7 @@
 						<view class="ui-table-td">'main-a'</view>
 						<view class="ui-table-td">
 							文本颜色
-							<navigator class="ui-TC-Main inline" url="/pages/docment/rules/rules">《使用规则》</navigator>
+							<navigator class="ui-TC-Main inline" url="/pages/document/rules/rules">《使用规则》</navigator>
 						</view>
 					</view>
 					<view class="ui-table-tr">

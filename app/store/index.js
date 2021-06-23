@@ -4,12 +4,12 @@ export default {
 		themeAuto: false, // 跟随系统
 		theme: 'light', // 设置默认主题
 		main: 'blue', // 设置默认强调色
-		homePath: '/pages/docment/home', // 设置首页路径(一些组件会用到跳回主页，请每个项目设置好！)
+		homePath: '/pages/document/home', // 设置首页路径(一些组件会用到跳回主页，请每个项目设置好！)
 		tabbar: [{
 				title: '文档',
-				icon: '/static/tab_icon/docment.png',
-				curIcon: '/static/tab_icon/docment_cur.png',
-				url: '/pages/docment/home',
+				icon: '/static/tab_icon/document.png',
+				curIcon: '/static/tab_icon/document_cur.png',
+				url: '/pages/document/home',
 				type: 'tab'
 			},
 			{
