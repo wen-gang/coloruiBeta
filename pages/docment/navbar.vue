@@ -1,5 +1,5 @@
 <template>
-	<ui-sys :loading="loading" title="导航栏" doc>
+	<ui-sys title="导航栏" doc>
 		<view class="ui-container">
 			<ui-title title="简介" depth="2" isIcon toc></ui-title>
 			<view class="paragraph">自定义顶部导航栏,适用于所有页面,小程序有返回胶囊样式可以使用。</view>

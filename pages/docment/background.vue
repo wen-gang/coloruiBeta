@@ -1,8 +1,8 @@
 <template>
-	<ui-sys :loading="loading" title="背景">
+	<ui-sys title="背景">
 		<view class="ui-container">
 			<!-- 简介 -->
-			<ui-title title="简介" depth="2"  isIcon toc></ui-title>
+			<ui-title title="简介" depth="2" isIcon></ui-title>
 			<view class="paragraph">
 				容器的背景表现,class控制。一些组件包含了通用属性
 				<ui-code>bg</ui-code>
@@ -10,7 +10,7 @@
 			</view>
 
 			<!-- 基础背景色 -->
-			<ui-title title="基础背景色" depth="2"  isIcon toc></ui-title>
+			<ui-title title="基础背景色" depth="2" isIcon></ui-title>
 			<view class="paragraph">
 				<ui-code>.bg-{color}</ui-code>
 				基础的背景颜色。
@@ -28,7 +28,7 @@
 			</view>
 
 			<!-- 淡色背景 -->
-			<ui-title title="淡色背景" depth="2"  isIcon toc></ui-title>
+			<ui-title title="淡色背景" depth="2" isIcon></ui-title>
 			<view class="paragraph">
 				<ui-code>.bg-{color}-thin</ui-code>
 				更浅的颜色。为适应暗色主题,注意有透明度！
@@ -45,9 +45,9 @@
 			</view>
 
 			<!-- 渐变背景色 -->
-			<ui-title title="渐变背景色" depth="2"  isIcon toc></ui-title>
+			<ui-title title="渐变背景色" depth="2" isIcon></ui-title>
 			<view class="paragraph">
-				<ui-title title="过渡渐变色" depth="3" class="ml-3"  isIcon toc></ui-title>
+				<ui-title title="过渡渐变色" depth="3" class="ml-3" isIcon></ui-title>
 				<ui-code>.bg-{color}-{color}</ui-code>
 				支持所有基础色到基础色的渐变,组合较多,你可以在
 				<ui-code>@/colorui/scss/_var.scss</ui-code>
@@ -57,13 +57,13 @@
 				<ui-code>false</ui-code>
 				来关闭渐变背景的编译。
 			</view>
-			<view class="ui-BG radius p-3 my-3" @click="_to('/pages/find/background')">
-				浏览全部背景色
+			<view class="ui-BG radius p-4 my-3 flex-bar" @click="_to('/pages/find/background')">
+				浏览全部背景色 <text class="cicon-forward"></text>
 			</view>
 		
 
 			<view class="paragraph p-3">
-				<ui-title title="特殊的渐变背景色" depth="3" class="ml-3"  isIcon toc></ui-title>
+				<ui-title title="特殊的渐变背景色" depth="3" class="ml-3" isIcon></ui-title>
 				<ui-code>.bg-{color}-gradient</ui-code>
 				精心调整的色值，更加自然的过渡色。
 			</view>
@@ -78,7 +78,7 @@
 				</view>
 			</view>
 			<view class="paragraph p-3">
-				<ui-title title="高亮色" depth="3" class="ml-3"  isIcon toc></ui-title>
+				<ui-title title="高亮色" depth="3" class="ml-3" isIcon></ui-title>
 				<ui-code>.bg-{color}-light</ui-code>
 				带有一定色彩的高亮背景。在深浅主题下保持一致。
 			</view>
@@ -94,9 +94,9 @@
 			</view>
 
 			<!-- 灰度背景色 -->
-			<ui-title title="灰度背景色" depth="2"  isIcon toc></ui-title>
+			<ui-title title="灰度背景色" depth="2" isIcon></ui-title>
 			<view class="paragraph">
-				<ui-title title="浅色灰度值" depth="3" class="ml-3"  isIcon toc></ui-title>
+				<ui-title title="浅色灰度值" depth="3" class="ml-3" isIcon></ui-title>
 				<ui-code>.bg-{gray}</ui-code>
 				<ui-code>#aaaaaa</ui-code>
 				~
@@ -110,7 +110,7 @@
 			</view>
 
 			<view class="paragraph mt-3">
-				<ui-title title="深色灰度值" depth="3" class="ml-3"  isIcon toc></ui-title>
+				<ui-title title="深色灰度值" depth="3" class="ml-3" isIcon></ui-title>
 				<ui-code>.bg-{dark}</ui-code>
 				<ui-code>#999999</ui-code>
 				~
@@ -124,9 +124,9 @@
 			</view>
 
 			<!-- 主题背景色 -->
-			<ui-title title="主题背景色" depth="2"  isIcon toc></ui-title>
+			<ui-title title="主题背景色" depth="2" isIcon></ui-title>
 			<view class="paragraph">
-				<ui-title title="主题主色背景" depth="3" class="ml-3"  isIcon toc></ui-title>
+				<ui-title title="主题主色背景" depth="3" class="ml-3" isIcon></ui-title>
 				<ui-code>.ui-BG-Main-{No}</ui-code>
 			</view>
 			<view class="ui-grid ui-cols-1 ui-cols-sm-2 ui-cols-md-4 ui-BG radius p-2" v-if="demo">
@@ -135,7 +135,7 @@
 				</view>
 			</view>
 			<view class="paragraph">
-				<ui-title title="主题层级背景" depth="3" class="ml-3"  isIcon toc></ui-title>
+				<ui-title title="主题层级背景" depth="3" class="ml-3" isIcon></ui-title>
 				<ui-code>.{level}-bg</ui-code>
 				<ui-code>.{level}-bg-sub</ui-code>
 			</view>
@@ -149,7 +149,7 @@
 			</view>
 
 			<!-- 背景遮罩 -->
-			<ui-title title="背景遮罩" depth="2"  isIcon toc></ui-title>
+			<ui-title title="背景遮罩" depth="2" isIcon></ui-title>
 			<view class="paragraph">
 				<ui-code>.bg-mask-{opacity}</ui-code>
 				占用after伪元素的遮罩层
@@ -173,7 +173,7 @@
 				</view>
 			</view>
 			<!-- 背景图片 -->
-			<ui-title title="背景图片" depth="2"  isIcon toc></ui-title>
+			<ui-title title="背景图片" depth="2" isIcon></ui-title>
 			<view class="paragraph">
 				<ui-code>.bg-img</ui-code>
 				自适应背景图片
@@ -185,7 +185,7 @@
 				</view>
 			</view>
 			<!-- 模糊背景 -->
-			<ui-title title="模糊背景" depth="2"  isIcon toc></ui-title>
+			<ui-title title="模糊背景" depth="2" isIcon></ui-title>
 			<view class="paragraph">
 				<ui-code>.bg-blur</ui-code>
 				高斯模糊背景。

@@ -4,7 +4,7 @@
 	position: relative;
 	z-index: 1;
 	color: var(--ui-TC);
-	rich-text {
+	.ui-rich-text {
 		display: inline-block;
 	}
 
@@ -19,23 +19,28 @@
 
 	&.pre {
 		display: block;
-		// padding: 10rpx;
-		margin: 20rpx 0;
+		margin: 3.2em 0 1em;
 		line-height: 1.6;
 		// border-radius: $radius-sm;
-		.rich-text {
+		.ui-code-title{
+			position: absolute;
+			top: -2.2em;
+			color: var(--ui-TC-2);
+			left: 0;
+		}
+		.ui-rich-text {
 			padding: 40rpx;
 			white-space: pre-wrap;
 			word-break: break-all;
 			word-wrap: break-word;
 		}
-		.scroll-view {
-			&.scroll {
+		.ui-scroll-view {
+			&.ui-scroll {
 				max-height: 500px;
 				white-space: pre;
 			}
 		}
-		.copy-btn {
+		.ui-copy-btn {
 			position: absolute;
 			z-index: 2;
 			top: 0;

@@ -42,9 +42,8 @@
 			</view>
 
 			<ui-title title="主题切换组件" depth="2" isIcon></ui-title>
-			<view class="paragraph">引用组件来切换系统的主题以及强调色</view>
-			<view class="mt-3 text-d">示例代码：</view>
-			<ui-code tag="pre" lang="html" :content="code1"></ui-code>
+			<view class="paragraph">引用组件来切换系统的主题以及强调色</view> 
+			<ui-code tag="pre" lang="html" title :content="code1"></ui-code>
 			<view class="my-4 text-d">演示：</view>
 			<ui-change-theme radius border/>
 		</view>

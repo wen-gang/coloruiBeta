@@ -1,5 +1,5 @@
 <template>
-	<ui-sys :loading="loading" doc title="系统">
+	<ui-sys doc title="系统">
 		<view class="ui-container">
 			<view class="ellipse bg-blue-gradient"></view>
 			<ui-title title="简介" depth="2" isIcon toc></ui-title>
@@ -8,8 +8,7 @@
 				<ui-code content="&lt;ui-sys&gt;&lt;/ui-sys&gt;"></ui-code>
 				组件来控制页面的表现，内嵌Colorui的交互反馈(模态框，轻提示等)，主题样式，页面加载等，是每个页面必须有的组件。
 			</view>
-			<view class="mt-3 text-d">示例代码：</view>
-			<ui-code tag="pre" lang="html" :content="code1"></ui-code>
+			<ui-code tag="pre" lang="html" :content="code1" title></ui-code>
 			<ui-title title="参数" depth="2" isIcon toc></ui-title>
 			<view class="ui-table table-border table-full ui-BG">
 				<view class="ui-table-header">
@@ -87,8 +86,7 @@
 				<navigator class="ui-TC-Main inline" url="/pages/docment/rules">《使用规则》</navigator>
 				里的背景颜色来配置页面颜色。
 
-				<view class="mt-3 text-d">示例代码：</view>
-				<ui-code tag="pre" lang="html" :content="code2"></ui-code>
+				<ui-code tag="pre" lang="html" title :content="code2"></ui-code>
 				<view class="mt-5">
 					你也可以使用背景图片来填充你的页面：
 					<navigator class="ui-TC-Main inline px-2" url="/pages/docment/demo?cur=1">
@@ -96,7 +94,7 @@
 						<text class="uicon-arrow"></text>
 					</navigator>
 				</view>
-				<ui-code tag="pre" lang="html" :content="code3"></ui-code>
+				<ui-code tag="pre" lang="html" title :content="code3"></ui-code>
 				<view class="mt-5">
 					或者根据图片宽度来加载背景：
 					<navigator class="ui-TC-Main inline px-2" url="/pages/docment/demo?cur=1">
@@ -104,7 +102,7 @@
 						<text class="uicon-arrow"></text>
 					</navigator>
 				</view>
-				<ui-code tag="pre" lang="html" :content="code4"></ui-code>
+				<ui-code tag="pre" lang="html" title :content="code4"></ui-code>
 			</view>
 		</view>
 	</ui-sys>

@@ -89,7 +89,7 @@ export default {
 			let parent = this.$parent
 			if (parent) {
 				let parentName = parent.$options.name
-				while (parentName !== 'uiRadioGroup') {
+				while (parentName !== 'UiRadioGroup') {
 					parent = parent.$parent
 					if (parent) {
 						parentName = parent.$options.name

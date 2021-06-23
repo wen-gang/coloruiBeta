@@ -1,0 +1,146 @@
+<template>
+	<view
+		class="ui-card"
+		:class="[{ margin: margin }, { border: border }, { radius: margin }, { shadow: shadow }, { 'shadow-sm': shadow == 'sm' }, { 'shadow-lg': shadow == 'lg' }]"
+	>
+		<view class="ui-card-main" :style="[{ height: imgHeight }, { paddingTop: imgHeight ? 0 : '50%' }]">
+			<image :src="img" class="ui-card-image" mode="aspectFill"></image>
+			<view class="text-cut text-lg text-bold ui-card-fixedTitle bg-mask-bottom" v-if="title && fixedTitle">
+				<view class="">
+					<text v-if="!slots.title">{{ title }}</text>
+					<slot name="title"></slot>
+				</view>
+			</view>
+			<view class="ui-card-tag" v-if="slots.tag">
+				<slot name="tag"></slot>
+			</view>
+		</view>
+		<view class="ui-card-content">
+			<view class="text-cut text-lg text-bold ui-card-title" v-if="title && !fixedTitle">
+				<text v-if="!slots.title">{{ title }}</text>
+				<slot name="title"></slot>
+			</view>
+			<view class="ui-TC-3 mt-2 text-linecut-2 ui-card-desc" v-if="desc">{{ desc }}</view>
+			<view class="ui-card-other"><slot></slot></view>
+		</view>
+	</view>
+</template>
+
+<script>
+export default {
+	name: 'UiCard',
+	data() {
+		return {
+			slots: {}
+		};
+	},
+	props: {
+		img: {
+			type: String
+		},
+		imgHeight: {
+			type: String
+		},
+		title: {
+			type: String
+		},
+		fixedTitle: {
+			type: Boolean,
+			default: false
+		},
+		desc: {
+			type: String
+		},
+		margin: {
+			type: Boolean,
+			default: true
+		},
+		border: {
+			type: Boolean,
+			default: false
+		},
+		shadow: {
+			type: [String, Boolean],
+			default: ''
+		}
+	},
+
+	mounted() {
+		this.slots = this.$scopedSlots;
+	},
+	methods: {
+		_getParent() {
+			let parent = this.$parent;
+			if (parent) {
+				let parentName = parent.$options.name;
+				while (parentName !== 'UiCard') {
+					parent = parent.$parent;
+					if (parent) {
+						parentName = parent.$options.name;
+					} else {
+						return null;
+					}
+				}
+				return parent;
+			}
+			return null;
+		}
+	}
+};
+</script>
+
+<style lang="scss">
+.ui-card {
+	position: relative;
+	background-color: var(--ui-BG);
+	overflow: hidden;
+	margin: 2em 0;
+	.ui-card-title {
+		padding: 0.5em 1em 0;
+	}
+	.ui-card-desc {
+		padding: 0.5em 1em 0;
+		height: 3.7em;
+		line-height: 1.6;
+	}
+	.ui-card-main {
+		width: 100%;
+		position: relative;
+		.ui-card-tag{
+			position: absolute;
+			width: 100%;
+			left: 0;
+			top: 0;
+			z-index: 2;
+		}
+		.ui-card-fixedTitle {
+			padding: 1.5em 1em 1em;
+			position: absolute;
+			width: 100%;
+			left: 0;
+			bottom: 0;
+			z-index: 2;
+			&::before{
+				opacity: .6;
+			}
+		}
+		.ui-card-image {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			z-index: 1;
+		}
+	}
+	.ui-card-other {
+		padding: 0.5em 1em;
+	}
+	&.margin {
+		margin: 2em 1em;
+	}
+	&:first-child {
+		margin-top: 0;
+	}
+}
+</style>

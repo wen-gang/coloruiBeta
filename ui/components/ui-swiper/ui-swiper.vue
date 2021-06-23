@@ -3,7 +3,7 @@
 		<view class="ui-swiper" :class="[mode,bg]">
 			<swiper :circular="circular" :autoplay="true" :interval="interval" duration="500" :style="{height: height}"
 				@change="swiperChange">
-				<swiper-item v-for="(item, index) in info" :key="index" :class="{ cur: cur == index }">
+				<swiper-item v-for="(item, index) in info" :key="index" :class="{ cur: cur == index }" @tap="_to(item.url,item.urlType)">
 					<view class="ui-swiper-main radius">
 						<image :src="item.img" :style="{height: imgHeight}" mode="aspectFill"></image>
 					</view>

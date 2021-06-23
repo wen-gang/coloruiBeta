@@ -1,5 +1,5 @@
 <template>
-	<ui-sys :loading="loading" title="图片">
+	<ui-sys title="图片">
 		<view class="ui-container">
 			<!-- 简介 -->
 			<ui-title title="简介" depth="2" isIcon></ui-title>

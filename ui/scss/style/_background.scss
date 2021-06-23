@@ -106,13 +106,15 @@
 
 [class*='bg-mask'] {
 	position: relative;
+	background: transparent !important;
+	color: #FFFFFF !important;
 	> view,
 	> text {
 		position: relative;
 		z-index: 1;
 		color: #ffffff;
 	}
-	&::after {
+	&::before {
 		content: '';
 		border-radius: inherit;
 		width: 100%;
@@ -121,16 +123,16 @@
 		background-color: rgba(0, 0, 0, 0.4);
 		z-index: 0;
 	}
-	@at-root .bg-mask-80::after {
+	@at-root .bg-mask-80::before {
 		background: rgba(0, 0, 0, 0.8) !important;
 	}
-	@at-root .bg-mask-50::after {
+	@at-root .bg-mask-50::before {
 		background: rgba(0, 0, 0, 0.5) !important;
 	}
-	@at-root .bg-mask-20::after {
+	@at-root .bg-mask-20::before {
 		background: rgba(0, 0, 0, 0.2) !important;
 	}
-	@at-root .bg-mask-top::after {
+	@at-root .bg-mask-top::before {
 		background-color: rgba(0, 0, 0, 0);
 		background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.618), rgba(0, 0, 0, 0.01));
 	}
@@ -138,7 +140,7 @@
 		background-color: rgba(0, 0, 0, 0);
 		background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.3));
 	}
-	@at-root .bg-mask-bottom::after {
+	@at-root .bg-mask-bottom::before {
 		background-color: rgba(0, 0, 0, 0);
 		background-image: linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.618), rgba(0, 0, 0, 1));
 	}
@@ -156,7 +158,7 @@
 		position: relative;
 		z-index: 1;
 	}
-	&::after {
+	&::before {
 		content: '';
 		width: 100%;
 		height: 100%;
@@ -168,15 +170,15 @@
 	}
 }
 @supports (-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px)) {
-	.bg-blur::after {
+	.bg-blur::before {
 		@include blur;
 		background-color: var(--ui-Blur-1);
 	}
-	.bg-blur-1::after {
+	.bg-blur-1::before {
 		@include blur;
 		background-color: var(--ui-Blur-2);
 	}
-	.bg-blur-2::after {
+	.bg-blur-2::before {
 		@include blur;
 		background-color: var(--ui-Blur-3);
 	}
@@ -184,19 +186,19 @@
 @supports not (backdrop-filter: blur(5px)) {
 	.bg-blur {
 		color: var(--ui-TC);
-		&::after {
+		&::before {
 			background-color: var(--ui-BG);
 		}
 	}
 	.bg-blur-1 {
 		color: var(--ui-TC);
-		&::after {
+		&::before {
 			background-color: var(--ui-BG-1);
 		}
 	}
 	.bg-blur-2 {
 		color: var(--ui-TC);
-		&::after {
+		&::before {
 			background-color: var(--ui-BG-2);
 		}
 	}

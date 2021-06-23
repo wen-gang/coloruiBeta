@@ -1,7 +1,9 @@
 /* ==================
          卡片
  ==================== */
-.ui-card {
+
+
+.ui-cards {
 	display: block;
 	overflow: hidden;
 	& .ui-btn.badge {
@@ -276,13 +278,13 @@
 			margin: 20rpx 20rpx 0rpx 20rpx;
 			background-color: var(--box-bg);
 			position: relative;
-			box-shadow: 0 0 10px rgba(0,0,0,.1);
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 			// display: flex;
 			// flex-wrap: wrap;
 			.content {
 				padding: 20rpx;
 				// width: calc(100% - 345rpx);
-				.text-cut{
+				.text-cut {
 					font-size: 16px;
 				}
 			}
@@ -292,19 +294,19 @@
 				border-radius: 6rpx 0 0 6rpx;
 				display: block;
 			}
-			.ui-progress-tag{
+			.ui-progress-tag {
 				width: 4em;
 				text-align: right;
 				font-size: 12px;
 			}
-			.border-top{
+			.border-top {
 				width: 100%;
 			}
-			.ui-tag{
+			.ui-tag {
 				position: absolute;
-				top:0;
+				top: 0;
 				left: 0;
-				border-radius: 6rpx 0 6rpx 0 ;
+				border-radius: 6rpx 0 6rpx 0;
 			}
 		}
 		// & > .ui-item:nth-child(2n) {

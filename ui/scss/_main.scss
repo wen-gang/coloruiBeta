@@ -301,6 +301,34 @@ $utilities: map-merge(
 				null: $radius
 			)
 		),
+		'radius-lr': (
+			property: border-top-left-radius border-bottom-right-radius,
+			class: radius-lr,
+			values: (
+				null: $radius
+			)
+		),
+		'radius-lrs': (
+			property: border-top-right-radius border-bottom-left-radius,
+			class: radius-lr,
+			values: (
+				null: 0
+			)
+		),
+		'radius-rl': (
+			property: border-top-right-radius border-bottom-left-radius,
+			class: radius-rl,
+			values: (
+				null: $radius
+			)
+		),
+		'radius-rls': (
+			property: border-top-left-radius border-bottom-right-radius,
+			class: radius-rl,
+			values: (
+				null: 0
+			)
+		),
 ),
 	$utilities
 );

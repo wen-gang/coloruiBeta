@@ -78,9 +78,6 @@
 			"path": "pages/docment/toast",
 			"style": {}
 		}, {
-			"path": "pages/docment/demo",
-			"style": {}
-		}, {
 			"path": "pages/my/set",
 			"style": {}
 		}, {
@@ -149,14 +146,23 @@
 		}, {
 			"path": "pages/docment/picker",
 			"style": {}
+		}, {
+			"path": "pages/demo/background",
+			"style": {}
+		}, {
+			"path": "pages/demo/avatar",
+			"style": {}
+		}, {
+			"path": "pages/demo/sys",
+			"style": {}
+		}, {
+			"path": "pages/article/article",
+			"style": {}
+		}, {
+			"path": "pages/article/guide/guide",
+			"style": {}
 		}
-	    ,{
-            "path" : "pages/find/background",
-            "style" :                                                                                    
-            {}
-            
-        }
-    ],
+	],
 	"easycom": {
 		"ui-(.*)": "@/ui/components/ui-$1/ui-$1.vue",
 		"app-(.*)": "@/app/components/app-$1/app-$1.vue"

@@ -22,7 +22,7 @@
 		<image src="https://oss.color-ui.com/img/uqlh4.png" mode="widthFix" class="w-100"></image>
 		<view class="ui-container">
 			<ui-title title="热门模板" depth="2" isIcon class="ml-3"></ui-title>
-			<view class="ui-card goods col-goods">
+			<view class="ui-cards goods col-goods">
 				<view class="ui-item" v-for="(item, index) in list" :key="index" @tap="toProductDetail(item.id)">
 					<image :src="item.img" class="image" mode="aspectFill"></image>
 					<view class="content">

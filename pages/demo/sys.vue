@@ -1,5 +1,5 @@
 <template>
-	<ui-sys :loading="loading" :bg="bg" :img="bgimg" title="系统 - 演示">
+	<ui-sys :bg="bg" :img="bgimg" title="系统 - 演示">
 		<!-- <ui-navbar backtext="系统 - 演示" shadow></ui-navbar> -->
 		<view class="p-4">
 			<view class="m-4 radius bg-white" :class="cur == 1 ? 'ui-BG-Main' : ''" @click="cur = 1">

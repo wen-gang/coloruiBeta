@@ -1,5 +1,5 @@
 <template>
-	<ui-sys :loading="loading" title="标题" doc>
+	<ui-sys title="标题" doc>
 		<view class="ui-container">
 			<ui-title title="简介" depth="2" isIcon toc></ui-title>
 			<view class="paragraph">标题组件可以快速构建一个等级标题。包含多种样式。</view>
