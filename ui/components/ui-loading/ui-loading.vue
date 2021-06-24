@@ -54,6 +54,7 @@ export default {
 <style lang="scss">
 .ui-loading-box {
 	display: inline-block;
+	vertical-align: middle;
 	.ui-loading {
 		width: 1em;
 		height: 1em;

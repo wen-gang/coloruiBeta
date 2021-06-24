@@ -11,7 +11,7 @@
 
 		<ui-modal name="customize" dialog="width:auto" :option="false">
 			<view class="p-4">
-				<ui-loading><image src="/static/logo.png" mode="aspectFill"></image></ui-loading>
+				<ui-loading color img="/static/logo.png"> </ui-loading>
 			</view>
 		</ui-modal>
 		<view class="ui-container">
@@ -21,7 +21,7 @@
 
 		<ui-modal name="customize2">
 			<view class="p-5 flex-center">
-				<ui-loading><image src="/static/logo.png" mode="aspectFill"></image></ui-loading>
+				<ui-loading color img="/static/logo.png"> </ui-loading>
 			</view>
 		</ui-modal>
 
@@ -33,7 +33,7 @@
 
 		<ui-modal name="btn1" :showCancel="false">
 			<view class="p-5 flex-center">
-				<ui-loading><image src="/static/logo.png" mode="aspectFill"></image></ui-loading>
+				<ui-loading color img="/static/logo.png"> </ui-loading>
 			</view>
 		</ui-modal>
 		
@@ -45,7 +45,7 @@
 		
 		<ui-modal name="text1" cancelText="再见" confirmText="好的">
 			<view class="p-5 flex-center">
-				<ui-loading><image src="/static/logo.png" mode="aspectFill"></image></ui-loading>
+				<ui-loading color img="/static/logo.png"> </ui-loading>
 			</view>
 		</ui-modal>
 		
@@ -54,7 +54,22 @@
 			<button class="ui-btn" @tap="$Modal.show('transparent1')">modal</button>
 			<button class="ui-btn" @tap="$Modal.show('transparent2')">modal</button>
 		</view>
+		<view class="ui-container">
+			<ui-title depth="2" title="抽屉" isIcon></ui-title>
+			<button class="ui-btn" @tap="$Modal.show('drawer')">drawer</button> 
+			<button class="ui-btn" @tap="$Modal.show('top')">top</button> 
+		</view>
 		
+		<ui-modal name="top" mask="40" align="top">
+			<view class="p-5 flex-center">
+				<image src="/static/logo.png" mode="aspectFill"></image>
+			</view>
+		</ui-modal>
+		<ui-modal name="drawer" mask="40" align="bottom">
+			<view class="p-5 flex-center">
+				<image src="/static/logo.png" mode="aspectFill"></image>
+			</view>
+		</ui-modal>
 		<ui-modal name="transparent1" transparent mask="40" iconCancel>
 			<view class="p-5 flex-center">
 				<image src="/static/logo.png" mode="aspectFill"></image>

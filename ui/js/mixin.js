@@ -68,15 +68,10 @@ const mixin = {
 
 	},
 	onReady() {
-		this.$nextTick(function() {
-			// #ifdef H5
-			// 刷新后保持导航栏位置
-			let top = window.pageYOffset || document.body.scrollTop || document.documentElement.scrollTop
-			this.sys_scrollTop = top;
-			uni.$emit('_scrollTop_' + this.$root._uid, top);
-			// #endif
-			uni.$emit('_hideLoading_' + this.$root._uid, false);
-		});
+		this._h5SetScrollTop();
+	},
+	onShow() {
+		this._h5SetScrollTop();
 	},
 	onHide() {
 		uni.$emit('_onHide_' + this._uid);
@@ -94,6 +89,17 @@ const mixin = {
 		}
 	},
 	methods: {
+		_h5SetScrollTop(){
+			this.$nextTick(function() {
+				// #ifdef H5
+				// 刷新后保持导航栏位置x
+				let top = window.pageYOffset || document.body.scrollTop || document.documentElement.scrollTop
+				this.sys_scrollTop = top;
+				uni.$emit('_scrollTop_' + this.$root._uid, top);
+				// #endif
+				uni.$emit('_hideLoading_' + this.$root._uid, false);
+			});
+		},
 		_onShow() {
 			this.sys_atPage = true;
 			// console.log('component: ' + this._uid + ' onShow in '+ this.$root._uid);

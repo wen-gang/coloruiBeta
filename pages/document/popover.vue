@@ -73,7 +73,7 @@
 				<view class="flex-between p-3 radius bg-blue" @longpress="isShow = true">
 					长按蓝色区域
 					<ui-popover tips="气泡框在这里出现哦" :show.sync="isShow" isChange>
-						<button class="ui-btn" bg="bg-white">目标</button>
+						<button class="ui-btn bg-white">目标</button>
 					</ui-popover>
 				</view>
 			</view>

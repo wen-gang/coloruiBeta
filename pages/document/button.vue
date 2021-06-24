@@ -103,6 +103,8 @@
 			
 			<ui-title depth="2" title="加载" isIcon></ui-title>
 			<view class="p-3"><button class="ui-btn block">按钮 <text class="uicon-loader-fill icon-spin"></text> </button></view>
+			<view class="p-3"><button class="ui-btn block">按钮 <ui-loading color></ui-loading> </button></view>
+			
 			<view class="p-3"><button class="ui-btn xl">按钮 <text class="uicon-loader-fill icon-spin"></text> </button><button class="ui-btn xxl">按钮 <text class="uicon-loader-fill icon-spin"></text> </button></view>
 			
 			<ui-title depth="2" title="填充无样式" isIcon></ui-title>

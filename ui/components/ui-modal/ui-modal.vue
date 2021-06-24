@@ -142,6 +142,7 @@ export default {
 
 <style lang="scss">
 .ui-modal {
+	@include flex-center;
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -202,13 +203,7 @@ export default {
 				color: #FFFFFF !important;
 			}
 		}
-	}
-	&::before {
-		content: '\200B';
-		display: inline-block;
-		height: 100%;
-		vertical-align: middle;
-	}
+	} 
 
 	&.show {
 		opacity: 1;
@@ -226,10 +221,11 @@ export default {
 
 	&.bottom {
 		margin-bottom: -1000rpx;
-		&::before {
+		&::after {
 			vertical-align: bottom;
 		}
 		.ui-dialog {
+			align-self: flex-end;
 			width: 100%;
 			border-radius: 0;
 			padding-bottom: calc(env(safe-area-inset-bottom) / 4 * 3);
@@ -240,10 +236,11 @@ export default {
 	}
 	&.top {
 		margin-top: -1000rpx;
-		&::before {
+		&::after {
 			vertical-align: top;
 		}
 		.ui-dialog {
+			align-self: flex-start;
 			width: 100%;
 			border-radius: 0;
 		}

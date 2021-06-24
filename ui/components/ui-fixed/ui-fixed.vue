@@ -24,7 +24,7 @@
 		<view
 			class="skeleton"
 			:id="'skeleton-' + _uid"
-			:style="[{ height: height != 0 ? height + 'px' : content.height + 'px', width: width + 'px' }]"
+			:style="[{ height: content.height + 'px', width: width + 'px' }]"
 			v-if="sticky ? fixed : placeholder && fixed"
 		></view>
 	</view>
@@ -58,10 +58,6 @@ export default {
 		},
 		val: {
 			type: Number,
-			default: 0
-		},
-		height: {
-			type: [String, Number],
 			default: 0
 		},
 		width: {
@@ -127,6 +123,7 @@ export default {
 	mounted() {
 		this.$nextTick(function() {
 			this.computedQuery();
+			
 		});
 	},
 	destroyed() {
@@ -138,18 +135,10 @@ export default {
 				.in(this)
 				.select('#fixed-' + this._uid)
 				.boundingClientRect(data => {
-					if (data != null) {
-						if (this.height == 0) {
-							// #ifdef H5
-							// 解决H5刷新错位的问题
-							let ele = document.getElementById('fixed-' + this._uid);
-							data.top = ele?ele.offsetTop:0;
-							
-							// #endif
-							this.content = data;
-							this.$emit('getHeight', data.height);
-							this.$emit('update:height', data.height);
-						}
+					if (data != null) {			
+						this.content = data;
+						this.$emit('getHeight', data.height);
+						this.$emit('update:height', data.height);
 						if (this.sticky) {
 							this.setFixed(this.sys_scrollTop);
 						}

@@ -1,5 +1,5 @@
 <template>
-	<ui-sys>
+	<ui-sys :footer="false">
 		<view class="guide-page" style="height: 60vh">
 			<view class="p-5">
 				<ui-loading color img="/static/logo.png"></ui-loading>
@@ -18,7 +18,9 @@
 			_this = this;
 		},
 		onReady() {
-			this._toHome();
+			setTimeout(()=>{
+				this._toHome();
+			},1500)
 		},
 		methods: {}
 	};
