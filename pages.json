@@ -168,6 +168,12 @@
             {}
             
         }
+        ,{
+            "path" : "pages/demo/navbar",
+            "style" :                                                                                    
+            {}
+            
+        }
     ],
 	"easycom": {
 		"ui-(.*)": "@/ui/components/ui-$1/ui-$1.vue",

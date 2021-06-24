@@ -6,13 +6,12 @@
 				<slot></slot>
 				<app-footer v-if="footer"></app-footer>
 				<ui-tabbar v-if="tabbar"></ui-tabbar>
-				
-				<view class="loading-body bg-blur" :style="[{ zIndex: 1999 }]" v-if="loading">
+
+				<view class="loading-body bg-blur" :style="[{ zIndex: 1999 }]" v-if="isloading">
 					<view class="cicon-loading icon-spin text-sl mb-3"></view>
 					<view>加载中</view>
 				</view>
 			</view>
-			
 
 			<ui-modal
 				name="sys_dialog"
@@ -46,7 +45,7 @@ export default {
 	name: 'uiSys',
 	data() {
 		return {
-			loading:true
+			isloading: true
 		};
 	},
 	props: {
@@ -68,10 +67,10 @@ export default {
 			type: String,
 			default: 'bg-blur'
 		},
-		// loading: {
-		// 	type: Boolean,
-		// 	default: false
-		// },
+		loading: {
+			type: [String, Boolean],
+			default: 'auto'
+		},
 		title: {
 			type: String,
 			default: ''
@@ -88,25 +87,38 @@ export default {
 	created() {
 		_this = this;
 		uni.$on('_hideLoading_' + this.$root._uid, e => {
-			this.loading = e;
+			if (this.loading == 'auto') {
+				this.isloading = e;
+			}
 		});
+	},
+	watch:{
+		loading: {
+			handler(val) {
+				if (val==false) {
+					this.isloading = false;
+				}
+			},
+			immediate: true
+		}
 	},
 	computed: {
 		...mapState({
 			dialog: state => state.modal.dialog,
 			toast: state => state.modal.toast
-		}),
+		})
 	},
-	mounted() { 
-		setTimeout(()=>{
-			this.loading = false;
-		},800)
+	mounted() {
+		setTimeout(() => {
+			if (this.loading == 'auto') {
+				this.isloading = false;
+			}
+		}, 800);
 	},
 	destroyed() {
 		uni.$off('_hideLoading_' + this.$root._uid);
 	},
-	methods: {
-	}
+	methods: {}
 };
 </script>
 

@@ -4,8 +4,8 @@ import ui from './ui'
 //挂载云空间口令--start
 const uniClient = uniCloud.init({
 	provider: 'aliyun',
-	spaceId: '5e8b7a75-3f07-4a3b-a5ae-9f376b90166a',
-	clientSecret: 'y1GmB4haXDt7hGlHvuSbNA=='
+	spaceId: 'f2b44127-8c25-4d80-b2dd-cbd9e4eba0ca',
+	clientSecret: 'T3g/MnLf57eLTAJQezFVmA=='
 })
 Vue.prototype.$api = uniClient;
 //挂载云空间口令--end

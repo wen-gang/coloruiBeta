@@ -1,5 +1,5 @@
 <template>
-	<view class="ui-code border radius" :class="[tag, 'language-' + lang, bg]">
+	<view class="ui-code border radius" :class="[tag, 'language-' + lang, bg,{'hasTitle':title}]">
 		<block v-if="rich">
 			<scroll-view :scroll-y="scroll" scroll-x class="ui-scroll-view" :class="scroll ? 'ui-scroll' : ''">
 				<rich-text :nodes="nodes" class="ui-rich-text"></rich-text>

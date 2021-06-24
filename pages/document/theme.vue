@@ -46,6 +46,9 @@
 			<ui-code tag="pre" lang="html" title :content="code1"></ui-code>
 			<view class="my-4 text-d">演示：</view>
 			<ui-change-theme radius border/>
+			<ui-menu radius class="mt-4">
+				<ui-menu-item icon="uicon-equalizer" title="参数" @click.native="_to('/pages/parameter/parameter?component=ui-theme')"></ui-menu-item>
+			</ui-menu>
 		</view>
 	</ui-sys>
 </template>

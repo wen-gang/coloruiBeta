@@ -19,8 +19,11 @@
 
 	&.pre {
 		display: block;
-		margin: 3.2em 0 1em;
+		margin: 1em 0;
 		line-height: 1.6;
+		&.hasTitle {
+			margin: 3.2em 0 1em;
+		}
 		// border-radius: $radius-sm;
 		.ui-code-title {
 			position: absolute;

@@ -58,8 +58,8 @@ export default {
 	},
 	props: {
 		radius: {
-			type: Boolean,
-			default: false
+			type: [String,Boolean],
+			default: ''
 		},
 		border: {
 			type: Boolean,
