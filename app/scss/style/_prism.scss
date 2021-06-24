@@ -68,74 +68,74 @@ pre[class*="language-"] {
 	white-space: normal;
 }
 
-.token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
+.comment,
+.prolog,
+.doctype,
+.cdata {
 	color: slategray;
 }
 
-.token.punctuation {
+.punctuation {
 	color: $grey;
 }
 
-.token.namespace {
+.namespace {
 	opacity: .7;
 }
 
-.token.property,
-.token.tag,
-.token.boolean,
-.token.number,
-.token.constant,
-.token.symbol,
-.token.deleted {
+.property,
+.tag,
+.boolean,
+.number,
+.constant,
+.symbol,
+.deleted {
 	color: $green;
 }
 
-.token.selector,
-.token.attr-name,
-.token.string,
-.token.char,
-.token.builtin,
-.token.inserted {
+.selector,
+.attr-name,
+.string,
+.char,
+.builtin,
+.inserted {
 	color: $blue;
 }
 
-.token.operator,
-.token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string {
+.operator,
+.entity,
+.url,
+.language-css .string,
+.style .string {
 	color: $brown;
 }
 
-.token.atrule,
-.token.attr-value,
-.token.keyword {
+.atrule,
+.attr-value,
+.keyword {
 	color: $cyan;
 }
 
-.token.function,
-.token.class-name {
+.function,
+.class-name {
 	color: $red;
 }
 
-.token.regex,
-.token.important,
-.token.variable {
+.regex,
+.important,
+.variable {
 	color: $orange;
 }
 
-.token.important,
-.token.bold {
+.important,
+.bold {
 	font-weight: bold;
 }
-.token.italic {
+.italic {
 	font-style: italic;
 }
 
-.token.entity {
+.entity {
 	cursor: help;
 }
 

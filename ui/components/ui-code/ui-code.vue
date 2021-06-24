@@ -1,5 +1,5 @@
 <template>
-	<view class="ui-code border radius" :class="[tag, 'language-' + lang,bg]">
+	<view class="ui-code border radius" :class="[tag, 'language-' + lang, bg]">
 		<block v-if="rich">
 			<scroll-view :scroll-y="scroll" scroll-x class="ui-scroll-view" :class="scroll ? 'ui-scroll' : ''">
 				<rich-text :nodes="nodes" class="ui-rich-text"></rich-text>
@@ -10,12 +10,8 @@
 			<text decode="true">{{ nodes }}</text>
 			<slot></slot>
 		</view>
-		<view class="ui-copy-btn sm" v-if="tag != 'code'" @tap="copyCode">
-			<text class="cicon-file-copy icon-xl text-c"></text>
-		</view>
-		<view class="ui-code-title ui-TC-2" v-if="title">
-			{{title==true?'示例代码:':title}}
-		</view>
+		<view class="ui-copy-btn sm" v-if="tag != 'code'" @tap="copyCode"><text class="cicon-copy icon-xl text-c"></text></view>
+		<view class="ui-code-title ui-TC-2" v-if="title">{{ title == true ? '示例代码:' : title }}</view>		
 	</view>
 </template>
 
@@ -26,12 +22,13 @@ export default {
 	data() {
 		return {
 			nodes: [],
-			rich: false
+			rich: false,
+			
 		};
 	},
 	props: {
 		title: {
-			type: [String,Boolean],
+			type: [String, Boolean],
 			default: false
 		},
 		content: {
@@ -103,7 +100,5 @@ export default {
 };
 </script>
 
-<style lang="scss">
-
-	
+<style lang="scss"> 
 </style>
