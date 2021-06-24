@@ -65,7 +65,7 @@ export default {
 			})
 			.then(res => {
 				this.parameter = res.result.data[0].parameter;
-				this.slot = res.result.data[0].slot;
+				this.slot = res.result.data[0].slot?res.result.data[0].slot:[];
 				this.loading = false;
 			})
 			.catch(err => {
