@@ -1,9 +1,15 @@
 <template>
-	<view class="ui-loading-box" :class="[size ? `text-${size}` : ``, { loop: loop }]">
+	<view class="ui-loading-box" :class="[size ? `text-${size}` : ``, { loop: slots.default||img }]">
 		<view class="ui-loading">
-			<view class="ui-loading-cut"><view class="ui-loading-loop" :class="[color == true ? 'color' : `default text-${color}`]"></view></view>
+			<view class="ui-loading-cut"><view class="ui-loading-loop" :class="[color == true ? 'color' : `default ${color}`]"></view></view>
 		</view>
-		<view class="ui-loading-content"><slot></slot></view>
+		<view class="ui-loading-content">
+			<image :src="img" mode="aspectFill" class="ui-loading-image" v-if="img"></image>
+			<div class="ui-loading-icon">
+				
+				<slot></slot>
+			</div>
+		</view>
 	</view>
 </template>
 
@@ -11,8 +17,8 @@
 let _this = null;
 export default {
 	data() {
-		return {
-			loop: false
+		return { 
+			slots: {}
 		};
 	},
 	props: {
@@ -20,26 +26,14 @@ export default {
 			type: String,
 			default: ''
 		},
+		img: {
+			type: String,
+			default: ''
+		},
 		color: {
 			type: [Boolean, String],
 			default: false
 		},
-		Number: {
-			type: Number,
-			default: 0
-		},
-		Array: {
-			type: Array,
-			default() {
-				return [];
-			}
-		},
-		Object: {
-			type: Object,
-			default() {
-				return {};
-			}
-		}
 	},
 	watch: {
 		String: {
@@ -47,9 +41,8 @@ export default {
 			immediate: true
 		}
 	},
-
 	mounted() {
-		this.loop = this.$scopedSlots.$hasNormal;
+		this.slots = this.$scopedSlots;
 	},
 	created() {
 		_this = this;
@@ -60,6 +53,7 @@ export default {
 
 <style lang="scss">
 .ui-loading-box {
+	display: inline-block;
 	.ui-loading {
 		width: 1em;
 		height: 1em;
@@ -77,6 +71,7 @@ export default {
 				box-sizing: border-box;
 				width: 1em;
 				height: 1em;
+				color: var(--ui-TC-3);
 				border: 4rpx solid currentColor;
 				border-radius: 50%;
 				border-left-color: transparent;
@@ -113,18 +108,20 @@ export default {
 				}
 			}
 		}
-		/deep/ .ui-loading-content {
+
+		.ui-loading-content {
 			position: absolute;
 			border-radius: 50%;
 			width: 6em;
 			height: 6em;
 			left: 0;
 			top: 0;
-			border: 4rpx solid var(--ui-BG-3);
-			image {
+			border: 4rpx solid var(--ui-BG-4);
+			.ui-loading-image,.ui-loading-icon {
 				width: 80% !important;
 				height: 80% !important;
 				margin: 10%;
+				@include  flex-center;
 			}
 		}
 	}

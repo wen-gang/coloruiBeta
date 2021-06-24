@@ -142,8 +142,5 @@ export default {
 	&.margin {
 		margin: 2em 1em;
 	}
-	&:first-child {
-		margin-top: 0;
-	}
 }
 </style>

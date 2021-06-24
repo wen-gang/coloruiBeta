@@ -1,7 +1,7 @@
 <template>
 	<view class="ui-progress" :class="[{ 'border': border },{ 'active': active },{ 'striped': striped },{ 'radius': radius },{ 'round': round },{ 'lg': lg },{ 'sm': sm },{ 'shadow': shadow },{ 'shadow-sm': shadow == 'sm' },{ 'shadow-lg': shadow == 'lg' }]">
 		<block v-if="progressArray.length > 0">
-			<view class="ui-progress-bar" v-for="(item, index) in progressArray" :class="bgArray[index]" :style="[{ width: item + '%' }]">
+			<view class="ui-progress-bar" v-for="(item, index) in progressArray" :key="index" :class="bgArray[index]" :style="[{ width: item + '%' }]">
 				<text v-if="item > 5 && !sm">{{ item }}%</text>
 			</view>
 		</block>

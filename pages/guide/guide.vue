@@ -2,9 +2,7 @@
 	<ui-sys>
 		<view class="guide-page" style="height: 60vh">
 			<view class="p-5">
-				<ui-loading color>
-					<image src="/static/logo.png" mode="aspectFill"></image>
-				</ui-loading>
+				<ui-loading color img="/static/logo.png"></ui-loading>
 			</view>
 		</view>
 	</ui-sys>

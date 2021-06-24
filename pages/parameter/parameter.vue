@@ -1,24 +1,27 @@
 <template>
 	<ui-sys :title="title">
-		<view class="ui-table table-border table-full ui-BG">
-			<view class="ui-table-header">
-				<view class="ui-table-tr ui-BG-1">
-					<view class="ui-table-th">属性名</view>
-					<view class="ui-table-th text-center">类型</view>
-					<view class="ui-table-th text-center">默认值</view>
-					<view class="ui-table-th">说明</view>
+		<view class="ui-container">
+			<view class="ui-table table-border table-full mt-3 table-radius sm">
+				<view class="ui-table-header">
+					<view class="ui-table-tr">
+						<view class="ui-table-th">属性名</view>
+						<view class="ui-table-th text-center">类型/默认值</view>
+						<view class="ui-table-th">说明</view>
+					</view>
 				</view>
-			</view>
-			<view class="ui-table-body">
-				<view class="ui-table-tr" v-for="(item, index) in parameter" :key="index">
-					<view class="ui-table-td">{{ item.name }}</view>
-					<view class="ui-table-td text-center"><view class="ui-tag">{{ item.type }}</view></view>
-					<view class="ui-table-td text-center"><view class="ui-tag" v-if="item.default">{{ item.default }}</view></view>
-					<view class="ui-table-td">{{ item.info }}</view>
+				<view class="ui-table-body">
+					<view class="ui-table-tr" v-for="(item, index) in parameter" :key="index">
+						<view class="ui-table-td">{{ item.name }}</view>
+						<view class="ui-table-td text-center">
+							<view class="ui-tag block sm bg-blue-thin">[{{ item.type }}]</view>
+							<view class="ui-tag block sm bg-grey-thin">{{ item.default }}</view>
+						</view>
+						<view class="ui-table-td">{{ item.info }}</view>
+					</view>
 				</view>
 			</view>
 		</view>
-	</ui-sys> 
+	</ui-sys>
 </template>
 
 <script>

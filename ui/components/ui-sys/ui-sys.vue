@@ -98,6 +98,9 @@ export default {
 		}),
 	},
 	mounted() { 
+		setTimeout(()=>{
+			this.loading = false;
+		},800)
 	},
 	destroyed() {
 		uni.$off('_hideLoading_' + this.$root._uid);
