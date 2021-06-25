@@ -3,34 +3,31 @@
  ==================== */
 
 .shadow {
-	box-shadow: 0 0 30rpx rgba(0, 0, 0, 0.1);
+	box-shadow: var(--ui-Shadow);
 	&-sm {
-		box-shadow: 0 4rpx 4rpx rgba(0, 0, 0, 0.06);
+		box-shadow: var(--ui-Shadow-sm);
 	}
 	&-lg {
-		box-shadow: 0 30rpx 60rpx rgba(0, 0, 0, 0.2);
+		box-shadow: var(--ui-Shadow-lg);
 	}
 	&-inset {
-		box-shadow: inset 0 0 20rpx rgba(0, 0, 0, 0.5);
+		box-shadow: var(--ui-Shadow-inset);
 	}
 	@each $color, $value in $colors {
 		@at-root .shadow-#{$color} {
-			box-shadow: 0 15rpx 15rpx rgba(darken($value, 10%), 0.3);
+			box-shadow: 0 .5em 1em rgba($value, var(--ui-Shadow-opacity));
 		}
 		&-sm.shadow-#{$color} {
-			box-shadow: 0 4rpx 4rpx rgba(darken($value, 10%), 0.3);
+			box-shadow:  0 .125em .25em rgba($value, var(--ui-Shadow-opacity-sm));
 		}
 		&-lg.shadow-#{$color} {
-			box-shadow: 0 50rpx 100rpx rgba(darken($value, 10%), 0.2);
-		}
-		&-inset.shadow-#{$color} {
-			box-shadow: inset 0 0 20rpx rgba(darken($value, 20%), 1);
+			box-shadow:  0 1em 3em rgba($value, var(--ui-Shadow-opacity-lg));
 		}
 	}
 
 	&-warp {
 		position: relative;
-		box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.06);
+		box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, var(--ui-Shadow-opacity-sm));
 	}
 	&-warp:before,
 	&-warp:after {
@@ -42,7 +39,7 @@
 		height: 30rpx;
 		transform: skew(0deg, -6deg);
 		transform-origin: 50% 50%;
-		background-color: rgba(0, 0, 0, 0.3);
+		background-color: rgba(0, 0, 0, var(--ui-Shadow-opacity));
 		filter: blur(20rpx);
 		z-index: -1;
 		opacity: 0.5;
@@ -63,10 +60,10 @@
 		position: absolute;
 		width: 100%;
 		height: 100%;
-		top: 10rpx;
-		left: 10rpx;
+		top: .5em;
+		left: .5em;
 		z-index: -1;
-		opacity: 0.5;
+		opacity: var(--ui-Shadow-opacity-lg);
 		transform-origin: 0 0;
 		border-radius: inherit;
 		transform: scale(1, 1);

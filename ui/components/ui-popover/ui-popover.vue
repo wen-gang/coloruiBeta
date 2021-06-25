@@ -63,6 +63,14 @@ export default {
 		time: {
 			type: Number,
 			default: 0
+		},
+		bottom: {
+			type: Boolean,
+			default: false
+		},
+		isChange: {
+			type: Boolean,
+			default: false
 		}
 	},
 	watch: {
@@ -90,9 +98,11 @@ export default {
 	mounted() {
 		this.$nextTick(() => {
 			this.computedQuery(uni.getSystemInfoSync().windowWidth, uni.getSystemInfoSync().windowHeight);
+			// #ifdef H5
 			uni.onWindowResize(res => {
 				this.computedQuery(res.size.windowWidth, res.size.windowHeight);
 			});
+			// #endif
 		});
 	},
 	methods: {
@@ -120,7 +130,7 @@ export default {
 						let arrowStyle = '';
 						this.BoxStyle = `width:${w}px; left:-${button.left}px;z-index: ${this.index + this.sys_layer + 102}`;
 						// 判断气泡在上面还是下面
-						if (button.bottom < h / 2) {
+						if (button.bottom < h / 2 || this.bottom) {
 							// '下';
 							contentStyle = contentStyle + `top:10px;`;
 							arrowStyle = arrowStyle + `top:${-5}px;`;
@@ -156,10 +166,11 @@ export default {
 				.exec();
 		},
 		popoverClick() {
+			if (this.isChange) {
+				return false
+			}
 			if (this.tips == '') {
-				if (this.show == 'change') {
-					this.popover = !this.popover;
-				}
+				this.popover = !this.popover;
 			} else {
 				this.popover = true;
 			}

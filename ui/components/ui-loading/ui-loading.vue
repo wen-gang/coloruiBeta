@@ -32,7 +32,7 @@ export default {
 		},
 		color: {
 			type: [Boolean, String],
-			default: false
+			default: ''
 		},
 	},
 	watch: {

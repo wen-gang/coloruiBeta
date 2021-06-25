@@ -25,4 +25,16 @@
 	--ui-Border:           		   	rgba(119, 119, 119, 0.25); 
 	--ui-Outline:                   rgba(255,255,255,0.1);
 	--ui-Line:                      rgba(119,119,119,0.25);
+	
+	// 透明与阴影
+	--ui-Shadow:           		   	0 .5em 1em rgba(0, 0, 0, 0.45);
+	--ui-Shadow-sm:                 0 .125em .25em rgba(0, 0, 0, 0.475);
+	--ui-Shadow-lg:                 0 1em 3em rgba(0, 0, 0, 0.575);
+	--ui-Shadow-inset:              inset 0 1px 2px rgba(0, 0, 0, 0.475);
+	
+	--ui-Shadow-opacity:           		0.55;
+	--ui-Shadow-opacity-sm:             0.175;
+	--ui-Shadow-opacity-lg:          	0.75;
+	
+	--ui-BG-opacity:    			.1; 
 } 

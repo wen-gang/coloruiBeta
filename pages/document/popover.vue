@@ -1,29 +1,29 @@
 <template>
 	<ui-sys title="气泡框">
 		<view class="ui-container">
-			<ui-title title="简介" depth="2"  isIcon ></ui-title>
+			<ui-title title="简介" depth="2" isIcon></ui-title>
 			<view class="paragraph">
 				气泡框组件可以对目标元素进行更多的操作或者简要的介绍与提示。
 				<view>气泡框的主体会根据目标元素在屏幕的上下半部分来显示在上面或者下面。</view>
 			</view>
 			<!-- 文字提示 -->
-			<ui-title title="文字提示" depth="2"  isIcon ></ui-title>
+			<ui-title title="文字提示" depth="2" isIcon></ui-title>
 			<view class="paragraph">文字提示会自动关闭。</view>
-			<view class="text-center" v-if="demo">
+			<view class="text-center">
 				<ui-popover tips="这里是提示文本"><button class="ui-btn">点击</button></ui-popover>
 			</view>
-			<ui-code tag="pre" lang="html" :content="code1" v-else></ui-code>
+			<ui-code tag="pre" lang="html" :content="code1"></ui-code>
 
 			<!-- 遮罩 -->
-			<ui-title title="遮罩" depth="2"  isIcon ></ui-title>
+			<ui-title title="遮罩" depth="2" isIcon></ui-title>
 			<view class="paragraph">默认无遮罩。</view>
-			<view class="text-center" v-if="demo">
+			<view class="text-center">
 				<ui-popover tips="这里是提示文本" mask><button class="ui-btn">点击</button></ui-popover>
 			</view>
-			<ui-code tag="pre" lang="html" :content="code2" v-else></ui-code>
+			<ui-code tag="pre" lang="html" :content="code2"></ui-code>
 
 			<!-- 换背景 -->
-			<ui-title title="换背景" depth="2"  isIcon ></ui-title>
+			<ui-title title="换背景" depth="2" isIcon></ui-title>
 			<view class="paragraph">
 				遵循
 				<navigator class="text-main-a inline" url="/pages/document/rules/rules">《使用规则》</navigator>
@@ -31,19 +31,19 @@
 				<ui-code>'box-bg'</ui-code>
 				菜单色。
 			</view>
-			<view class="text-center" v-if="demo">
+			<view class="text-center">
 				<ui-popover tips="这里是提示文本" bg="bg-red"><button class="ui-btn">点击</button></ui-popover>
 			</view>
-			<ui-code tag="pre" lang="html" :content="code3" v-else></ui-code>
+			<ui-code tag="pre" lang="html" :content="code3"></ui-code>
 
 			<!-- 自定义内容 -->
-			<ui-title title="自定义内容" depth="2"  isIcon ></ui-title>
+			<ui-title title="自定义内容" depth="2" isIcon></ui-title>
 			<view class="paragraph">
 				设定
 				<ui-code>content</ui-code>
 				插槽可以自定义气泡框内容
 			</view>
-			<view class="text-center pb-3" v-if="demo">
+			<view class="text-center pb-3">
 				<ui-popover>
 					<button class="ui-btn">点击</button>
 					<block slot="content">
@@ -51,36 +51,34 @@
 					</block>
 				</ui-popover>
 			</view>
-			<ui-code tag="pre" lang="html" :content="code4" v-else></ui-code>
+			<ui-code tag="pre" lang="html" :content="code4"></ui-code>
 
 			<!-- 定时 -->
-			<ui-title title="定时" depth="2"  isIcon ></ui-title>
+			<ui-title title="定时" depth="2" isIcon></ui-title>
 			<view class="paragraph">可以更改时间自动关闭，单位毫秒。文字提示默认是3000毫秒，自定义内容默认需要点击空白处或者遮罩关闭</view>
-			<view class="text-center" v-if="demo">
+			<view class="text-center">
 				<ui-popover tips="这里是提示文本" :time="5000"><button class="ui-btn">点击</button></ui-popover>
 			</view>
-			<ui-code tag="pre" lang="html" :content="code5" v-else></ui-code>
+			<ui-code tag="pre" lang="html" :content="code5"></ui-code>
 
 			<!-- 自定义触发方式 -->
-			<ui-title title="自定义触发方式" depth="2"  isIcon ></ui-title>
+			<ui-title title="自定义触发方式" depth="2" isIcon></ui-title>
 			<view class="paragraph">
 				设定
 				<ui-code>show</ui-code>
 				来控制气泡框的显示，需要开启
 				<ui-code>isChange</ui-code>
 			</view>
-			<view class="text-center" v-if="demo">
-				<view class="flex-between p-3 radius bg-blue" @longpress="isShow = true">
-					长按蓝色区域
-					<ui-popover tips="气泡框在这里出现哦" :show.sync="isShow" isChange>
-						<button class="ui-btn bg-white">目标</button>
-					</ui-popover>
+			<view class="text-center">
+				<view class="flex-bar p-3 radius ui-BG">
+					<ui-popover tips="气泡框在这里出现哦" :show.sync="isShow" isChange><button class="ui-btn ui-BG-Main">目标</button></ui-popover>
+					<button class="ui-btn ui-BG-Main" @tap="isShow = true">点击</button>
 				</view>
 			</view>
-			<ui-code tag="pre" lang="html" :content="code6" v-else></ui-code>
+			<ui-code tag="pre" lang="html" :content="code6"></ui-code>
 			<!-- Api -->
 			<block v-if="!demo">
-				<ui-title title="参数" depth="2"  isIcon ></ui-title>
+				<ui-title title="参数" depth="2" isIcon></ui-title>
 				<view class="ui-table table-border table-full box-bg">
 					<view class="ui-table-header">
 						<view class="ui-table-tr box-bg-sub">
@@ -132,7 +130,7 @@
 						</view>
 					</view>
 				</view>
-				<ui-title title="插槽" depth="2"  isIcon ></ui-title>
+				<ui-title title="插槽" depth="2" isIcon></ui-title>
 				<view class="ui-table table-border table-full box-bg">
 					<view class="ui-table-header">
 						<view class="ui-table-tr box-bg-sub">

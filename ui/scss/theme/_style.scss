@@ -1,27 +1,20 @@
-@import './light';			//浅蓝主题
-@import './dark';				//深蓝主题
+@import './light'; //浅蓝主题
+@import './dark'; //深蓝主题
 // 多主题
-@if $enable-theme {
-	.theme-light {
-		@include theme-light;
-	}
-	.theme-dark {
+.theme-light {
+	@include theme-light;
+}
+.theme-dark {
+	@include theme-dark;
+}
+.theme-auto {
+	@include theme-light;
+}
+@media (prefers-color-scheme: dark) {
+	.theme-auto {
 		@include theme-dark;
 	}
-	.theme-auto {
-		@include theme-light;
-	}
-	@media (prefers-color-scheme: dark) {
-		.theme-auto {
-			@include theme-dark;
-		}
-	}
-} @else {
-	.theme-light {
-		@include theme-light;
-	}
 }
-
 
 @each $value in ('', '-1', '-2', '-3', '-4') {
 	.ui-BG#{$value} {
@@ -40,14 +33,14 @@
 	}
 }
 
-@each $color, $value in $colors{
+@each $color, $value in $colors {
 	.main-#{$color} {
 		--ui-BG-Main: #{$value};
-		--ui-BG-Main-1:  #{mix(rgba(255,255,255,0.7),desaturate($value, 20%), 10%)};
-		--ui-BG-Main-2:  #{mix(rgba(255,255,255,0.6),desaturate($value, 40%), 20%)};
-		--ui-BG-Main-3:  #{mix(rgba(119,119,119,0.2),desaturate($value, 40%), 40%)};
-		--ui-BG-Main-4:  #{mix(rgba(119,119,119,0.1),desaturate($value, 40%), 60%)};
-		
+		--ui-BG-Main-1: #{mix(rgba(255, 255, 255, 0.7), desaturate($value, 20%), 10%)};
+		--ui-BG-Main-2: #{mix(rgba(255, 255, 255, 0.6), desaturate($value, 40%), 20%)};
+		--ui-BG-Main-3: #{mix(rgba(119, 119, 119, 0.2), desaturate($value, 40%), 40%)};
+		--ui-BG-Main-4: #{mix(rgba(119, 119, 119, 0.1), desaturate($value, 40%), 60%)};
+
 		@if $color == 'yellow' {
 			--ui-BG-Main-TC: #333333 !important;
 		} @else {

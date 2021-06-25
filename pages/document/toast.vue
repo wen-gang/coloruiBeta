@@ -4,7 +4,7 @@
 			<ui-title depth="2" title="Tips" isIcon></ui-title>
 			<button class="ui-btn" @tap="tips">Tips</button>
 			<button class="ui-btn" @tap="tips2">Tips=>5000</button>
-			<button class="ui-btn" @tap="tips3">lang Tips</button>
+			<button class="ui-btn" @tap="tips3">lang Tips</button> 
 
 			<ui-title depth="2" title="Toast" isIcon></ui-title>
 			<button class="ui-btn" @tap="$Success()">Success</button>
@@ -45,7 +45,7 @@ export default {
 		},
 		toast2() {
 			this.$Error();
-		}
+		}, 
 	}
 };
 </script>

@@ -5,10 +5,10 @@
 		<block v-if="id == 3">
 			<ui-navbar :shadow="shadow"></ui-navbar>
 			<view class="p-4 mt-3 flex-center">
-				<button class="ui-btn m-3 round borde" @tap="shadow = false" :class="{ 'ui-BG-Main': shadow == false }">无阴影</button>
-				<button class="ui-btn m-3 round border" @tap="shadow = 'sm'" :class="{ 'ui-BG-Main': shadow == 'sm' }">小阴影</button>
-				<button class="ui-btn m-3 round border" @tap="shadow = true" :class="{ 'ui-BG-Main': shadow == true }">默认阴影</button>
-				<button class="ui-btn m-3 round border" @tap="shadow = 'lg'" :class="{ 'ui-BG-Main': shadow == 'lg' }">长阴影</button>
+				<button class="ui-btn sm m-2 round borde" @tap="shadow = false" :class="{ 'ui-BG-Main': shadow == false }">无阴影</button>
+				<button class="ui-btn sm m-2 round border" @tap="shadow = 'sm'" :class="{ 'ui-BG-Main': shadow == 'sm' }">小阴影</button>
+				<button class="ui-btn sm m-2 round border" @tap="shadow = true" :class="{ 'ui-BG-Main': shadow == true }">默认阴影</button>
+				<button class="ui-btn sm m-2 round border" @tap="shadow = 'lg'" :class="{ 'ui-BG-Main': shadow == 'lg' }">长阴影</button>
 			</view>
 		</block>
 		<view class="">

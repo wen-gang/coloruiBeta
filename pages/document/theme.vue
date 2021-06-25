@@ -3,11 +3,7 @@
 		<view class="ui-container">
 			<ui-title title="简介" depth="2" isIcon></ui-title>
 			<view class="paragraph">
-				Colorui支持多款配色的主题方案,也支持根据系统来适配暗色主题。 如果你项目中不需要多主题,你可以在
-				<ui-code>coloui/scss/_var.scss</ui-code>
-				中设置
-				<ui-code>$enable-theme</ui-code>
-				来关闭多主题的编译,以减少冗余代码。
+				Colorui支持多款配色的主题方案,也支持根据系统来适配暗色主题。
 			</view>
 
 			<ui-title title="配色展示" depth="2" isIcon></ui-title>

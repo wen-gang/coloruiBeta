@@ -49,18 +49,9 @@
 			<view class="paragraph">
 				<ui-title title="过渡渐变色" depth="3" class="ml-3" isIcon></ui-title>
 				<ui-code>.bg-{color}-{color}</ui-code>
-				支持所有基础色到基础色的渐变,组合较多,你可以在
-				<ui-code>@/colorui/scss/_var.scss</ui-code>
-				中配置
-				<ui-code>$enable-gradients</ui-code>
-				为
-				<ui-code>false</ui-code>
-				来关闭渐变背景的编译。
+				支持所有基础色到基础色的渐变。
 			</view>
-			<view class="ui-BG radius p-4 my-3 flex-bar" @click="_to('/pages/find/background')">
-				浏览全部背景色 <text class="cicon-forward"></text>
-			</view>
-		
+			<ui-menu radius><ui-menu-item icon="uicon-paint" title="浏览全部背景色" @click.native="_to('/pages/demo/background')"></ui-menu-item></ui-menu>
 
 			<view class="paragraph p-3">
 				<ui-title title="特殊的渐变背景色" depth="3" class="ml-3" isIcon></ui-title>
@@ -131,7 +122,7 @@
 			</view>
 			<view class="ui-grid ui-cols-1 ui-cols-sm-2 ui-cols-md-4 ui-BG radius p-2" v-if="demo">
 				<view class="p-2 ui-item" v-for="(item, index) in themeColor" :key="$util.getUuid()">
-					<view :class="'ui-BG-Main-' + (index+1)" class="radius p-3 item">{{ item.name }}</view>
+					<view :class="'ui-BG-Main-' + (index + 1)" class="radius p-3 item">{{ item.name }}</view>
 				</view>
 			</view>
 			<view class="paragraph">
@@ -203,7 +194,7 @@
 					<view class="mt-5 p-4 ui-BG radius-bottom"><view>.bg-blur 不兼容时</view></view>
 				</view>
 			</view>
-		</view> 
+		</view>
 	</ui-sys>
 </template>
 
