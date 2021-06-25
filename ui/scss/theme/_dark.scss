@@ -2,11 +2,11 @@
 @mixin theme-dark {
 	
 	// 背景色
-	--ui-BG:                        #282828;
-	--ui-BG-1:                      #222222;
-	--ui-BG-2:                      #1b1b1b;
-	--ui-BG-3:                      #181818;
-	--ui-BG-4:                      #111111;	
+	--ui-BG:                        #393939;
+	--ui-BG-1:                      #333333;
+	--ui-BG-2:                      #2c2c2c;
+	--ui-BG-3:                      #292929;
+	--ui-BG-4:                      #222222;	
 	
 	// 文本色
 	--ui-TC:                       	#ffffff;
@@ -29,7 +29,7 @@
 	// 透明与阴影
 	--ui-Shadow:           		   	0 .5em 1em rgba(0, 0, 0, 0.45);
 	--ui-Shadow-sm:                 0 .125em .25em rgba(0, 0, 0, 0.475);
-	--ui-Shadow-lg:                 0 1em 3em rgba(0, 0, 0, 0.575);
+	--ui-Shadow-lg:                 0 1em 3em rgba(0, 0, 0, 0.475);
 	--ui-Shadow-inset:              inset 0 1px 2px rgba(0, 0, 0, 0.475);
 	
 	--ui-Shadow-opacity:           		0.55;

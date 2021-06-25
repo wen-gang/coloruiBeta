@@ -1,5 +1,5 @@
 <template>
-	<view class="ui-menu-item border-bottom" :class="[{ arrow: arrow }]">
+	<view class="ui-menu-item" :class="[{ arrow: arrow }]">
 		<view class="ui-menu-item-icon">
 			<template v-if="slots.icon">
 				<slot name="icon"></slot>

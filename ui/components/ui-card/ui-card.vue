@@ -1,8 +1,6 @@
 <template>
 	<view
-		class="ui-card"
-		:class="[{ margin: margin }, { border: border }, { radius: margin }, { shadow: shadow }, { 'shadow-sm': shadow == 'sm' }, { 'shadow-lg': shadow == 'lg' }]"
-	>
+		class="ui-card" :class="[ui]" >
 		<view class="ui-card-main" v-if="img" :style="[{ height: imgHeight }, { paddingTop: imgHeight ? 0 : '50%' }]">
 			<image :src="img" class="ui-card-image" mode="aspectFill"></image>
 			<view class="text-cut text-lg text-bold ui-card-fixedTitle bg-mask-bottom" v-if="title && fixedTitle">
@@ -50,19 +48,10 @@ export default {
 		},
 		desc: {
 			type: String
-		},
-		margin: {
-			type: Boolean,
-			default: true
-		},
-		border: {
-			type: Boolean,
-			default: false
-		},
-		shadow: {
-			type: [String, Boolean],
-			default: ''
-		}
+		}, 
+		ui: {
+			type: String
+		}, 
 	},
 
 	mounted() {
@@ -138,9 +127,6 @@ export default {
 	}
 	.ui-card-other:first-child {
 		padding: 0;
-	}
-	&.margin {
-		margin: 2em 1em;
 	}
 }
 </style>

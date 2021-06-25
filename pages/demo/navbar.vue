@@ -3,12 +3,12 @@
 		<block v-if="id == 1"><ui-navbar></ui-navbar></block>
 		<block v-if="id == 2"><ui-navbar backtext="返回"></ui-navbar></block>
 		<block v-if="id == 3">
-			<ui-navbar :shadow="shadow"></ui-navbar>
+			<ui-navbar :ui="ui"></ui-navbar>
 			<view class="p-4 mt-3 flex-center">
-				<button class="ui-btn sm m-2 round borde" @tap="shadow = false" :class="{ 'ui-BG-Main': shadow == false }">无阴影</button>
-				<button class="ui-btn sm m-2 round border" @tap="shadow = 'sm'" :class="{ 'ui-BG-Main': shadow == 'sm' }">小阴影</button>
-				<button class="ui-btn sm m-2 round border" @tap="shadow = true" :class="{ 'ui-BG-Main': shadow == true }">默认阴影</button>
-				<button class="ui-btn sm m-2 round border" @tap="shadow = 'lg'" :class="{ 'ui-BG-Main': shadow == 'lg' }">长阴影</button>
+				<button class="ui-btn sm m-2 round borde" @tap="ui = ''" :class="{ 'ui-BG-Main': ui == '' }">无阴影</button>
+				<button class="ui-btn sm m-2 round border" @tap="ui= 'shadow-sm'" :class="{ 'ui-BG-Main': ui==  'shadow-sm' }">小阴影</button>
+				<button class="ui-btn sm m-2 round border" @tap="ui= 'shadow'" :class="{ 'ui-BG-Main': ui =='shadow'}">默认阴影</button>
+				<button class="ui-btn sm m-2 round border" @tap="ui= 'shadow-lg'" :class="{ 'ui-BG-Main': ui == 'shadow-lg' }">长阴影</button>
 			</view>
 		</block>
 		<view class="">
@@ -35,7 +35,7 @@ export default {
 	data() {
 		return {
 			id: 0,
-			shadow: true
+			ui: ''
 		};
 	},
 	onLoad(e) {

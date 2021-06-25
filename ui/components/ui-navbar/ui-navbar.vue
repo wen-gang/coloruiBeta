@@ -1,5 +1,5 @@
 <template>
-	<ui-fixed :noFixed="noFixed" :val="0" :index="1000" noNav :bg="bg" :shadow="shadow" :opacity="opacity" :opacityVal="opacityVal" :placeholder="placeholder">
+	<ui-fixed :noFixed="noFixed" :val="0" :index="1000" noNav :bg="bg" :ui="ui" :opacity="opacity" :opacityVal="opacityVal" :placeholder="placeholder">
 		<view class="ui-navbar-box" :class="[{'border-bottom':!opacity&&bg!='bg-none'}]" :style="{ paddingTop: sys_statusBar + 'px', height: sys_navBar + 'px' }">
 			<view class="ui-bar" :class="status == '' ? `text-a` : status == 'light' ? 'text-white' : 'text-black'" :style="[{ height: sys_navBar - sys_statusBar + 'px' }]">
 				<block v-if="slots.default"><slot></slot></block>
@@ -86,9 +86,9 @@ export default {
 			type: Boolean,
 			default: false
 		},
-		shadow: {
-			type: [Boolean, String],
-			default: false
+		ui: {
+			type: String,
+			default: ''
 		},
 		capsule: {
 			//是否开启胶囊返回

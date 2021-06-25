@@ -22,7 +22,7 @@
 					</navigator>
 				</ui-title>
 			</view>
-			<view class="text-center"><image class="radius border" src="https://oss.color-ui.com/web/ozgly.jpg" mode="widthFix" style="width: 100%;"></image></view>
+			<ui-img src="https://oss.color-ui.com/web/ozgly.jpg" ui="radius border"></ui-img> 
 			<ui-code tag="pre" lang="html" title :content="code1"></ui-code>
 			<!-- 自定义返回文本 -->
 			<view class="paragraph">
@@ -33,7 +33,7 @@
 					</navigator>
 				</ui-title>
 			</view>
-			<view class="text-center"><image class="radius border" src="https://oss.color-ui.com/web/i4ux8.jpg" mode="widthFix" style="width: 100%;"></image></view>
+			<ui-img src="https://oss.color-ui.com/web/i4ux8.jpg" ui="radius border"></ui-img> 
 			<ui-code tag="pre" lang="html" title :content="code2"></ui-code>
 
 			<!-- 有阴影 -->
@@ -45,7 +45,7 @@
 					</navigator>
 				</ui-title>
 			</view>
-			<view class="text-center"><image class="radius border" src="https://oss.color-ui.com/web/7i87w.jpg" mode="widthFix" style="width: 100%;"></image></view>
+			<ui-img src="https://oss.color-ui.com/web/7i87w.jpg" ui="radius border"></ui-img> 
 			<ui-code tag="pre" lang="html" title :content="code3"></ui-code>
 		</view>
 	</ui-sys>

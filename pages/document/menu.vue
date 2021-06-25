@@ -2,7 +2,7 @@
 	<ui-sys title="菜单">
 		<view class="ui-container">
 			<ui-title depth="2" title="菜单" isIcon></ui-title> 
-			<ui-menu class="mt-5 border sm-border radius"  >
+			<ui-menu class="mt-5"  border sm-border radius>
 				<ui-menu-item arrow title="Github" icon="uicon-github"></ui-menu-item>
 				<ui-menu-item arrow title="关于Colorui组件库">
 					<block slot="icon"><image src="/static/logo.png" mode="aspectFill" class="ui-menu-item-image"></image></block>

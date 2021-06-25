@@ -17,7 +17,7 @@
 			<view style="height: calc(env(safe-area-inset-bottom) / 5 * 3);" :class="[bg]" v-if="bottom && !noSafe"></view>
 			<view
 				class="ui-fixed-bg"
-				:class="[bg, { 'shadow': shadow }, { 'shadow-sm': shadow == 'sm' }, { 'shadow-lg': shadow == 'lg' }]"
+				:class="[ui,bg]"
 				:style="[{ zIndex: index + sys_layer - 1 }, bg == 'bg-img' ? { backgroundImage: 'url(' + img + ')' } : {}, opacity ? { opacity: opacityVal } : '']"
 			></view>
 		</view>
@@ -88,8 +88,8 @@ export default {
 			type: Boolean,
 			default: false
 		},
-		shadow: {
-			type: [Boolean, String],
+		ui: {
+			type: String,
 			default: ''
 		},
 		clickTo: {

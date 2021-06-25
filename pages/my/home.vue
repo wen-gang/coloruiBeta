@@ -14,7 +14,7 @@
 					</view>
 				</view>
 			</view>
-			<ui-menu radius shadow class="mt-5">
+			<ui-menu radius shadow border smBorder class="mt-5">
 				<ui-menu-item arrow title="Github" icon="uicon-github"></ui-menu-item>
 				<ui-menu-item arrow title="关于Colorui组件库">
 					<block slot="icon">
