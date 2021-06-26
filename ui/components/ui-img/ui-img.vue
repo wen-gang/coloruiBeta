@@ -48,6 +48,10 @@ export default {
 				return []
 			}
 		},
+		current: {
+			type: Number,
+			default: ''
+		},
 	},
 	watch: {
 		width: {
@@ -117,6 +121,7 @@ export default {
 			} 
 			uni.previewImage({
 				urls: this.urls.length<1?[this.src]:this.urls,
+				current:this.current,
 				longPressActions: {
 					itemList: ['发送给朋友', '保存图片', '收藏'],
 					success: function(data) {
