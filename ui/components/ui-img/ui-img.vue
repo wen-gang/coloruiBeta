@@ -1,5 +1,5 @@
 <template>
-	<view class="ui-img-box" :id="'image-' + _uid" :class="[ui, mode]" :style="[{ backgroundImage: 'url(' + src + ')' }, { width: imgW }, { height: imgH }]">
+	<view class="ui-img-box" @click="_preview()" :id="'image-' + _uid" :class="[ui, mode]" :style="[{ backgroundImage: 'url(' + src + ')' }, { width: imgW }, { height: imgH }]">
 		<image class="ui-img" :class="mode" :id="'img-' + _uid" :src="src" mode="aspectFill" @load="_load" @error="_error"></image>
 		<view class="ui-img-load" v-if="isLoad"><ui-loading color size="xl"></ui-loading></view>
 	</view>
@@ -7,6 +7,7 @@
 
 <script>
 export default {
+	name:'UiImg',
 	data() {
 		return {
 			isLoad: true,
@@ -36,7 +37,17 @@ export default {
 		height: {
 			type: String,
 			default: ''
-		}
+		},
+		preview: {
+			type: Boolean,
+			default: false
+		},
+		urls: {
+			type: Array,
+			default(){
+				return []
+			}
+		},
 	},
 	watch: {
 		width: {
@@ -52,7 +63,7 @@ export default {
 			immediate: true
 		}
 	},
-	mounted() {
+	mounted() { 
 		this.$nextTick(() => {
 			// #ifdef H5
 			uni.onWindowResize(res => {
@@ -99,7 +110,24 @@ export default {
 		},
 		_error(e) {
 			this.error = true;
-		}
+		},
+		_preview() {
+			if (!this.preview) {
+				return false;
+			} 
+			uni.previewImage({
+				urls: this.urls.length<1?[this.src]:this.urls,
+				longPressActions: {
+					itemList: ['发送给朋友', '保存图片', '收藏'],
+					success: function(data) {
+						console.log('选中了第' + (data.tapIndex + 1) + '个按钮,第' + (data.index + 1) + '张图片');
+					},
+					fail: function(err) {
+						console.log(err.errMsg);
+					}
+				}
+			});
+		},
 	}
 };
 </script>
