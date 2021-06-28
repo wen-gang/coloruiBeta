@@ -182,7 +182,7 @@
 		&.card {
 			swiper-item {
 				width: 610rpx !important;
-				// left: 70rpx;
+				left: 70rpx;
 				box-sizing: border-box;
 				padding: 20rpx 0rpx 60rpx;
 				overflow: initial;
@@ -233,62 +233,10 @@
 			}
 		}
 
-		&.smcard {
-			swiper-item {
-				width: 100% !important;
-				// left: 70rpx;
-				box-sizing: border-box;
-				overflow: initial;
-			}
-
-			swiper-item .ui-swiper-main {
-				width: 100%;
-				display: block;
-				height: 100%;
-				border-radius: 10rpx;
-				transition: all 0.2s ease-in 0s;
-				padding: 0 20rpx;
-				position: relative;
-				background-size: cover;
-
-				image {
-					height: 100%;
-					border-radius: inherit;
-				}
-			}
-
-			swiper-item .ui-swiper-main::before {
-				content: '';
-				display: block;
-				background: inherit;
-				filter: blur(5px);
-				position: absolute;
-				width: 100%;
-				height: 100%;
-				top: 10rpx;
-				left: 10rpx;
-				z-index: -1;
-				opacity: 0.3;
-				transform-origin: 0 0;
-				border-radius: inherit;
-				transform: scale(1, 1);
-			}
-
-			swiper-item.cur .ui-swiper-main {
-				transform: scale(1);
-				transition: all 0.2s ease-in 0s;
-			}
-
-			.ui-swiper-dot {
-				position: absolute;
-				bottom: 0rpx;
-			}
-		}
-
 		&.hotelCard {
 			swiper-item {
 				width: 650rpx !important;
-				// left: 30rpx;
+				left: 30rpx;
 				box-sizing: border-box;
 				padding: 0rpx 0rpx 50rpx;
 				overflow: initial;
