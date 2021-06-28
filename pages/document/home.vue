@@ -21,7 +21,7 @@
 				<!-- #endif -->
 			</view>
 		</ui-navbar>
-		<ui-swiper :info="swiperList" height="48vw" dotStyle="whiteline" dotCur="ui-BG-Main"></ui-swiper>
+		<ui-swiper :info="swiperList" height="48vw" dotStyle="line" dotCur="ui-BG-Main"></ui-swiper>
 		<view class="ui-container">
 			<block v-for="(nav, navindex) in nav" :key="navindex">
 				<ui-title :title="nav.title" depth="2" isIcon class="ml-3"></ui-title>

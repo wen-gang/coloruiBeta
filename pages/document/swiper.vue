@@ -1,8 +1,14 @@
 <template>
 	<ui-sys title="轮播图">
-		<view class="ui-container"><ui-title title="dotStyle='line'" depth="2" isIcon toc></ui-title></view>
-		<ui-swiper :info="swiperList" dotStyle="line" dotCur="ui-BG-Main"></ui-swiper>
+		<view class="ui-container"><ui-title title="dotStyle='default'" depth="2" isIcon toc></ui-title></view>
+		<ui-swiper :info="swiperList" dotCur="ui-BG-Main"></ui-swiper>
 
+		<view class="ui-container"><ui-title title="dotStyle='long'" depth="2" isIcon toc></ui-title></view>
+		<ui-swiper :info="swiperList" dotStyle="long" dotCur="bg-white"></ui-swiper>
+		
+		<view class="ui-container"><ui-title title="dotStyle='line'" depth="2" isIcon toc></ui-title></view>
+		<ui-swiper :info="swiperList" dotStyle="line" dotCur="bg-white"></ui-swiper>
+		
 		<view class="ui-container"><ui-title title="dotStyle='tag'" depth="2" isIcon toc></ui-title></view>
 		<ui-swiper :info="swiperList" dotStyle="tag" dotCur="bg-mask-50"></ui-swiper>
 
