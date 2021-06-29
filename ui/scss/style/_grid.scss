@@ -29,6 +29,16 @@
 .ui-grid {
 	display: flex;
 	flex-wrap: wrap;
+	&.multi-column{
+		display: block;
+		column-count: 2;
+		column-width: 0px;
+		column-gap: 0px;;
+		> .ui-item {
+			 break-inside: avoid;
+			 padding: 0.001em;
+		}
+	}
 	&.grid-square {
 		overflow: hidden;
 		> .ui-item {

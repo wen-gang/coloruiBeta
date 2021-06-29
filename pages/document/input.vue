@@ -4,7 +4,7 @@
 			<!-- 简介 -->
 			<ui-title title="简介" depth="2" isIcon></ui-title>
 			<view class="paragraph">输入框</view>
-			<ui-stepper></ui-stepper>
+			<ui-input title="用户名"></ui-input>
 		</view>
 	</ui-sys>
 </template>
