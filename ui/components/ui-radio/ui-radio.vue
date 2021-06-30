@@ -1,5 +1,5 @@
 <template>
-	<view class="ui-radio" @click="_onRadioClick" :class="{ disabled: isDisabled }">
+	<view class="ui-radio" @click="_onRadioClick" :class="[{ disabled: isDisabled },ui]">
 		<view class="ui-radio-input round" :class="[isChecked ? 'cur ' + ui : unbg==''?'borderss':unbg]"></view>
 		<slot></slot>
 	</view>
@@ -14,6 +14,10 @@ export default {
 		};
 	},
 	props: {
+			ui: {
+				type: String,
+				default: ''
+			},
 		value: {
 			type: [String, Number, Boolean]
 		},

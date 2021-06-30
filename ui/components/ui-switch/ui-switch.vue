@@ -1,5 +1,5 @@
 <template>
-	<view class="ui-switch" :class="{disabled:disabled}">
+	<view class="ui-switch" :class="[{disabled:disabled},ui]">
 		<view class="ui-switch-wrapper" @tap="clickSwitch">
 			<view class="ui-switch-input" :class="[{ 'ui-switch-input-checked': tempChecked }, tempChecked ? bg : '', text, size]"></view>
 		</view>
@@ -8,13 +8,17 @@
 
 <script>
 export default {
-	name: 'uiSwitch',
+	name: 'UiSwitch',
 	data() {
 		return {
 			tempChecked: false
 		};
 	},
 	props: {
+		ui: {
+			type: String,
+			default: ''
+		},
 		bg: {
 			type: String,
 			default: 'ui-BG-Main'

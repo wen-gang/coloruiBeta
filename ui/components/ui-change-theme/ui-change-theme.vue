@@ -50,7 +50,7 @@
 <script>
 let _this = null;
 export default {
-	name: 'uiChangeTheme',
+	name: 'UiChangeTheme',
 	data() {
 		return {
 			color: ['red', 'orange', 'yellow', 'olive', 'green', 'cyan', 'blue', 'purple', 'mauve', 'pink', 'brown', 'grey']

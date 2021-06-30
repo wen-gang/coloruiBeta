@@ -30,7 +30,7 @@
 </template>
 <script>
 export default {
-	name: 'uiNavbar',
+	name: 'UiNavbar',
 	data() {
 		return {
 			statusCur: '',

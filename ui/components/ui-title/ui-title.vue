@@ -1,5 +1,5 @@
 <template>
-	<view class="ui-title" :class="[align, tpl, bg, { line: inLine }, depth > 0 ? 'heading-title heading-' + depth : '']">
+	<view class="ui-title" :class="[ui,align, tpl, bg, { line: inLine }, depth > 0 ? 'heading-title heading-' + depth : '']">
 		<view class="anchor" :id="title"></view>
 		<view class="action" :class="[hasLine ? 'hasLine' : '', hasDot ? 'hasDot' : '']">
 			<div class="action-icon">
@@ -30,7 +30,7 @@
 
 <script>
 export default {
-	name: 'uiTitle',
+	name: 'UiTitle',
 	data() {
 		return {};
 	},
@@ -44,6 +44,10 @@ export default {
 			default: 0
 		},
 		subTitle: {
+			type: String,
+			default: ''
+		},
+		ui: {
 			type: String,
 			default: ''
 		},

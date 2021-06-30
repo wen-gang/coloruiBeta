@@ -18,7 +18,7 @@
 
 <script>
 export default {
-	name: 'uiColorPicker',
+	name: 'UiColorPicker',
 	data() {
 		return {
 			inputValue: '',

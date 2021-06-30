@@ -5,7 +5,7 @@
 			<view class="paragraph">自定义顶部导航栏,适用于所有页面,小程序有返回胶囊样式可以使用。</view>
 			<!-- <view class="paragraph">默认导航栏带有返回按钮,自动判断当前页面是否为首页而改变图标和跳转(请在<ui-code>@/colorui/js/mixin.js</ui-code>配置首页)</view> -->
 
-			<ui-menu radius class="mt-4">
+			<ui-menu class="mt-4 radius">
 				<ui-menu-item icon="uicon-equalizer" title="参数" @click.native="_to('/pages/parameter/parameter?component=ui-navbar')"></ui-menu-item>
 			</ui-menu>
 			<!-- 带返回 -->

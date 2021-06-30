@@ -1,5 +1,5 @@
 <template>
-	<view class="ui-steps" :class="[{ 'steps-arrow': arrow }, { 'steps-number': number }, { 'steps-column': column }]" v-else>
+	<view class="ui-steps" :class="[{ 'steps-arrow': arrow }, { 'steps-number': number }, { 'steps-column': column },ui]">
 		<view class="ui-step" :class="index > cur ? '' : curStyle" v-for="(item, index) in info" :key="index">
 			<view class="ui-steps-num" :data-index="index + 1" v-if="number" :class="[{ 'ui-steps-err': index + 1 == err }]"></view>
 			<view class="ui-steps-icon" :class="index > cur ? 'cicon-title' : item.icon" v-else></view>
@@ -17,7 +17,7 @@
 
 <script>
 export default {
-	name: 'uiSteps',
+	name: 'UiSteps',
 	data() {
 		return {};
 	},
@@ -25,6 +25,10 @@ export default {
 		direction: {
 			type: String,
 			default: 'row'
+		},
+		ui: {
+			type: String,
+			default: ''
 		},
 		arrow: {
 			type: Boolean,

@@ -6,7 +6,7 @@
 			@tap="_cancel"
 			:style="{ top: (noNav ? 0 : sys_navBar + top) + 'px' }"
 		>
-			<view :style="dialog" class="ui-dialog" @tap.stop :class="transparent ? 'bg-none' : ''">
+			<view :style="dialog" class="ui-dialog" :class="[transparent? 'bg-none' : '',ui]" @tap.stop>
 				<slot v-if="name != 'sys_dialog'"></slot>
 				<view class="ui-modal-title" v-if="title != ''"><ui-title :title="title" align="center" text="text-xl"></ui-title></view>
 				<view class="ui-modal-content" v-if="content != ''">{{ content }}</view>
@@ -27,11 +27,15 @@
 <script>
 import { mapState } from 'vuex';
 export default {
-	name: 'uiModal',
+	name: 'UiModal',
 	props: {
 		noNav: {
 			type: Boolean,
 			default: false
+		},
+		ui: {
+			type: String,
+			default: ''
 		},
 		title: {
 			type: String,

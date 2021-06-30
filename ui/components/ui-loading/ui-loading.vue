@@ -1,5 +1,5 @@
 <template>
-	<view class="ui-loading-box" :class="[size ? `text-${size}` : ``, { loop: slots.default||img }]">
+	<view class="ui-loading-box" :class="[size ? `text-${size}` : ``, { loop: slots.default||img },ui]">
 		<view class="ui-loading">
 			<view class="ui-loading-cut"><view class="ui-loading-loop" :class="[color == true ? 'color' : `default ${color}`]"></view></view>
 		</view>
@@ -16,12 +16,17 @@
 <script>
 let _this = null;
 export default {
+	name: 'UiLoading',
 	data() {
 		return { 
 			slots: {}
 		};
 	},
 	props: {
+		ui: {
+			type: String,
+			default: ''
+		},
 		size: {
 			type: String,
 			default: ''

@@ -32,7 +32,7 @@
 
 <script>
 export default {
-	name: 'uiFixed',
+	name: 'UiFixed',
 	data() {
 		return {
 			content: {},

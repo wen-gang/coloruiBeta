@@ -1,6 +1,6 @@
 <template>
 	<view class="ui-page" :class="['theme-' + sys_theme, 'main-' + sys_main]">
-		<view class="page-body" :class="bg" :style="[styles]">
+		<view class="page-body" :class="[bg,ui]" :style="[styles]">
 			<view class="page-body-main">
 				<app-navbar :bg="navBg" :title="title" v-if="title"></app-navbar>
 				<slot></slot>
@@ -42,7 +42,7 @@
 import { mapState } from 'vuex';
 var _this = {};
 export default {
-	name: 'uiSys',
+	name: 'UiSys',
 	data() {
 		return {
 			isloading: true
@@ -58,6 +58,10 @@ export default {
 		bg: {
 			type: String,
 			default: 'ui-BG-2'
+		},
+		ui: {
+			type: String,
+			default: ''
 		},
 		img: {
 			type: String,

@@ -42,46 +42,46 @@
 			<ui-title title="头像层叠" depth="2" isIcon></ui-title>
 			<view class="p-5 flex align-center">
 				<view class="ui-avatar-stack">
-					<view class="ui-avatar xxl"><image src="https://oss.color-ui.com/avatar/lol-avatar/1032.jpg" mode="widthFix"></image></view>
-					<view class="ui-avatar xxl"><image src="https://oss.color-ui.com/avatar/lol-avatar/1040.jpg" mode="widthFix"></image></view>
-					<view class="ui-avatar xxl"><image src="https://oss.color-ui.com/avatar/lol-avatar/1050.jpg" mode="widthFix"></image></view>
+					<view class="ui-avatar xl"><image src="https://oss.color-ui.com/avatar/lol-avatar/1032.jpg" mode="widthFix"></image></view>
+					<view class="ui-avatar xl"><image src="https://oss.color-ui.com/avatar/lol-avatar/1040.jpg" mode="widthFix"></image></view>
+					<view class="ui-avatar xl"><image src="https://oss.color-ui.com/avatar/lol-avatar/1050.jpg" mode="widthFix"></image></view>
 				</view>
 			</view>
 
 			<view class="p-5 flex align-center">
 				<view class="ui-avatar-stack ui-BG-2 reverse">
-					<view class="ui-avatar xxl"><image src="https://oss.color-ui.com/avatar/lol-avatar/1032.jpg" mode="widthFix"></image></view>
-					<view class="ui-avatar xxl"><image src="https://oss.color-ui.com/avatar/lol-avatar/1040.jpg" mode="widthFix"></image></view>
-					<view class="ui-avatar xxl"><image src="https://oss.color-ui.com/avatar/lol-avatar/1050.jpg" mode="widthFix"></image></view>
+					<view class="ui-avatar xl"><image src="https://oss.color-ui.com/avatar/lol-avatar/1032.jpg" mode="widthFix"></image></view>
+					<view class="ui-avatar xl"><image src="https://oss.color-ui.com/avatar/lol-avatar/1040.jpg" mode="widthFix"></image></view>
+					<view class="ui-avatar xl"><image src="https://oss.color-ui.com/avatar/lol-avatar/1050.jpg" mode="widthFix"></image></view>
 				</view>
 			</view>
 
 			<view class="p-5 flex align-center">
 				<view class="ui-avatar-stack ui-BG-2 reverse">
-					<view class="ui-avatar xxl"><image src="https://oss.color-ui.com/avatar/lol-avatar/1032.jpg" mode="widthFix"></image></view>
-					<view class="ui-avatar xxl"><image src="https://oss.color-ui.com/avatar/lol-avatar/1040.jpg" mode="widthFix"></image></view>
-					<view class="ui-avatar xxl"><image src="https://oss.color-ui.com/avatar/lol-avatar/1050.jpg" mode="widthFix"></image></view>
+					<view class="ui-avatar xl"><image src="https://oss.color-ui.com/avatar/lol-avatar/1032.jpg" mode="widthFix"></image></view>
+					<view class="ui-avatar xl"><image src="https://oss.color-ui.com/avatar/lol-avatar/1040.jpg" mode="widthFix"></image></view>
+					<view class="ui-avatar xl"><image src="https://oss.color-ui.com/avatar/lol-avatar/1050.jpg" mode="widthFix"></image></view>
 				</view>
 			</view>
 
 			<view class="p-5 flex align-center">
 				<view class="ui-avatar-stack ui-BG-2 mx-3">
-					<view class="ui-avatar xxl ellipse"><image src="https://oss.color-ui.com/avatar/lol-avatar/1032.jpg" mode="widthFix"></image></view>
-					<view class="ui-avatar xxl ellipse"><image src="https://oss.color-ui.com/avatar/lol-avatar/1040.jpg" mode="widthFix"></image></view>
-					<view class="ui-avatar xxl ellipse"><image src="https://oss.color-ui.com/avatar/lol-avatar/1050.jpg" mode="widthFix"></image></view>
+					<view class="ui-avatar xl ellipse"><image src="https://oss.color-ui.com/avatar/lol-avatar/1032.jpg" mode="widthFix"></image></view>
+					<view class="ui-avatar xl ellipse"><image src="https://oss.color-ui.com/avatar/lol-avatar/1040.jpg" mode="widthFix"></image></view>
+					<view class="ui-avatar xl ellipse"><image src="https://oss.color-ui.com/avatar/lol-avatar/1050.jpg" mode="widthFix"></image></view>
 				</view>
 			</view>
 
 			<view class="p-5 flex align-center">
 				<view class="ui-avatar-stack ui-BG-2 mx-3">
-					<view class="ui-avatar xxl round"><image src="https://oss.color-ui.com/avatar/lol-avatar/1032.jpg" mode="widthFix"></image></view>
-					<view class="ui-avatar xxl round"><image src="https://oss.color-ui.com/avatar/lol-avatar/1040.jpg" mode="widthFix"></image></view>
-					<view class="ui-avatar xxl round"><image src="https://oss.color-ui.com/avatar/lol-avatar/1050.jpg" mode="widthFix"></image></view>
+					<view class="ui-avatar xl round"><image src="https://oss.color-ui.com/avatar/lol-avatar/1032.jpg" mode="widthFix"></image></view>
+					<view class="ui-avatar xl round"><image src="https://oss.color-ui.com/avatar/lol-avatar/1040.jpg" mode="widthFix"></image></view>
+					<view class="ui-avatar xl round"><image src="https://oss.color-ui.com/avatar/lol-avatar/1050.jpg" mode="widthFix"></image></view>
 				</view>
 				<view class="ui-avatar-stack ui-BG-2 mx-3 reverse">
-					<view class="ui-avatar xxl round"><image src="https://oss.color-ui.com/avatar/lol-avatar/1042.jpg" mode="widthFix"></image></view>
-					<view class="ui-avatar xxl round"><image src="https://oss.color-ui.com/avatar/lol-avatar/1050.jpg" mode="widthFix"></image></view>
-					<view class="ui-avatar xxl round"><image src="https://oss.color-ui.com/avatar/lol-avatar/1060.jpg" mode="widthFix"></image></view>
+					<view class="ui-avatar xl round"><image src="https://oss.color-ui.com/avatar/lol-avatar/1042.jpg" mode="widthFix"></image></view>
+					<view class="ui-avatar xl round"><image src="https://oss.color-ui.com/avatar/lol-avatar/1050.jpg" mode="widthFix"></image></view>
+					<view class="ui-avatar xl round"><image src="https://oss.color-ui.com/avatar/lol-avatar/1060.jpg" mode="widthFix"></image></view>
 				</view>
 			</view>
 

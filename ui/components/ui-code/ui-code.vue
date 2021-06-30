@@ -1,5 +1,5 @@
 <template>
-	<view class="ui-code border radius" :class="[tag, 'language-' + lang, bg,{'hasTitle':title}]">
+	<view class="ui-code border radius" :class="[tag, 'language-' + lang, bg,{'hasTitle':title},ui]">
 		<block v-if="rich">
 			<scroll-view :scroll-y="scroll" scroll-x class="ui-scroll-view" :class="scroll ? 'ui-scroll' : ''">
 				<rich-text :nodes="nodes" class="ui-rich-text"></rich-text>
@@ -18,7 +18,7 @@
 <script>
 import Prism from './prism.js';
 export default {
-	name: 'uiCode',
+	name: 'UiCode',
 	data() {
 		return {
 			nodes: [],
@@ -27,6 +27,10 @@ export default {
 		};
 	},
 	props: {
+		ui: {
+			type: String,
+			default: ''
+		},
 		title: {
 			type: [String, Boolean],
 			default: false

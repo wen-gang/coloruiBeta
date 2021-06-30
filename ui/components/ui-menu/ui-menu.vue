@@ -6,7 +6,7 @@
 
 <script>
 export default {
-	name: 'uiRadio',
+	name: 'UiMenu',
 	data() {
 		return {
 			 

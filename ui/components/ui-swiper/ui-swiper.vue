@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<view class="ui-swiper" :class="[mode,bg]">
+		<view class="ui-swiper" :class="[mode,bg,ui]">
 			<swiper :circular="circular" :autoplay="true" :interval="interval" duration="500" :style="{height: height}"
 				@change="swiperChange">
 				<swiper-item v-for="(item, index) in info" :key="index" :class="{ cur: cur == index }" @tap="_to(item.url,item.urlType)">
@@ -23,7 +23,7 @@
 
 <script>
 	export default {
-		name: 'uiSwiper',
+		name: 'UiSwiper',
 		data() {
 			return {
 				cur: 0,
@@ -51,6 +51,10 @@
 				default () {
 					return [];
 				}
+			},
+			ui: {
+				type: String,
+				default: ''
 			},
 			mode: {
 				//default

@@ -51,7 +51,7 @@
 				<ui-code>.bg-{color}-{color}</ui-code>
 				支持所有基础色到基础色的渐变。
 			</view>
-			<ui-menu radius><ui-menu-item icon="uicon-paint" title="浏览全部背景色" @click.native="_to('/pages/demo/background')"></ui-menu-item></ui-menu>
+			<ui-menu ui="radius"><ui-menu-item icon="uicon-paint" title="浏览全部背景色" @click.native="_to('/pages/demo/background')"></ui-menu-item></ui-menu>
 
 			<view class="paragraph p-3">
 				<ui-title title="特殊的渐变背景色" depth="3" class="ml-3" isIcon></ui-title>

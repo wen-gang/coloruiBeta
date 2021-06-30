@@ -1,5 +1,5 @@
 <template>
-	<view class="stepper">
+	<view class="stepper" :class="[ui]">
 		<button class="ui-btn round icon sm" :class="[bg]" @click="_calcValue('minus')" :disabled="inputValue <= min || disabled">
 			<view class="uicon-move"></view>
 		</button>
@@ -12,13 +12,17 @@
 
 <script>
 	export default {
-		name: 'stepper',
+		name: 'UiStepper',
 		data() {
 			return {
 				inputValue: 0
 			};
 		},
 		props: {
+			ui: {
+				type: String,
+				default: ''
+			},
 			value: {
 				type: [Number, String],
 				default: 1

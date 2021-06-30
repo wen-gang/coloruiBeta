@@ -19,7 +19,7 @@
 
 <script>
 export default {
-	name: 'uiTabbar',
+	name: 'UiTabbar',
 	data() {
 		return {
 			cur: 0
