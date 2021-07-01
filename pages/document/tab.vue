@@ -4,6 +4,9 @@
 			<!-- 简介 -->
 			<ui-title title="简介" depth="2" isIcon></ui-title>
 			<view class="paragraph">选项卡</view>
+			
+			<ui-tab :tab="['选项卡1','选项卡2','选项卡3']"></ui-tab>
+			
 		</view>
 	</ui-sys>
 </template>

@@ -18,7 +18,7 @@
 			box-shadow: 0 .5em 1em rgba($value, var(--ui-Shadow-opacity));
 		}
 		&-sm.shadow-#{$color} {
-			box-shadow:  0 .125em .25em rgba($value, var(--ui-Shadow-opacity-sm));
+			box-shadow:  0 .125em .25em rgba($value, var(--ui-Shadow-opacity));
 		}
 		&-lg.shadow-#{$color} {
 			box-shadow:  0 1em 3em rgba($value, var(--ui-Shadow-opacity-lg));
@@ -27,7 +27,7 @@
 
 	&-warp {
 		position: relative;
-		box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, var(--ui-Shadow-opacity-sm));
+		box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, var(--ui-Shadow-opacity));
 	}
 	&-warp:before,
 	&-warp:after {

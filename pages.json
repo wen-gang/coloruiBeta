@@ -161,26 +161,20 @@
 		}, {
 			"path": "pages/article/guide/guide",
 			"style": {}
+		}, {
+			"path": "pages/parameter/parameter",
+			"style": {}
+		}, {
+			"path": "pages/demo/navbar",
+			"style": {}
+		}, {
+			"path": "pages/demo/wallpaper",
+			"style": {}
+		}, {
+			"path": "pages/login/login",
+			"style": {}
 		}
-	    ,{
-            "path" : "pages/parameter/parameter",
-            "style" :                                                                                    
-            {}
-            
-        }
-        ,{
-            "path" : "pages/demo/navbar",
-            "style" :                                                                                    
-            {}
-            
-        }
-        ,{
-            "path" : "pages/demo/wallpaper",
-            "style" :                                                                                    
-            {}
-            
-        }
-    ],
+	],
 	"easycom": {
 		"ui-(.*)": "@/ui/components/ui-$1/ui-$1.vue",
 		"app-(.*)": "@/app/components/app-$1/app-$1.vue"

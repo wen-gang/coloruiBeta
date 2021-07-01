@@ -78,16 +78,6 @@
 		left: 0;
 		display: flex;
 	}
-	&.shadow:not([class*='bg-']){
-		box-shadow: 0 8rpx 8rpx rgba(0, 0, 0, 0.3);
-	}
-	
-	&.shadow-sm:not([class*='bg-']) {
-		box-shadow: 0 4rpx 4rpx rgba(0, 0, 0, 0.3);
-	}
-	&.shadow-lg:not([class*='bg-']) {
-		box-shadow: 0 30rpx 60rpx rgba(0, 0, 0, 0.2);
-	}
 }
 
 	.ui-btn:not(.icon) [class*='icon-'] {

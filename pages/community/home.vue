@@ -1,10 +1,14 @@
 <template>
-	<ui-sys img="https://oss.color-ui.com/img/4put2.png"  tabbar>
-		<ui-navbar :back="false" opacity>
-			<view class="flex-center flex-sub" v-if="sys_scrollTop > sys_navBar">
-				社区
-			</view>
-		</ui-navbar>
+	<ui-sys img="https://oss.color-ui.com/img/4put2.png" tabbar>
+
+		<block v-if="isPc"></block>
+		<block v-else>
+			<ui-navbar :back="false" opacity>
+				<view class="flex-center flex-sub" v-if="sys_scrollTop > sys_navBar">
+					社区
+				</view>
+			</ui-navbar>
+		</block>
 	</ui-sys>
 </template>
 

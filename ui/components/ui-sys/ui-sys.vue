@@ -2,10 +2,18 @@
 	<view class="ui-page" :class="['theme-' + sys_theme, 'main-' + sys_main]">
 		<view class="page-body" :class="[bg,ui]" :style="[styles]">
 			<view class="page-body-main">
-				<app-navbar :bg="navBg" :title="title" v-if="title"></app-navbar>
-				<slot></slot>
-				<app-footer v-if="footer"></app-footer>
-				<ui-tabbar v-if="tabbar"></ui-tabbar>
+				<block v-if="isPc">
+					<app-pc :tabbar="tabbar"  :title="title">
+						<slot></slot>
+						<app-footer v-if="footer"></app-footer>
+					</app-pc>				
+				</block>
+				<block v-else>
+					<app-navbar :bg="navBg" :title="title" v-if="title"></app-navbar>
+					<slot></slot>
+					<app-footer v-if="footer"></app-footer>
+					<ui-tabbar ui="shadow border-top" v-if="tabbar"></ui-tabbar>
+				</block>
 
 				<view class="loading-body bg-blur" :style="[{ zIndex: 1999 }]" v-if="isloading">
 					<view class="cicon-loading icon-spin text-sl mb-3"></view>

@@ -29,6 +29,9 @@ const mixin = {
 		sys_capsule() {
 			return this.$store.getters.sys_capsule
 		},
+		isPc(){
+			return uni.getSystemInfoSync().windowWidth > 750
+		}
 	},
 	created() {
 		if (this._uid != this.$root._uid) {

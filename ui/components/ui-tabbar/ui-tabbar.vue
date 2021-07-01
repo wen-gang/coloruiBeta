@@ -1,6 +1,6 @@
 <template>
-	<ui-fixed bottom @getHeight="tabbarheight" :bg="bg" :placeholder="true" :index="1000" :ui="'shadow '+ui">
-		<view class="ui-tabbar-box border-top">
+	<ui-fixed bottom @getHeight="tabbarheight" :bg="bg" :placeholder="true" :ui="ui" :noFixed="noFixed">
+		<view class="ui-tabbar-box">
 			<view class="ui-tabbar">
 				<block class="" v-for="(item, index) in tabbar" :key="index">
 					<view class="ui-tabbar-item" :class="[index == cur ? curText : text, item.type, { cur: index == cur }]" @tap="clickItem(item)">
@@ -40,7 +40,7 @@ export default {
 		},
 		ui: {
 			type: String,
-			default: 'bg-blur'
+			default: ''
 		},
 		curText: {
 			type: String,
@@ -49,6 +49,10 @@ export default {
 		text: {
 			type: String,
 			default: 'text-c'
+		},
+		noFixed: {
+			type: Boolean,
+			default: false
 		},
 	},
 	watch: {},
