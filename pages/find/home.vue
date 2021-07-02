@@ -1,28 +1,20 @@
 <template>
 	<ui-sys img="https://oss.color-ui.com/img/4put2.png" tabbar>
-
-		<block v-if="isPc"></block>
-		<block v-else>
-			<ui-navbar :back="false" opacity>
-				<view class="flex-center flex-sub" v-if="sys_scrollTop > sys_navBar">
-					发现
-				</view>
-			</ui-navbar>
-		</block>
+		<ui-navbar :back="false" opacity><view class="flex-center flex-sub" v-if="sys_scrollTop > sys_navBar">发现</view></ui-navbar>
 	</ui-sys>
 </template>
 
 <script>
-	let _this = null;
-	export default {
-		data() {
-			return {};
-		},
-		onLoad() {
-			_this = this;
-		},
-		methods: {}
-	};
+let _this = null;
+export default {
+	data() {
+		return {};
+	},
+	onLoad() {
+		_this = this;
+	},
+	methods: {}
+};
 </script>
 
 <style lang="scss"></style>

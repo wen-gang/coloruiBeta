@@ -1,36 +1,6 @@
 <template>
-	<ui-sys :img="isPc?'':'https://oss.color-ui.com/img/4put2.png'" tabbar>
-		<block  v-if="isPc">
-			<view class="banner-box">
-				<view class="banner-content-box">
-					<view class="mr-5 pr-5">
-						<image src="https://oss.color-ui.com//web/2oxyb.png" mode="widthFix" style="width:200px;height: 47px;"></image>
-						<view class="text-light text-lg mt-3 ml-2">专注于视觉,基于UniApp的高质量UI组件库</view>
-						<view class="mt-5">
-							<navigator class="cu-btn bg-main-a round" url="http://localhost:8080/pages/docment/article/scss">开始使用</navigator>
-							<a class="cu-btn border round ml-3" target="_blank" href="https://github.com/weilanwl/ColorUI">
-								<text class="cui-github-circle mr-2"></text>
-								访问GitHub
-							</a>
-						</view>
-					</view>
-					<view class=""><image src="https://oss.color-ui.com//web/n79wa.png" mode="widthFix" style="width:280px;"></image></view>
-				</view>
-				<image src="https://oss.color-ui.com//web/9cp3f.png" mode="widthFix" class="banner-img-left"></image>
-				<image src="https://oss.color-ui.com//web/ypfjn.png" mode="widthFix" class="banner-img-right"></image>
-			</view>
-			<view class="ui-container">
-				<block v-for="(nav, navindex) in nav" :key="navindex">
-					<ui-title :title="nav.title" depth="2" isIcon class="ml-3"></ui-title>
-					<view class="ui-grid ui-cols-5">
-						<view class="ui-item p-3" v-for="(item, index) in nav.subnav" :key="index">
-							<app-nav-li :data="item"></app-nav-li>
-						</view>
-					</view>
-				</block>
-			</view>
-		</block>
-		<block v-else>
+	<ui-sys img="https://oss.color-ui.com/img/4put2.png" tabbar>
+
 			<ui-navbar :back="false" opacity>
 				<view class="flex-bar p-3" v-if="sys_scrollTop > sys_navBar">
 					<image src="https://oss.color-ui.com/img/hapm8.png" mode="aspectFill"
@@ -63,7 +33,6 @@
 					</view>
 				</block>
 			</view>
-		</block>
 	</ui-sys>
 </template>
 
