@@ -1,7 +1,82 @@
 <template>
-	<view class="ui-form-input">
-		<input :id="_uid" :type="type" :placeholder="placeholder" :value="curValue" @focus="_focus" @blur="_blur" @input="_input" :class="[{ focus: focus }, size]" />
-		<text class="icon uicon-round-close" v-if="clear && curValue" @tap="_clear"></text>
+	<view class="ui-form-input" :class="[{ disabled: isDisabled }]">
+		<block v-if="type == 'textarea'">
+			<textarea
+				class="ui-textarea-wrapper"
+				:disabled="isDisabled"
+				:id="_uid"
+				:name="name"
+				:placeholder="placeholder"
+				:maxlength="maxlength"
+				:value="curValue"
+				@focus="_focus"
+				@blur="_blur"
+				@input="_input"
+				:class="[{ focus: focus }, ui,{'show-tag':showtag}]"
+				type="textarea"
+				:auto-height="autoheight"
+				:cursor-spacing="100"
+			></textarea>
+			<view class="ui-tag ui-textarea-tag" v-if="showtag">{{curValue.length}} / {{maxlength}}</view>
+		</block>
+		<block v-else>
+			<!-- #ifdef H5 -->
+			<Input
+				class="ui-input-wrapper"
+				:disabled="isDisabled"
+				:id="_uid"
+				:type="isVisible?'text':type"
+				:name="name"
+				:placeholder="placeholder"
+				:maxlength="maxlength"
+				:value="curValue"
+				@focus="_focus"
+				@blur="_blur"
+				@input="_input"
+				:class="[{ focus: focus }, ui]"
+				:cursor-spacing="18"
+			/>
+			<!-- #endif -->
+			<!-- #ifndef H5 -->
+			<input
+				class="ui-input-wrapper"
+				:disabled="isDisabled"
+				:id="_uid"
+				type="text"
+				:name="name"
+				:placeholder="placeholder"
+				:maxlength="maxlength"
+				:value="curValue"
+				@focus="_focus"
+				@blur="_blur"
+				@input="_input"
+				:class="[{ focus: focus }, ui]"
+				v-if="isVisible"
+				:cursor-spacing="18"
+			/>
+			<input
+				class="ui-input-wrapper"
+				:disabled="isDisabled"
+				:id="_uid"
+				:type="type"
+				:name="name"
+				:placeholder="placeholder"
+				:maxlength="maxlength"
+				:value="curValue"
+				@focus="_focus"
+				@blur="_blur"
+				@input="_input"
+				:class="[{ focus: focus }, ui]"
+				:cursor-spacing="18"
+				v-else
+			/>
+			<!-- #endif -->
+			<text class="ui-input-icon cicon-round-close" v-if="clear && curValue" @click="_clear"></text>
+			<view class="ui-input-icon ui-input-visible" v-if="type == 'password'" @click="_toggleVisible">
+				<text class="uicon-eye" v-if="isVisible"></text>
+				<text class="uicon-eye-off" v-else></text>
+			</view>
+		</block>
 	</view>
 </template>
 
@@ -10,6 +85,7 @@ export default {
 	name: 'UiInput',
 	data() {
 		return {
+			isVisible: false,
 			focus: false,
 			curValue: this.value,
 			tips: false
@@ -32,11 +108,11 @@ export default {
 			type: String,
 			default: 'text'
 		},
-		title: {
+		name: {
 			type: String,
 			default: ''
 		},
-		size: {
+		ui: {
 			type: String,
 			default: ''
 		},
@@ -45,13 +121,18 @@ export default {
 			default: false
 		},
 		maxlength: {
-			type: Number
+			type: [Number, String],
+			default: 140
 		},
-		autofocus: {
+		showtag: {
 			type: Boolean,
 			default: false
 		},
-		clearable: {
+		autoheight: {
+			type: Boolean,
+			default: false
+		},
+		autofocus: {
 			type: Boolean,
 			default: false
 		}
@@ -62,7 +143,31 @@ export default {
 			this.setCurValue(val);
 		}
 	},
+
+	computed: {
+		isDisabled() {
+			this.Group = this._getGroup();
+			// 判断是否存在 ui-Group 组件
+			if (this.Group) {
+				return this.Group.disabled;
+			}
+			return false;
+		}
+	},
 	methods: {
+		/**
+		 * 获取父元素实例
+		 */
+		_getGroup(name = 'UiFormGroup') {
+			let parent = this.$parent;
+			let parentName = parent.$options.name;
+			while (parentName !== name) {
+				parent = parent.$parent;
+				if (!parent) return false;
+				parentName = parent.$options.name;
+			}
+			return parent;
+		},
 		_focus() {
 			this.focus = true;
 		},
@@ -77,6 +182,10 @@ export default {
 		setCurValue(value) {
 			if (value === this.curValue) return;
 			this.curValue = value;
+		},
+		_toggleVisible() {
+			console.log('_toggleVisible');
+			this.isVisible = !this.isVisible; 
 		}
 	}
 };
@@ -85,76 +194,56 @@ export default {
 <style lang="scss">
 .ui-form-input {
 	position: relative;
-	display: inline-block;
+	display: inline-flex;
 	width: 100%;
 	border-radius: inherit;
-	display: flex;
-	input {
-		padding: 0 20rpx;
-		flex: 1;
-		font-size: 28rpx;
-		height: 72rpx;
+	align-items: center;
+	.ui-input-wrapper,.ui-textarea-wrapper {
 		border-radius: inherit;
-
-		&:after {
-			position: absolute;
-			content: '';
-			width: 100%;
-			height: 100%;
-			box-shadow: 0 0 0 1px var(--border-color);
-			top: 0;
-			left: 0;
-			border-radius: inherit;
-			pointer-events: none;
-		}
-		&:hover::after,
-		&.focus::after {
-			box-shadow: 0 0 0 1px var(--primary);
-		}
-		&::before {
-			position: absolute;
-			content: '';
-			width: calc(100% + 10px);
-			height: calc(100% + 10px);
-			box-shadow: 0 0 0 3px var(--primary);
-			top: 0;
-			left: -5px;
-			right: 0;
-			bottom: 0;
-			margin: auto;
-			border-radius: inherit;
-			pointer-events: none;
-			opacity: 0;
-			transition: $transition-base-out;
-		}
-		&.focus::before {
-			width: calc(100% + 0px);
-			height: calc(100% + 0px);
-			left: 0px;
-			opacity: 0.3;
-			transition: $transition-base;
-		}
-
-		&.sm {
-			font-size: 24rpx;
-			height: 60rpx;
-		}
-		&.lg {
-			font-size: 32rpx;
-			height: 84rpx;
+		color: var(--ui-TC-1);
+		padding: 0.8em 0;
+		font-size: 28rpx;
+		width: 100%;
+		/* #ifdef H5 */
+		background-color: transparent;
+		border: none;
+		/* #endif */
+		&:focus-visible {
+			outline: none;
+			outline-style: none;
 		}
 	}
-	.icon {
-		width: 72rpx;
-		height: 72rpx;
-		line-height: 72rpx;
-		font-size: 28rpx;
-		text-align: center;
-		color: #808695;
+	.ui-input-wrapper {
+		display: flex;
+		align-items: center;
+	}
+	.ui-textarea-wrapper {
+		min-height: 3.2em;
+		line-height: 1.4em;
+	}
+	.ui-textarea-wrapper.show-tag {
+		min-height: 5.6em;
+		padding-bottom: 2.4em;
+	}
+	.ui-textarea-tag{
 		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+	.ui-input-visible {
+		font-size: 16px;
+		text-align: center;
+	}
+	.ui-input-icon {
+		width: 2em;
+		height: 2.6em;
+		line-height: 2.6em;
+		font-size: 28rpx;
+		text-align: center;  
 		right: 0;
 		top: 0;
 		z-index: 3;
+		padding-left: .6em;
 	}
 	.tips-text {
 		height: 1em;

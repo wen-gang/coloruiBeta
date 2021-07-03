@@ -21,7 +21,9 @@
 	color: var(--text-a);
 	background-color: var(--ui-BG);
 	vertical-align: baseline;
-
+	&:first-child:last-child{
+		margin: 0;
+	}
 	&:not([class*='round'])::after {
 		border-radius: calc(#{$radius} * 2);
 	}
