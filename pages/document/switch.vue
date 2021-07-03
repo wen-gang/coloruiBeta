@@ -6,7 +6,7 @@
 			<ui-switch></ui-switch>
 			
 			<ui-title depth="2" title="默认" isIcon></ui-title>
-			<ui-switch ui="bg-red"></ui-switch>
+			<ui-switch bg="bg-red"></ui-switch>
 			
 		</view>
 	</ui-sys>
