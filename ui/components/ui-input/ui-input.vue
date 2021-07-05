@@ -20,24 +20,6 @@
 			<view class="ui-tag ui-textarea-tag" v-if="showtag">{{curValue.length}} / {{maxlength}}</view>
 		</block>
 		<block v-else>
-			<!-- #ifdef H5 -->
-			<Input
-				class="ui-input-wrapper"
-				:disabled="isDisabled"
-				:id="_uid"
-				:type="isVisible?'text':type"
-				:name="name"
-				:placeholder="placeholder"
-				:maxlength="maxlength"
-				:value="curValue"
-				@focus="_focus"
-				@blur="_blur"
-				@input="_input"
-				:class="[{ focus: focus }, ui]"
-				:cursor-spacing="18"
-			/>
-			<!-- #endif -->
-			<!-- #ifndef H5 -->
 			<input
 				class="ui-input-wrapper"
 				:disabled="isDisabled"
@@ -70,7 +52,6 @@
 				:cursor-spacing="18"
 				v-else
 			/>
-			<!-- #endif -->
 			<text class="ui-input-icon cicon-round-close" v-if="clear && curValue" @click="_clear"></text>
 			<view class="ui-input-icon ui-input-visible" v-if="type == 'password'" @click="_toggleVisible">
 				<text class="uicon-eye" v-if="isVisible"></text>

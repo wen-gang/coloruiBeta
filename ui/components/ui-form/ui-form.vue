@@ -1,5 +1,5 @@
 <template>
-	<view class="ui-form border-top" :class="[ui]"><slot></slot></view>
+	<view class="ui-form border-top border-bottom" :class="[ui]"><slot></slot></view>
 </template>
 
 <script>

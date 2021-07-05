@@ -1,7 +1,7 @@
 <template>
 	<view
 		class="ui-card" :class="[ui]" >
-		<view class="ui-card-main" v-if="img" :style="[{ height: imgHeight }, { paddingTop: imgHeight ? 0 : '50%' }]">
+		<view class="ui-card-main" :class="[imgUi]" v-if="img" :style="[{ height: imgHeight }, { paddingTop: imgHeight ? 0 : '50%' }]">
 			<image :src="img" class="ui-card-image" :style="[{position:imgHeight=='auto'?'relative':'absolute'}]" :mode="imgHeight=='auto'?'widthFix':'aspectFill'"></image>
 			<view class="text-cut text-lg text-bold ui-card-fixedTitle bg-mask-bottom" v-if="title && fixedTitle">
 				<view class="">
@@ -50,6 +50,9 @@ export default {
 			type: String
 		}, 
 		ui: {
+			type: String
+		}, 
+		imgUi: {
 			type: String
 		}, 
 	},
@@ -101,6 +104,7 @@ export default {
 			left: 0;
 			top: 0;
 			z-index: 2;
+			border-radius: inherit;
 		}
 		.ui-card-fixedTitle {
 			padding: 1.5em 1em 1em;
