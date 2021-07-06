@@ -133,6 +133,8 @@ export default {
 		// background-color: var(--ui-BG-1);
 		// padding: 0 1em;
 		border-radius: $radius;
+		display: flex;
+		align-items: center;
 	}
 	.ui-form-action {
 		margin-left: 1em;
