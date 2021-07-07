@@ -12,7 +12,7 @@
 
 			<view class="ui-menu-item" v-if="sys_theme != 'auto'">
 				<view class="flex flex-center py-5 text-center flex-sub">
-					<view class="px-5">
+					<view class="pr-5">
 						<view class="mobile-phone border" @tap="setTheme('light')"
 							:class="{ cur: sys_theme == 'light' }">
 							<view class="ui-BG-Main radius"></view>
@@ -22,7 +22,7 @@
 						</view>
 						<view>浅色</view>
 					</view>
-					<view class="px-5">
+					<view class="pl-5">
 						<view class="mobile-phone border dark" @tap="setTheme('dark')"
 							:class="{ cur: sys_theme == 'dark' }">
 							<view class="ui-BG-Main radius"></view>
