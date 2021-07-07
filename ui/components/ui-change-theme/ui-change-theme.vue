@@ -11,7 +11,7 @@
 			<!-- #endif -->
 
 			<view class="ui-menu-item" v-if="sys_theme != 'auto'">
-				<view class="flex flex-center p-5 text-center flex-sub">
+				<view class="flex flex-center py-5 text-center flex-sub">
 					<view class="px-5">
 						<view class="mobile-phone border" @tap="setTheme('light')"
 							:class="{ cur: sys_theme == 'light' }">
