@@ -4,6 +4,7 @@ import modal from '@/ui/js/modal.js'
 import util from '@/ui/js/util.js'
 import mixin from '@/ui/js/mixin.js'
 import app from "@/app/index.js"
+
 if (uni.getStorageSync("VUE_APP_NAME") != process.env.VUE_APP_NAME) {
 	uni.clearStorage();
 	uni.setStorageSync('VUE_APP_NAME', process.env.VUE_APP_NAME);

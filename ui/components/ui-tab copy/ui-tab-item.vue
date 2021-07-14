@@ -12,6 +12,7 @@
 
 <script>
 export default {
+	name: 'TabItem',
 	data() {
 		return {};
 	},
@@ -54,21 +55,21 @@ export default {
 	},
 	created() {
 		uni.onWindowResize(res => {
-			this.computedQuery();
+			this._computedQuery();
 		});
 	},
 	mounted() {
 		this.$nextTick(function() {
-			this.computedQuery();
+			this._computedQuery();
 		});
 	},
 	updated() {
 		this.$nextTick(function() {
-			this.computedQuery();
+			this._computedQuery();
 		});
 	},
 	methods: {
-		computedQuery() {
+		_computedQuery() {
 			uni.createSelectorQuery()
 				.in(this)
 				.select('#tab-' + this.index)
@@ -90,9 +91,11 @@ export default {
 
 <style lang="scss">
 .ui-tab-item {
-	display: inline-block;
+	display: inline-flex;
 	vertical-align: middle;
-	padding: 20rpx;
+	padding: 0 20rpx;
+	min-height: 4em;
+	line-height: 4em;
 	&.cur {
 		color: var(--ui-TC-Main);
 	}

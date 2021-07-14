@@ -13,7 +13,7 @@
 				}
 			]"
 		>
-			<view class="ui-fixed-content" @tap="toTop" :style="[{ zIndex: index + sys_layer }]"><slot /></view>
+			<view class="ui-fixed-content" @tap="_toTop" :style="[{ zIndex: index + sys_layer }]"><slot /></view>
 			<view style="height: calc(env(safe-area-inset-bottom) / 5 * 3);" :class="[bg]" v-if="bottom && !noSafe"></view>
 			<view
 				class="ui-fixed-bg"
@@ -108,7 +108,7 @@ export default {
 	watch: {
 		sys_scrollTop(newValue, oldValue) {
 			if (this.sticky) {
-				this.setFixed(newValue);
+				this._setFixed(newValue);
 			}
 		},
 		noFixed: {
@@ -122,15 +122,14 @@ export default {
 	},
 	mounted() {
 		this.$nextTick(function() {
-			this.computedQuery();
-			
+			this._computedQuery();			
 		});
 	},
 	destroyed() {
 		uni.$off('_scrollTop_' + this.$root._uid);
 	},
 	methods: {
-		computedQuery() {
+		_computedQuery() {
 			uni.createSelectorQuery()
 				.in(this)
 				.select('#fixed-' + this._uid)
@@ -140,7 +139,7 @@ export default {
 						this.$emit('getHeight', data.height);
 						this.$emit('update:height', data.height);
 						if (this.sticky) {
-							this.setFixed(this.sys_scrollTop);
+							this._setFixed(this.sys_scrollTop);
 						}
 					} else {
 						console.log('fixed-' + this._uid + ' data error');
@@ -148,14 +147,14 @@ export default {
 				})
 				.exec();
 		},
-		setFixed(value) {
+		_setFixed(value) {
 			if (this.bottom) {
 				this.fixed = value >= this.content.bottom - uni.getSystemInfoSync().windowHeight + this.content.height + this.val;
 			} else {
 				this.fixed = value >= this.content.top - (this.noNav ? this.val : this.val + this.sys_navBar);
 			}
 		},
-		toTop() {
+		_toTop() {
 			if (this.clickTo) {
 				uni.pageScrollTo({
 					scrollTop: this.content.top,

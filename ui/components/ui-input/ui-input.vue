@@ -121,7 +121,7 @@ export default {
 	created() {},
 	watch: {
 		value(val) {
-			this.setCurValue(val);
+			this._setCurValue(val);
 		}
 	},
 
@@ -158,9 +158,9 @@ export default {
 		_input(e) {
 			let value = e.detail.value;
 			this.$emit('input', value);
-			this.setCurValue(value);
+			this._setCurValue(value);
 		},
-		setCurValue(value) {
+		_setCurValue(value) {
 			if (value === this.curValue) return;
 			this.curValue = value;
 		},

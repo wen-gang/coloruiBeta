@@ -77,7 +77,7 @@
 		},
 		watch: {
 			popover(val) {
-				this.computedQuery(uni.getSystemInfoSync().windowWidth, uni.getSystemInfoSync().windowHeight);
+				this._computedQuery(uni.getSystemInfoSync().windowWidth, uni.getSystemInfoSync().windowHeight);
 				if (val) {
 					if (this.tips != '' || this.time > 0) {
 						setTimeout(
@@ -99,10 +99,10 @@
 		},
 		mounted() {
 			this.$nextTick(() => {
-				this.computedQuery(uni.getSystemInfoSync().windowWidth, uni.getSystemInfoSync().windowHeight);
+				this._computedQuery(uni.getSystemInfoSync().windowWidth, uni.getSystemInfoSync().windowHeight);
 				// #ifdef H5
 				uni.onWindowResize(res => {
-					this.computedQuery(res.size.windowWidth, res.size.windowHeight);
+					this._computedQuery(res.size.windowWidth, res.size.windowHeight);
 				});
 				// #endif
 			});
@@ -111,7 +111,7 @@
 			_onHide() {
 				this.popover = false;
 			},
-			computedQuery(w, h) {
+			_computedQuery(w, h) {
 				uni.createSelectorQuery()
 					.in(this)
 					.select('#popover-button-' + this._uid)
