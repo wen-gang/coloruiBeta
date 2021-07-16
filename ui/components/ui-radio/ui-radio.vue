@@ -43,6 +43,10 @@
 			clearable: {
 				type: Boolean,
 				default: false
+			},
+			checked: {
+				type: Boolean,
+				default: false
 			}
 		},
 		computed: {
@@ -59,21 +63,26 @@
 				}
 				return this.disabled
 			},
+			isClearable() {
+				if (this.isGroup) {
+					return this._getParent().clearable || this.clearable
+				}
+				return this.clearable
+			},
 			isChecked() {
 				let parent = this._getParent()
 				if ((this.isGroup && parent.value == this.label) || (!this.isGroup && this.currentValue == this.label)) {
-					;
 					return true
 				}
-				return false
+				return this.checked
 			},
 		},
 		watch: {
 			value: {
-				immediate: true,
 				handler(value) {
 					this.currentValue = value
-				}
+				},
+				immediate: true
 			}
 		},
 		created() {
@@ -99,23 +108,8 @@
 				}
 				return null
 			},
-			// _onRadioChange() {
-			// 	if (!this.disabled) {
-			// 		if (this.isGroup) {
-			// 			this.radioGroupDate._onRadioGroupChange(this.label);
-			// 		} else {
-			// 			this.$emit('input', this.label);
-			// 			this.$emit('change', this.label);
-			// 		}
-			// 	}
-			// },
 			_onRadioClick() {
 				if (!this.isDisabled && !this.preventClick) {
-					this._choose()
-				}
-			},
-			select() {
-				if (!this.isDisabled) {
 					this._choose()
 				}
 			},
@@ -128,7 +122,7 @@
 						let parent = this._getParent()
 						parent._onRadioChange(this.label)
 					}
-				} else if (this.clearable) {
+				} else if (this.isClearable) {
 					this.currentValue = null
 					this.$emit('input', this.currentValue)
 					this.$emit('change', this.currentValue)
@@ -156,24 +150,70 @@
 			width: 1.2em;
 			height: 1.2em;
 			vertical-align: middle;
-		}
-
-		.ui-radio-input.cur {
-			position: relative;
-
 			&::before {
 				content: '';
 				position: absolute;
-				width: 0.5em;
-				height: 0.5em;
+				width: 0%;
+				height: 0%;
 				background-color: currentColor;
 				border-radius: 50%;
 				@include position-center;
 			}
 		}
 
+		.ui-radio-input.cur {
+			position: relative;
+			&::before {
+				width: 45%;
+				height: 45%;
+				transition: $transition-base;
+			}
+		}
+
 		&:last-child {
 			margin: 0 0.14286em;
+		}
+		&.check {
+			.ui-radio-input { 
+				&::before {
+					font-family: 'colorui';
+					content: '\e69f'; 
+					width: 1em;
+					height: 1em;
+					font-size: 0%;
+					background-color: transparent; 
+				}
+			}
+			.ui-radio-input.cur { 
+				&::before {					
+					width: 1em;
+					height: 1em;
+					font-size: 80%;
+				}
+			}
+		}
+		&.line { 
+			.ui-radio-input.cur { 
+				&::before {
+					width: calc(100% - 2px);
+					height: calc(100% - 2px);
+					background-color: var(--ui-BG);
+				}
+				&::after {
+					content: '';
+					position: absolute;
+					width: 50%;
+					height: 50%;
+					background-color: inherit;
+					border-radius: 50%;
+					@include position-center;
+				}
+			}
+		}
+		&.lg { 
+			.ui-radio-input {
+				font-size: 18px;
+			}
 		}
 	}
 </style>

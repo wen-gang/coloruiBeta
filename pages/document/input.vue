@@ -10,6 +10,7 @@
 		<ui-form ui="ui-BG">
 			<ui-form-group title="文本"><ui-input placeholder="请输入文本"></ui-input></ui-form-group>
 		</ui-form>
+		
 		<ui-title title="自定义类型" depth="2" isIcon ui="mx-4"></ui-title>
 		<ui-form ui="ui-BG">
 			<!-- 输入任意文本 -->

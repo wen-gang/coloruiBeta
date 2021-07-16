@@ -135,6 +135,7 @@ export default {
 		border-radius: $radius;
 		display: flex;
 		align-items: center;
+		min-height: 3em;
 	}
 	.ui-form-action {
 		margin-left: 1em;

@@ -28,6 +28,10 @@
 			bg: {
 				type: String,
 				default: 'ui-BG-Main'
+			},
+			clearable: {
+				type: Boolean,
+				default: false
 			}
 		},
 		watch: {
