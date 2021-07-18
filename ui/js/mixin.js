@@ -139,6 +139,9 @@ const mixin = {
 				}
 			});
 		},
+		_has(data,str) {
+			 return data.indexOf(str) != -1
+		},
 		_to(url, type = '') {
 			switch (type) {
 				case 'switchTab':
