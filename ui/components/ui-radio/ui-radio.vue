@@ -1,6 +1,6 @@
 <template>
 	<view class="ui-radio" @click="_onRadioClick" :class="[{ disabled: isDisabled }, ui]">
-		<view class="ui-radio-input round" :class="[isChecked ? 'cur ' + bg : unbg]" v-if="!noInput"></view>
+		<view class="ui-radio-input round" :class="[isChecked ? 'cur ' + bg : unbg]" v-if="!none"></view>
 		<view class="ui-radio-content"><slot></slot></view>
 		<view class="ui-radio-bg round" v-if="_has(ui,'card')" :class="[isChecked ? 'cur ' + bg : '']"></view>
 	</view>
@@ -37,19 +37,11 @@ export default {
 			type: String,
 			default: 'borderss'
 		},
-		preventClick: {
-			type: Boolean,
-			default: false
-		},
 		clearable: {
 			type: Boolean,
 			default: false
-		},
-		checked: {
-			type: Boolean,
-			default: false
-		},
-		noInput: {
+		},		
+		none: {
 			type: Boolean,
 			default: false
 		}
@@ -79,7 +71,7 @@ export default {
 			if ((this.isGroup && parent.value == this.label) || (!this.isGroup && this.currentValue == this.label)) {
 				return true;
 			}
-			return this.checked;
+			return false;
 		}
 	},
 	watch: {
@@ -114,7 +106,7 @@ export default {
 			return null;
 		},
 		_onRadioClick() {
-			if (!this.isDisabled && !this.preventClick) {
+			if (!this.isDisabled) {
 				this._choose();
 			}
 		},

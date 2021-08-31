@@ -136,7 +136,6 @@ export default {
 		transition: 0.3s;
 		overflow-x: hidden;
 		overflow-y: auto;
-		pointer-events: auto;
 	}
 }
 </style>

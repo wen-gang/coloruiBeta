@@ -116,10 +116,11 @@
 					<view class="ml-5 px-4 text-xxl text-price text-orange">760.00</view>
 				</view>
 			</ui-radio>
-			<ui-radio label="4" ui="card lg line shadow-lg" noInput>
+			<!-- 消除样式 -->
+			<ui-radio label="4" ui="card lg line shadow-lg" none>
 				<view class="flex-bar flex-sub w-100">
 					<view class="flex-sub">
-						<view class="text-xl">套餐四</view>
+						<view class="text-xl">套餐四 （消除样式）</view>
 						<view class="ui-TC-3">四个月会员</view>
 					</view>
 					<view class="ml-5 px-4 text-xxl text-price text-orange">960.00</view>
