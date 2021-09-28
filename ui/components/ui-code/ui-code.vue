@@ -10,7 +10,7 @@
 			<text decode="true">{{ nodes }}</text>
 			<slot></slot>
 		</view>
-		<view class="ui-copy-btn sm" v-if="tag != 'code'" @tap="copyCode"><text class="cicon-copy icon-xl text-c"></text></view>
+		<view class="ui-copy-btn sm" v-if="tag != 'code'" @tap="copyCode"><text class="_icon-copy icon-xl text-c"></text></view>
 		<view class="ui-code-title ui-TC-2" v-if="title">{{ title == true ? '示例代码:' : title }}</view>		
 	</view>
 </template>

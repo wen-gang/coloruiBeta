@@ -1,29 +1,29 @@
 <template>
 	<ui-sys title="图标">
 		<view class="ui-container">
-			<!-- 	<ui-fixed sticky>
-				<view class="p-3">
-					<ui-input><ui-btn>搜索</ui-btn></ui-input>
-				</view>
-			</ui-fixed> -->
+			<ui-title title="系统图标" depth="2" isIcon></ui-title>
+			<view class="paragraph">Colorui自带的图标,不可移除。
+				<ui-code>._icon-{name}</ui-code></view> 
+			<view class="blockquote">
+				你也可以按照<ui-code>@/app/scss/icon</ui-code>
+				中的
+				<ui-code>coloricon</ui-code>模板。
+				引入自己的图标库。
+			</view> 
+			
 			<view class="ui-icon-list ui-grid ui-cols-4 mt-3">
-				<view class="ui-item" v-for="(item, index) in iconlist" :key="index">
+				<view class="ui-item" v-for="(item, index) in list" :key="index">
 					<view class="py-4 border radius ui-BG" style="height: 100%;">
-						<view class="text-cut mt-2 icon-xxl p-4 ui-TC"><text :class="[`cicon-${item}`]"></text></view>
+						<view class="text-cut mt-2 icon-xxl p-4 ui-TC"><text :class="[`_icon-${item}`]"></text></view>
 						<view class="text-cut mt-2 text-xs text-grey">{{ item }}</view>
 					</view>
 				</view>
 			</view>
-			<!-- 			<view class="ui-icon-list ui-grid ui-cols-2 ui-cols-sm-3 ui-cols-md-4 ui-cols-lg-6 ui-cols-xl-8 ui-cols-xxl-10">
-				<view v-for="(item, index) in list" :key="index" class="ui-item">
-					<view class="py-4 border radius ui-BG" style="height: 100%;" @tap="copy(item.name)">
-						<view class="text-cut mt-2 icon-xxl p-4 ui-TC">
-							<rich-text :nodes="'&#x' + item.content + ';'" class="uicon-" :selectable="true"></rich-text>
-						</view>
-						<view class="text-cut mt-2 text-xs text-grey">{{ item.name | icon }}</view>
-					</view>
-				</view>
-			</view> -->
+			
+			
+			<ui-menu class="mt-4 radius">
+				<ui-menu-item icon="cicon-apps" title="扩展图标库" @click.native="_to('/pages/document/iconfont')"></ui-menu-item>
+			</ui-menu>
 		</view>
 	</ui-sys>
 </template>
@@ -34,8 +34,7 @@ export default {
 		return {
 			loading: false,
 			grid: true,
-			list: [],
-			iconlist: [
+			list: [
 				'home',
 				'home-o',
 				'search',
@@ -87,32 +86,9 @@ export default {
 		};
 	},
 	created() {
-		// this.list = icons;
 		this.loading = true;
-		// this.getMaterialIcon(0);
 	},
 	methods: {
-		getMaterialIcon(page) {
-			this.$api
-				.callFunction({
-					name: 'getMaterialIcon',
-					data: {
-						page: page
-					}
-				})
-				.then(res => {
-					this.list = this.list.concat(res.result.data);
-					if (res.result.data.length == 100) {
-						this.getMaterialIcon(page + 1);
-					}
-					this.loading = false;
-					console.log(page);
-				})
-				.catch(err => {
-					console.log(err.errMsg);
-					this.loading = false;
-				});
-		},
 		copy(text) {
 			this.$util.copyText(unescape(text.replace(/&#x/g, '%u').replace(/;/g, '')));
 		}

@@ -5,7 +5,7 @@
 			<view class="ui-table-tr">
 				<view class="ui-table-th" style="width: 120rpx;" v-if="type == 'checked'">
 					<view class="text-xxl text-center" @tap="toggleAllChecked()"><text
-							:class="allChecked ? 'cicon-checkbox' : 'cicon-box'"></text></view>
+							:class="allChecked ? '_icon-checkbox' : '_icon-box'"></text></view>
 				</view>
 				<view v-for="(item, index) in header" :key="index" class="ui-table-th"
 					:class="['text-' + item.align, item.className]"
@@ -15,7 +15,7 @@
 						<view class="text-cut">
 							<inline :text="item.title"></inline>
 						</view>
-						<text v-if="item.sortable" class="cicon-unfold-more"></text>
+						<text v-if="item.sortable" class="_icon-unfold-more"></text>
 					</block>
 					<block v-if="item.isSearch">
 						<ui-popover :mask="true" :index="10000" :show.sync="hidePopover[item.key]">
@@ -23,7 +23,7 @@
 								<view class="text-cut">
 									<inline :text="item.title"></inline>
 								</view>
-								<text class="cicon-search ml-3"></text>
+								<text class="_icon-search ml-3"></text>
 							</view>
 							<block slot="content">
 								<view class="p-3 flex-bar text-left">
@@ -43,14 +43,14 @@
 								<view class="text-cut">
 									<inline :text="item.title"></inline>
 								</view>
-								<text class="cicon-filter ml-3"></text>
+								<text class="_icon-filter ml-3"></text>
 							</view>
 							<block slot="content">
 								<view class="ui-list menu sm-border" style="width: 150px;">
 									<view class="ui-item" v-for="(filter, filterIndex) in item.filter"
 										:key="filterIndex" @tap="searchHead(item.key, filter.value)">
 										{{ filter['name'] }}
-										<view class="action"><text class="cicon-forward"></text></view>
+										<view class="action"><text class="_icon-forward"></text></view>
 									</view>
 								</view>
 							</block>
@@ -75,7 +75,7 @@
 				<view class="ui-table-tr">
 					<view class="ui-table-td" v-if="type == 'checked'" @tap="toggleIndexChecked(row)">
 						<view class="text-xxl text-center"><text
-								:class="tr['_checked'] ? 'cicon-checkbox' : 'cicon-box'"></text></view>
+								:class="tr['_checked'] ? '_icon-checkbox' : '_icon-box'"></text></view>
 					</view>
 					<block v-for="(item, index) in header" :key="index">
 						<view class="ui-table-td"
@@ -85,7 +85,7 @@
 							<block v-if="!item.slot">
 								<block v-if="item.key == subkey && tr.subnav">
 									<text class="mr-2 icon-lg"
-										:class="tr._showChildren ? 'cicon-move-round' : 'cicon-add-round-o'"></text>
+										:class="tr._showChildren ? '_icon-move-round' : '_icon-add-round-o'"></text>
 								</block>
 								<text v-if="item.price">{{ tr[item.key] | price}}</text>
 								<text v-else>{{ tr[item.key] }}</text>
@@ -101,7 +101,7 @@
 					<view class="ui-table-tr" v-if="subtr._show">
 						<view class="ui-table-td" v-if="type == 'checked'" @tap="toggleIndexChecked(subrow)">
 							<view class="text-xxl text-center"><text
-									:class="subtr['_checked'] ? 'cicon-checkbox' : 'cicon-box'"></text></view>
+									:class="subtr['_checked'] ? '_icon-checkbox' : '_icon-box'"></text></view>
 						</view>
 						<block v-for="(item, index) in header" :key="index">
 							<view class="ui-table-td" :class="['text-' + item.align, item.className]"

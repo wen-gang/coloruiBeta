@@ -18,7 +18,7 @@
 			
 			<ui-loading color img="/static/logo.png"></ui-loading>
 			<ui-loading color>
-				<text class="uicon-GooglePlaylogo text-sl text-red"></text>
+				<text class="cicon-GooglePlaylogo text-sl text-red"></text>
 			</ui-loading>
 			<ui-loading color>
 				<text class="text-lg text-blue">ColorUI</text>

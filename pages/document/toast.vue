@@ -10,7 +10,7 @@
 			<button class="ui-btn" @tap="$Success()">Success</button>
 			<button class="ui-btn" @tap="$Error()">Error</button>
 			<button class="ui-btn" @tap="Loading()">Loading => 1500 调用Api关闭</button>
-			<!-- <text class="uicon-check"></text> -->
+			<!-- <text class="cicon-check"></text> -->
 		</view>
 	</ui-sys>
 </template>

@@ -32,16 +32,16 @@
 		</ui-form>
 		<ui-title title="显示图标" depth="2" isIcon ui="mx-4"></ui-title>
 		<ui-form ui="ui-BG">
-			<ui-form-group title="图标" icon="uicon-safe-check"><ui-input placeholder="请输入文本"></ui-input></ui-form-group>
-			<ui-form-group icon="uicon-safe-check"><ui-input placeholder="请输入文本"></ui-input></ui-form-group>
+			<ui-form-group title="图标" icon="cicon-safe-check"><ui-input placeholder="请输入文本"></ui-input></ui-form-group>
+			<ui-form-group icon="cicon-safe-check"><ui-input placeholder="请输入文本"></ui-input></ui-form-group>
 			<ui-form-group title="图标">
 				<ui-input placeholder="请输入文本"></ui-input>
-				<block slot="action"><text class="uicon-place icon-xl"></text></block>
+				<block slot="action"><text class="cicon-place icon-xl"></text></block>
 			</ui-form-group>
 		</ui-form>
 		<ui-title title="必填项" depth="2" isIcon ui="mx-4"></ui-title>
 		<ui-form ui="ui-BG">
-			<ui-form-group required icon="uicon-mobile" type="phone"><ui-input placeholder="请输入手机号"></ui-input></ui-form-group>
+			<ui-form-group required icon="cicon-mobile" type="phone"><ui-input placeholder="请输入手机号"></ui-input></ui-form-group>
 		</ui-form>
 		<ui-title title="插槽" depth="2" isIcon ui="mx-4"></ui-title>
 		<ui-form ui="ui-BG">
@@ -65,10 +65,10 @@
 
 		<ui-title title="组" depth="2" isIcon ui="mx-4"></ui-title>
 		<ui-form ui="ui-BG mt-4">
-			<ui-form-group icon="uicon-avatar"><ui-input placeholder="请输入用户名"></ui-input></ui-form-group>
-			<ui-form-group required icon="uicon-mobile" type="phone"><ui-input placeholder="请输入手机号"></ui-input></ui-form-group>
-			<ui-form-group icon="uicon-lock"><ui-input placeholder="请输入密码" type="password" name="password"></ui-input></ui-form-group>
-			<ui-form-group icon="uicon-numcode">
+			<ui-form-group icon="cicon-avatar"><ui-input placeholder="请输入用户名"></ui-input></ui-form-group>
+			<ui-form-group required icon="cicon-mobile" type="phone"><ui-input placeholder="请输入手机号"></ui-input></ui-form-group>
+			<ui-form-group icon="cicon-lock"><ui-input placeholder="请输入密码" type="password" name="password"></ui-input></ui-form-group>
+			<ui-form-group icon="cicon-numcode">
 				<ui-input placeholder="请输入验证码"></ui-input>
 				<block slot="action"><button class="ui-btn bg-blue-gradient">发送验证码</button></block>
 			</ui-form-group>

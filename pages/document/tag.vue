@@ -63,13 +63,13 @@
 				<view class="ui-item">
 					<view class="ui-avatar round xl bg-blue">
 						Bf
-						<view class="ui-tag shadow badge badge-br bg-white"><text class="uicon-male text-blue"></text></view>
+						<view class="ui-tag shadow badge badge-br bg-white"><text class="cicon-male text-blue"></text></view>
 					</view>
 				</view>
 				<view class="ui-item">
 					<view class="ui-avatar round xl bg-pink">
 						Cv
-						<view class="ui-tag shadow badge badge-bl bg-white"><text class="uicon-female text-pink"></text></view>
+						<view class="ui-tag shadow badge badge-bl bg-white"><text class="cicon-female text-pink"></text></view>
 					</view>
 				</view>
 				<view class="ui-item">

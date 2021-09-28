@@ -13,7 +13,7 @@
 					<block slot="tag">
 						<view class="ui-tag bg-mask-20 radius-lr">
 							<view class="">
-								<text class="uicon-favorite mx-2"></text>{{item.like}}
+								<text class="cicon-favorite mx-2"></text>{{item.like}}
 							</view>
 						</view>
 					</block>
@@ -27,7 +27,7 @@
 					<block slot="tag">
 						<view class="ui-tag bg-mask-20 radius-lr">
 							<view class="">
-								<text class="uicon-favorite mx-2"></text>{{item.like}}
+								<text class="cicon-favorite mx-2"></text>{{item.like}}
 							</view>
 						</view>
 					</block>

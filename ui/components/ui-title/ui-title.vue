@@ -4,9 +4,9 @@
 		<view class="action" :class="[hasLine ? 'hasLine' : '', hasDot ? 'hasDot' : '']">
 			<div class="action-icon">
 				<block v-if="isIcon">
-					<view class="ui-TC-Main cicon-titles" v-if="depth < 3"></view>
-					<view class="ui-TC-Main cicon-title" v-if="depth == 3"></view>
-					<view class="ui-TC-Main cicon-title icon-sm" v-if="depth > 3"></view>
+					<view class="ui-TC-Main _icon-titles" v-if="depth < 3"></view>
+					<view class="ui-TC-Main _icon-title" v-if="depth == 3"></view>
+					<view class="ui-TC-Main _icon-title icon-sm" v-if="depth > 3"></view>
 				</block>
 				<slot name="icon"></slot>
 			</div>

@@ -34,7 +34,7 @@
 				<button class="ui-btn">按钮</button>
 				<button class="ui-btn">按钮</button>
 				<button class="ui-btn round">按钮</button>
-				<button class="ui-btn icon"><text class="uicon-link"></text></button>
+				<button class="ui-btn icon"><text class="cicon-link"></text></button>
 			</view>
 
 			<ui-title depth="2" title="块状" isIcon></ui-title>
@@ -78,9 +78,9 @@
 				<button class="ui-btn border border-blue bg-blue-light">按钮</button>
 			</view>
 			<view class="p-3 flex-between">
-				<button class="ui-btn icon bg-none border border-blue"><text class="uicon-link text-blue"></text></button>
-				<button class="ui-btn icon lg borders bg-none border-bluegreen"><text class="uicon-link text-green"></text></button>
-				<button class="ui-btn icon round xl borderss bg-none border-yellow"><text class="uicon-link text-yellow"></text></button>
+				<button class="ui-btn icon bg-none border border-blue"><text class="cicon-link text-blue"></text></button>
+				<button class="ui-btn icon lg borders bg-none border-bluegreen"><text class="cicon-link text-green"></text></button>
+				<button class="ui-btn icon round xl borderss bg-none border-yellow"><text class="cicon-link text-yellow"></text></button>
 			</view>
 
 			<ui-title depth="2" title="无效" isIcon></ui-title>
@@ -92,9 +92,9 @@
 			</view>
 
 			<ui-title depth="2" title="图标" isIcon></ui-title>
-			<view class="p-3"><button class="ui-btn block">按钮  <text class="uicon-ellipse"></text></button></view> 
-			<view class="p-3"><button class="ui-btn block">按钮 <text class="uicon-ellipse"></text> </button></view>
-			<view class="p-3"><button class="ui-btn xl">按钮 <text class="uicon-ellipse"></text> </button><button class="ui-btn xxl">按钮 <text class="uicon-ellipse"></text> </button></view>
+			<view class="p-3"><button class="ui-btn block">按钮  <text class="cicon-ellipse"></text></button></view> 
+			<view class="p-3"><button class="ui-btn block">按钮 <text class="cicon-ellipse"></text> </button></view>
+			<view class="p-3"><button class="ui-btn xl">按钮 <text class="cicon-ellipse"></text> </button><button class="ui-btn xxl">按钮 <text class="cicon-ellipse"></text> </button></view>
 			
 			<view class="p-3"><button class="ui-btn block">按钮 </button></view> 
 			<view class="p-3"><button class="ui-btn block">按钮 </button></view>
@@ -102,10 +102,10 @@
 			
 			
 			<ui-title depth="2" title="加载" isIcon></ui-title>
-			<view class="p-3"><button class="ui-btn block">按钮 <text class="uicon-loader-fill icon-spin"></text> </button></view>
+			<view class="p-3"><button class="ui-btn block">按钮 <text class="cicon-loader-fill icon-spin"></text> </button></view>
 			<view class="p-3"><button class="ui-btn block">按钮 <ui-loading color></ui-loading> </button></view>
 			
-			<view class="p-3"><button class="ui-btn xl">按钮 <text class="uicon-loader-fill icon-spin"></text> </button><button class="ui-btn xxl">按钮 <text class="uicon-loader-fill icon-spin"></text> </button></view>
+			<view class="p-3"><button class="ui-btn xl">按钮 <text class="cicon-loader-fill icon-spin"></text> </button><button class="ui-btn xxl">按钮 <text class="cicon-loader-fill icon-spin"></text> </button></view>
 			
 			<ui-title depth="2" title="填充无样式" isIcon></ui-title>
 			<view class="position-relative p-5"><button class="ui-btn none-style">sx</button></view>

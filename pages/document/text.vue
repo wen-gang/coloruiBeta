@@ -2,11 +2,11 @@
 	<ui-sys title="文本">
 		<view class="ui-container">
 			<!-- 简介 -->
-			<ui-title title="简介" depth="2" isIcon toc></ui-title>
+			<ui-title title="简介" depth="2" isIcon></ui-title>
 			<view class="paragraph">文本字体样式,Class控制。适用于任何组件元素。</view>
 
 			<!-- 尺寸 -->
-			<ui-title title="尺寸" depth="2" isIcon toc></ui-title>
+			<ui-title title="尺寸" depth="2" isIcon></ui-title>
 			<view class="paragraph">
 				添加包含尺寸的Class来控制文字大小。
 				<ui-code>.text-{size}</ui-code>
@@ -71,13 +71,15 @@
 			</view>
 	
 			<!-- 颜色 -->
-			<ui-title title="颜色" depth="2" isIcon toc></ui-title>
+			<ui-title title="颜色" depth="2" isIcon></ui-title>
 			<view class="paragraph">
-				添加包含颜色的Class来控制文字颜色。
-				<a href="#简介">简介</a>
+				添加包含颜色的Class来控制文字颜色。 
 				<ui-code>.text-{color}</ui-code>
 			</view>
-			<view class="ui-table table-border table-full ui-BG">
+			<ui-menu class="mt-4 radius">
+				<ui-menu-item icon="cicon-palette-o" title="所有颜色" @click.native="_to('/pages/document/text-color')"></ui-menu-item>
+			</ui-menu>
+	<!-- 		<view class="ui-table table-border table-full ui-BG">
 				<view class="ui-table-header">
 					<view class="ui-table-tr ui-BG-1">
 						<view class="ui-table-th" style="width: 200rpx;">类名</view>
@@ -131,9 +133,9 @@
 						</view>
 					</view>
 				</view>
-			</view>
+			</view> -->
 			<!-- 截断 -->
-			<ui-title title="截断" depth="2" isIcon toc></ui-title>
+			<ui-title title="截断" depth="2" isIcon></ui-title>
 			<view class="paragraph">
 				添加
 				<ui-code>.text-cut</ui-code>
@@ -159,7 +161,7 @@
 			<ui-code tag="pre" lang="html" :content="code2" v-if="!demo||pc"></ui-code>
 
 			<!-- 对齐 -->
-			<ui-title title="对齐" depth="2" isIcon toc></ui-title>
+			<ui-title title="对齐" depth="2" isIcon></ui-title>
 			<view class="paragraph">
 				添加
 				<ui-code>.text-{ align }</ui-code>
@@ -185,7 +187,7 @@
 			<ui-code tag="pre" lang="html" :content="code3" v-if="!demo||pc"></ui-code>
 
 			<!-- 辅助类 -->
-			<ui-title title="辅助类" depth="2" isIcon toc></ui-title>
+			<ui-title title="辅助类" depth="2" isIcon></ui-title>
 			<view class="p-3 my-3  ui-BG radius text-center" v-for="(item, index) in util" :key="index">
 				<view class="p-3">
 					<text v-if="item.desc" :class="item.class">{{ item.desc }}</text>

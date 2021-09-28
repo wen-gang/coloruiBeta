@@ -1,11 +1,11 @@
 <template>
 	<view class="stepper" :class="[ui]">
 		<button class="ui-btn round icon sm" :class="[bg]" @click="_calcValue('minus')" :disabled="inputValue <= min || disabled">
-			<view class="uicon-move"></view>
+			<view class="cicon-move"></view>
 		</button>
 		<input :disabled="disabled" v-model="inputValue" type="number" @blur="_onBlur"/>
 		<button class="ui-btn round icon sm" :class="[bg]" @click="_calcValue('plus')" :disabled="inputValue >= max || disabled">
-			<view class="uicon-add"></view>
+			<view class="cicon-add"></view>
 		</button> 
 	</view>
 </template>

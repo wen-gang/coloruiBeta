@@ -2,13 +2,13 @@
 	<ui-sys tabbar>
 		<ui-navbar :back="false" opacity :placeholder="false">
 			<view class="flex-bar p-3" v-if="sys_scrollTop > sys_navBar">
-				<text class="text-lg uicon-goods-o text-red mx-3"></text>
+				<text class="text-lg cicon-goods-o text-red mx-3"></text>
 				<text class="text-lg text-bold">模板市场</text>
 			</view>
 			<view class="p-3 flex-bar flex-sub" v-if="sys_scrollTop > sys_navBar">
 				<view url="/pages/search/search" class="flex-sub flex-bar">
 					<view class="p-2 bg-blur-1 w-100 round flex-center" :style="{ height: `35px` }">
-						<text class="uicon-search-line mx-2"></text>
+						<text class="cicon-search-line mx-2"></text>
 						<view class="text-c text-sm">搜索关键词查找模板</view>
 					</view>
 				</view>
@@ -32,11 +32,11 @@
 							<view class="text-price text-red text-xxl ">{{ item.price }}</view>
 							<view class="flex-bar ui-TC-3">
 								<view class="flex-bar mx-3">
-									<text class="uicon-favorite mx-2"></text>
+									<text class="cicon-favorite mx-2"></text>
 									{{ item.like }}
 								</view>
 								<view class="flex-bar mx-3">
-									<text class="uicon-comment mx-2"></text>
+									<text class="cicon-comment mx-2"></text>
 									{{ item.comment }}
 								</view>
 							</view>

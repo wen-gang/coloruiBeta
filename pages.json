@@ -48,6 +48,9 @@
 			"path": "pages/document/text",
 			"style": {}
 		}, {
+			"path": "pages/document/text-color",
+			"style": {}
+		}, {
 			"path": "pages/document/system",
 			"style": {}
 		}, {
@@ -88,6 +91,9 @@
 			"style": {}
 		}, {
 			"path": "pages/document/icon",
+			"style": {}
+		}, {
+			"path": "pages/document/iconfont",
 			"style": {}
 		}, {
 			"path": "pages/document/title",

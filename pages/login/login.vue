@@ -17,7 +17,7 @@
 					<view class="ui-form-group border-bottom flex-sub">
 						<input :password="isShowPassWord" v-model="account.password" placeholder="帐号户密码" />
 						<view class="action" @tap="togglePassword"><text
-								:class="isShowPassWord ? 'uicon-eye-off' : 'uicon-eye'"></text></view>
+								:class="isShowPassWord ? 'cicon-eye-off' : 'cicon-eye'"></text></view>
 					</view>
 				</view>
 			</block>
@@ -38,7 +38,7 @@
 			<view class="mt-5">
 				<button class="ui-btn bg-blue-gradient radius lg block shadow-blue" @tap="loginSubmit" :disabled="isLoading">
 					登录
-					<text class="uicon-loading1 icon-spin ml-3" v-if="isLoading"></text>
+					<text class="cicon-loading1 icon-spin ml-3" v-if="isLoading"></text>
 				</button>
 			</view>
 			<view class="flex-bar mt-4">
@@ -46,7 +46,7 @@
 					忘记密码？
 				</view>
 				<view class="p-3">
-					立即注册 <text class="uicon-round-angle-o ml-3"></text>
+					立即注册 <text class="cicon-round-angle-o ml-3"></text>
 				</view>
 			</view>
 			<ui-fixed bottom>
@@ -56,9 +56,9 @@
 					</ui-title>
 					<button class="ui-btn bg-green-gradient radius lg block shadow-green" @tap="wxloginSubmit"
 						:disabled="isLoading">
-						<text class="uicon-weixin icon-xl mr-3"></text>
+						<text class="cicon-weixin icon-xl mr-3"></text>
 						微信一键登录
-						<text class="uicon-loading1 icon-spin ml-3" v-if="wxisLoading"></text>
+						<text class="cicon-loading1 icon-spin ml-3" v-if="wxisLoading"></text>
 					</button>
 				</view>
 			</ui-fixed>

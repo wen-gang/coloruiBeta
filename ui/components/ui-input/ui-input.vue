@@ -52,10 +52,10 @@
 				:cursor-spacing="18"
 				v-else
 			/>
-			<text class="ui-input-icon cicon-round-close" v-if="clear && curValue" @click="_clear"></text>
+			<text class="ui-input-icon _icon-round-close" v-if="clear && curValue" @click="_clear"></text>
 			<view class="ui-input-icon ui-input-visible" v-if="type == 'password'" @click="_toggleVisible">
-				<text class="uicon-eye" v-if="isVisible"></text>
-				<text class="uicon-eye-off" v-else></text>
+				<text class="cicon-eye" v-if="isVisible"></text>
+				<text class="cicon-eye-off" v-else></text>
 			</view>
 		</block>
 	</view>

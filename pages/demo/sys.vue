@@ -5,7 +5,7 @@
 			<view class="m-4 radius bg-white" :class="cur == 1 ? 'ui-BG-Main' : ''" @click="cur = 1">
 				<ui-title title="背景图填充" text="text-black">
 					<block slot="more">
-						<text class="icon-xl" :class="cur == 1 ? 'uicon-check-round' : 'uicon-round'"></text>
+						<text class="icon-xl" :class="cur == 1 ? 'cicon-check-round' : 'cicon-round'"></text>
 					</block>
 				</ui-title>
 				<view class="p-4 border-top" v-if="cur == 1 ">

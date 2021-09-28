@@ -53,22 +53,22 @@ export default {
 			num: 0,
 			basicsList: [
 				{
-					icon: 'uicon-play-circle',
+					icon: 'cicon-play-circle',
 					title: '开始',
 					desc:'二〇二〇年十二月十七日'
 				},
 				{
-					icon: 'uicon-countdown',
+					icon: 'cicon-countdown',
 					title: '等待',
 					desc:'二〇二〇年十二月十七日'
 				},
 				{
-					icon: 'uicon-close-round',
+					icon: 'cicon-close-round',
 					title: '错误',
 					desc:'二〇二〇年十二月十七日'
 				},
 				{
-					icon: 'uicon-check-round',
+					icon: 'cicon-check-round',
 					title: '完成',
 					desc:'二〇二〇年十二月十七日'
 				}

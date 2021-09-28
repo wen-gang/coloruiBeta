@@ -2,7 +2,7 @@
 	<view class="ui-steps" :class="[{ 'steps-arrow': arrow }, { 'steps-number': number }, { 'steps-column': column },ui]">
 		<view class="ui-step" :class="index > cur ? '' : curStyle" v-for="(item, index) in info" :key="index">
 			<view class="ui-steps-num" :data-index="index + 1" v-if="number" :class="[{ 'ui-steps-err': index + 1 == err }]"></view>
-			<view class="ui-steps-icon" :class="index > cur ? 'cicon-title' : item.icon" v-else></view>
+			<view class="ui-steps-icon" :class="index > cur ? '_icon-title' : item.icon" v-else></view>
 			<view class="ui-steps-text">
 				<view class="ui-steps-title">
 					{{ item.title }}

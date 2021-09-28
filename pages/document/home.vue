@@ -9,7 +9,7 @@
 				<view class="p-3 flex-bar flex-sub" v-if="sys_scrollTop > sys_navBar">
 					<view url="/pages/search/search" class="flex-sub flex-bar">
 						<view class="p-2 bg-blur-1 w-100 round border flex-center" :style="{height:`35px`}">
-							<text class="uicon-search-line mx-2"></text>
+							<text class="cicon-search-line mx-2"></text>
 							<view class="text-c text-sm">
 								键入类名搜索释义
 							</view>

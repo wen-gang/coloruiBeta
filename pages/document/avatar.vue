@@ -16,9 +16,9 @@
 			</view>
 			<ui-title title="背景" depth="2" isIcon></ui-title>
 			<view class="p-5 flex align-center text-sm">
-				<view class="ui-avatar sl ui-BG"><view class="uicon-discover"></view></view>
-				<view class="ui-avatar sl round bg-red-thin"><view class="uicon-discover"></view></view>
-				<view class="ui-avatar sl ellipse bg-red-gradient"><view class="uicon-discover"></view></view>
+				<view class="ui-avatar sl ui-BG"><view class="cicon-discover"></view></view>
+				<view class="ui-avatar sl round bg-red-thin"><view class="cicon-discover"></view></view>
+				<view class="ui-avatar sl ellipse bg-red-gradient"><view class="cicon-discover"></view></view>
 			</view>
 			
 			<ui-title title="大小" depth="2" isIcon></ui-title>
@@ -177,7 +177,7 @@
 			</view>
 
 			<view class="ui-BG radius p-4 my-3 flex-bar" @click="_to('/pages/find/avatar')">
-				 《英雄联盟》头像素材 <text class="cicon-forward"></text>
+				 《英雄联盟》头像素材 <text class="_icon-forward"></text>
 			</view>
 		</view>
 	</ui-sys>

@@ -4,6 +4,8 @@ export default {
 		themeAuto: false, // 跟随系统
 		theme: 'light', // 设置默认主题
 		main: 'blue', // 设置默认强调色
+		domain: 'https://color-ui.com',
+		apiPath: '/api/',
 		homePath: '/pages/document/home', // 设置首页路径(一些组件会用到跳回主页，请每个项目设置好！)
 		tabbar: [{
 				title: '文档',
@@ -41,46 +43,45 @@ export default {
 				type: 'tab'
 			},
 		],
-		leftTop:0,
 		nav: [{
 				title: '基础',
 				subnav: [{
-						icon: 'uicon-set',
+						icon: 'cicon-set',
 						name: 'system',
 						title: '系统'
 					},
 					{
-						icon: 'uicon-paint',
+						icon: 'cicon-paint',
 						name: 'theme',
 						title: '主题'
 					},
 					{
-						icon: 'uicon-topbar',
+						icon: 'cicon-topbar',
 						name: 'navbar',
 						title: '导航栏'
 					},
 					{
-						icon: 'uicon-palette',
+						icon: 'cicon-palette',
 						name: 'background',
 						title: '背景'
 					},
 					{
-						icon: 'uicon-Aa',
+						icon: 'cicon-Aa',
 						name: 'text',
 						title: '文本'
 					},
 					{
-						icon: 'uicon-magic',
+						icon: 'cicon-magic',
 						name: 'icon',
 						title: '图标'
 					},
 					{
-						icon: 'uicon-darkmode-o',
+						icon: 'cicon-darkmode-o',
 						name: 'shadow',
 						title: '阴影'
 					},
 					{
-						icon: 'uicon-box',
+						icon: 'cicon-box',
 						name: 'border',
 						title: '边框'
 					}
@@ -89,42 +90,42 @@ export default {
 			{
 				title: '视图',
 				subnav: [{
-						icon: 'uicon-avatar',
+						icon: 'cicon-avatar',
 						name: 'avatar',
 						title: '头像'
 					},
 					{
-						icon: 'uicon-Tt',
+						icon: 'cicon-Tt',
 						name: 'title',
 						title: '标题'
 					},
 					{
-						icon: 'uicon-tag',
+						icon: 'cicon-tag',
 						name: 'tag',
 						title: '标签'
 					},
 					{
-						icon: 'uicon-ellipse',
+						icon: 'cicon-ellipse',
 						name: 'button',
 						title: '按钮'
 					},
 					{
-						icon: 'uicon-pic',
+						icon: 'cicon-pic',
 						name: 'image',
 						title: '图片'
 					},
 					{
-						icon: 'uicon-code-box',
+						icon: 'cicon-code-box',
 						name: 'code',
 						title: '代码'
 					},
 					{
-						icon: 'uicon-progress',
+						icon: 'cicon-progress',
 						name: 'progress',
 						title: '进度条'
 					},
 					{
-						icon: 'uicon-loader-fill',
+						icon: 'cicon-loader-fill',
 						name: 'loading',
 						title: '加载'
 					}
@@ -133,42 +134,42 @@ export default {
 			{
 				title: '布局',
 				subnav: [{
-						icon: 'uicon-view-agenda',
+						icon: 'cicon-view-agenda',
 						name: 'flex',
 						title: '容器'
 					},
 					{
-						icon: 'uicon-view-agenda',
+						icon: 'cicon-view-agenda',
 						name: 'menu',
 						title: '菜单'
 					},
 					{
-						icon: 'uicon-dashboard',
+						icon: 'cicon-dashboard',
 						name: 'fixed',
 						title: '浮动'
 					},
 					{
-						icon: 'uicon-card',
+						icon: 'cicon-card',
 						name: 'card',
 						title: '卡片'
 					},
 					{
-						icon: 'uicon-view-list',
+						icon: 'cicon-view-list',
 						name: 'list',
 						title: '列表'
 					},
 					{
-						icon: 'uicon-grid',
+						icon: 'cicon-grid',
 						name: 'grid',
 						title: '栅栏'
 					},
 					{
-						icon: 'uicon-stock',
+						icon: 'cicon-stock',
 						name: 'timeline',
 						title: '时间轴'
 					},
 					{
-						icon: 'uicon-grid',
+						icon: 'cicon-grid',
 						name: 'table',
 						title: '表格'
 					}
@@ -177,42 +178,42 @@ export default {
 			{
 				title: '交互',
 				subnav: [{
-						icon: 'uicon-popover',
+						icon: 'cicon-popover',
 						name: 'popover',
 						title: '气泡框'
 					},
 					{
-						icon: 'uicon-stop',
+						icon: 'cicon-stop',
 						name: 'modal',
 						title: '模态框'
 					},
 					{
-						icon: 'uicon-subtitles',
+						icon: 'cicon-subtitles',
 						name: 'toast',
 						title: '轻提示'
 					},
 					{
-						icon: 'uicon-view-quilt',
+						icon: 'cicon-view-quilt',
 						name: 'drawer',
 						title: '抽屉'
 					},
 					{
-						icon: 'uicon-view-day',
+						icon: 'cicon-view-day',
 						name: 'collapse',
 						title: '折叠面板'
 					},
 					{
-						icon: 'uicon-view-array',
+						icon: 'cicon-view-array',
 						name: 'tab',
 						title: '选项卡'
 					},
 					{
-						icon: 'uicon-view-carousel',
+						icon: 'cicon-view-carousel',
 						name: 'swiper',
 						title: '轮播图'
 					},
 					{
-						icon: 'uicon-git-commit',
+						icon: 'cicon-git-commit',
 						name: 'steps',
 						title: '步骤条'
 					}
@@ -221,34 +222,33 @@ export default {
 			{
 				title: '表单',
 				subnav: [{
-						icon: 'uicon-input',
+						icon: 'cicon-input',
 						name: 'input',
 						title: '输入框'
 					},
 					{
-						icon: 'uicon-radiobox',
+						icon: 'cicon-radiobox',
 						name: 'radio',
 						title: '单选框'
 					},
 					{
-						icon: 'uicon-checkbox',
+						icon: 'cicon-checkbox',
 						name: 'checkbox',
 						title: '复选框'
 					},
 					{
-						icon: 'uicon-toggle',
+						icon: 'cicon-toggle',
 						name: 'switch',
 						title: '开关'
 					},
 					{
-						icon: 'uicon-view-headline',
+						icon: 'cicon-view-headline',
 						name: 'picker',
 						title: '选择器'
 					}
 				]
 			}
 		],
-		
 	},
 	getters: {
 		getCustomTheme: state => {
@@ -263,18 +263,15 @@ export default {
 		getNav: state => {
 			return state.nav
 		},
-		getLeftTop: state => {
-			return state.leftTop
+		getDomain: state => {
+			return state.domain
 		},
-		
+		getApiPath: state => {
+			return state.apiPath
+		},
 	},
 	mutations: {
-		setLeftTop(state, data) {
-			if (data != 0) {
-				state.leftTop = data;
-				uni.setStorageSync('leftTop', data);
-			}
-		},
+		 
 	},
 	actions: {}
 }

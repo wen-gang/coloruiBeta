@@ -6,12 +6,12 @@
 				<block v-else>
 					<view class="left">
 						<view class="back" @tap="_navback" v-if="back && !capsule">
-							<view class="back-icon icon-fw text-xl" :class="[sys_atHome ? 'cicon-home-o' : 'cicon-back', statusCur, { opacityIcon: opacityBg }]"></view>
+							<view class="back-icon icon-fw text-xl" :class="[sys_atHome ? '_icon-home-o' : '_icon-back', statusCur, { opacityIcon: opacityBg }]"></view>
 							<view>{{ backtext }}</view>
 						</view>
 						<view class="capsule" :style="[capsuleBack]" v-if="capsule" :class="[{ atHome: sys_atHome }, statusCur]">
-							<view class="capsule-back" @tap="_navback"><text class="icon-fw text-xl cicon-back"></text></view>
-							<view class="capsule-home" @tap="_toHome"><text class="icon-fw text-xl" :class="sys_atHome ? 'cicon-home' : 'cicon-home-o'"></text></view>
+							<view class="capsule-back" @tap="_navback"><text class="icon-fw text-xl _icon-back"></text></view>
+							<view class="capsule-home" @tap="_toHome"><text class="icon-fw text-xl" :class="sys_atHome ? '_icon-home' : '_icon-home-o'"></text></view>
 						</view>
 						<slot name="left"></slot>
 					</view>
@@ -236,7 +236,7 @@ export default {
 					}
 				}
 				/* #ifdef  MP-ALIPAY */
-				.cicon-back {
+				._icon-back {
 					opacity: 0;
 				}
 				/* #endif */

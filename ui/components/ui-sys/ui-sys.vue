@@ -8,7 +8,7 @@
 				<ui-tabbar ui="shadow border-top" v-if="tabbar"></ui-tabbar>
 
 				<view class="loading-body bg-blur" :style="[{ zIndex: 1999 }]" v-if="isloading">
-					<view class="cicon-loading icon-spin text-sl mb-3"></view>
+					<view class="_icon-loading icon-spin text-sl mb-3"></view>
 					<view>加载中</view>
 				</view>
 			</view>

@@ -56,7 +56,7 @@
 		<ui-title title="事件/多数据" depth="2" isIcon ui="mx-4"></ui-title>
 
 		<view class="p-4">@change => 输出 {{ change }}</view>
-		<ui-tab :tab="[{name:'选项卡1',icon:'uicon-github text-red'},{name:'选项卡2',tag:''},{name:'选项卡3',tag:'hot'}]" @change="tabChange"></ui-tab>
+		<ui-tab :tab="[{name:'选项卡1',icon:'cicon-github text-red'},{name:'选项卡2',tag:''},{name:'选项卡3',tag:'hot'}]" @change="tabChange"></ui-tab>
 		
 	</ui-sys>
 </template>
