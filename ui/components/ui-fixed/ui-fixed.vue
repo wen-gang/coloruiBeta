@@ -14,7 +14,7 @@
 			]"
 		>
 			<view class="ui-fixed-content" @tap="_toTop" :style="[{ zIndex: index + sys_layer }]"><slot /></view>
-			<view style="height: calc(env(safe-area-inset-bottom) / 5 * 3);" :class="[bg]" v-if="bottom && !noSafe"></view>
+			<view class="ui-fixed-bottom" :class="[bg]" v-if="bottom && !noSafe"></view>
 			<view
 				class="ui-fixed-bg"
 				:class="[ui,bg]"
@@ -184,6 +184,10 @@ export default {
 			top: 0;
 			z-index: 1;
 			pointer-events: none;
+		}
+		.ui-fixed-bottom{
+			 height: calc(constant(safe-area-inset-bottom) / 5 * 3);
+			 height: calc(env(safe-area-inset-bottom) / 5 * 3);
 		}
 	}
 }
