@@ -1,5 +1,5 @@
 <template>
-	<view class="ui-page" :class="['theme-' + sys_theme, 'main-' + sys_main]">
+	<view class="ui-page" :class="['theme-' + sys_theme, 'main-' + sys_main, 'font-' + sys_text]">
 		<view class="page-body" :class="[bg,ui]" :style="[styles]">
 			<view class="page-body-main">
 				<app-navbar :bg="navBg" :title="title" v-if="title"></app-navbar>

@@ -1,13 +1,31 @@
 /* ==================
           文本
  ==================== */
-
+.font-0{	
+	font-size: 24rpx;
+	--textSize:-4rpx;
+}
+.font-1{	
+	font-size: 28rpx;
+	--textSize:0rpx;
+}
+.font-2{	
+	font-size: 32rpx;
+	--textSize:4rpx;
+}
+.font-3{	
+	font-size: 36rpx;
+	--textSize:8rpx;
+}
+.font-4{	
+	font-size: 40rpx;
+	--textSize:12rpx;
+}
 .text {
 	@each $class, $value in $fontsize {
 		&-#{$class},
 		&-#{$value / 2} {
-				font-size: #{$value}rpx !important;
-			
+			font-size: calc(#{$value}rpx + var(--textSize)) !important;			
 		}
 	}
 	&-cut {

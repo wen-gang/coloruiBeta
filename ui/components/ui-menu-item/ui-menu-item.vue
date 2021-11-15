@@ -1,6 +1,6 @@
 <template>
 	<view class="ui-menu-item" :class="[{ 'arrow': arrow },{'first-item':isFirstChild},ui]">
-		<view class="ui-menu-item-icon">
+		<view class="ui-menu-item-icon" v-if="$scopedSlots.icon||icon!=''">
 			<template v-if="$scopedSlots.icon">
 				<slot name="icon"></slot>
 			</template>

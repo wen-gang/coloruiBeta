@@ -1,10 +1,10 @@
 <template>
-	<view class="ui-avatar" :class="[ui, bg, { stack: isStack }, { reverse: isReverse },{isFirstChild:isFirstChild}]">
+	<view class="ui-avatar" :class="[ui, bg, { stack: isStack }, { reverse: isReverse }, { isFirstChild: isFirstChild }]">
 		<view class="ui-avatar-icon"><text :class="icon"></text></view>
 		<image class="ui-avatar-image" :src="src" mode="aspectFill"></image>
 		<slot></slot>
-		<view class="ui-avatar-group" :class="'nth-'+srcs.length" v-if="srcs.length>1">
-			<image class="ui-avatar-image" :src="item" v-for="(item,index) in srcs" :key="index" mode="aspectFill"></image>
+		<view class="ui-avatar-group" :class="'nth-' + srcs.length" v-if="srcs.length > 0">
+			<image class="ui-avatar-image" :src="item" v-for="(item, index) in srcs" :key="index" mode="aspectFill"></image>
 		</view>
 	</view>
 </template>
@@ -13,8 +13,7 @@
 export default {
 	name: 'UiAvatar',
 	data() {
-		return { 
-		};
+		return {};
 	},
 	props: {
 		bg: {
@@ -31,8 +30,8 @@ export default {
 		},
 		srcs: {
 			type: Array,
-			default(){
-				return []
+			default() {
+				return [];
 			}
 		},
 		icon: {
@@ -156,10 +155,10 @@ export default {
 		margin-left: -1em;
 		background-color: inherit;
 		z-index: 1;
-		&.isFirstChild{
+		&.isFirstChild {
 			margin-left: 0px;
 		}
-		&.reverse{		
+		&.reverse {
 			margin: 0 -1em 0 0.14em;
 		}
 		&::after {
@@ -188,14 +187,17 @@ export default {
 	}
 }
 .ui-avatar-group {
-	display: inline-block;
+	display: flex;
+	flex-wrap: wrap;
 	width: 100%;
 	height: 100%;
+	padding: 1px;
 	.ui-avatar-image {
 		position: relative;
 		float: left;
 		border-radius: #{$radius};
 		margin: 1px;
+		display: block;
 	}
 	/*1个*/
 	&.nth-1 .ui-avatar-image {
@@ -204,16 +206,16 @@ export default {
 	}
 	/*2个*/
 	&.nth-2 .ui-avatar-image {
-		width: calc(50% - 2px);
-		height: calc(50% - 2px);
+		width: calc((100% - 5px) / 2);
+		height: calc((100% - 5px) / 2);
 	}
 	&.nth-2 .ui-avatar-image:last-child {
 		margin-left: calc(50% + 1px);
 	}
 	/*3个*/
 	&.nth-3 .ui-avatar-image {
-		width: calc(50% - 2px);
-		height: calc(50% - 2px);
+		width: calc((100% - 5px) / 2);
+		height: calc((100% - 5px) / 2);
 		float: left;
 	}
 	&.nth-3 .ui-avatar-image:first-child {
@@ -228,27 +230,45 @@ export default {
 	/*5/6个*/
 	&.nth-5 .ui-avatar-image,
 	&.nth-6 .ui-avatar-image {
-		width: calc(100% / 3 - 2px);
-		height: calc(100% / 3 - 2px);
+		width: calc((100% - 6px) / 3);
+		height: calc((100% - 6px) / 3);
+		border-radius: #{$radius - 2};
 	}
 	&.nth-5 .ui-avatar-image:first-child,
 	&.nth-6 .ui-avatar-image:first-child {
-		width: calc(100% / 3 * 2 - 2px);
-		height: calc(100% / 3 * 2 - 2px);
+		width: calc((100% - 6px) / 3 * 2 + 2px);
+		height: calc((100% - 6px) / 3 * 2 + 2px);
+		border-radius: #{$radius};
 	}
+	&.nth-5 .ui-avatar-image:last-child {
+		top: -33.33%;
+	}
+	&.nth-6 .ui-avatar-image:last-child {
+		top: -66.66%;
+		left: 66.66%;
+	}
+	// &.nth-5 .ui-avatar-image:nth-last-child(1),&.nth-5 .ui-avatar-image:nth-last-child(2),&.nth-5 .ui-avatar-image:nth-last-child(3),
+	// &.nth-6 .ui-avatar-image:nth-last-child(1),&.nth-6 .ui-avatar-image:nth-last-child(2),&.nth-6 .ui-avatar-image:nth-last-child(3),{
+	// 	margin-top: 2px;
+	// }
 	/* 7个 8个 9个 */
-	&.nth-7 .ui-avatar-image,
-	&.nth-8 .ui-avatar-image,
-	&.nth-9 .ui-avatar-image {
-		width: calc(100% / 3 - 2px);
-		height: calc(100% / 3 - 2px);
-	}
 	&.nth-7 .ui-avatar-image:first-child {
 		margin-left: calc(100% / 3 + 1px);
 		margin-right: calc(100% / 3 + 1px);
 	}
 	&.nth-8 .ui-avatar-image:first-child {
 		margin-left: calc(100% / 3 / 2 + 1px);
+	}
+	&.nth-7,
+	&.nth-8,
+	&.nth-9 {
+		display: flex;
+		flex-wrap: wrap;
+		.ui-avatar-image {
+			width: calc((100% - 6px) / 3);
+			height: calc((100% - 6px) / 3);
+			border-radius: #{$radius - 2};
+		}
 	}
 }
 </style>

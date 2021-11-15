@@ -19,6 +19,7 @@ const mixin = {
 			sys_theme: state => state.sys_theme,
 			sys_main: state => state.sys_main,
 			sys_info: state => state.sys_info,
+			sys_text: state => state.sys_text,
 			sys_statusBar: state => state.sys_statusBar,
 			sys_homePath: state => state.app.homePath
 		}),

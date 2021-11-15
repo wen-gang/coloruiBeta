@@ -6,9 +6,9 @@ import modal from '@/ui/store/modal.js'
 Vue.use(Vuex)
 const store = new Vuex.Store({
 	state: {
-		sys_theme: uni.getStorageSync('sys_theme') ? uni.getStorageSync('sys_theme') : app.state
-		.theme, // light dark
+		sys_theme: uni.getStorageSync('sys_theme') ? uni.getStorageSync('sys_theme') : app.state.theme, // light dark
 		sys_main: uni.getStorageSync('sys_main') ? uni.getStorageSync('sys_main') : app.state.main, // color
+		sys_text: 1,
 		sys_info: uni.getSystemInfoSync(),
 		sys_statusBar: uni.getSystemInfoSync().statusBarHeight,
 	},
@@ -88,7 +88,10 @@ const store = new Vuex.Store({
 			} else {
 				this.commit('setStatusStyle',data == 'light' ? 'dark' : 'light');
 			}
-
+		},
+		setText(state, data) {
+			uni.setStorageSync('sys_text', data);
+			state.sys_text = data;
 		},
 		setStatusStyle(state, status) {
 			// console.log('theme=>',uni.getSystemInfoSync().theme,'status=>',status);

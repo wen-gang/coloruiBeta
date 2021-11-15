@@ -7,8 +7,8 @@
 			:style="{ top: (noNav ? 0 : sys_navBar + top) + 'px' }"
 		>
 			<view :style="dialog" class="ui-dialog" :class="[transparent? 'bg-none' : '',ui]" @tap.stop>
+				<view class="ui-modal-title border-bottom" v-if="title != ''"><ui-title :title="title" align="center" text="text-xl"></ui-title></view>
 				<slot v-if="name != 'sys_dialog'"></slot>
-				<view class="ui-modal-title" v-if="title != ''"><ui-title :title="title" align="center" text="text-xl"></ui-title></view>
 				<view class="ui-modal-content" v-if="content != ''">{{ content }}</view>
 				<view class="ui-modal-option flex-bar" :class="{'border-top':!transparent}" v-if="option&&!iconCancel">
 					<view class="ui-modal-btn border-right" @tap="_cancel" v-if="showCancel">{{ cancelText }}</view>
