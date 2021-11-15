@@ -91,6 +91,12 @@ export default {
 	},
 	onLoad() {
 		_this = this;
+		this.$Modal.dialog({
+			content: '模板都还没有，需要的可以QQ（1273753708）找我定制。后续慢慢上',
+			success: res => {
+				console.log(res);
+			}
+		});
 	},
 	methods: {}
 };

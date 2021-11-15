@@ -3,7 +3,7 @@
 		<ui-navbar :back="false" opacity><view class="flex-center flex-sub" v-if="sys_scrollTop > sys_navBar">我的</view></ui-navbar>
 		<view class="ui-container">
 			<view class="flex-bar my-4" @click="_to('/pages/login/login')">
-				<view class="ui-avatar xxl ellipse"><image class="logo" src="/static/logo.png" mode="aspectFill"></image></view>
+				<ui-avatar ui="xxl ellipse" src="/static/logo.png"></ui-avatar>
 				<view class="flex-sub pl-3"><view class="text-xl">登录,享受更多服务。</view></view>
 			</view>
 			<ui-menu ui="mt-5 radius border">
