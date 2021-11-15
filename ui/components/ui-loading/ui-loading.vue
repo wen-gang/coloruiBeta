@@ -1,5 +1,5 @@
 <template>
-	<view class="ui-loading-box" :class="[size ? `text-${size}` : ``, { loop: slots.default||img },ui]">
+	<view class="ui-loading-box" :class="[size ? `text-${size}` : ``, { loop: $scopedSlots.default||img },ui]">
 		<view class="ui-loading">
 			<view class="ui-loading-cut"><view class="ui-loading-loop" :class="[color == true ? 'color' : `default ${color}`]"></view></view>
 		</view>
@@ -18,8 +18,7 @@ let _this = null;
 export default {
 	name: 'UiLoading',
 	data() {
-		return { 
-			slots: {}
+		return {  
 		};
 	},
 	props: {
@@ -45,9 +44,6 @@ export default {
 			handler(val) {},
 			immediate: true
 		}
-	},
-	mounted() {
-		this.slots = this.$scopedSlots;
 	},
 	created() {
 		_this = this;

@@ -1,7 +1,7 @@
 <template>
 	<view class="ui-menu-item" :class="[{ 'arrow': arrow },{'first-item':isFirstChild},ui]">
 		<view class="ui-menu-item-icon">
-			<template v-if="slots.icon">
+			<template v-if="$scopedSlots.icon">
 				<slot name="icon"></slot>
 			</template>
 			<template v-else>
@@ -12,7 +12,7 @@
 			<view class="ui-menu-item-title">
 				{{ title }}
 			</view>
-			<view class="ui-menu-item-action" v-if="slots.action">
+			<view class="ui-menu-item-action" v-if="$scopedSlots.action">
 				<slot name="action"></slot>
 			</view>
 		</view>
@@ -24,8 +24,7 @@
 export default {
 	name: 'UiMenuItem',
 	data() {
-		return {
-			slots: {}
+		return { 
 		};
 	},
 	props: {
@@ -59,10 +58,7 @@ export default {
 			}
 			return false
 		}
-	},
-	mounted() {
-		this.slots = this.$scopedSlots;
-	},
+	}, 
 	watch: {},
 	methods: { 
 	}

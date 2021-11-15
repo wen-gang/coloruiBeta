@@ -11,8 +11,7 @@
 export default {
 	name: 'UiAvatar',
 	data() {
-		return {
-			slots: {}
+		return { 
 		};
 	},
 	props: {
@@ -65,9 +64,6 @@ export default {
 			}
 			return false;
 		}
-	},
-	mounted() {
-		this.slots = this.$scopedSlots;
 	},
 	methods: {}
 };

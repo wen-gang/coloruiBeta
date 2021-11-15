@@ -12,9 +12,9 @@
 			</block>
 			<block v-if="tabCur == 1">
 				<ui-form ui="ui-BG mt-4">
-					<ui-form-group><ui-input v-model="login.phone" placeholder="手机号" ></ui-input></ui-form-group>
-					<ui-form-group>
-						<ui-input v-model="login.code" placeholder="验证码" ></ui-input>
+					<ui-form-group icon="cicon-mobile text-gray"><ui-input v-model="login.phone" placeholder="手机号" ></ui-input></ui-form-group>
+					<ui-form-group icon="cicon-numcode text-gray">
+						<ui-input v-model="login.code" placeholder="验证码"></ui-input>
 						<block slot="action"><button class="ui-btn bg-blue-gradient">发送验证码</button></block>
 					</ui-form-group>
 				</ui-form>

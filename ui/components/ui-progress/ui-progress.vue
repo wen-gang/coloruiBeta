@@ -16,8 +16,7 @@
 	export default {
 		name: 'UiProgress',
 		data() {
-			return {
-				slots: {}
+			return { 
 			};
 		},
 		props: {
@@ -80,10 +79,6 @@
 				type: [String, Boolean],
 				default: ''
 			}
-		},
-
-		mounted() {
-			this.slots = this.$scopedSlots;
 		},
 		methods: {}
 	};

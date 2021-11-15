@@ -5,17 +5,17 @@
 			<image :src="img" class="ui-card-image" :style="[{position:imgHeight=='auto'?'relative':'absolute'}]" :mode="imgHeight=='auto'?'widthFix':'aspectFill'"></image>
 			<view class="text-cut text-lg text-bold ui-card-fixedTitle bg-mask-bottom" v-if="title && fixedTitle">
 				<view class="">
-					<text v-if="!slots.title">{{ title }}</text>
+					<text v-if="!$scopedSlots.title">{{ title }}</text>
 					<slot name="title"></slot>
 				</view>
 			</view>
-			<view class="ui-card-tag" v-if="slots.tag">
+			<view class="ui-card-tag" v-if="$scopedSlots.tag">
 				<slot name="tag"></slot>
 			</view>
 		</view>
 		<view class="ui-card-content">
 			<view class="text-cut text-lg text-bold ui-card-title" v-if="title && !fixedTitle">
-				<text v-if="!slots.title">{{ title }}</text>
+				<text v-if="!$scopedSlots.title">{{ title }}</text>
 				<slot name="title"></slot>
 			</view>
 			<view class="ui-TC-3 mt-2 text-linecut-2 ui-card-desc" v-if="desc">{{ desc }}</view>
@@ -28,8 +28,7 @@
 export default {
 	name: 'UiCard',
 	data() {
-		return {
-			slots: {}
+		return { 
 		};
 	},
 	props: {
@@ -55,10 +54,6 @@ export default {
 		imgUi: {
 			type: String
 		}, 
-	},
-
-	mounted() {
-		this.slots = this.$scopedSlots;
 	},
 	methods: {
 		_getParent() {
