@@ -1,5 +1,5 @@
 # coloruiBeta
-Colorui先行版本
+Colorui先行版本 （uni-app版）
 
 Demo：http://beta3.color-ui.com
 
@@ -22,3 +22,10 @@ app 是每个项目不一样的 可以自定义的
 ![支持支持](https://cos.color-ui.com/web/yehv3.jpg)
 
 
+##声明
+-------
+
+开源不意味着可以肆无忌惮的倒卖，去除作者信息并改名骗人等。
+希望各位开发者，能尊重每一位开源人，尊重他（她）们的劳动成果，不奢求在页面添加colorui信息，但希望能保留colorui代码内的版权信息，谢谢
+
+ps：vue3版正在做，原生小程序版还在适配中，请耐心等待。
