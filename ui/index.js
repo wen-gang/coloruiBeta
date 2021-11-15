@@ -14,6 +14,7 @@ if (uni.getStorageSync("VUE_APP_NAME") != process.env.VUE_APP_NAME) {
 /*分析主题*/
 var theme = uni.getStorageSync("sys_theme");
 var main = uni.getStorageSync("sys_main");
+var text = uni.getStorageSync("sys_text");
 
 if (!theme) {
 	theme = store.getters.getCustomTheme;
@@ -21,5 +22,9 @@ if (!theme) {
 if (!main) {
 	main = store.getters.getCustomMain;
 }
+if (!text) {
+	text = store.getters.getCustomText;
+}
 store.commit('setTheme', theme);
 store.commit('setMain', main);
+store.commit('setText', text);

@@ -4,6 +4,7 @@ export default {
 		themeAuto: false, // 跟随系统
 		theme: 'light', // 设置默认主题
 		main: 'blue', // 设置默认强调色
+		text: 1, // 设置默认字号等级(0-4)
 		domain: 'https://color-ui.com',
 		apiPath: '/api/',
 		homePath: '/pages/document/home', // 设置首页路径(一些组件会用到跳回主页，请每个项目设置好！)
@@ -76,7 +77,7 @@ export default {
 						title: '图标'
 					},
 					{
-						icon: 'cicon-darkmode-o',
+						icon: 'cicon-DarkMode',
 						name: 'shadow',
 						title: '阴影'
 					},
@@ -256,6 +257,9 @@ export default {
 		},
 		getCustomMain: state => {
 			return state.main
+		},
+		getCustomText: state => {
+			return state.text
 		},
 		getTabbar: state => {
 			return state.tabbar

@@ -6,8 +6,10 @@
 			<view class="paragraph">文本字体样式,Class控制。适用于任何组件元素。</view>
 
 			<!-- 尺寸 -->
-			<ui-title title="尺寸" depth="2" isIcon></ui-title>
+			<ui-title title="字号设置组件" depth="2" isIcon></ui-title>
 			<ui-text-size ui="radius border"></ui-text-size>
+			<!-- 尺寸 -->
+			<ui-title title="尺寸" depth="2" isIcon></ui-title>
 			<view class="paragraph">
 				添加包含尺寸的Class来控制文字大小。
 				<ui-code>.text-{size}</ui-code>

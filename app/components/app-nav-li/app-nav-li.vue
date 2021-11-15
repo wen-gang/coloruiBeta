@@ -5,7 +5,7 @@
 				<view class="doc-title">{{ data.title }}</view>
 				<view class="text-lg text-Abc text-lighter doc-name">{{ data.name }}</view>
 			</view>
-			<view class="mt-2 mr-1 pt-4 pr-4 pl-2 doc-text"><text class="icon-xl text-xl" :class="[data.icon]"></text></view>
+			<view class="mt-2 mr-1 pt-4 pr-4 pl-2 doc-icon"><text class="icon-xl text-xl" :class="[data.icon]"></text></view>
 			<view class="doc-dot doc-dot1" :class="['bg-' + colorname + '-gradient']"></view>
 			<view class="doc-dot doc-dot2" :class="['bg-' + colorname + '-gradient']"></view>
 			<view class="doc-dot doc-dot3" :class="['bg-' + colorname + '-gradient']"></view>
@@ -115,6 +115,12 @@ export default {
 	.doc-text{
 		position: relative;
 		z-index: 2;
+		padding-right: 50px !important;
+	}
+	.doc-icon{
+		position: absolute;
+		z-index: 2;
+		right: 0;
 	}
 	.doc-dot {
 		position: absolute;

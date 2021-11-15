@@ -36,9 +36,6 @@ export default {
 	methods: {
 		sliderChange(e) {
 			this.$store.commit('setText',e.detail.value);
-		},
-		chooseColor(val) {
-			this.$store.commit('setMain', val);
 		}
 	}
 };
