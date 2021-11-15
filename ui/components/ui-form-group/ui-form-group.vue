@@ -14,7 +14,8 @@
 export default {
 	name: 'UiFormGroup',
 	data() {
-		return { 
+		return {
+			slots: {}
 		};
 	},
 	props: {
@@ -49,7 +50,7 @@ export default {
 	},
 	computed: {
 		isFirstChild() {
-			this.Form = this.getForm();
+			this.Form = this._getParent(name = 'UiForm');
 			// 判断是否存在 ui-Form 组件
 			if (this.Form) {
 				if (!this.Form.firstChildAppend) {
@@ -61,27 +62,14 @@ export default {
 		},
 		titleWidth() {
 			if (this.Form) {
-				this.Form = this.getForm();
+				this.Form = this._getParent(name = 'UiForm');
 				return this.Form.titleWidth;
 			} else {
 				return this.title.length + (this.icon?1.2:0)
 			}			
 		}
 	},
-	methods: {
-		/**
-		 * 获取父元素实例
-		 */
-		getForm(name = 'UiForm') {
-			let parent = this.$parent;
-			let parentName = parent.$options.name;
-			while (parentName !== name) {
-				parent = parent.$parent;
-				if (!parent) return false;
-				parentName = parent.$options.name;
-			}
-			return parent;
-		}
+	methods: { 
 	}
 };
 </script>

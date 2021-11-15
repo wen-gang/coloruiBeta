@@ -1,9 +1,11 @@
 <template>
-	<view class="ui-avatar" :class="[ui, bg, { stack: isGroup && isStack }, { reverse: isReverse }]">
+	<view class="ui-avatar" :class="[ui, bg, { stack: isStack }, { reverse: isReverse },{isFirstChild:isFirstChild}]">
 		<view class="ui-avatar-icon"><text :class="icon"></text></view>
 		<image class="ui-avatar-image" :src="src" mode="aspectFill"></image>
-
 		<slot></slot>
+		<view class="ui-avatar-group" :class="'nth-'+srcs.length" v-if="srcs.length>1">
+			<image class="ui-avatar-image" :src="item" v-for="(item,index) in srcs" :key="index" mode="aspectFill"></image>
+		</view>
 	</view>
 </template>
 
@@ -27,35 +29,34 @@ export default {
 			type: String,
 			default: ''
 		},
+		srcs: {
+			type: Array,
+			default(){
+				return []
+			}
+		},
 		icon: {
 			type: String,
 			default: ''
 		}
 	},
 	computed: {
-		isGroup() {
-			let parent = this._getParent('UiAvatarGroup');
+		isStack() {
+			let parent = this._getParent('UiAvatarStack');
 			if (parent) {
 				return true;
 			}
 			return false;
 		},
-		isStack() {
-			let parent = this._getParent('UiAvatarGroup');
-			if (parent) {
-				return parent.stack;
-			}
-			return false;
-		},
 		isReverse() {
-			let parent = this._getParent('UiAvatarGroup');
+			let parent = this._getParent('UiAvatarStack');
 			if (parent) {
 				return parent.reverse;
 			}
 			return false;
 		},
 		isFirstChild() {
-			let parent = this._getParent('UiAvatarGroup');
+			let parent = this._getParent('UiAvatarStack');
 			if (parent) {
 				if (!parent.firstChildAppend) {
 					parent.firstChildAppend = true;
@@ -152,9 +153,15 @@ export default {
 		font-size: 150%;
 	}
 	&.stack {
-		margin-right: -1em;
+		margin-left: -1em;
 		background-color: inherit;
 		z-index: 1;
+		&.isFirstChild{
+			margin-left: 0px;
+		}
+		&.reverse{		
+			margin: 0 -1em 0 0.14em;
+		}
 		&::after {
 			content: '';
 			background-color: inherit;
@@ -178,6 +185,70 @@ export default {
 			mask-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNjE5NjMxNjI4MjE3IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjE0MzAyIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgd2lkdGg9IjIwMCIgaGVpZ2h0PSIyMDAiPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PC9zdHlsZT48L2RlZnM+PHBhdGggZD0iTTEwMDcuMzI3NjgxODQgNTEwLjQ3NzQyODU0Yy0xLjYwNDMxNTM3IDQxLjcxMjIxMTc1LTIuNDk1NjAyNDMgODMuNjAyNjgyMjgtNS4xNjk0NjIyNiAxMjUuMzE0ODk0MDUtMy43NDM0MDQzNSA1Ny43NTUzNzA4NS0xMi4yOTk3NTQ3OCAxMTQuNjE5NDU2MDEtMzAuNDgyMDAxNDkgMTcwLjA1NzQ4MDQ0LTI2LjU2MDMzOTcxIDgwLjU3MjMwNzYtODAuNzUwNTY1MDMgMTMzLjE1ODIxNjE4LTE1OS4xODM3ODUwMiAxNjIuNzQ4OTMxOTQtMzEuNzI5ODAyIDExLjk0MzIzOTkyLTY0LjcwNzQwNTkyIDE4LjAwMzk4OTI5LTk3Ljg2MzI2NzI2IDIzLjUyOTk2NjQyLTYwLjI1MDk3MzMgMTAuMTYwNjY3MTQtMTIxLjIxNDk3NjIzIDEyLjI5OTc1NDc4LTE4Mi4xNzg5Nzc3OCAxMi4yOTk3NTQ3OC00My42NzMwNDMzIDAtODcuMzQ2MDg1MjUtMC4zNTY1MTQ4Mi0xMzEuMDE5MTI5OTQtMi42NzM4NTk4Ny02MS42NzcwMzI1OC0zLjIwODYzMjEtMTIyLjgxOTI5MTU5LTEwLjMzODkyNDU5LTE4Mi4xNzg5Nzc4Mi0yOS41OTA3MTU3Ny00Ny41OTQ3MDM2OS0xNS4zMzAxMjk0NS04OC43NzIxNDQ1Ny00MC4xMDc4OTYzOC0xMjEuMjE0OTc2MjMtNzguNjExNDc2MDNDNzIuMDExNTM1MTkgODYyLjcxMzg4ODIgNTQuNzIwNTc1NTggODI3LjA2MjQyNDQxIDQzLjg0Njg3ODc1IDc4OC41NTg4NDM0MWMtNy42NjUwNjQ3Mi0yNy4yNzMzNjkzOS0xMy45MDQwNzAxNC01NS4yNTk3Njg0MS0xNy40NjkyMTcwNi04My40MjQ0MjQ4OS00Ljk5MTIwNDg4LTM5LjM5NDg2Njc0LTcuODQzMzIyMTQtNzguOTY3OTkyMjQtMTAuMTYwNjY3MTUtMTE4LjU0MTExNjM2LTEuNzgyNTcyNzgtMzEuMTk1MDMxMTMtMS40MjYwNTc5NS02Mi4zOTAwNjA4Ny0xLjQyNjA1Nzk1LTkzLjU4NTA5MDY4LTAuMTc4MjU3NC01MS4xNTk4NTA2MiAyLjEzOTA4NzYxLTEwMi4zMTk2OTk4NiA3LjQ4NjgwNzMyLTE1My4zMDEyOTQ0NCA0LjgxMjk0NzQ2LTQ0LjU2NDMyODk5IDEzLjE5MTA0MTgzLTg4LjQxNTYyOTc0IDI3LjgwODE0MTYzLTEzMC42NjI2MTM3NCAyNi41NjAzMzk3MS03Ni4xMTU4NzUgNzcuNzIwMTkwMzUtMTI4Ljg4MDA0MDk2IDE1My4zMDEyOTMwOC0xNTcuNDAxMjEwODUgMzMuNjkwNjMzNTctMTIuNjU2MjY5NTkgNjguNjI5MDY3NjYtMjEuMDM0MzYzOTcgMTA0LjI4MDUzMTQtMjYuMjAzODI2MjYgODQuNjcyMjI1MzktMTIuNDc4MDEyMTggMTY5Ljg3OTIyNDQzLTEzLjcyNTgxNDEgMjU1LjI2NDQ3ODExLTExLjU4NjcyNTA5IDMzLjY5MDYzMzU3IDAuODkxMjg3MDggNjcuMzgxMjY1NzcgMi42NzM4NTk4NCAxMDAuODkzNjQxOTEgNS41MjU5NzU3MyA1NS45NzI3OTgwOCA0Ljk5MTIwNDg4IDExMC44NzYwNTE2NyAxNS4zMzAxMjk0NSAxNjMuNjQwMjE3NjMgMzYuMTg2MjM2IDczLjc5ODUyOTk2IDI5LjQxMjQ1Njk3IDEyMC4xNDU0MzE3NSA4My45NTkxOTcxIDE0NC45MjMyMDAwNyAxNTcuOTM1OTgzMTIgMTEuNTg2NzI1MSAzNC41ODE5MTkyNyAxOS4yNTE3ODk4NCA3MC4wNTUxMjU2MSAyMy43MDgyMjM4NSAxMDYuMjQxMzYxNjEgNy44NDMzMjIxNCA2My40NTk2MDU0IDEwLjg3MzY5NjgzIDEyNi45MTkyMTA3NiAxMS4yMzAyMTAyNSAxOTAuNzM1MzMwOTh6IiBwLWlkPSIxNDMwMyI+PC9wYXRoPjwvc3ZnPg==);
 			mask-size: cover;
 		}
+	}
+}
+.ui-avatar-group {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	.ui-avatar-image {
+		position: relative;
+		float: left;
+		border-radius: #{$radius};
+		margin: 1px;
+	}
+	/*1个*/
+	&.nth-1 .ui-avatar-image {
+		width: calc(100% - 2px);
+		height: calc(100% - 2px);
+	}
+	/*2个*/
+	&.nth-2 .ui-avatar-image {
+		width: calc(50% - 2px);
+		height: calc(50% - 2px);
+	}
+	&.nth-2 .ui-avatar-image:last-child {
+		margin-left: calc(50% + 1px);
+	}
+	/*3个*/
+	&.nth-3 .ui-avatar-image {
+		width: calc(50% - 2px);
+		height: calc(50% - 2px);
+		float: left;
+	}
+	&.nth-3 .ui-avatar-image:first-child {
+		margin-left: calc(25% + 1px);
+	}
+	/*4个*/
+	&.nth-4 .ui-avatar-image {
+		width: calc(50% - 2px);
+		height: calc(50% - 2px);
+		float: left;
+	}
+	/*5/6个*/
+	&.nth-5 .ui-avatar-image,
+	&.nth-6 .ui-avatar-image {
+		width: calc(100% / 3 - 2px);
+		height: calc(100% / 3 - 2px);
+	}
+	&.nth-5 .ui-avatar-image:first-child,
+	&.nth-6 .ui-avatar-image:first-child {
+		width: calc(100% / 3 * 2 - 2px);
+		height: calc(100% / 3 * 2 - 2px);
+	}
+	/* 7个 8个 9个 */
+	&.nth-7 .ui-avatar-image,
+	&.nth-8 .ui-avatar-image,
+	&.nth-9 .ui-avatar-image {
+		width: calc(100% / 3 - 2px);
+		height: calc(100% / 3 - 2px);
+	}
+	&.nth-7 .ui-avatar-image:first-child {
+		margin-left: calc(100% / 3 + 1px);
+		margin-right: calc(100% / 3 + 1px);
+	}
+	&.nth-8 .ui-avatar-image:first-child {
+		margin-left: calc(100% / 3 / 2 + 1px);
 	}
 }
 </style>

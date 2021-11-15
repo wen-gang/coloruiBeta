@@ -53,7 +53,7 @@ export default {
 	},
 	computed: {
 		isGroup() {
-			let parent = this._getParent();
+			let parent = this._getParent('UiRadioGroup');
 			if (parent) {
 				return true;
 			}
@@ -61,18 +61,18 @@ export default {
 		},
 		isDisabled() {
 			if (this.isGroup) {
-				return this._getParent().disabled || this.disabled;
+				return this._getParent('UiRadioGroup').disabled || this.disabled;
 			}
 			return this.disabled;
 		},
 		isClearable() {
 			if (this.isGroup) {
-				return this._getParent().clearable || this.clearable;
+				return this._getParent('UiRadioGroup').clearable || this.clearable;
 			}
 			return this.clearable;
 		},
 		isChecked() {
-			let parent = this._getParent();
+			let parent = this._getParent('UiRadioGroup');
 			if ((this.isGroup && parent.value == this.label) || (!this.isGroup && this.currentValue == this.label)) {
 				return true;
 			}
@@ -88,28 +88,12 @@ export default {
 		}
 	},
 	created() {
-		let parent = this._getParent();
+		let parent = this._getParent('UiRadioGroup');
 		if (parent) {
 			this._setValue(parent.value);
 		}
 	},
 	methods: {
-		_getParent() {
-			let parent = this.$parent;
-			if (parent) {
-				let parentName = parent.$options.name;
-				while (parentName !== 'UiRadioGroup') {
-					parent = parent.$parent;
-					if (parent) {
-						parentName = parent.$options.name;
-					} else {
-						return null;
-					}
-				}
-				return parent;
-			}
-			return null;
-		},
 		_onRadioClick() {
 			if (!this.isDisabled) {
 				this._choose();
@@ -121,7 +105,7 @@ export default {
 				this.$emit('input', this.currentValue);
 				this.$emit('change', this.currentValue);
 				if (this.isGroup) {
-					let parent = this._getParent();
+					let parent = this._getParent('UiRadioGroup');
 					parent._onRadioChange(this.label);
 				}
 			} else if (this.isClearable) {
@@ -129,7 +113,7 @@ export default {
 				this.$emit('input', this.currentValue);
 				this.$emit('change', this.currentValue);
 				if (this.isGroup) {
-					let parent = this._getParent();
+					let parent = this._getParent('UiRadioGroup');
 					parent._onRadioChange(null);
 				}
 			}

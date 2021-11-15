@@ -48,9 +48,7 @@
 			<ui-title title="角标" depth="2" isIcon></ui-title>
 			<view class="p-4 ui-grid ui-cols-5">
 				<view class="ui-item">
-					<ui-avatar ui="radius xl" src="https://cos.color-ui.com/avatar/lol-avatar/1029.jpg"> 
-						<view class="ui-tag badge">3</view>
-					</ui-avatar>
+					<ui-avatar ui="radius xl" src="https://cos.color-ui.com/avatar/lol-avatar/1029.jpg"><view class="ui-tag badge">3</view></ui-avatar>
 				</view>
 				<view class="ui-item">
 					<ui-avatar ui="round xl">
@@ -80,75 +78,128 @@
 
 			<ui-title title="多头像层叠" depth="2" isIcon></ui-title>
 			<view class="p-5 flex align-center">
-				<ui-avatar-group stack>
+				<ui-avatar-stack>
 					<ui-avatar ui="round xl" src="https://cos.color-ui.com/avatar/lol-avatar/1032.jpg"></ui-avatar>
 					<ui-avatar ui="round xl" src="https://cos.color-ui.com/avatar/lol-avatar/1035.jpg"></ui-avatar>
 					<ui-avatar ui="round xl" src="https://cos.color-ui.com/avatar/lol-avatar/1040.jpg"></ui-avatar>
-				</ui-avatar-group>
-				<!-- <view class="ui-avatar-stack">
-					<view class="ui-avatar xl"><image src="https://cos.color-ui.com/avatar/lol-avatar/1032.jpg" mode="widthFix"></image></view>
-					<view class="ui-avatar xl"><image src="https://cos.color-ui.com/avatar/lol-avatar/1040.jpg" mode="widthFix"></image></view>
-					<view class="ui-avatar xl"><image src="https://cos.color-ui.com/avatar/lol-avatar/1050.jpg" mode="widthFix"></image></view>
-				</view> -->
+				</ui-avatar-stack> 
 			</view>
 
 			<view class="p-5 flex align-center">
-				<view class="ui-avatar-stack ui-BG-2 reverse">
-					<view class="ui-avatar xl"><image src="https://cos.color-ui.com/avatar/lol-avatar/1032.jpg" mode="widthFix"></image></view>
-					<view class="ui-avatar xl"><image src="https://cos.color-ui.com/avatar/lol-avatar/1040.jpg" mode="widthFix"></image></view>
-					<view class="ui-avatar xl"><image src="https://cos.color-ui.com/avatar/lol-avatar/1050.jpg" mode="widthFix"></image></view>
-				</view>
-			</view>
-
-			<view class="p-5 flex align-center">
-				<view class="ui-avatar-stack ui-BG-2 reverse">
-					<view class="ui-avatar xl"><image src="https://cos.color-ui.com/avatar/lol-avatar/1032.jpg" mode="widthFix"></image></view>
-					<view class="ui-avatar xl"><image src="https://cos.color-ui.com/avatar/lol-avatar/1040.jpg" mode="widthFix"></image></view>
-					<view class="ui-avatar xl"><image src="https://cos.color-ui.com/avatar/lol-avatar/1050.jpg" mode="widthFix"></image></view>
-				</view>
-			</view>
-
-			<view class="p-5 flex align-center">
-				<view class="ui-avatar-stack ui-BG-2 mx-3">
-					<view class="ui-avatar xl ellipse"><image src="https://cos.color-ui.com/avatar/lol-avatar/1032.jpg" mode="widthFix"></image></view>
-					<view class="ui-avatar xl ellipse"><image src="https://cos.color-ui.com/avatar/lol-avatar/1040.jpg" mode="widthFix"></image></view>
-					<view class="ui-avatar xl ellipse"><image src="https://cos.color-ui.com/avatar/lol-avatar/1050.jpg" mode="widthFix"></image></view>
-				</view>
-			</view>
-
-			<view class="p-5 flex align-center">
-				<view class="ui-avatar-stack ui-BG-2 mx-3">
-					<view class="ui-avatar xl round"><image src="https://cos.color-ui.com/avatar/lol-avatar/1032.jpg" mode="widthFix"></image></view>
-					<view class="ui-avatar xl round"><image src="https://cos.color-ui.com/avatar/lol-avatar/1040.jpg" mode="widthFix"></image></view>
-					<view class="ui-avatar xl round"><image src="https://cos.color-ui.com/avatar/lol-avatar/1050.jpg" mode="widthFix"></image></view>
-				</view>
-				<view class="ui-avatar-stack ui-BG-2 mx-3 reverse">
-					<view class="ui-avatar xl round"><image src="https://cos.color-ui.com/avatar/lol-avatar/1042.jpg" mode="widthFix"></image></view>
-					<view class="ui-avatar xl round"><image src="https://cos.color-ui.com/avatar/lol-avatar/1050.jpg" mode="widthFix"></image></view>
-					<view class="ui-avatar xl round"><image src="https://cos.color-ui.com/avatar/lol-avatar/1060.jpg" mode="widthFix"></image></view>
-				</view>
+				<ui-avatar-stack reverse>
+					<ui-avatar ui="round xl" bg="ui-BG-2" src="https://cos.color-ui.com/avatar/lol-avatar/1032.jpg"></ui-avatar>
+					<ui-avatar ui="round xl" bg="ui-BG-2" src="https://cos.color-ui.com/avatar/lol-avatar/1035.jpg"></ui-avatar>
+					<ui-avatar ui="round xl" bg="ui-BG-2" src="https://cos.color-ui.com/avatar/lol-avatar/1040.jpg"></ui-avatar>
+				</ui-avatar-stack>
 			</view>
 
 			<ui-title title="头像组" depth="2" isIcon></ui-title>
-			<view class="p-5 flex align-center">
-				<view class="ui-avatar xxl">
-					<view class="ui-avatar-group nth-1"><image src="https://cos.color-ui.com/avatar/lol-avatar/1032.jpg" mode="aspectFill"></image></view>
-				</view>
-				<view class="ui-avatar xxl">
-					<view class="ui-avatar-group nth-2">
+			<view class="p-3 flex align-center">
+				<ui-avatar ui="xxl" :srcs="['https://cos.color-ui.com/avatar/lol-avatar/1032.jpg', 'https://cos.color-ui.com/avatar/lol-avatar/1033.jpg']"></ui-avatar>
+				<ui-avatar
+					ui="xxl"
+					:srcs="[
+						'https://cos.color-ui.com/avatar/lol-avatar/1032.jpg',
+						'https://cos.color-ui.com/avatar/lol-avatar/1033.jpg',
+						'https://cos.color-ui.com/avatar/lol-avatar/1035.jpg'
+					]"
+				></ui-avatar>
+				<ui-avatar
+					ui="xxl"
+					:srcs="[
+						'https://cos.color-ui.com/avatar/lol-avatar/1032.jpg',
+						'https://cos.color-ui.com/avatar/lol-avatar/1033.jpg',
+						'https://cos.color-ui.com/avatar/lol-avatar/1036.jpg',
+						'https://cos.color-ui.com/avatar/lol-avatar/1043.jpg'
+					]"
+				></ui-avatar>
+				<ui-avatar
+					ui="xxl"
+					:srcs="[
+						'https://cos.color-ui.com/avatar/lol-avatar/1032.jpg',
+						'https://cos.color-ui.com/avatar/lol-avatar/1033.jpg',
+						'https://cos.color-ui.com/avatar/lol-avatar/1036.jpg',
+						'https://cos.color-ui.com/avatar/lol-avatar/1043.jpg',
+						'https://cos.color-ui.com/avatar/lol-avatar/1053.jpg'
+					]"
+				></ui-avatar>
+			</view>
+			<view class="p-3 flex align-center">
+				<ui-avatar
+					ui="xxl"
+					:srcs="[
+						'https://cos.color-ui.com/avatar/lol-avatar/1032.jpg',
+						'https://cos.color-ui.com/avatar/lol-avatar/1033.jpg',
+						'https://cos.color-ui.com/avatar/lol-avatar/1036.jpg',
+						'https://cos.color-ui.com/avatar/lol-avatar/1043.jpg',
+						'https://cos.color-ui.com/avatar/lol-avatar/1052.jpg',
+						'https://cos.color-ui.com/avatar/lol-avatar/1057.jpg'
+					]"
+				></ui-avatar>
+				<ui-avatar
+					ui="xxl"
+					:srcs="[
+						'https://cos.color-ui.com/avatar/lol-avatar/1032.jpg',
+						'https://cos.color-ui.com/avatar/lol-avatar/1033.jpg',
+						'https://cos.color-ui.com/avatar/lol-avatar/1036.jpg',
+						'https://cos.color-ui.com/avatar/lol-avatar/1043.jpg',
+						'https://cos.color-ui.com/avatar/lol-avatar/1052.jpg',
+						'https://cos.color-ui.com/avatar/lol-avatar/1057.jpg',
+						'https://cos.color-ui.com/avatar/lol-avatar/1058.jpg'
+					]"
+				></ui-avatar>
+				<ui-avatar
+					ui="xxl"
+					:srcs="[
+						'https://cos.color-ui.com/avatar/lol-avatar/1032.jpg',
+						'https://cos.color-ui.com/avatar/lol-avatar/1033.jpg',
+						'https://cos.color-ui.com/avatar/lol-avatar/1036.jpg',
+						'https://cos.color-ui.com/avatar/lol-avatar/1043.jpg',
+						'https://cos.color-ui.com/avatar/lol-avatar/1052.jpg',
+						'https://cos.color-ui.com/avatar/lol-avatar/1057.jpg',
+						'https://cos.color-ui.com/avatar/lol-avatar/1068.jpg',
+						'https://cos.color-ui.com/avatar/lol-avatar/1068.jpg'
+					]"
+				></ui-avatar>
+				<ui-avatar
+					ui="xxl"
+					:srcs="[
+						'https://cos.color-ui.com/avatar/lol-avatar/1032.jpg',
+						'https://cos.color-ui.com/avatar/lol-avatar/1033.jpg',
+						'https://cos.color-ui.com/avatar/lol-avatar/1036.jpg',
+						'https://cos.color-ui.com/avatar/lol-avatar/1043.jpg',
+						'https://cos.color-ui.com/avatar/lol-avatar/1052.jpg',
+						'https://cos.color-ui.com/avatar/lol-avatar/1057.jpg',
+						'https://cos.color-ui.com/avatar/lol-avatar/1068.jpg',
+						'https://cos.color-ui.com/avatar/lol-avatar/1068.jpg',
+						'https://cos.color-ui.com/avatar/lol-avatar/1068.jpg'
+					]"
+				></ui-avatar>
+				<!-- 			<ui-avatar-stack>
+					<ui-avatar src="https://cos.color-ui.com/avatar/lol-avatar/1060.jpg"></ui-avatar>
+					<ui-avatar src="https://cos.color-ui.com/avatar/lol-avatar/1061.jpg"></ui-avatar>
+				</ui-avatar-stack>
+				<ui-avatar-stack>
+					<ui-avatar src="https://cos.color-ui.com/avatar/lol-avatar/1060.jpg"></ui-avatar>
+					<ui-avatar src="https://cos.color-ui.com/avatar/lol-avatar/1061.jpg"></ui-avatar>
+					<ui-avatar src="https://cos.color-ui.com/avatar/lol-avatar/1060.jpg"></ui-avatar>
+					<ui-avatar src="https://cos.color-ui.com/avatar/lol-avatar/1061.jpg"></ui-avatar>
+				</ui-avatar-stack> -->
+				<!-- <view class="ui-avatar xxl">
+					<view class="ui-avatar-stack nth-2">
 						<image src="https://cos.color-ui.com/avatar/lol-avatar/1032.jpg" mode="aspectFill"></image>
 						<image src="https://cos.color-ui.com/avatar/lol-avatar/1040.jpg" mode="aspectFill"></image>
 					</view>
 				</view>
 				<view class="ui-avatar xxl">
-					<view class="ui-avatar-group nth-3">
+					<view class="ui-avatar-stack nth-3">
 						<image src="https://cos.color-ui.com/avatar/lol-avatar/1032.jpg" mode="aspectFill"></image>
 						<image src="https://cos.color-ui.com/avatar/lol-avatar/1040.jpg" mode="aspectFill"></image>
 						<image src="https://cos.color-ui.com/avatar/lol-avatar/1050.jpg" mode="aspectFill"></image>
 					</view>
 				</view>
 				<view class="ui-avatar xxl">
-					<view class="ui-avatar-group nth-4">
+					<view class="ui-avatar-stack nth-4">
 						<image src="https://cos.color-ui.com/avatar/lol-avatar/1032.jpg" mode="aspectFill"></image>
 						<image src="https://cos.color-ui.com/avatar/lol-avatar/1040.jpg" mode="aspectFill"></image>
 						<image src="https://cos.color-ui.com/avatar/lol-avatar/1050.jpg" mode="aspectFill"></image>
@@ -156,7 +207,7 @@
 					</view>
 				</view>
 				<view class="ui-avatar xxl">
-					<view class="ui-avatar-group nth-5">
+					<view class="ui-avatar-stack nth-5">
 						<image src="https://cos.color-ui.com/avatar/lol-avatar/1032.jpg" mode="aspectFill"></image>
 						<image src="https://cos.color-ui.com/avatar/lol-avatar/1040.jpg" mode="aspectFill"></image>
 						<image src="https://cos.color-ui.com/avatar/lol-avatar/1050.jpg" mode="aspectFill"></image>
@@ -169,7 +220,7 @@
 
 			<view class="p-5 flex align-center">
 				<view class="ui-avatar xxl">
-					<view class="ui-avatar-group nth-6">
+					<view class="ui-avatar-stack nth-6">
 						<image src="https://cos.color-ui.com/avatar/lol-avatar/1032.jpg" mode="aspectFill"></image>
 						<image src="https://cos.color-ui.com/avatar/lol-avatar/1032.jpg" mode="aspectFill"></image>
 						<image src="https://cos.color-ui.com/avatar/lol-avatar/1040.jpg" mode="aspectFill"></image>
@@ -180,7 +231,7 @@
 					</view>
 				</view>
 				<view class="ui-avatar xxl">
-					<view class="ui-avatar-group nth-7">
+					<view class="ui-avatar-stack nth-7">
 						<image src="https://cos.color-ui.com/avatar/lol-avatar/1032.jpg" mode="aspectFill"></image>
 						<image src="https://cos.color-ui.com/avatar/lol-avatar/1040.jpg" mode="aspectFill"></image>
 						<image src="https://cos.color-ui.com/avatar/lol-avatar/1032.jpg" mode="aspectFill"></image>
@@ -192,7 +243,7 @@
 					</view>
 				</view>
 				<view class="ui-avatar xxl">
-					<view class="ui-avatar-group nth-8">
+					<view class="ui-avatar-stack nth-8">
 						<image src="https://cos.color-ui.com/avatar/lol-avatar/1032.jpg" mode="aspectFill"></image>
 						<image src="https://cos.color-ui.com/avatar/lol-avatar/1040.jpg" mode="aspectFill"></image>
 						<image src="https://cos.color-ui.com/avatar/lol-avatar/1050.jpg" mode="aspectFill"></image>
@@ -205,7 +256,7 @@
 					</view>
 				</view>
 				<view class="ui-avatar xxl ellipse">
-					<view class="ui-avatar-group nth-9">
+					<view class="ui-avatar-stack nth-9">
 						<image src="https://cos.color-ui.com/avatar/lol-avatar/1032.jpg" mode="aspectFill"></image>
 						<image src="https://cos.color-ui.com/avatar/lol-avatar/1040.jpg" mode="aspectFill"></image>
 						<image src="https://cos.color-ui.com/avatar/lol-avatar/1050.jpg" mode="aspectFill"></image>
@@ -217,7 +268,7 @@
 						<image src="https://cos.color-ui.com/avatar/lol-avatar/1050.jpg" mode="aspectFill"></image>
 					</view>
 					<view class="ui-tag badge">3</view>
-				</view>
+				</view> -->
 			</view>
 
 			<view class="ui-BG radius p-4 my-3 flex-bar" @click="_to('/pages/find/avatar')">
@@ -237,6 +288,4 @@ export default {
 };
 </script>
 
-<style lang="scss">
-	
-</style>
+<style lang="scss"></style>
