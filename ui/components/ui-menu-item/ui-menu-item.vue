@@ -49,36 +49,22 @@ export default {
 	created() {},
 	computed: {
 		isFirstChild(){
-			this.Menu = this.getMenu()
+			let parent = this._getParent('UiMenu')
 			// 判断是否存在 ui-Menu 组件
-			if(this.Menu){ 
-				if (!this.Menu.firstChildAppend) {
-					this.Menu.firstChildAppend = true;
+			if(parent){ 
+				if (!parent.firstChildAppend) {
+					parent.firstChildAppend = true;
 					return true;
 				}
 			}
 			return false
 		}
 	},
-
 	mounted() {
 		this.slots = this.$scopedSlots;
 	},
 	watch: {},
-	methods: {
-		/**
-		 * 获取父元素实例
-		 */
-		getMenu(name = 'UiMenu') {
-			let parent = this.$parent;
-			let parentName = parent.$options.name;
-			while (parentName !== name) {
-				parent = parent.$parent;
-				if (!parent) return false
-				parentName = parent.$options.name;
-			}
-			return parent;
-		},
+	methods: { 
 	}
 };
 </script>

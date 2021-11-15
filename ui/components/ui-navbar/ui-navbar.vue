@@ -6,12 +6,12 @@
 				<block v-else>
 					<view class="left">
 						<view class="back" @tap="_navback" v-if="back && !capsule">
-							<view class="back-icon icon-fw text-xl" :class="[sys_atHome ? '_icon-home-o' : '_icon-back', statusCur, { opacityIcon: opacityBg }]"></view>
+							<view class="back-icon icon-fw text-xl" :class="[sys_isFirstPage ? '_icon-home-o' : '_icon-back', statusCur, { opacityIcon: opacityBg }]"></view>
 							<view>{{ backtext }}</view>
 						</view>
-						<view class="capsule" :style="[capsuleBack]" v-if="capsule" :class="[{ atHome: sys_atHome }, statusCur]">
+						<view class="capsule" :style="[capsuleBack]" v-if="capsule" :class="[{ isFristPage: sys_isFirstPage }, statusCur]">
 							<view class="capsule-back" @tap="_navback"><text class="icon-fw text-xl _icon-back"></text></view>
-							<view class="capsule-home" @tap="_toHome"><text class="icon-fw text-xl" :class="sys_atHome ? '_icon-home' : '_icon-home-o'"></text></view>
+							<view class="capsule-home" @tap="_toHome"><text class="icon-fw text-xl" :class="sys_isFirstPage ? '_icon-home' : '_icon-home-o'"></text></view>
 						</view>
 						<slot name="left"></slot>
 					</view>
@@ -52,7 +52,6 @@ export default {
 			default: ''
 		},
 		bg: {
-			//返回文本
 			type: String,
 			default: 'bg-blur'
 		},
@@ -119,7 +118,7 @@ export default {
 			height: this.sys_capsule.height + 'px',
 			margin: '0 ' + (this.sys_info.windowWidth - this.sys_capsule.right) + 'px'
 		};
-		if (this.sys_atHome) {
+		if (this.sys_isFirstPage) {
 			this.capsuleBack = {
 				width: this.sys_capsule.height + 'px',
 				height: this.sys_capsule.height + 'px',
@@ -134,6 +133,7 @@ export default {
 	mounted() {
 		this.slots = this.$scopedSlots;
 		
+		console.log(this.sys_isFirstPage);
 		// //设置 statusBarStyle App端必须在渲染后
 		this.changeStatus();
 	},
@@ -283,7 +283,7 @@ export default {
 					@include flex-center;
 					flex: 1;
 				}
-				&.atHome {
+				&.isFristPage {
 					.capsule-back,
 					&::after {
 						display: none;

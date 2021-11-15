@@ -1,9 +1,9 @@
 <template>
-	<ui-sys img="https://oss.color-ui.com/img/4put2.png" tabbar>
+	<ui-sys img="https://cos.color-ui.com/img/4put2.png" tabbar>
 
 			<ui-navbar :back="false" opacity>
 				<view class="flex-bar p-3" v-if="sys_scrollTop > sys_navBar">
-					<image src="https://oss.color-ui.com/img/hapm8.png" mode="aspectFill"
+					<image src="https://cos.color-ui.com/img/hapm8.png" mode="aspectFill"
 						style="width: 200rpx;height: 56rpx;"></image>
 				</view>
 				<view class="p-3 flex-bar flex-sub" v-if="sys_scrollTop > sys_navBar">
@@ -42,12 +42,12 @@
 		data() {
 			return {
 				swiperList: [{
-					img: "https://oss.color-ui.com/img/8v2yr.png",
+					img: "https://cos.color-ui.com/img/8v2yr.png",
 					url:'/pages/article/guide/guide'
 				}, {
-					img: "https://oss.color-ui.com/img/qhgtb.png"
+					img: "https://cos.color-ui.com/img/qhgtb.png"
 				}, {
-					img: "https://oss.color-ui.com/img/qhgtb.png"
+					img: "https://cos.color-ui.com/img/qhgtb.png"
 				}],
 
 			}

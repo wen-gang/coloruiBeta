@@ -13,7 +13,7 @@
 		data() {
 			return {
 				list:[{
-					img:"https://oss.color-ui.com/img/qtrr8.png"
+					img:"https://cos.color-ui.com/img/qtrr8.png"
 				}]
 			}
 		},

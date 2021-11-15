@@ -3,16 +3,15 @@
 		<view class="ui-container">
 			<ui-title title="简介" depth="2" isIcon></ui-title>
 			<view class="paragraph">自定义顶部导航栏,适用于所有页面,小程序有返回胶囊样式可以使用。</view>
-			<view class="blockquote">默认导航栏带有返回按钮,自动判断当前页面是否为首页而改变图标和跳转(请在<ui-code>@/app/store/index.js</ui-code>配置首页)</view>
-
-			<ui-menu class="mt-4 radius">
+	
+			<ui-menu class="mt-4 radius border">
 				<ui-menu-item icon="cicon-equalizer" title="参数" @click.native="_to('/pages/parameter/parameter?component=ui-navbar')"></ui-menu-item>
 			</ui-menu>
-			<!-- 带返回 -->
-			<ui-title title="带返回" depth="2" isIcon></ui-title>
+			<!-- 导航操作 -->
+			<ui-title title="导航操作" depth="2" isIcon></ui-title>
 			<view class="paragraph">
-				带有返回按钮的导航栏,自动判断当前页面是否为首页而改变图标和跳转(请在
-				<ui-code>@/colorui/js/mixin.js</ui-code>
+				默认导航栏,自动判断当前页面是否为首页而改变图标和跳转(请在
+				<ui-code>@/app/store/index.js</ui-code>
 				配置首页)
 				<!-- 仅图标 -->
 				<ui-title title="仅图标" depth="3" isIcon>
@@ -22,7 +21,7 @@
 					</navigator>
 				</ui-title>
 			</view>
-			<ui-img src="https://oss.color-ui.com/web/ozgly.jpg" ui="radius border"></ui-img> 
+			<ui-img src="https://cos.color-ui.com/web/ozgly.jpg" ui="radius border"></ui-img> 
 			<ui-code tag="pre" lang="html" title :content="code1"></ui-code>
 			<!-- 自定义返回文本 -->
 			<view class="paragraph">
@@ -33,7 +32,7 @@
 					</navigator>
 				</ui-title>
 			</view>
-			<ui-img src="https://oss.color-ui.com/web/i4ux8.jpg" ui="radius border"></ui-img> 
+			<ui-img src="https://cos.color-ui.com/web/i4ux8.jpg" ui="radius border"></ui-img> 
 			<ui-code tag="pre" lang="html" title :content="code2"></ui-code>
 
 			<!-- 有阴影 -->
@@ -45,7 +44,7 @@
 					</navigator>
 				</ui-title>
 			</view>
-			<ui-img src="https://oss.color-ui.com/web/7i87w.jpg" ui="radius border"></ui-img> 
+			<ui-img src="https://cos.color-ui.com/web/7i87w.jpg" ui="radius border"></ui-img> 
 			<ui-code tag="pre" lang="html" title :content="code3"></ui-code>
 		</view>
 	</ui-sys>

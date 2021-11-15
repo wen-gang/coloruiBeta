@@ -8,7 +8,6 @@ const mixin = {
 			_uid: this._uid, //vue实例id
 			sys_scrollTop: 0, //实例所在页面滚动值
 			sys_atPage: true, //实例是否在页面里显示
-			sys_atHome: false, //实例是否在首页
 			sys_layer: 0, //实例层级
 		};
 	},
@@ -29,6 +28,11 @@ const mixin = {
 		sys_capsule() {
 			return this.$store.getters.sys_capsule
 		},
+		sys_isFirstPage() {
+			//实例是否为路由栈的第一个页面
+			let pages = getCurrentPages(); 
+			return pages.length == 1
+		},
 		isPc(){
 			return uni.getSystemInfoSync().windowWidth > 750
 		}
@@ -41,7 +45,10 @@ const mixin = {
 			this.sys_layer = (this.$parent.sys_layer ? this.$parent.sys_layer : 0) + 1
 		}
 	},
-	onLoad() {},
+	onLoad() {
+		
+		
+	},
 	onShow() {
 		uni.$emit('_onShow_' + this._uid);
 	},
@@ -58,20 +65,16 @@ const mixin = {
 		uni.$on('_onReachBottom_' + this.$root._uid, () => {
 			this._onReachBottom();
 		})
-		uni.$on('_onResize_' + this.$root._uid, () => {
-
-		})
-		// #ifdef H5
-		this.sys_atHome = window.history.length <= 1;
-		// #endif
-		// #ifndef H5
-		let pages = getCurrentPages();
-		this.sys_atHome = pages.length == 1;
-		// #endif
 
 	},
 	onReady() {
 		this._h5SetScrollTop();
+		// // #ifdef H5
+		// this.sys_isFirstPage = window.history.length <= 1;
+		// // #endif
+		// // #ifndef H5
+		// // #endif
+		
 	},
 	onShow() {
 		this._h5SetScrollTop();
@@ -113,7 +116,7 @@ const mixin = {
 			// console.log('component: ' + this._uid + ' onHide in '+ this.$root._uid);
 		},
 		_backPage() {
-			if (this.sys_atHome) {
+			if (this.sys_isFirstPage) {
 				this._toHome();
 			} else {
 				// #ifdef H5
@@ -152,9 +155,12 @@ const mixin = {
 						}
 					});
 					break;
-				case 'reLaunch':
+				case 'reLaunch': 
 					uni.reLaunch({
 						url: url,
+						success(res) {
+							console.log(res);
+						},
 						fail(res) {
 							console.log(res);
 						}
@@ -177,8 +183,23 @@ const mixin = {
 					})
 					break;
 			}
-
-		}
+		},
+		_getParent(name) {
+			let parent = this.$parent;
+			if (parent) {
+				let parentName = parent.$options.name;
+				while (parentName !== name) {
+					parent = parent.$parent;
+					if (parent) {
+						parentName = parent.$options.name;
+					} else {
+						return null;
+					}
+				}
+				return parent;
+			}
+			return null;
+		},
 	}
 }
 

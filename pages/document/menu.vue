@@ -19,7 +19,7 @@
 				<ui-menu-item arrow title="标签" icon="cicon-tag text-orange">
 					<block slot="action">
 						<view class="ui-tag bg-red img">
-							<image src="https://oss.color-ui.com/avatar/lol-avatar/1009.jpg" mode="aspectFill" class="tag-img"></image>
+							<image src="https://cos.color-ui.com/avatar/lol-avatar/1009.jpg" mode="aspectFill" class="tag-img"></image>
 							bg-red
 						</view>
 
@@ -29,9 +29,9 @@
 				<ui-menu-item arrow title="头像组" icon="cicon-tag text-orange">
 					<block slot="action">
 						<view class="ui-avatar-stack ui-BG mx-3 reverse">
-							<view class="ui-avatar round"><image src="https://oss.color-ui.com/avatar/lol-avatar/1042.jpg" mode="widthFix"></image></view>
-							<view class="ui-avatar round"><image src="https://oss.color-ui.com/avatar/lol-avatar/1050.jpg" mode="widthFix"></image></view>
-							<view class="ui-avatar round"><image src="https://oss.color-ui.com/avatar/lol-avatar/1060.jpg" mode="widthFix"></image></view>
+							<view class="ui-avatar round"><image src="https://cos.color-ui.com/avatar/lol-avatar/1042.jpg" mode="widthFix"></image></view>
+							<view class="ui-avatar round"><image src="https://cos.color-ui.com/avatar/lol-avatar/1050.jpg" mode="widthFix"></image></view>
+							<view class="ui-avatar round"><image src="https://cos.color-ui.com/avatar/lol-avatar/1060.jpg" mode="widthFix"></image></view>
 						</view>
 					</block>
 				</ui-menu-item>
@@ -53,7 +53,7 @@
 			<ui-menu-item arrow title="标签" icon="cicon-tag text-orange">
 				<block slot="action">
 					<view class="ui-tag bg-red img">
-						<image src="https://oss.color-ui.com/avatar/lol-avatar/1009.jpg" mode="aspectFill" class="tag-img"></image>
+						<image src="https://cos.color-ui.com/avatar/lol-avatar/1009.jpg" mode="aspectFill" class="tag-img"></image>
 						bg-red
 					</view>
 
@@ -63,9 +63,9 @@
 			<ui-menu-item arrow title="头像组" icon="cicon-tag text-orange">
 				<block slot="action">
 					<view class="ui-avatar-stack ui-BG mx-3 reverse">
-						<view class="ui-avatar round"><image src="https://oss.color-ui.com/avatar/lol-avatar/1042.jpg" mode="widthFix"></image></view>
-						<view class="ui-avatar round"><image src="https://oss.color-ui.com/avatar/lol-avatar/1050.jpg" mode="widthFix"></image></view>
-						<view class="ui-avatar round"><image src="https://oss.color-ui.com/avatar/lol-avatar/1060.jpg" mode="widthFix"></image></view>
+						<view class="ui-avatar round"><image src="https://cos.color-ui.com/avatar/lol-avatar/1042.jpg" mode="widthFix"></image></view>
+						<view class="ui-avatar round"><image src="https://cos.color-ui.com/avatar/lol-avatar/1050.jpg" mode="widthFix"></image></view>
+						<view class="ui-avatar round"><image src="https://cos.color-ui.com/avatar/lol-avatar/1060.jpg" mode="widthFix"></image></view>
 					</view>
 				</block>
 			</ui-menu-item>

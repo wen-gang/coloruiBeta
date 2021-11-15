@@ -3,7 +3,7 @@
 		<view class="ui-container">
 			<ui-title title="简介" depth="2" isIcon></ui-title>
 			<view class="paragraph">标题组件可以快速构建一个等级标题。包含多种样式。</view>
-			<ui-menu class="mt-4 radius">
+			<ui-menu class="mt-4 radius border">
 				<ui-menu-item icon="cicon-equalizer" title="参数" @click.native="_to('/pages/parameter/parameter?component=ui-navbar')"></ui-menu-item>
 			</ui-menu>
 

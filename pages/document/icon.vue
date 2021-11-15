@@ -21,7 +21,7 @@
 			</view>
 			
 			
-			<ui-menu class="mt-4 radius">
+			<ui-menu class="mt-4 radius border">
 				<ui-menu-item icon="cicon-apps" title="扩展图标库" @click.native="_to('/pages/document/iconfont')"></ui-menu-item>
 			</ui-menu>
 		</view>

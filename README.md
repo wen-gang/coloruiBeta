@@ -1,5 +1,8 @@
 # coloruiBeta
+<<<<<<< Updated upstream
 Colorui先行版本
+=======
+>>>>>>> Stashed changes
 
 ##文档
 -------

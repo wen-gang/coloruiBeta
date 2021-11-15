@@ -127,16 +127,32 @@
 				</view>
 			</ui-radio>
 		</ui-radio-group>
-		
+
+		<ui-title title="图片" depth="2" isIcon ui="mx-4"></ui-title>
+		<ui-form ui="ui-BG">
+			<ui-form-group title="单选框" contentui="justify-end">
+				<ui-radio-group bg="bg-red-thin" v-model="clearable" clearable>
+					<ui-radio  v-for="(item, index) in 5" :key="index" :label="index" :src="`https://cos.color-ui.com/avatar/lol-avatar/${1000 + index + 1}.jpg`"></ui-radio> 
+				</ui-radio-group>
+			</ui-form-group>
+		</ui-form>
+
 		<ui-title title="其他" depth="2" isIcon ui="mx-4"></ui-title>
 		<ui-form ui="ui-BG">
 			<ui-form-group title="单选框" contentui="justify-end">
 				<ui-radio-group bg="bg-red-thin" v-model="clearable" clearable>
 					<ui-radio label="1">选项1</ui-radio>
-					<ui-radio label="2" :ui="`p-3 ui-BG-3 radius ${clearable==2?'borders border-white ':''}`" bg="bg-white shadow-sm shadow-red" unbg="borderss border-white ui-BG-3 ">选项2</ui-radio>
+					<ui-radio
+						label="2"
+						:ui="`p-3 ui-BG-3 radius ${clearable == 2 ? 'borders border-white ' : ''}`"
+						bg="bg-white shadow-sm shadow-red"
+						unbg="borderss border-white ui-BG-3 "
+					>
+						选项2
+					</ui-radio>
 					<ui-radio label="3" ui="" bg="bg-red shadow-sm shadow-red" unbg="borders border-red ui-BG-3 shadow-sm shadow-red">选项3</ui-radio>
 				</ui-radio-group>
-			</ui-form-group> 
+			</ui-form-group>
 		</ui-form>
 	</ui-sys>
 </template>
@@ -161,4 +177,6 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+
+</style>

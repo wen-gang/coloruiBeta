@@ -46,7 +46,7 @@ export default {
 	},
 	computed: {
 		isGroup() {
-			let parent = this._getParent();
+			let parent = this._getParent('UiCheckboxGroup');
 			if (parent) {
 				return true;
 			}
@@ -54,12 +54,12 @@ export default {
 		},
 		isDisabled() {
 			if (this.isGroup) {
-				return this._getParent().disabled || this.disabled;
+				return this._getParent('UiCheckboxGroup').disabled || this.disabled;
 			}
 			return this.disabled;
 		},
 		isChecked() {
-			let parent = this._getParent();
+			let parent = this._getParent('UiCheckboxGroup');
 			if (typeof this.currentValue == 'boolean') {
 				return this.currentValue;
 			} else {
@@ -82,28 +82,12 @@ export default {
 		}
 	},
 	created() {
-		let parent = this._getParent();
+		let parent = this._getParent('UiCheckboxGroup');
 		if (parent) {
 			this._setValue(parent.value);
 		}
 	},
-	methods: {
-		_getParent() {
-			let parent = this.$parent;
-			if (parent) {
-				let parentName = parent.$options.name;
-				while (parentName !== 'UiCheckboxGroup') {
-					parent = parent.$parent;
-					if (parent) {
-						parentName = parent.$options.name;
-					} else {
-						return null;
-					}
-				}
-				return parent;
-			}
-			return null;
-		},
+	methods: { 
 		_onCheckboxClick() {
 			if (!this.isDisabled) {
 				this._choose();
@@ -113,7 +97,7 @@ export default {
 			this.$emit('input', !this.isChecked);
 			this.$emit('change', !this.isChecked);
 			if (this.isGroup) {
-				let parent = this._getParent();
+				let parent = this._getParent('UiCheckboxGroup');
 				if(this.all){
 					parent._onCheckboxAll(!this.isChecked);
 				} else {					

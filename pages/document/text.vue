@@ -7,6 +7,7 @@
 
 			<!-- 尺寸 -->
 			<ui-title title="尺寸" depth="2" isIcon></ui-title>
+			<ui-text-size ui="radius border"></ui-text-size>
 			<view class="paragraph">
 				添加包含尺寸的Class来控制文字大小。
 				<ui-code>.text-{size}</ui-code>
@@ -76,7 +77,7 @@
 				添加包含颜色的Class来控制文字颜色。 
 				<ui-code>.text-{color}</ui-code>
 			</view>
-			<ui-menu class="mt-4 radius">
+			<ui-menu class="mt-4 radius border">
 				<ui-menu-item icon="cicon-palette-o" title="所有颜色" @click.native="_to('/pages/document/text-color')"></ui-menu-item>
 			</ui-menu>
 	<!-- 		<view class="ui-table table-border table-full ui-BG">

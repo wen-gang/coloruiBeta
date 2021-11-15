@@ -50,7 +50,7 @@ export default {
 		},
 		current: {
 			type: Number,
-			default: ''
+			default: -1
 		},
 	},
 	watch: {

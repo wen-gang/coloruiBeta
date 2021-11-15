@@ -1,8 +1,9 @@
 <template>
-	<view class="ui-radio" @click="_onRadioClick" :class="[{ disabled: isDisabled }, ui]">
-		<view class="ui-radio-input round" :class="[isChecked ? 'cur ' + bg : unbg]" v-if="!none"></view>
-		<view class="ui-radio-content"><slot></slot></view>
-		<view class="ui-radio-bg round" v-if="_has(ui,'card')" :class="[isChecked ? 'cur ' + bg : '']"></view>
+	<view class="ui-radio" @click="_onRadioClick" :class="[{ disabled: isDisabled }, { img: src }, ui]">
+		<view class="ui-radio-input" :class="[isChecked ? 'cur ' + bg : unbg, src ? 'radius' : 'round']" v-if="!none"></view>
+		<image class="ui-radio-img radius" v-if="src" :src="src" mode="aspectFill"></image>
+		<view class="ui-radio-content" v-else><slot></slot></view>
+		<view class="ui-radio-bg round" v-if="_has(ui, 'card')" :class="[isChecked ? 'cur ' + bg : '']"></view>
 	</view>
 </template>
 
@@ -37,10 +38,14 @@ export default {
 			type: String,
 			default: 'borderss'
 		},
+		src: {
+			type: String,
+			default: ''
+		},
 		clearable: {
 			type: Boolean,
 			default: false
-		},		
+		},
 		none: {
 			type: Boolean,
 			default: false
@@ -213,6 +218,42 @@ export default {
 			font-size: 18px;
 		}
 	}
+	&.img {
+		position: relative;
+		margin: 0 0.28572em 0 0.28572em;
+		.ui-radio-input {
+			width: 42px;
+			height: 42px;
+			border-radius: 0px;
+			position: absolute;
+			margin: 0;
+			left: -1px;
+			top: -1px;
+			// opacity: 0;
+			&::before {
+				width: 40px;
+				height: 40px;
+				border-radius: $radius;
+			}
+			&.cur {
+				width: 44px;
+				height: 44px;
+				top: -2px;
+				left: -2px;
+				border-radius: 7px !important;
+				opacity: .8;
+			}
+		}
+		.ui-radio-img {
+			// position: absolute;
+			width: 40px;
+			height: 40px;
+			display: block;
+			overflow: hidden;
+			border-radius: 10px;
+			// opacity: 0.2;
+		}
+	}
 	&.card {
 		display: flex;
 		margin: 30rpx;
@@ -227,14 +268,14 @@ export default {
 			width: 200%;
 			height: 200%;
 			transform: scale(0.5);
-			border-radius: #{$radius *2} !important;
+			border-radius: #{$radius * 2} !important;
 			z-index: 0;
 			left: 0;
 			top: 0;
 			transform-origin: 0 0;
 			background-color: var(--ui-BG);
 		}
-		.ui-radio-input{
+		.ui-radio-input {
 			position: relative;
 			z-index: 1;
 			margin-right: 0;
@@ -248,7 +289,7 @@ export default {
 			transform-origin: 0 0;
 			// border: 1px solid inherit;
 			background-color: var(--ui-BG) !important;
-			left:4px;
+			left: 4px;
 			top: 4px;
 			border-radius: #{$radius * 2 + 8} !important;
 			z-index: 0;
