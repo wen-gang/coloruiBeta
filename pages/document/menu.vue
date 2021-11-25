@@ -4,7 +4,7 @@
 			<ui-title depth="2" title="菜单" isIcon></ui-title>
 
 			<ui-menu ui="mt-5 border radius">
-				<ui-menu-item arrow title="Github" icon="cicon-github"></ui-menu-item>
+				<ui-menu-item title="Github" icon="cicon-github"></ui-menu-item>
 				<ui-menu-item arrow title="关于Colorui组件库">
 					<block slot="icon"><image src="/static/logo.png" mode="aspectFill" class="ui-menu-item-image"></image></block>
 				</ui-menu-item>

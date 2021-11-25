@@ -49,36 +49,36 @@
 		data() {
 			return {
 				shop: [{
-					title: '英国的"外科医生"，竟然把nike运动服改造成了高级定制西装',
-					imgUrl: 'https://hbimg.huabanimg.com/c2b3a8aff0df4a7e4c65ad06404278c20020802adf63d-fre8vM_fw658',
+					title: '上斗鱼领永久皮肤',
+					imgUrl: 'https://ossweb-img.qq.com/images/clientpop/act/lol_1636982696_uploadnewsImg.jpg',
 					avatar: 'https://hbimg.huabanimg.com/68b31a50db076d4334f9cc608b8a8cfdcd389bcd1755-ix61xr_sq75sf',
 					name: '盒子芥末',
 					isFavor: false,
 					favor: 333
 				}, {
-					title: '英国的"外科医生"，竟然把nike运动服改造成了高级定制西装',
-					imgUrl: 'https://hbimg.huabanimg.com/a93f35df96eb6fd176313decd3c27ade7b71c7c378630-l6CXXd_fw658',
+					title: '剑舞双辰，亦幻亦真',
+					imgUrl: 'https://img.crawler.qq.com/lolwebschool/0/JAutoCMS_LOLWeb_3f9fe26fac0da9c15e6a7f765dab5634/0',
 					avatar: 'https://hbimg.huabanimg.com/68b31a50db076d4334f9cc608b8a8cfdcd389bcd1755-ix61xr_sq75sf',
 					name: '盒子芥末',
 					isFavor: true,
 					favor: 333
 				}, {
 					title: '英国的"外科医生"，竟然把nike运动服改造成了高级定制西装',
-					imgUrl: 'https://cos.color-ui.com/img/qtrr8.png',
+					imgUrl: 'https://game.gtimg.cn/images/lol/act/img/skinloading/2000.jpg',
 					avatar: 'https://hbimg.huabanimg.com/68b31a50db076d4334f9cc608b8a8cfdcd389bcd1755-ix61xr_sq75sf',
 					name: '盒子芥末',
 					isFavor: true,
 					favor: 333
 				},{
 					title: '英国的"外科医生"，竟然把nike运动服改造成了高级定制西装',
-					imgUrl: 'https://hbimg.huabanimg.com/c2b3a8aff0df4a7e4c65ad06404278c20020802adf63d-fre8vM_fw658',
+					imgUrl: 'https://ossweb-img.qq.com/images/clientpop/act/lol_1636982696_uploadnewsImg.jpg',
 					avatar: 'https://hbimg.huabanimg.com/68b31a50db076d4334f9cc608b8a8cfdcd389bcd1755-ix61xr_sq75sf',
 					name: '盒子芥末',
 					isFavor: false,
 					favor: 333
 				}, {
 					title: '英国的"外科医生"，竟然把nike运动服改造成了高级定制西装',
-					imgUrl: 'https://hbimg.huabanimg.com/a93f35df96eb6fd176313decd3c27ade7b71c7c378630-l6CXXd_fw658',
+					imgUrl: 'https://img.crawler.qq.com/lolwebschool/0/JAutoCMS_LOLWeb_3f9fe26fac0da9c15e6a7f765dab5634/0',
 					avatar: 'https://hbimg.huabanimg.com/68b31a50db076d4334f9cc608b8a8cfdcd389bcd1755-ix61xr_sq75sf',
 					name: '盒子芥末',
 					isFavor: true,

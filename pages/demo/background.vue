@@ -4,8 +4,7 @@
 			<block v-for="(item, index) in color" :key="$util.getUuid()">
 				<view class="p-3 ui-item " v-for="(itemsub, indexsub) in color" :key="$util.getUuid()" v-if="item.name != itemsub.name && index < 6">
 					<view class="ui-BG radius p-3 text-center">
-						<view :class="'bg-' + item.name + '-' + itemsub.name" class="p-4 item ui-avatar round xxl"></view>
-
+						<ui-avatar :bg="'bg-' + item.name + '-' + itemsub.name" ui="round xxl"></ui-avatar>
 						<view class="text-14 mt-3">{{ '.bg-' + item.name + '-' + itemsub.name }}</view>
 						<view class="text-14 mt-3">{{ '#' + item.value + ' - #' + itemsub.value }}</view>
 					</view>

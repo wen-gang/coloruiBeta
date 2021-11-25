@@ -182,7 +182,7 @@
 				}
 			},
 			mouseover() {
-				if (this.hover) {
+				if (this.hover&&(this.tips!=''||this.content.height!=0)) {
 					this.popover = true;
 				}
 			},

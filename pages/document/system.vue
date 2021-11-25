@@ -9,7 +9,7 @@
 				组件来控制页面的表现，内嵌Colorui的交互反馈(模态框，轻提示等)，主题样式，页面加载等，是每个页面必须有的组件。
 			</view>
 			<ui-code tag="pre" lang="html" :content="code1" title></ui-code>
-			<ui-menu ui="radius"><ui-menu-item icon="cicon-equalizer" title="参数" @click.native="_to('/pages/parameter/parameter?component=ui-sys')"></ui-menu-item></ui-menu>
+			<ui-menu ui="radius border"><ui-menu-item icon="cicon-equalizer" title="参数" @click.native="_to('/pages/parameter/parameter?component=ui-sys')"></ui-menu-item></ui-menu>
 			<ui-title title="使用背景" depth="2" isIcon></ui-title>
 			<view class="">
 				默认背景是

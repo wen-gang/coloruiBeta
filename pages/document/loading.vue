@@ -24,7 +24,7 @@
 				<text class="text-lg text-blue">ColorUI</text>
 			</ui-loading>
 			<ui-loading color>
-				<view class="ui-avatar xxl ellipse ui-BG "><image src="../../static/logo.png" mode="widthFix"></image></view>
+				<ui-avatar ui="xxl ellipse ui-BG " src="../../static/logo.png"></ui-avatar>
 			</ui-loading>
 		</view>
 	</ui-sys>
