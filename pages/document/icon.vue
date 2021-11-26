@@ -13,7 +13,7 @@
 			
 			<view class="ui-icon-list ui-grid ui-cols-4 mt-3">
 				<view class="ui-item" v-for="(item, index) in list" :key="index">
-					<view class="py-4 border radius ui-BG" style="height: 100%;">
+					<view class="py-4 border radius ui-BG" style="height: 100%;" @tap="copy(`_icon-${item}`)">
 						<view class="text-cut mt-2 icon-xxl p-4 ui-TC"><text :class="[`_icon-${item}`]"></text></view>
 						<view class="text-cut mt-2 text-xs text-grey">{{ item }}</view>
 					</view>
