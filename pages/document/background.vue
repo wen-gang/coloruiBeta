@@ -17,7 +17,7 @@
 			</view>
 			<view class="ui-grid ui-cols-1 ui-cols-sm-2 ui-cols-md-2 ui-cols-lg-2 ui-cols-xl-4 ui-cols-xxl-8 ui-BG radius p-2" v-if="demo">
 				<view class="p-3 ui-item" v-for="(item, index) in color" :key="index">
-					<view :class="'bg-' + item.name" class="radius p-4 item">
+					<view :class="'bg-' + item.name" class="radius p-4 item" @tap="copy(`bg-${item.name}`)">
 						<view class="text-xl pb-3">{{ item.desc }}</view>
 						<view class="text-sm flex-bar">
 							<text class="text-ABC">#{{ item.value }}</text>
@@ -35,7 +35,7 @@
 			</view>
 			<view class="ui-grid ui-cols-1 ui-cols-sm-2 ui-cols-md-2 ui-cols-lg-2 ui-cols-xl-4 ui-cols-xxl-8 radius" v-if="demo">
 				<view class="p-3 ui-item" v-for="(item, index) in color" :key="$util.getUuid()">
-					<view :class="'bg-' + item.name + '-thin'" class="radius p-4 item">
+					<view :class="'bg-' + item.name + '-thin'" class="radius p-4 item" @tap="copy(`bg-${item.name}-thin`)">
 						<view class="text-xl pb-3">{{ item.desc }}</view>
 						<view class="text-sm flex-bar">
 							<text>.bg-{{ item.name }}-thin</text>
@@ -60,7 +60,7 @@
 			</view>
 			<view class="ui-grid ui-cols-1 ui-cols-sm-2 ui-cols-md-2 ui-cols-lg-2 ui-cols-xl-4 ui-cols-xxl-8" v-if="demo">
 				<view class="p-3 ui-item" v-for="(item, index) in color" :key="$util.getUuid()">
-					<view :class="'bg-' + item.name + '-gradient'" class="radius p-4 item">
+					<view :class="'bg-' + item.name + '-gradient'" class="radius p-4 item" @tap="copy(`bg-${item.name}-gradient`)">
 						<view class="text-xl pb-3">{{ item.desc }}</view>
 						<view class="text-sm">
 							<text>.bg-{{ item.name }}-gradient</text>
@@ -75,7 +75,7 @@
 			</view>
 			<view class="ui-grid ui-cols-1 ui-cols-sm-2 ui-cols-md-2 ui-cols-lg-2 ui-cols-xl-4 ui-cols-xxl-8 radius" v-if="demo">
 				<view class="p-3 ui-item" v-for="(item, index) in color" :key="$util.getUuid()">
-					<view :class="'bg-' + item.name + '-light'" class="radius p-4 item">
+					<view :class="'bg-' + item.name + '-light'" class="radius p-4 item" @tap="copy(`bg-${item.name}-light`)">
 						<view class="text-xl pb-3">{{ item.desc }}</view>
 						<view class="text-sm">
 							<text>.bg-{{ item.name }}-light</text>
@@ -96,7 +96,7 @@
 			</view>
 			<view class="ui-grid ui-cols-1 ui-cols-sm-2 ui-cols-md-2 ui-cols-lg-2 ui-cols-xl-4 ui-cols-xxl-7 bg-dark-3 radius p-2" v-if="demo">
 				<view class="p-2 ui-item" v-for="(item, index) in gray" :key="$util.getUuid()">
-					<view :class="'bg-' + item.name" class="radius p-3 item">{{ item.name }}</view>
+					<view :class="'bg-' + item.name" class="radius p-3 item" @tap="copy(`bg-${item.name}`)">{{ item.name }}</view>
 				</view>
 			</view>
 
@@ -110,7 +110,7 @@
 			</view>
 			<view class="ui-grid ui-cols-1 ui-cols-sm-2 ui-cols-md-2 ui-cols-lg-2 ui-cols-xl-4 ui-cols-xxl-7 bg-white radius p-2 mt-3" v-if="demo">
 				<view class="p-2 ui-item" v-for="(item, index) in dark" :key="$util.getUuid()">
-					<view :class="'bg-' + item.name" class="radius p-3 item">{{ item.name }}</view>
+					<view :class="'bg-' + item.name" class="radius p-3 item" @tap="copy(`bg-${item.name}`)">{{ item.name }}</view>
 				</view>
 			</view>
 
@@ -122,7 +122,7 @@
 			</view>
 			<view class="ui-grid ui-cols-1 ui-cols-sm-2 ui-cols-md-4 ui-BG radius p-2" v-if="demo">
 				<view class="p-2 ui-item" v-for="(item, index) in themeColor" :key="$util.getUuid()">
-					<view :class="'ui-BG-Main-' + (index + 1)" class="radius p-3 item">{{ item.name }}</view>
+					<view :class="'ui-BG-Main-' + (index + 1)" class="radius p-3 item" @tap="copy(`ui-BG-Main-${(index + 1)}`)">{{ item.name }}</view>
 				</view>
 			</view>
 			<view class="paragraph">
@@ -132,10 +132,10 @@
 			</view>
 			<view class="ui-grid ui-cols-1 ui-cols-sm-3 radius px-2" v-if="demo">
 				<view class="px-2 ui-item" v-for="(item, index) in level" :key="$util.getUuid()">
-					<view :class="item + '-bg'" class="radius p-3 item border">{{ item }}</view>
+					<view :class="item + '-bg'" class="radius p-3 item border" @tap="copy(`${item}-bg`)">{{ item }}</view>
 				</view>
 				<view class="px-2 ui-item mt-4" v-for="(item, index) in level" :key="$util.getUuid()">
-					<view :class="item + '-bg-sub'" class="radius p-3 item border">{{ item }}</view>
+					<view :class="item + '-bg-sub'" class="radius p-3 item border" @tap="copy(`${item}-bg-sub`)">{{ item }}</view>
 				</view>
 			</view>
 
@@ -250,6 +250,9 @@ export default {
 	methods: {
 		setColor(color) {
 			this.curColor = color;
+		},
+		copy(text) {
+			this.$util.copyText(unescape(text.replace(/&#x/g, '%u').replace(/;/g, '')));
 		}
 	}
 };
