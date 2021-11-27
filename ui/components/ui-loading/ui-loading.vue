@@ -1,14 +1,15 @@
 <template>
 	<view class="ui-loading-box" :class="[size ? `text-${size}` : ``, { loop: $scopedSlots.default||img },ui]">
 		<view class="ui-loading">
-			<view class="ui-loading-cut"><view class="ui-loading-loop" :class="[color == true ? 'color' : `default ${color}`]"></view></view>
+			<view class="ui-loading-cut">
+				<view class="ui-loading-loop" :class="[color == true ? 'color' : `default ${color}`]"/>
+			</view>
 		</view>
 		<view class="ui-loading-content">
-			<image :src="img" mode="aspectFill" class="ui-loading-image" v-if="img"></image>
-			<div class="ui-loading-icon">
-				
+			<image :src="img" mode="aspectFill" class="ui-loading-image" v-if="img"/>
+			<view class="ui-loading-icon">
 				<slot></slot>
-			</div>
+			</view>
 		</view>
 	</view>
 </template>
@@ -62,7 +63,7 @@ export default {
 		margin: 0 0.5em;
 		animation: loading_spin 0.7s linear infinite;
 		.ui-loading-cut {
-			position: relative;
+			//position: relative;
 			width: 0.5em;
 			height: 1em;
 			overflow: hidden;

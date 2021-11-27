@@ -71,15 +71,18 @@ export default {
 	methods: {
 		initCode() {
 			if (this.tag == 'pre') {
-				let langArr = new Array();
+				let langArr = new Array(), nodes =[];
 				langArr = this.SupportList();
-				// console.log(langArr)
+				console.log(langArr)
 				if (langArr.indexOf(this.lang) == -1) {
-					this.nodes = this.content;
+					nodes = this.content;
+					console.log(nodes)
 				} else {
-					this.nodes = Prism.highlight(this.content, Prism.languages[this.lang], this.lang);
+					nodes = Prism.highlight(this.content, Prism.languages[this.lang], this.lang);
+					console.log(nodes)
 					this.rich = true;
 				}
+				this.nodes = nodes
 			}
 			if (this.tag == 'code') {
 				this.nodes = this.content;
