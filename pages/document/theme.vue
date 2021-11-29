@@ -43,7 +43,7 @@
 			<view class="my-4 text-d">演示：</view>
 			<ui-change-theme ui="radius border"/>
 			<ui-menu ui="mt-4 radius border">
-				<ui-menu-item icon="cicon-equalizer" title="参数" @click.native="_to('/pages/parameter/parameter?component=ui-theme')"></ui-menu-item>
+				<ui-menu-item icon="cicon-equalizer" title="参数" arrow @click.native="_to('/pages/parameter/parameter?component=ui-theme')"></ui-menu-item>
 			</ui-menu>
 		</view>
 	</ui-sys>

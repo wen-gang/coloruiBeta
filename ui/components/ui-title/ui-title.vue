@@ -1,6 +1,6 @@
 <template>
-	<view class="ui-title" :class="[ui,align, tpl, bg, { line: inLine }, depth > 0 ? 'heading-title heading-' + depth : '']">
-		<view class="anchor" :id="title"></view>
+	<view class="ui-title" :class="[ui,align, tpl, bg, { line: inLine }, 'heading-' + depth]">
+		<view class="anchor" :id="title" :style="`top:-${sys_navBar}px`"></view>
 		<view class="action" :class="[hasLine ? 'hasLine' : '', hasDot ? 'hasDot' : '']">
 			<div class="action-icon">
 				<block v-if="isIcon">
@@ -10,7 +10,7 @@
 				</block>
 				<slot name="icon"></slot>
 			</div>
-			<view class="action-title" :class="[text]" v-if="title != ''">
+			<view class="action-title" :class="[titleUi]" v-if="title != ''">
 				{{ title }}
 				<slot></slot>
 				<view class="action-line" :class="[line]" v-if="hasLine">
@@ -22,7 +22,7 @@
 					<view></view>
 				</view>
 			</view>
-			<view class="action-desc" :class="[desc]" v-if="desc != ''">{{ subTitle }}</view>
+			<view class="action-desc" :class="[descUi]" v-if="desc != ''">{{ desc }}</view>
 		</view>
 		<view class="more"><slot name="more"></slot></view>
 	</view>
@@ -35,18 +35,6 @@ export default {
 		return {};
 	},
 	props: {
-		title: {
-			type: String,
-			default: ''
-		},
-		depth: {
-			type: [Number, String],
-			default: 0
-		},
-		subTitle: {
-			type: String,
-			default: ''
-		},
 		ui: {
 			type: String,
 			default: ''
@@ -55,13 +43,25 @@ export default {
 			type: String,
 			default: 'bg-none'
 		},
-		text: {
+		title: {
 			type: String,
-			default: 'text-a'
+			default: ''
 		},
 		desc: {
 			type: String,
-			default: 'text-c'
+			default: ''
+		},
+		titleUi: {
+			type: String,
+			default: 'ui-TC'
+		},
+		descUi: {
+			type: String,
+			default: 'ui-TC-3'
+		},
+		depth: {
+			type: [Number, String],
+			default: 0
 		},
 		dot: {
 			type: String,
@@ -113,11 +113,10 @@ ui-title {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 30rpx;
+	// padding: 30rpx;
 	.anchor {
 		pointer-events: none;
 		position: absolute;
-		top: -60px;
 	}
 	&.line {
 		padding: 0 30rpx;
@@ -147,8 +146,8 @@ ui-title {
 			z-index: 2;
 			.action-dot {
 				position: absolute;
-				width: 1.2em;
-				height: 1.2em;
+				width: 18px;
+				height: 18px;
 				border-radius: 50%;
 				top: -0.3em;
 				z-index: -1;
@@ -172,6 +171,22 @@ ui-title {
 				left: 0;
 				right: 0;
 				margin: auto;
+			}
+		}
+	}
+	&.right {
+		justify-content: flex-end;
+		letter-spacing: 5rpx;
+		.hasDot {
+			.action-dot {
+				left: auto;
+				right: 0;
+			}
+		}
+		.hasLine {
+			.action-line {
+				left: auto;
+				right: 0;
 			}
 		}
 	}
@@ -199,7 +214,7 @@ ui-title {
 				top: -10rpx;
 			}
 		}
-		&.center {
+		&.center,&.right {
 			position: relative;
 			z-index: 1;
 			.action {
@@ -211,6 +226,11 @@ ui-title {
 				right: 0;
 				margin: auto;
 				text-align: center;
+			}
+		}
+		&.right {
+			.action-desc { 
+				text-align: right;
 			}
 		}
 	}
@@ -318,35 +338,49 @@ ui-title {
 		}
 	}
 }
-.ui-title.heading-title {
-	padding: 0;
+
+.heading-0 {
+	padding-top: #{map-get($spacers, 4)};
+	padding-bottom: #{map-get($spacers, 4)};
+	font-size: calc(#{map-get($fontsize, xl)}rpx + var(--textSize)) !important;
+	.action-desc{
+		font-size: calc(#{map-get($fontsize, df)}rpx + var(--textSize)) !important;
+	}
 }
+
 .heading-1 {
-	margin: 60rpx 0 30rpx;
-	font-size: #{map-get($fontsize, xxl)}rpx !important;
+	padding-top: #{map-get($spacers, 5)};
+	padding-bottom: #{map-get($spacers, 4)};
+	font-size: calc(#{map-get($fontsize, xxl)}rpx + var(--textSize)) !important;
+	.action-desc{
+		font-size: calc(#{map-get($fontsize, lg)}rpx + var(--textSize)) !important;
+	}
 }
 
 .heading-2 {
-	margin: 40rpx 0 20rpx;
-	font-size: #{map-get($fontsize, xl)}rpx !important;
+	padding-top: #{map-get($spacers, 4)};
+	padding-bottom: #{map-get($spacers, 3)};
+	font-size: calc(#{map-get($fontsize, xl)}rpx + var(--textSize)) !important;	
+	.action-desc{
+		font-size: calc(#{map-get($fontsize, df)}rpx + var(--textSize)) !important;
+	}
 }
 
 .heading-3 {
-	margin: 30rpx 0 10rpx;
-	font-size: #{map-get($fontsize, lg)}rpx !important;
+	padding-top: #{map-get($spacers, 3)};
+	padding-bottom: #{map-get($spacers, 2)};
+	font-size: calc(#{map-get($fontsize, lg)}rpx + var(--textSize)) !important;	
+	.action-desc{
+		font-size: calc(#{map-get($fontsize, sm)}rpx + var(--textSize)) !important;
+	}
 }
 
 .heading-4 {
-	margin: 20rpx 0 10rpx;
-	font-size: #{map-get($fontsize, df)}rpx !important;
-}
-
-.heading-5 {
-	margin: 10rpx 0 10rpx;
-	font-size: #{map-get($fontsize, sm)}rpx !important;
-}
-
-.heading-6 {
-	font-size: #{map-get($fontsize, xs)}rpx !important;
+	padding-top: #{map-get($spacers, 2)};
+	padding-bottom: #{map-get($spacers, 1)};
+	font-size: calc(#{map-get($fontsize, df)}rpx + var(--textSize)) !important;	
+	.action-desc{
+		font-size: calc(#{map-get($fontsize, xs)}rpx + var(--textSize)) !important;
+	}
 }
 </style>

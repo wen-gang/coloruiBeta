@@ -5,7 +5,7 @@
 			<view class="paragraph">自定义顶部导航栏,适用于所有页面,小程序有返回胶囊样式可以使用。</view>
 	
 			<ui-menu class="mt-4 radius border">
-				<ui-menu-item icon="cicon-equalizer" title="参数" @click.native="_to('/pages/parameter/parameter?component=ui-navbar')"></ui-menu-item>
+				<ui-menu-item icon="cicon-equalizer" title="参数" arrow @click.native="_to('/pages/parameter/parameter?component=ui-navbar')"></ui-menu-item>
 			</ui-menu>
 			<!-- 导航操作 -->
 			<ui-title title="导航操作" depth="2" isIcon></ui-title>

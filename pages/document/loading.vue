@@ -2,8 +2,10 @@
 	<ui-sys title="加载">
 		<view class="ui-container">
 			<!-- 简介 -->
-			<ui-title title="简介" depth="2" isIcon></ui-title>
-			<view class="paragraph">加载</view>
+			<ui-title title="默认的加载" depth="1" isIcon></ui-title>
+			<ui-title title="默认的加载" depth="2" isIcon></ui-title>
+			<ui-title title="默认的加载" depth="3" isIcon></ui-title>
+			<view class="paragraph">提供一些局部或者全局的加载样式。</view>
 
 			<ui-loading></ui-loading>
 			<ui-loading color></ui-loading>

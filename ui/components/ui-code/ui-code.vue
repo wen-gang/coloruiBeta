@@ -10,7 +10,7 @@
 			<text decode="true">{{ nodes }}</text>
 			<slot></slot>
 		</view>
-		<view class="ui-copy-btn sm" v-if="tag != 'code'" @tap="copyCode"><text class="_icon-copy icon-xl text-c"></text></view>
+		<view class="ui-copy-btn sm" v-if="tag != 'code'" @tap="_copyCode"><text class="_icon-copy icon-xl text-c"></text></view>
 		<view class="ui-code-title ui-TC-2" v-if="title">{{ title == true ? '示例代码:' : title }}</view>		
 	</view>
 </template>
@@ -61,25 +61,22 @@ export default {
 		}
 	},
 	created() {
-		this.initCode();
+		this._initCode();
 	},
 	watch: {
 		content() {
-			this.initCode();
+			this._initCode();
 		}
 	},
 	methods: {
-		initCode() {
+		_initCode() {
 			if (this.tag == 'pre') {
 				let langArr = new Array(), nodes =[];
-				langArr = this.SupportList();
-				console.log(langArr)
+				langArr = this._supportList(); 
 				if (langArr.indexOf(this.lang) == -1) {
-					nodes = this.content;
-					console.log(nodes)
+					nodes = this.content; 
 				} else {
-					nodes = Prism.highlight(this.content, Prism.languages[this.lang], this.lang);
-					console.log(nodes)
+					nodes = Prism.highlight(this.content, Prism.languages[this.lang], this.lang); 
 					this.rich = true;
 				}
 				this.nodes = nodes
@@ -88,7 +85,7 @@ export default {
 				this.nodes = this.content;
 			}
 		},
-		SupportList() {
+		_supportList() {
 			var langs = new Array();
 			let i = 0;
 			for (let language in Prism.languages) {
@@ -99,7 +96,7 @@ export default {
 			}
 			return langs;
 		},
-		copyCode() {
+		_copyCode() {
 			// console.log(this.content)
 			this.$util.copyText(this.content);
 		}

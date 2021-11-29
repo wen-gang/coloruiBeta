@@ -175,7 +175,7 @@ export default {
 		text-align: left;
 		color: var(--ui-TC);
 		.ui-modal-title {
-			padding-top: 20rpx;
+			// padding-top: 20rpx;
 		}
 		.ui-modal-content {
 			padding: 10rpx 50rpx 50rpx;
