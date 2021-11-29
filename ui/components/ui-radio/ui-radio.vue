@@ -134,8 +134,8 @@ export default {
 	.ui-radio-input {
 		margin: 0 0.5em 0 0.14286em;
 		display: inline-block;
-		width: 1.2em;
-		height: 1.2em;
+		width: 18px;
+		height: 18px;
 		vertical-align: middle;
 		&::before {
 			content: '';
@@ -151,8 +151,8 @@ export default {
 	.ui-radio-input.cur {
 		position: relative;
 		&::before {
-			width: 45%;
-			height: 45%;
+			width: 10px;
+			height: 10px;
 			transition: $transition-base;
 		}
 	}
@@ -165,17 +165,20 @@ export default {
 			&::before {
 				font-family: 'colorui';
 				content: '\e69f';
-				width: 1em;
-				height: 1em;
+				width: 18px;
+				height: 18px;
 				font-size: 0%;
 				background-color: transparent;
 			}
 		}
 		.ui-radio-input.cur {
 			&::before {
-				width: 1em;
-				height: 1em;
-				font-size: 80%;
+				width: 18px;
+				height: 18px;
+				font-size: 1em;
+				transform: scale(0.8);
+				text-align: center;
+				line-height: 18px;
 			}
 		}
 	}
@@ -189,8 +192,8 @@ export default {
 			&::after {
 				content: '';
 				position: absolute;
-				width: 50%;
-				height: 50%;
+				width: 10px;
+				height: 10px;
 				background-color: inherit;
 				border-radius: 50%;
 				@include position-center;
@@ -225,7 +228,7 @@ export default {
 				top: -2px;
 				left: -2px;
 				border-radius: 7px !important;
-				opacity: .8;
+				opacity: 0.8;
 			}
 		}
 		.ui-radio-img {
