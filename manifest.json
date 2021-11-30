@@ -2,8 +2,8 @@
     "name" : "ColoruiApp",
     "appid" : "__UNI__E4EF39A",
     "description" : "",
-    "versionName" : "3.5.2",
-    "versionCode" : 352,
+    "versionName" : "3.5.3",
+    "versionCode" : 353,
     "transformPx" : false,
     /* 5+App特有相关 */
     "app-plus" : {

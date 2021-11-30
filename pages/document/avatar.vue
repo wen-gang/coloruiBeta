@@ -48,30 +48,32 @@
 			<ui-title title="角标" depth="2" isIcon></ui-title>
 			<view class="p-4 ui-grid ui-cols-5">
 				<view class="ui-item">
-					<ui-avatar ui="radius xl" src="https://cos.color-ui.com/avatar/lol-avatar/1029.jpg"><view class="ui-tag badge">3</view></ui-avatar>
+					<ui-avatar ui="radius xl" src="https://cos.color-ui.com/avatar/lol-avatar/1029.jpg"> 
+						<ui-tag badge>3</ui-tag>
+					</ui-avatar>
 				</view>
 				<view class="ui-item">
 					<ui-avatar ui="round xl">
 						As
-						<view class="ui-tag badge bg-blue">vip</view>
+						<ui-tag badge bg="bg-blue">vip</ui-tag>
 					</ui-avatar>
 				</view>
 				<view class="ui-item">
 					<ui-avatar ui="round xl bg-blue">
 						Bf
-						<view class="ui-tag shadow badge badge-br bg-white"><text class="cicon-male text-blue"></text></view>
+						<ui-tag badge="br" bg="shadow bg-white"><text class="cicon-male text-blue"></text></ui-tag>
 					</ui-avatar>
 				</view>
 				<view class="ui-item">
 					<ui-avatar ui="round xl bg-pink">
 						Cv
-						<view class="ui-tag shadow badge badge-bl bg-white"><text class="cicon-female text-pink"></text></view>
+						<ui-tag badge="bl" bg="shadow bg-white"><text class="cicon-female text-pink"></text></ui-tag>
 					</ui-avatar>
 				</view>
 				<view class="ui-item">
 					<ui-avatar ui="round xl bg-blue-thin borders border-blue">
 						Jx
-						<view class="ui-tag badge badge-tl bg-blue-light borders border-blue shadow-blue">user</view>
+						<ui-tag badge="tl" ui="borders border-blue shadow-blue" bg="bg-blue-light">user</ui-tag>
 					</ui-avatar>
 				</view>
 			</view>
