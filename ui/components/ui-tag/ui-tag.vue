@@ -1,8 +1,8 @@
 <template>
-	<view class="ui-tag" :class="[ui, bg,{'img':src},{'empty':!$scopedSlots.default&&info==''},{'icon':icon},{'badge':badge},badge?'badge-'+badge:'']">
+	<view class="ui-tag" :class="[ui, bg,{'img':src},{'empty':!slots.default&&info==''},{'icon':icon},{'badge':badge},badge?'badge-'+badge:'']">
 		<image class="tag-img" v-if="src" :src="src" mode="aspectFill"></image>
 		<view class="">
-			<block v-if="$scopedSlots.default"><slot></slot></block>
+			<block v-if="slots.default"><slot></slot></block>
 			<block v-else>{{info}}</block>
 		</view>
 	</view>

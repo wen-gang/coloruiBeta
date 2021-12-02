@@ -1,6 +1,6 @@
 <template>
 	<view class="ui-title" :class="[ui,align, tpl, bg, { line: inLine }, 'heading-' + depth]">
-		<view class="anchor" :id="title" :style="`top:-${sys_navBar}px`"></view>
+		<view class="anchor" :id="title" :style="{top:`-${sys_navBar}px`}"></view>
 		<view class="action" :class="[hasLine ? 'hasLine' : '', hasDot ? 'hasDot' : '']">
 			<div class="action-icon">
 				<block v-if="isIcon">

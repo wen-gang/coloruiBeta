@@ -118,11 +118,15 @@ export default {
 				.select('#tab-' + this._uid)
 				.boundingClientRect(data => {
 					if (data != null) {
-						this.content = data;
-						this._computedChildQuery(this.$children);
-						setTimeout(() => {
-							this.over = true;
-						}, 300);
+						if (data.left == 0 && data.right == 0) {
+							this._computedQuery();
+						} else {
+							this.content = data;
+							this._computedChildQuery(this.$children);
+							setTimeout(() => {
+								this.over = true;
+							}, 300);
+						}
 					} else {
 						console.log('tab-' + this._uid + ' data error');
 					}
@@ -166,6 +170,7 @@ export default {
 			let list = this.tabNodeList;
 			let cur = this.curValue;
 			this.markLeft = list[cur].left - this.content.left;
+			console.log(list[cur].left, this.content.left);
 			this.markWidth = list[cur].width;
 		},
 		_computedScroll() {
@@ -314,6 +319,11 @@ export default {
 				width: calc(100% - 0.6em);
 			}
 		}
+		&.sm .ui-tab-mark.ui-btn {
+			height: calc(100% - 2px);
+			width: calc(100% - 2px);
+			border-radius: #{$radius - 2};
+		}
 	}
 	&.ui-tab-inline {
 		display: inline-flex;
@@ -327,13 +337,35 @@ export default {
 				}
 			}
 		}
-
 		&.btn {
 			.ui-tab-mark-warp {
 				.ui-tab-mark.ui-btn {
 					height: calc(100% - 10px);
 					width: calc(100% - 10px);
 				}
+			}
+			
+		}
+	}
+	
+	&.sm {		
+		height: 70rpx !important;
+		
+		&.ui-tab-inline{ 
+			height: 70rpx;
+			&.ui-tab-scrolls {
+				.ui-tab-scroll {
+					height: calc(70rpx + 17px);
+					line-height: 70rpx;
+					.ui-tab-mark-warp {
+						height: 70rpx;
+					}
+				}
+			}
+			&.btn .ui-tab-mark.ui-btn {
+				height: calc(100% - 2px);
+				width: calc(100% - 2px);
+				border-radius: #{$radius - 2};
 			}
 		}
 	}

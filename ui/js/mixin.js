@@ -9,6 +9,7 @@ const mixin = {
 			sys_scrollTop: 0, //实例所在页面滚动值
 			sys_atPage: true, //实例是否在页面里显示
 			sys_layer: 0, //实例层级
+			slots:{}
 		};
 	},
 	watch: {
@@ -66,7 +67,7 @@ const mixin = {
 		uni.$on('_onReachBottom_' + this.$root._uid, () => {
 			this._onReachBottom();
 		})
-
+        this.slots=this.$scopedSlots
 	},
 	onReady() {
 		this._h5SetScrollTop();

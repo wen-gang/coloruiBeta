@@ -2,7 +2,7 @@
 	<ui-fixed :noFixed="noFixed" :val="0" :index="1000" noNav :bg="bg" :ui="ui" :opacity="opacity" :opacityVal="opacityVal" :placeholder="placeholder">
 		<view class="ui-navbar-box" :class="[{'border-bottom':!opacity&&bg!='bg-none'}]" :style="{ paddingTop: sys_statusBar + 'px', height: sys_navBar + 'px' }">
 			<view class="ui-bar" :class="status == '' ? `text-a` : status == 'light' ? 'text-white' : 'text-black'" :style="[{ height: sys_navBar - sys_statusBar + 'px' }]">
-				<block v-if="$scopedSlots.default"><slot></slot></block>
+				<block v-if="slots.default"><slot></slot></block>
 				<block v-else>
 					<view class="left">
 						<view class="back" @tap="_navback" v-if="back && !capsule">
@@ -15,9 +15,9 @@
 						</view>
 						<slot name="left"></slot>
 					</view>
-					<view class="center" v-if="$scopedSlots.center"><slot name="center"></slot></view>
-					<view class="right" v-if="$scopedSlots.center && !$scopedSlots.right"></view>
-					<view class="right" v-if="$scopedSlots.right">
+					<view class="center" v-if="slots.center"><slot name="center"></slot></view>
+					<view class="right" v-if="slots.center && !slots.right"></view>
+					<view class="right" v-if="slots.right">
 						<view class="right-content"><slot name="right"></slot></view>
 						<!-- #ifdef MP -->
 						<view :style="[capsuleStyle]"></view>

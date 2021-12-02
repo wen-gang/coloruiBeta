@@ -35,35 +35,19 @@ export default {
 	},
 	computed: {
 		cur() {
-			return this._getParent().curValue==this.index
+			return this._getParent('UiTab').curValue==this.index
 		},
 		tpl() {
-			return this._getParent().tpl
+			return this._getParent('UiTab').tpl
 		},
 		curColor() {
-			return this._getParent().curColor
+			return this._getParent('UiTab').curColor
 		},
 	},
 	created() {
-		let parent = this._getParent()
+		let parent = this._getParent('UiTab')
 	},
 	methods: {
-		_getParent() {
-			let parent = this.$parent
-			if (parent) {
-				let parentName = parent.$options.name
-				while (parentName !== 'UiTab') {
-					parent = parent.$parent
-					if (parent) {
-						parentName = parent.$options.name
-					} else {
-						return null
-					}
-				}
-				return parent
-			}
-			return null
-		},
 		// 获取子节点的位置宽度等信息
 		_computedQuery() {
 			uni.createSelectorQuery()
@@ -93,7 +77,7 @@ export default {
 	position: relative;
 	z-index: 1;
 	opacity: .6;
-	transition: 0.3s;
+	transition: opacity 0.3s;
 	.ui-tab-icon{
 		margin: 0 .25em;
 		font-size: 120%;
@@ -104,7 +88,7 @@ export default {
 	&.btn{
 		.ui-tab-text{
 			transform: scale(.9);
-			transition: 0.3s;
+			transition: color 0.3s;
 		}
 	}
 }

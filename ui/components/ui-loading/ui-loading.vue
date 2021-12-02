@@ -1,5 +1,5 @@
 <template>
-	<view class="ui-loading-box" :class="[size ? `text-${size}` : ``, { loop: $scopedSlots.default||img },ui]">
+	<view class="ui-loading-box" :class="[size ? `text-${size}` : ``, { loop: slots.default||img },ui]">
 		<view class="ui-loading">
 			<view class="ui-loading-cut">
 				<view class="ui-loading-loop" :class="[color == true ? 'color' : `default ${color}`]"/>

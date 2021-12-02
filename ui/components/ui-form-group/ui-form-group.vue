@@ -6,7 +6,7 @@
 			<text class="ui-form-required" v-if="required">*</text>
 		</view>
 		<view class="ui-form-content" :class="[contentui]"><slot></slot></view>
-		<view class="ui-form-action" v-if="$scopedSlots.action"><slot name="action"></slot></view>
+		<view class="ui-form-action" v-if="slots.action"><slot name="action"></slot></view>
 	</view>
 </template>
 

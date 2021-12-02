@@ -1,7 +1,7 @@
 <template>
 	<view class="ui-menu-item" :class="[{ 'arrow': arrow },{'first-item':isFirstChild},ui]">
-		<view class="ui-menu-item-icon" v-if="$scopedSlots.icon||icon!=''">
-			<template v-if="$scopedSlots.icon">
+		<view class="ui-menu-item-icon" v-if="slots.icon||icon!=''">
+			<template v-if="slots.icon">
 				<slot name="icon"></slot>
 			</template>
 			<template v-else>
@@ -12,7 +12,7 @@
 			<view class="ui-menu-item-title">
 				{{ title }}
 			</view>
-			<view class="ui-menu-item-action" v-if="$scopedSlots.action">
+			<view class="ui-menu-item-action" v-if="slots.action">
 				<slot name="action"></slot>
 			</view>
 		</view>

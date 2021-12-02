@@ -1,6 +1,5 @@
 <template>
 	<ui-sys img="https://cos.color-ui.com/img/4put2.png" tabbar>
-
 			<ui-navbar :back="false" opacity>
 				<view class="flex-bar p-3" v-if="sys_scrollTop > sys_navBar">
 					<image src="https://cos.color-ui.com/img/hapm8.png" mode="aspectFill"
@@ -21,7 +20,7 @@
 					<view :style="{width:`${sys_capsule.width + 10}px`,height:`${sys_capsule.height}px`}"> </view>
 					<!-- #endif -->
 				</view>
-			</ui-navbar>
+			</ui-navbar>			
 			<ui-swiper :info="swiperList" height="48vw" dotStyle="line" dotCur="ui-BG-Main"></ui-swiper>
 			<view class="ui-container">
 				<block v-for="(nav, navindex) in nav" :key="navindex">
