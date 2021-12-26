@@ -213,7 +213,7 @@ export default {
 				{ name: 'mauve', value: 'b745cb', desc: '木槿' },
 				{ name: 'purple', value: '905ddf', desc: '姹紫' },
 				{ name: 'blue', value: '0081ff', desc: '海蓝' },
-				{ name: 'cyan', value: '1cbbb4', desc: '天青' },
+				{ name: 'cyan', value: '37c0fe', desc: '天青' },
 				{ name: 'green', value: '3eb93b', desc: '森绿' },
 				{ name: 'olive', value: '8dc63f', desc: '橄榄' },
 				{ name: 'grey', value: '8799a3', desc: '玄灰' },
