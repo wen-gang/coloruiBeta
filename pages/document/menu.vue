@@ -6,7 +6,9 @@
 			<ui-menu ui="mt-5 border radius">
 				<ui-menu-item title="Github" icon="cicon-github"></ui-menu-item>
 				<ui-menu-item arrow title="关于Colorui组件库">
-					<block slot="icon"><image src="/static/logo.png" mode="aspectFill" class="ui-menu-item-image"></image></block>
+					<block slot="icon">
+						<image src="/static/logo.png" mode="aspectFill" class="ui-menu-item-image"></image>
+					</block>
 				</ui-menu-item>
 				<ui-menu-item arrow title="按钮" icon="cicon-ellipse">
 					<block slot="action">
@@ -18,12 +20,8 @@
 				</ui-menu-item>
 				<ui-menu-item arrow title="标签" icon="cicon-tag text-orange">
 					<block slot="action">
-						<view class="ui-tag bg-red img">
-							<image src="https://cos.color-ui.com/avatar/lol-avatar/1009.jpg" mode="aspectFill" class="tag-img"></image>
-							bg-red
-						</view>
-
-						<view class="ui-tag bg-red-thin sm">bg-red-thin</view>
+						<ui-tag info="bg-red" src="https://cos.color-ui.com/avatar/lol-avatar/1009.jpg" bg="bg-red"></ui-tag>
+						<ui-tag info="bg-red-thin" ui="sm" bg="bg-red-thin"></ui-tag>
 					</block>
 				</ui-menu-item>
 				<ui-menu-item arrow title="头像组" icon="cicon-tag text-orange">
@@ -40,7 +38,9 @@
 		<ui-menu ui="mt-5">
 			<ui-menu-item arrow title="Github" icon="cicon-github"></ui-menu-item>
 			<ui-menu-item arrow title="关于Colorui组件库">
-				<block slot="icon"><image src="/static/logo.png" mode="aspectFill" class="ui-menu-item-image"></image></block>
+				<block slot="icon">
+					<image src="/static/logo.png" mode="aspectFill" class="ui-menu-item-image"></image>
+				</block>
 			</ui-menu-item>
 			<ui-menu-item arrow title="按钮" icon="cicon-ellipse">
 				<block slot="action">
@@ -52,12 +52,8 @@
 			</ui-menu-item>
 			<ui-menu-item arrow title="标签" icon="cicon-tag text-orange">
 				<block slot="action">
-					<view class="ui-tag bg-red img">
-						<image src="https://cos.color-ui.com/avatar/lol-avatar/1009.jpg" mode="aspectFill" class="tag-img"></image>
-						bg-red
-					</view>
-
-					<view class="ui-tag bg-red-thin sm">bg-red-thin</view>
+					<ui-tag info="bg-red" src="https://cos.color-ui.com/avatar/lol-avatar/1009.jpg" bg="bg-red"></ui-tag>
+					<ui-tag info="bg-red-thin" ui="sm" bg="bg-red-thin"></ui-tag>
 				</block>
 			</ui-menu-item>
 			<ui-menu-item arrow title="头像组" icon="cicon-tag text-orange">
