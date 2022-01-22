@@ -2,16 +2,6 @@
           栅栏
  ==================== */
 
-@mixin make_col($screen) {
-	@for $i from 1 through 12 {
-		.ui-col-#{$screen}-#{$i} {
-			width: #{100% / 12 * $i};
-		}
-		.ui-cols-#{$screen}-#{$i} .ui-item {
-			width: #{100% / $i};
-		}
-	}
-}
 .ui-container {
 	box-sizing: border-box;
 	margin-left: auto;
@@ -63,14 +53,26 @@
 }
 @for $i from 1 through 12 {
 	.ui-cols-#{$i} .ui-item {
-		width: #{100% / $i};
+		width: calc(100% / #{$i});
 	}
 }
 @for $i from 1 through 12 {
 	.ui-col-#{$i} {
-		width: #{100% / 12 * $i};
+		width: calc(100% / 12 * #{$i});
 	}
 }
+
+@mixin make_col($screen) {
+	@for $i from 1 through 12 {
+		.ui-col-#{$screen}-#{$i} {
+			width: calc(100% / 12 * #{$i});
+		}
+		.ui-cols-#{$screen}-#{$i} .ui-item {
+			width: calc(100% / #{$i});
+		}
+	}
+}
+
 // 小屏
 @media screen and (min-width: 0px) {
 	@include make_col('xs');
