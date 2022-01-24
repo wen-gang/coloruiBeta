@@ -47,7 +47,7 @@
 
 <style lang="scss">
 .ui-tag {
-	font-size: .85714286em;
+	font-size: calc(28rpx + var(--textSize));
 	vertical-align: middle;
 	position: relative;
 	display: inline-flex;
@@ -57,8 +57,13 @@
 	padding: .5833em .833em;
 	white-space: nowrap; 
 	border-radius: $radius;
-	line-height: 1;
+	line-height: initial;
 	margin: 0 .14286em;
+	&.xs {
+		transform: scale(0.7);
+		padding: .2em .5em;
+		margin: 0;
+	}
 	&.sm {
 		transform: scale(0.8);
 		margin: 0 0.02em 0 0;
@@ -74,6 +79,7 @@
 	}
 	&.img {
 		padding: .5833em .833em .5833em .5em;
+		line-height: 1;
 		.tag-img {
 			margin: -.5833em .5em -.5833em -.5em;
 			width: 2.1666em;
@@ -89,9 +95,10 @@
 		font-size: 2em;
 		top: 0;
 		right: 0;
+		line-height: 1;
+		padding: 0.4em 0.6em 0.3em;
 		transform: scale(0.3) translateX(0.5em) translatey(-0.6em);
 		transform-origin: 100% 0;
-		padding: 0.4em 0.6em 0.3em;
 		&.badge-br{
 			top: auto;
 			bottom: 0;
