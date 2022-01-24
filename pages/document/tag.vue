@@ -13,8 +13,8 @@
 			<view class="p-4 ui-BG border">
 				<ui-tag ui="" info="春风"></ui-tag>
 				<ui-tag ui="round" info="秋日"></ui-tag>
-				<!-- <ui-tag ui="border border-grey" bg="bg-none"><text class="text-grey">春风</text></ui-tag>
-				<ui-tag ui="round border border-orange" bg="bg-none"><text class="text-orange">秋日</text></ui-tag> -->
+				<!--  <ui-tag ui="border border-grey" bg="bg-none"><text class="text-grey">春风</text></ui-tag>
+				<ui-tag ui="round border border-orange" bg="bg-none"><text class="text-orange">秋日</text></ui-tag>  -->
 			</view>
 			
 			<ui-title title="标签大小" depth="2" isIcon></ui-title>
