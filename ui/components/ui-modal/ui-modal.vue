@@ -4,9 +4,9 @@
 			class="ui-modal"
 			:class="[align, tpl, name == target ? 'show' : 'hide', { 'bg-mask-80': mask||mask=='80'}, { 'bg-mask-20': mask == '20' }, { 'bg-mask-40': mask == '40'}]"
 			@tap="_cancel"
-			:style="{ top: (noNav ? 0 : sys_navBar + top) + 'px' }"
+			:style="{ top: (noNav ? 0 : sys_navBar + top) + 'px' , bottom : bottom +'rpx'}"
 		>
-			<view :style="dialog" class="ui-dialog" :class="[transparent? 'bg-none' : '',ui]" @tap.stop>
+			<view :style="{overflow : (visible ? 'visible' : 'hidden') , dialog}" class="ui-dialog" :class="[transparent? 'bg-none' : '',ui]" @tap.stop>
 				<view class="ui-modal-title border-bottom" v-if="title != ''"><ui-title :title="title" align="center" text="text-xl"></ui-title></view>
 				<slot v-if="name != 'sys_dialog'"></slot>
 				<view class="ui-modal-content" v-if="content != ''">{{ content }}</view>
@@ -96,6 +96,16 @@ export default {
 		top: {
 			type: Number,
 			default: 0
+		},
+		/* 白色区域向上偏移，多用于显示底部tabbar */
+		bottom :{
+			type:Number,
+			default:0
+		},
+		/* 是否允许内部组件超出白色区域*/
+		overflowVisible :{
+			type: Boolean,
+			default:false
 		}
 	},
 	data() {
@@ -161,6 +171,13 @@ export default {
 	perspective: 2000rpx;
 	transition: 0.3s;
 	pointer-events: none;
+	&.window{
+		.ui-dialog{
+			width: 100vw;
+			height: 100vh;
+			@include flex-center;
+		}
+	}
 	.ui-dialog {
 		position: relative;
 		display: inline-block;
