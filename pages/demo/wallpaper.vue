@@ -18,7 +18,7 @@ export default {
 	created() {
 		let i=1;
 		for(i;i<15;i++){
-			this.$set(this.list,i-1,`https://cos.color-ui.com/wallpaper/10${i  < 10 ? '0' + (i ) : i }.jpg`);
+			this.$set(this.list,i-1,`https://oss.colorui.org/cos/wallpaper/10${i  < 10 ? '0' + (i ) : i }.jpg`);
 		}
 	},
 	methods: {}

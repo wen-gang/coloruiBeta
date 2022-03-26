@@ -8,6 +8,7 @@ const uniClient = uniCloud.init({
 	clientSecret: 'T3g/MnLf57eLTAJQezFVmA=='
 })
 Vue.prototype.$api = uniClient;
+
 //挂载云空间口令--end
 Vue.config.productionTip = false
 

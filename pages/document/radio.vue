@@ -132,7 +132,7 @@
 		<ui-form ui="ui-BG">
 			<ui-form-group title="单选框" contentui="justify-end">
 				<ui-radio-group bg="bg-red-thin" v-model="clearable" clearable>
-					<ui-radio  v-for="(item, index) in 5" :key="index" :label="index" :src="`https://cos.color-ui.com/avatar/lol-avatar/${1000 + index + 1}.jpg`"></ui-radio> 
+					<ui-radio  v-for="(item, index) in 5" :key="index" :label="index" :src="`https://oss.colorui.org/cos/avatar/lol-avatar/${1000 + index + 1}.jpg`"></ui-radio> 
 				</ui-radio-group>
 			</ui-form-group>
 		</ui-form>

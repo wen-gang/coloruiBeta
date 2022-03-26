@@ -20,7 +20,7 @@ app 是每个项目不一样的 可以自定义的
 以后只会更新/ui 下的文件 你可以直接复制 /ui 来更新3.2 以后的版本
 
 
-![支持支持](https://cos.color-ui.com/web/yehv3.jpg)
+![支持支持](https://oss.colorui.org/cos/web/yehv3.jpg)
 
 
 ## 声明

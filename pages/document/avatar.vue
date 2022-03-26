@@ -35,20 +35,20 @@
 
 			<ui-title title="图像" depth="2" isIcon></ui-title>
 			<view class="">
-				<ui-avatar ui="radius" src="https://cos.color-ui.com/avatar/lol-avatar/1032.jpg"></ui-avatar>
-				<ui-avatar ui="round" src="https://cos.color-ui.com/avatar/lol-avatar/1035.jpg"></ui-avatar>
-				<ui-avatar ui="ellipse" src="https://cos.color-ui.com/avatar/lol-avatar/1040.jpg"></ui-avatar>
+				<ui-avatar ui="radius" src="https://oss.colorui.org/cos/avatar/lol-avatar/1032.jpg"></ui-avatar>
+				<ui-avatar ui="round" src="https://oss.colorui.org/cos/avatar/lol-avatar/1035.jpg"></ui-avatar>
+				<ui-avatar ui="ellipse" src="https://oss.colorui.org/cos/avatar/lol-avatar/1040.jpg"></ui-avatar>
 			</view>
 			<ui-title title="图标" depth="2" isIcon></ui-title>
 			<view class="">
 				<ui-avatar ui="radius" icon="cicon-android"></ui-avatar>
 				<ui-avatar ui="round" icon="cicon-link"></ui-avatar>
-				<ui-avatar ui="ellipse" icon="cicon-apple text-white" src="https://cos.color-ui.com/avatar/lol-avatar/1070.jpg"></ui-avatar>
+				<ui-avatar ui="ellipse" icon="cicon-apple text-white" src="https://oss.colorui.org/cos/avatar/lol-avatar/1070.jpg"></ui-avatar>
 			</view>
 			<ui-title title="角标" depth="2" isIcon></ui-title>
 			<view class="p-4 ui-grid ui-cols-5">
 				<view class="ui-item">
-					<ui-avatar ui="radius xl" src="https://cos.color-ui.com/avatar/lol-avatar/1029.jpg"> 
+					<ui-avatar ui="radius xl" src="https://oss.colorui.org/cos/avatar/lol-avatar/1029.jpg"> 
 						<ui-tag badge>3</ui-tag>
 					</ui-avatar>
 				</view>
@@ -81,49 +81,49 @@
 			<ui-title title="多头像层叠" depth="2" isIcon></ui-title>
 			<view class="p-5 flex align-center">
 				<ui-avatar-stack>
-					<ui-avatar ui="round xl" src="https://cos.color-ui.com/avatar/lol-avatar/1032.jpg"></ui-avatar>
-					<ui-avatar ui="round xl" src="https://cos.color-ui.com/avatar/lol-avatar/1035.jpg"></ui-avatar>
-					<ui-avatar ui="round xl" src="https://cos.color-ui.com/avatar/lol-avatar/1040.jpg"></ui-avatar>
+					<ui-avatar ui="round xl" src="https://oss.colorui.org/cos/avatar/lol-avatar/1032.jpg"></ui-avatar>
+					<ui-avatar ui="round xl" src="https://oss.colorui.org/cos/avatar/lol-avatar/1035.jpg"></ui-avatar>
+					<ui-avatar ui="round xl" src="https://oss.colorui.org/cos/avatar/lol-avatar/1040.jpg"></ui-avatar>
 				</ui-avatar-stack> 
 			</view>
 
 			<view class="p-5 flex align-center">
 				<ui-avatar-stack reverse>
-					<ui-avatar ui="round xl" bg="ui-BG-2" src="https://cos.color-ui.com/avatar/lol-avatar/1032.jpg"></ui-avatar>
-					<ui-avatar ui="round xl" bg="ui-BG-2" src="https://cos.color-ui.com/avatar/lol-avatar/1035.jpg"></ui-avatar>
-					<ui-avatar ui="round xl" bg="ui-BG-2" src="https://cos.color-ui.com/avatar/lol-avatar/1040.jpg"></ui-avatar>
+					<ui-avatar ui="round xl" bg="ui-BG-2" src="https://oss.colorui.org/cos/avatar/lol-avatar/1032.jpg"></ui-avatar>
+					<ui-avatar ui="round xl" bg="ui-BG-2" src="https://oss.colorui.org/cos/avatar/lol-avatar/1035.jpg"></ui-avatar>
+					<ui-avatar ui="round xl" bg="ui-BG-2" src="https://oss.colorui.org/cos/avatar/lol-avatar/1040.jpg"></ui-avatar>
 				</ui-avatar-stack>
 			</view>
 
 			<ui-title title="头像组" depth="2" isIcon></ui-title>
 			<view class="p-3 flex align-center">
-				<ui-avatar ui="sl" :srcs="['https://cos.color-ui.com/avatar/lol-avatar/1032.jpg']"></ui-avatar>
-				<ui-avatar ui="sl" :srcs="['https://cos.color-ui.com/avatar/lol-avatar/1032.jpg', 'https://cos.color-ui.com/avatar/lol-avatar/1033.jpg']"></ui-avatar>
+				<ui-avatar ui="sl" :srcs="['https://oss.colorui.org/cos/avatar/lol-avatar/1032.jpg']"></ui-avatar>
+				<ui-avatar ui="sl" :srcs="['https://oss.colorui.org/cos/avatar/lol-avatar/1032.jpg','https://oss.colorui.org/cos/avatar/lol-avatar/1033.jpg']"></ui-avatar>
 				<ui-avatar
 					ui="sl"
 					:srcs="[
-						'https://cos.color-ui.com/avatar/lol-avatar/1032.jpg',
-						'https://cos.color-ui.com/avatar/lol-avatar/1033.jpg',
-						'https://cos.color-ui.com/avatar/lol-avatar/1035.jpg'
+						'https://oss.colorui.org/cos/avatar/lol-avatar/1032.jpg',
+						'https://oss.colorui.org/cos/avatar/lol-avatar/1033.jpg',
+						'https://oss.colorui.org/cos/avatar/lol-avatar/1035.jpg'
 					]"
 				></ui-avatar>
 				<ui-avatar
 					ui="sl"
 					:srcs="[
-						'https://cos.color-ui.com/avatar/lol-avatar/1032.jpg',
-						'https://cos.color-ui.com/avatar/lol-avatar/1033.jpg',
-						'https://cos.color-ui.com/avatar/lol-avatar/1036.jpg',
-						'https://cos.color-ui.com/avatar/lol-avatar/1043.jpg'
+						'https://oss.colorui.org/cos/avatar/lol-avatar/1032.jpg',
+						'https://oss.colorui.org/cos/avatar/lol-avatar/1033.jpg',
+						'https://oss.colorui.org/cos/avatar/lol-avatar/1036.jpg',
+						'https://oss.colorui.org/cos/avatar/lol-avatar/1043.jpg'
 					]"
 				></ui-avatar>
 				<ui-avatar
 					ui="sl"
 					:srcs="[
-						'https://cos.color-ui.com/avatar/lol-avatar/1032.jpg',
-						'https://cos.color-ui.com/avatar/lol-avatar/1033.jpg',
-						'https://cos.color-ui.com/avatar/lol-avatar/1036.jpg',
-						'https://cos.color-ui.com/avatar/lol-avatar/1043.jpg',
-						'https://cos.color-ui.com/avatar/lol-avatar/1053.jpg'
+						'https://oss.colorui.org/cos/avatar/lol-avatar/1032.jpg',
+						'https://oss.colorui.org/cos/avatar/lol-avatar/1033.jpg',
+						'https://oss.colorui.org/cos/avatar/lol-avatar/1036.jpg',
+						'https://oss.colorui.org/cos/avatar/lol-avatar/1043.jpg',
+						'https://oss.colorui.org/cos/avatar/lol-avatar/1053.jpg'
 					]"
 				></ui-avatar>
 			</view>
@@ -131,51 +131,51 @@
 				<ui-avatar
 					ui="sl"
 					:srcs="[
-						'https://cos.color-ui.com/avatar/lol-avatar/1032.jpg',
-						'https://cos.color-ui.com/avatar/lol-avatar/1033.jpg',
-						'https://cos.color-ui.com/avatar/lol-avatar/1036.jpg',
-						'https://cos.color-ui.com/avatar/lol-avatar/1043.jpg',
-						'https://cos.color-ui.com/avatar/lol-avatar/1052.jpg',
-						'https://cos.color-ui.com/avatar/lol-avatar/1057.jpg'
+						'https://oss.colorui.org/cos/avatar/lol-avatar/1032.jpg',
+						'https://oss.colorui.org/cos/avatar/lol-avatar/1033.jpg',
+						'https://oss.colorui.org/cos/avatar/lol-avatar/1036.jpg',
+						'https://oss.colorui.org/cos/avatar/lol-avatar/1043.jpg',
+						'https://oss.colorui.org/cos/avatar/lol-avatar/1052.jpg',
+						'https://oss.colorui.org/cos/avatar/lol-avatar/1057.jpg'
 					]"
 				></ui-avatar>
 				<ui-avatar
 					ui="sl"
 					:srcs="[
-						'https://cos.color-ui.com/avatar/lol-avatar/1032.jpg',
-						'https://cos.color-ui.com/avatar/lol-avatar/1033.jpg',
-						'https://cos.color-ui.com/avatar/lol-avatar/1036.jpg',
-						'https://cos.color-ui.com/avatar/lol-avatar/1043.jpg',
-						'https://cos.color-ui.com/avatar/lol-avatar/1052.jpg',
-						'https://cos.color-ui.com/avatar/lol-avatar/1057.jpg',
-						'https://cos.color-ui.com/avatar/lol-avatar/1058.jpg'
+						'https://oss.colorui.org/cos/avatar/lol-avatar/1032.jpg',
+						'https://oss.colorui.org/cos/avatar/lol-avatar/1033.jpg',
+						'https://oss.colorui.org/cos/avatar/lol-avatar/1036.jpg',
+						'https://oss.colorui.org/cos/avatar/lol-avatar/1043.jpg',
+						'https://oss.colorui.org/cos/avatar/lol-avatar/1052.jpg',
+						'https://oss.colorui.org/cos/avatar/lol-avatar/1057.jpg',
+						'https://oss.colorui.org/cos/avatar/lol-avatar/1058.jpg'
 					]"
 				></ui-avatar>
 				<ui-avatar
 					ui="sl"
 					:srcs="[
-						'https://cos.color-ui.com/avatar/lol-avatar/1032.jpg',
-						'https://cos.color-ui.com/avatar/lol-avatar/1033.jpg',
-						'https://cos.color-ui.com/avatar/lol-avatar/1036.jpg',
-						'https://cos.color-ui.com/avatar/lol-avatar/1043.jpg',
-						'https://cos.color-ui.com/avatar/lol-avatar/1052.jpg',
-						'https://cos.color-ui.com/avatar/lol-avatar/1057.jpg',
-						'https://cos.color-ui.com/avatar/lol-avatar/1068.jpg',
-						'https://cos.color-ui.com/avatar/lol-avatar/1068.jpg'
+						'https://oss.colorui.org/cos/avatar/lol-avatar/1032.jpg',
+						'https://oss.colorui.org/cos/avatar/lol-avatar/1033.jpg',
+						'https://oss.colorui.org/cos/avatar/lol-avatar/1036.jpg',
+						'https://oss.colorui.org/cos/avatar/lol-avatar/1043.jpg',
+						'https://oss.colorui.org/cos/avatar/lol-avatar/1052.jpg',
+						'https://oss.colorui.org/cos/avatar/lol-avatar/1057.jpg',
+						'https://oss.colorui.org/cos/avatar/lol-avatar/1068.jpg',
+						'https://oss.colorui.org/cos/avatar/lol-avatar/1068.jpg'
 					]"
 				></ui-avatar>
 				<ui-avatar
 					ui="sl"
 					:srcs="[
-						'https://cos.color-ui.com/avatar/lol-avatar/1032.jpg',
-						'https://cos.color-ui.com/avatar/lol-avatar/1033.jpg',
-						'https://cos.color-ui.com/avatar/lol-avatar/1036.jpg',
-						'https://cos.color-ui.com/avatar/lol-avatar/1043.jpg',
-						'https://cos.color-ui.com/avatar/lol-avatar/1052.jpg',
-						'https://cos.color-ui.com/avatar/lol-avatar/1057.jpg',
-						'https://cos.color-ui.com/avatar/lol-avatar/1068.jpg',
-						'https://cos.color-ui.com/avatar/lol-avatar/1068.jpg',
-						'https://cos.color-ui.com/avatar/lol-avatar/1068.jpg'
+						'https://oss.colorui.org/cos/avatar/lol-avatar/1032.jpg',
+						'https://oss.colorui.org/cos/avatar/lol-avatar/1033.jpg',
+						'https://oss.colorui.org/cos/avatar/lol-avatar/1036.jpg',
+						'https://oss.colorui.org/cos/avatar/lol-avatar/1043.jpg',
+						'https://oss.colorui.org/cos/avatar/lol-avatar/1052.jpg',
+						'https://oss.colorui.org/cos/avatar/lol-avatar/1057.jpg',
+						'https://oss.colorui.org/cos/avatar/lol-avatar/1068.jpg',
+						'https://oss.colorui.org/cos/avatar/lol-avatar/1068.jpg',
+						'https://oss.colorui.org/cos/avatar/lol-avatar/1068.jpg'
 					]"
 				></ui-avatar>
 				

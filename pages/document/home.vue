@@ -1,17 +1,14 @@
 <template>
-	<ui-sys img="https://cos.color-ui.com/img/4put2.png" tabbar>
+	<ui-sys :img="oss + '/img/4put2.png'" tabbar>
 			<ui-navbar :back="false" opacity>
 				<view class="flex-bar p-3" v-if="sys_scrollTop > sys_navBar">
-					<image src="https://cos.color-ui.com/img/hapm8.png" mode="aspectFill"
-						style="width: 200rpx;height: 56rpx;"></image>
+					<image :src="oss + '/img/hapm8.png'" mode="aspectFill" style="width: 200rpx;height: 56rpx;"></image>
 				</view>
 				<view class="p-3 flex-bar flex-sub" v-if="sys_scrollTop > sys_navBar">
 					<view url="/pages/search/search" class="flex-sub flex-bar">
 						<view class="p-2 bg-blur-1 w-100 round border flex-center" :style="{height:`35px`}">
 							<text class="cicon-search-line mx-2"></text>
-							<view class="text-c text-sm">
-								键入类名搜索释义
-							</view>
+							<view class="text-c text-sm">键入类名搜索释义</view>
 						</view>
 					</view>
 				</view>
@@ -41,12 +38,12 @@
 		data() {
 			return {
 				swiperList: [{
-					img: "https://cos.color-ui.com/img/8v2yr.png",
+					img: "https://oss.colorui.org/cos/img/8v2yr.png",
 					url:'/pages/article/guide/guide'
 				}, {
-					img: "https://cos.color-ui.com/img/qhgtb.png"
+					img: "https://oss.colorui.org/cos/img/qhgtb.png"
 				}, {
-					img: "https://cos.color-ui.com/img/qhgtb.png"
+					img: "https://oss.colorui.org/cos/img/qhgtb.png"
 				}],
 
 			}

@@ -85,7 +85,7 @@
 					favor: 333
 				}, {
 					title: '英国的"外科医生"，竟然把nike运动服改造成了高级定制西装',
-					imgUrl: 'https://cos.color-ui.com/img/qtrr8.png',
+					imgUrl: 'https://oss.colorui.org/cos/img/qtrr8.png',
 					avatar: 'https://hbimg.huabanimg.com/68b31a50db076d4334f9cc608b8a8cfdcd389bcd1755-ix61xr_sq75sf',
 					name: '盒子芥末',
 					isFavor: true,
@@ -99,7 +99,7 @@
 					favor: 333
 				}, {
 					title: '英国的"外科医生"，竟然把nike运动服改造成了高级定制西装',
-					imgUrl: 'https://cos.color-ui.com/img/qtrr8.png',
+					imgUrl: 'https://oss.colorui.org/cos/img/qtrr8.png',
 					avatar: 'https://hbimg.huabanimg.com/68b31a50db076d4334f9cc608b8a8cfdcd389bcd1755-ix61xr_sq75sf',
 					name: '盒子芥末',
 					isFavor: true,
@@ -113,7 +113,7 @@
 					favor: 333
 				},{
 					title: '英国的"外科医生"，竟然把nike运动服改造成了高级定制西装',
-					imgUrl: 'https://cos.color-ui.com/img/qtrr8.png',
+					imgUrl: 'https://oss.colorui.org/cos/img/qtrr8.png',
 					avatar: 'https://hbimg.huabanimg.com/68b31a50db076d4334f9cc608b8a8cfdcd389bcd1755-ix61xr_sq75sf',
 					name: '盒子芥末',
 					isFavor: true,
@@ -127,7 +127,7 @@
 					favor: 333
 				},],
 				list: [{
-						img: 'https://cos.color-ui.com/img/qtrr8.png',
+						img: 'https://oss.colorui.org/cos/img/qtrr8.png',
 						title: 'ColorStore - 个人小店',
 						desc: '个人开店首选！有分类，有物流。包含多种活动，优惠券页面。',
 						price: '799',
@@ -135,7 +135,7 @@
 						comment: 55
 					},
 					{
-						img: 'https://cos.color-ui.com/img/beptn.png',
+						img: 'https://oss.colorui.org/cos/img/beptn.png',
 						title: 'ColorShop - 多用户商城',
 						desc: '适配多语言,会员、商家多用户角色。对接国际物流，跨境电商立马搞定！',
 						price: '2799',
@@ -143,7 +143,7 @@
 						comment: 24
 					},
 					{
-						img: 'https://cos.color-ui.com/img/dkarj.png',
+						img: 'https://oss.colorui.org/cos/img/dkarj.png',
 						title: 'ColorTakeaway - 外卖与骑手',
 						desc: '多商家，多用户，另有骑手端。可做区域配送。',
 						price: '4799',
@@ -151,7 +151,7 @@
 						comment: 32
 					},
 					{
-						img: 'https://cos.color-ui.com/img/7grzo.png',
+						img: 'https://oss.colorui.org/cos/img/7grzo.png',
 						title: 'ColorFinance - 金融钱包',
 						desc: ' ',
 						price: '4799',

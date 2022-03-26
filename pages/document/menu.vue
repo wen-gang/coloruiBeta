@@ -20,16 +20,16 @@
 				</ui-menu-item>
 				<ui-menu-item arrow title="标签" icon="cicon-tag text-orange">
 					<block slot="action">
-						<ui-tag info="bg-red" src="https://cos.color-ui.com/avatar/lol-avatar/1009.jpg" bg="bg-red"></ui-tag>
+						<ui-tag info="bg-red" src="https://oss.colorui.org/cos/avatar/lol-avatar/1009.jpg" bg="bg-red"></ui-tag>
 						<ui-tag info="bg-red-thin" ui="sm" bg="bg-red-thin"></ui-tag>
 					</block>
 				</ui-menu-item>
 				<ui-menu-item arrow title="头像组" icon="cicon-tag text-orange">
 					<block slot="action">
 						<ui-avatar-stack ui="mx-3">
-							<ui-avatar ui="round" src="https://cos.color-ui.com/avatar/lol-avatar/1042.jpg" ></ui-avatar>
-							<ui-avatar ui="round" src="https://cos.color-ui.com/avatar/lol-avatar/1050.jpg" ></ui-avatar>
-							<ui-avatar ui="round" src="https://cos.color-ui.com/avatar/lol-avatar/1060.jpg" ></ui-avatar>
+							<ui-avatar ui="round" src="https://oss.colorui.org/cos/avatar/lol-avatar/1042.jpg" ></ui-avatar>
+							<ui-avatar ui="round" src="https://oss.colorui.org/cos/avatar/lol-avatar/1050.jpg" ></ui-avatar>
+							<ui-avatar ui="round" src="https://oss.colorui.org/cos/avatar/lol-avatar/1060.jpg" ></ui-avatar>
 						</ui-avatar-stack>
 					</block>
 				</ui-menu-item>
@@ -52,16 +52,16 @@
 			</ui-menu-item>
 			<ui-menu-item arrow title="标签" icon="cicon-tag text-orange">
 				<block slot="action">
-					<ui-tag info="bg-red" src="https://cos.color-ui.com/avatar/lol-avatar/1009.jpg" bg="bg-red"></ui-tag>
+					<ui-tag info="bg-red" src="https://oss.colorui.org/cos/avatar/lol-avatar/1009.jpg" bg="bg-red"></ui-tag>
 					<ui-tag info="bg-red-thin" ui="sm" bg="bg-red-thin"></ui-tag>
 				</block>
 			</ui-menu-item>
 			<ui-menu-item arrow title="头像组" icon="cicon-tag text-orange">
 				<block slot="action">
 					<ui-avatar-stack ui="mx-3" reverse>
-						<ui-avatar ui="round" src="https://cos.color-ui.com/avatar/lol-avatar/1042.jpg"></ui-avatar>
-						<ui-avatar ui="round" src="https://cos.color-ui.com/avatar/lol-avatar/1050.jpg"></ui-avatar>
-						<ui-avatar ui="round" src="https://cos.color-ui.com/avatar/lol-avatar/1060.jpg"></ui-avatar>
+						<ui-avatar ui="round" src="https://oss.colorui.org/cos/avatar/lol-avatar/1042.jpg"></ui-avatar>
+						<ui-avatar ui="round" src="https://oss.colorui.org/cos/avatar/lol-avatar/1050.jpg"></ui-avatar>
+						<ui-avatar ui="round" src="https://oss.colorui.org/cos/avatar/lol-avatar/1060.jpg"></ui-avatar>
 					</ui-avatar-stack>
 				</block>
 			</ui-menu-item>

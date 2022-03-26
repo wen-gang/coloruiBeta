@@ -1,6 +1,6 @@
 <template>
 	<view class="text-center py-4">
-		<image src="https://cos.color-ui.com/img/pa1m9.png" mode="aspectFill" class="page-footer"></image>
+		<image src="https://oss.colorui.org/cos/img/pa1m9.png" mode="aspectFill" class="page-footer"></image>
 	</view>
 </template>
 

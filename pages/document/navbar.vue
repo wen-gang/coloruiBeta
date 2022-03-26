@@ -21,7 +21,7 @@
 					</navigator>
 				</ui-title>
 			</view>
-			<ui-img src="https://cos.color-ui.com/web/ozgly.jpg" ui="radius border"></ui-img> 
+			<ui-img src="https://oss.colorui.org/cos/web/ozgly.jpg" ui="radius border"></ui-img> 
 			<ui-code tag="pre" lang="html" title :content="code1"></ui-code>
 			<!-- 自定义返回文本 -->
 			<view class="paragraph">
@@ -32,7 +32,7 @@
 					</navigator>
 				</ui-title>
 			</view>
-			<ui-img src="https://cos.color-ui.com/web/i4ux8.jpg" ui="radius border"></ui-img> 
+			<ui-img src="https://oss.colorui.org/cos/web/i4ux8.jpg" ui="radius border"></ui-img> 
 			<ui-code tag="pre" lang="html" title :content="code2"></ui-code>
 
 			<!-- 有阴影 -->
@@ -44,7 +44,7 @@
 					</navigator>
 				</ui-title>
 			</view>
-			<ui-img src="https://cos.color-ui.com/web/7i87w.jpg" ui="radius border"></ui-img> 
+			<ui-img src="https://oss.colorui.org/cos/web/7i87w.jpg" ui="radius border"></ui-img> 
 			<ui-code tag="pre" lang="html" title :content="code3"></ui-code>
 		</view>
 	</ui-sys>

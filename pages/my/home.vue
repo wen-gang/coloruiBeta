@@ -1,5 +1,5 @@
 <template>
-	<ui-sys img="https://cos.color-ui.com/img/4put2.png" tabbar>
+	<ui-sys img="https://oss.colorui.org/cos/img/4put2.png" tabbar>
 		<ui-navbar :back="false" opacity><view class="flex-center flex-sub" v-if="sys_scrollTop > sys_navBar">我的</view></ui-navbar>
 		<view class="ui-container">
 			<view class="flex-bar my-4" @click="_to('/pages/login/login')">
@@ -24,13 +24,13 @@ export default {
 		return {
 			swiperList: [
 				{
-					img: 'https://cos.color-ui.com/img/8v2yr.png'
+					img: 'https://oss.colorui.org/cos/img/8v2yr.png'
 				},
 				{
-					img: 'https://cos.color-ui.com/img/qhgtb.png'
+					img: 'https://oss.colorui.org/cos/img/qhgtb.png'
 				},
 				{
-					img: 'https://cos.color-ui.com/img/qhgtb.png'
+					img: 'https://oss.colorui.org/cos/img/qhgtb.png'
 				}
 			]
 		};

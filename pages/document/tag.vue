@@ -30,14 +30,14 @@
 			<ui-title title="标签带图片" depth="2" isIcon></ui-title>
 			<view class="paragraph"><ui-code>src="{src}"</ui-code></view>
 			<view class="p-4 ui-BG radius border">
-				<ui-tag info="糖果炸弹" src="https://cos.color-ui.com/avatar/lol-avatar/1004.jpg" ></ui-tag>
+				<ui-tag info="糖果炸弹" src="https://oss.colorui.org/cos/avatar/lol-avatar/1004.jpg" ></ui-tag>
 			</view>
 			<ui-code tag="pre" lang="html" title :content="code2"></ui-code>
 			
 			<ui-title title="标签背景" depth="2" isIcon></ui-title>
 			<view class="paragraph"><ui-code>bg="{bg}"</ui-code></view>
 			<view class="p-4 ui-BG radius border">
-				<ui-tag info="bg-red" bg="bg-red" src="https://cos.color-ui.com/avatar/lol-avatar/1009.jpg" ></ui-tag>
+				<ui-tag info="bg-red" bg="bg-red" src="https://oss.colorui.org/cos/avatar/lol-avatar/1009.jpg" ></ui-tag>
 				<ui-tag bg="ui-BG-Main" info="ui-BG-Main"></ui-tag>
 				<ui-tag bg="bg-mask-50" info="bg-mask-50"></ui-tag>
 				<ui-tag bg="bg-red-gradient" info="bg-red-gradient"></ui-tag>
@@ -52,7 +52,7 @@
 			</view>
 			<view class="p-4 ui-grid ui-cols-5">
 				<view class="ui-item">
-					<ui-avatar ui="radius xl" src="https://cos.color-ui.com/avatar/lol-avatar/1029.jpg"> 
+					<ui-avatar ui="radius xl" src="https://oss.colorui.org/cos/avatar/lol-avatar/1029.jpg"> 
 						<ui-tag badge></ui-tag>
 					</ui-avatar>
 				</view>
@@ -90,7 +90,7 @@ export default {
 	data() {
 		return {
 			code1: '<ui-tag info="30"></ui-tag>',
-			code2: '<ui-tag info="糖果炸弹" src="https://cos.color-ui.com/avatar/lol-avatar/1004.jpg" ></ui-tag>',
+			code2: '<ui-tag info="糖果炸弹" src="https://oss.colorui.org/cos/avatar/lol-avatar/1004.jpg" ></ui-tag>',
 		};
 	},
 	methods: {}
