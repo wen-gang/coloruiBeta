@@ -1,8 +1,8 @@
 <template>
-	<ui-sys :img="oss + '/img/4put2.png'" tabbar>
+	<ui-sys img="https://oss.colorui.org/cos/img/4put2.png" tabbar>
 			<ui-navbar :back="false" opacity>
 				<view class="flex-bar p-3" v-if="sys_scrollTop > sys_navBar">
-					<image :src="oss + '/img/hapm8.png'" mode="aspectFill" style="width: 200rpx;height: 56rpx;"></image>
+					<image src="https://oss.colorui.org/cos/img/hapm8.png" mode="aspectFill" style="width: 200rpx;height: 56rpx;"></image>
 				</view>
 				<view class="p-3 flex-bar flex-sub" v-if="sys_scrollTop > sys_navBar">
 					<view url="/pages/search/search" class="flex-sub flex-bar">

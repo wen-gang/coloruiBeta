@@ -4,8 +4,7 @@ import {
 export default {
 	data() {
 		return {
-			//图片地址
-			oss: 'https://oss.colorui.org/cos'
+			
 		};
 	},
 	computed: {
