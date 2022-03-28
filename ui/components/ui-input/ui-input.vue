@@ -93,10 +93,6 @@ export default {
 			type: String,
 			default: ''
 		},
-		ui: {
-			type: String,
-			default: ''
-		},
 		clear: {
 			type: Boolean,
 			default: false
@@ -127,10 +123,10 @@ export default {
 
 	computed: {
 		isDisabled() {
-			this.Group = this._getGroup();
+			let Group = this._getGroup();
 			// 判断是否存在 ui-Group 组件
-			if (this.Group) {
-				return this.Group.disabled;
+			if (Group) {
+				return Group.disabled;
 			}
 			return false;
 		}
